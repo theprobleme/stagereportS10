@@ -1,0 +1,29 @@
+\subsubsection{Mise en oeuvre}
+\paragraph{L'utilisation de variable avec docker}
+Afin d'expliquer concrètement la gestion des variables, on considère 2 variables :
+\begin{itemize}
+    \item \verb|NEXTCLOUD_IMAGE| : le nom de l'image Nextcloud utilisée qui n'est pas un secret.
+    \item \verb|NEXTCLOUD_ADMIN_PASSWORD| : le mot de passe de l'utilisateur administrateur de Nextcloud qui est un secret.
+\end{itemize}
+
+Dans un script docker-compose, afin d'utiliser les variables d'un fichier \verb|.env|, on applique la syntaxe suivant :
+\begin{verbatim}
+services:
+  app:
+     image: "${NEXTCLOUD_IMAGE}:${NEXTCLOUD_VERSION}"
+     environment:
+       - NEXTCLOUD_ADMIN_PASSWORD=${NEXTCLOUD_ADMIN_PASSWORD}
+\end{verbatim}
+Cette syntaxe signifie que la valeur des paramètres \verb|NEXTCLOUD_IMAGE| et \verb|NEXTCLOUD_ADMIN_PASSWORD| seront prises dans le fichier \verb|.env|.
+
+\paragraph{Le templating avec Jinja}
+Jinja est un moteur de templates pour le langage de programmation Python. Dans notre cas, Jinja est utilisé pour faire le template du fichier \verb|.env| pour que celui-ci utilise les variables d'Ansible.
+
+Ainsi, le fichier \verb|env_template_nextcloud.j2| contiendra :
+\begin{verbatim}
+## Nextcloud variables used in /apps/nextcloud/docker-compose.yml
+NEXTCLOUD_IMAGE={{ nextcloud_docker_image }}
+# Variables to change in the Vault file vault.yaml
+## Nextcloud
+NEXTCLOUD_ADMIN_PASSWORD={{ vault_nextcloud.admin_password }}
+\end{verbatim}
