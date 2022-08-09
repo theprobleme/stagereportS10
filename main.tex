@@ -81,7 +81,7 @@
 \end{center}
 
 \newpage
-\section{Engagement de non plagiat}
+\section*{Engagement de non plagiat}
 \textit{Je soussigné(e), Paul LEFAY, étudiant à l'\gls{ESEO}, atteste avoir pris connaissance du contenu du Règlement intérieur de l'École et de l'engagement de « non-plagiat ». 
 Je déclare m'y conformer dans le cadre de la rédaction de ce document. 
 Je déclare sur l'honneur que le contenu du présent mémoire est original et reflète mon travail personnel. 
@@ -92,7 +92,7 @@ Le non-respect de cet engagement m'exposerait à des sanctions dont j'ai bien pr
 
 % Remerciements %
 \newpage
-\section{Remerciements}
+\section*{Remerciements}
 Je tiens à remercier Yves-Gaël Cheny, Nicolas Gourichon et Valentin Baraise pour l'opportunité qu'ils m'ont donné en m'acceptant en contrat de professionnalisation. 
 L'expérience acquise lors de la période de Projet de Fin d'Etude (PFE) est inestimable compare à celle que j'aurai eu si j'avais travaillé sur un PFE scolaire. \\
 
@@ -112,7 +112,7 @@ Enfin, merci à Yves-Gaël Cheny et Raphaël Poitevin pour l'aide qu'ils m'ont a
 
 % Fiche de synthèse du stage %
 \newpage
-\section{Introduction}
+\section*{Introduction}
 Mon sujet de stage S10 porte sur la mise en place de nouveaux outils de sécurité pour améliorer l'infrastructure. 
 J'ai principalement travaillé sur des outils d'inventaire des machines du système d'information et sur le durcissement des systèmes Linux. 
 En parallèle de ces travaux de sécurité, j'ai mis en place de nouvelles infrastructures ou logiciels pour des clients, amélioré le processus pour les nouveaux arrivants et rédigé de la documentation technique propre aux administrateurs système. \\
@@ -137,7 +137,7 @@ Les ressources sont disponibles sur le dépôt GitHub \url{https://github.com/th
 
 % Abstract %
 \newpage
-\section{Abstract}
+\section*{Abstract}
 
 % 1ère Partie : L'environnement et le contexte du stage %
 \newpage
@@ -595,7 +595,7 @@ C'est-à-dire qu'un agent est installé sur l'ensemble des machines, et celui-ci
 Ensuite, l'application GLPI avec un plugin dédié à l'import des données d'OCSInventory va se connecter à l'application OCSInventory et lire les données.
 Finalement, par une action manuelle à réaliser dans GLPI, je valide les imports.
 
-L'agent est paramétré avec un champ TAG avec les critères suivants :
+L'agent est paramétré avec un champ TAG pouvant être :
 \begin{itemize}
     \item \textbf{ANG-ORD} : ordinateurs des salariés d'Angers.
     \item \textbf{ANG-DC} : serveurs physiques et machines virtuelles d'Angers.
@@ -604,7 +604,8 @@ L'agent est paramétré avec un champ TAG avec les critères suivants :
 \end{itemize}
 
 Une fois l'import fait, je peux dans GLPI visualiser les machines avec les TAGs associés. 
-Le TAG va alors permettre de tirer lors de l'import l'affectation dans des \textit{organisations} basées sur la localisation.
+Le TAG va alors permettre d'effectuer un trie lors de l'import. 
+Par exemple, les machines dont le TAG est \textit{REN} seront placé dans l'entité "Datacenter de Rennes".
 Lorsqu'un import est validé, GLPI écrit dans une base de données qui lui ait propre les informations.
 
 Une autre architecture aurait été possible en utilisant FusionInventory à la place d'OCSInventory. 
@@ -624,6 +625,27 @@ Les vhosts sont les noms des sites webs hébergés sur une machine et il est int
 Afin de répondre à ce besoin interne, j'ai repris le travail d'un collègue avec l'écriture d'un script Perl permettant d'inventorier les vhosts des serveurs web Nginx, des conteneurs Docker et de les écrires dans la base de données d'OCSInventory.
 Le nom des sites ayant une structure comprenant à la fois le service et le nom du client, il est possible de faire du traitement afin de créer une nouvelle table spécifiquement pour le nom des clients.
 Cela se fait pas un traitement du même résultat que pour les vhost.
+
+Ce script va dans un premier temps vérifier la présence ou non de la base de données \textit{vhost}.
+Si celle-ci existe déjà, il ne fait aucune action, sinon il créer la base de données.
+Ensuite, pour récupérer les vhosts des serveurs Nginx, les fichiers de configuration présents dans \\ \verb|/etc/nginx/sites-enabled| sont filtrés par une série de commandes Linux.
+Voici le résultat :
+\begin{verbatim}
+    grep -EhR 'server_name\\s' $dir | 
+    sed 's/^.*server_name\\s\\+\\(.\\+\\)\\s*;/\\1/' |
+    sort | uniq |
+\end{verbatim}
+Enfin, pour récupérer les vhosts des conteneur dockers, cela se fait avec la commande docker et jquery (jq).
+La commande \verb|docker ps| permet de récupérer l'ensemble des identifiants de conteneurs, une boucle va ensuite effectuer un \verb|docker inspect| sur chacun des conteneurs puis la commande \verb|jq| va en sortir le vhost.
+Cela donne la commande :
+\begin{verbatim}
+    docker inspect $1 | jq '.[0] |
+    .Config.Labels | to_entries |
+    .[] | select(.key | test(".*http.*rule")) |
+    .value' | sed 's/.*`\(.*\)`.*/\1/' | uniq
+\end{verbatim}
+
+Merci à Raphaël Poitevin qui avait largement entamé ce travail avant que je le reprenne.
 
 \subsubsection{Installation et configuration avec Ansible}
 \paragraph{Bastion SSH}
