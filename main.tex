@@ -30,7 +30,7 @@
 % Informations de la page de garde
 \title{Rapport de stage S10}
 \author{Paul LEFAY}
-\date{2021/2022}
+\date{2021-2022}
 
 \begin{document}
 
@@ -1021,15 +1021,16 @@ Grâce à l'interface Web intégrée, nous pouvons facilement gérer les machine
 \subsubsection{Objectif}
 Les datacenters de Rennes et Tours utilisent une plate-forme de virtualisation nommé Proxmox. 
 L'objectif est de mettre en oeuvre la même plate-forme de virtualisation à Angers pour que celle-ci puisse servir principalement à des tests. 
-Pour cela, 3 serveurs physiques sont disponibles afin de faire un cluster à 3 noeuds.
+Pour cela, 3 serveurs physiques sont disponibles afin de construire un cluster à 3 noeuds.
 
 \subsubsection{Installation physique}
-Dans un premier temps, j'ai ajouté une carte fibre 10G pour ajouter une interface supplémentaire au serveur. 
+Dans un premier temps, j'ai ajouté une carte fibre 10G pour disposer d'une interface supplémentaire au serveur. 
 Cette interface est destinée à faire transiter du traffic réseau ayant besoin de plus de débit qu'une simple interface 1G. 
 L'interface 1G quant à elle sert à l'administration du serveur.
 Dans un second temps, j'ai racké les serveurs dans une baies. 
-Dans chaque serveur, un disque est réservé à l'installation du système d'exploitation et les autres servent au stockage des machines virtuelles.
-J'ai formaté les disques dédiés au stockage.
+Enfin, j'ai ajouté des disques ssh et hdd supplémentaires.
+Pour chaque serveur, un disque est réservé à l'installation du système d'exploitation et les autres servent au stockage pour les machines virtuelles.
+J'ai formaté chacun des disques destinés au stockage.
 
 \subsubsection{Installation logiciel}
 \paragraph{Image}
@@ -1042,7 +1043,7 @@ Depuis l'interface graphique, j'ai configuré la partie DNS sur le DNS interne e
 Le DHCP interne attribue par défaut des adresses sur le réseau 192.168.23.0/22.
 
 Une fois cette étape terminée, les interfaces web de Proxmox sont disponibles à l'adresse IP configurée sur le port par défaut 8006.
-Sur le DNS interne j'ai créé 3 enregistrements sur le domaine \verb|.vt| pour avoir les noms de domaines \verb|an-virt-pmx-1.vt|, \verb|an-virt-pmx-2.vt| et \verb|an-virt-pmx-3.vt| pour chacun des noeuds.
+Sur le DNS interne, j'ai créé 3 enregistrements sur le domaine \verb|.vt| pour avoir accèder aux site aux noms \verb|an-virt-pmx-1.vt|, \verb| an-virt-pmx-2.vt| et \verb|an-virt-pmx-3.vt|.
 Le domaine utilisé est accessible uniquement sur le réseau local.
 
 \paragraph{Regroupement en cluster}
@@ -1067,11 +1068,10 @@ Arrivé à ce stade, le cluster est fonctionnel.
 Cependant, pour une raison de fiabilité du stockage, j'ai installé et paramétré une solution de stockage nommé Ceph.
 
 \subsubsection{Ceph}
-\paragraph{Description}
 \noindent%
 \begin{minipage}{.7\textwidth}%
-Ceph est une solution libre de stockage distribué qui propose trois protocoles avec Bloc, Fichiers et Objets.
-L'objectif de ceph est d'obtenir un stockage 100\% distribué dans point unique de défaillance.
+Ceph est une solution libre de stockage distribué qui propose trois protocoles: Bloc, Fichiers et Objets.
+L'objectif de Ceph est d'obtenir un stockage 100\% distribué sans point unique de défaillance.
 
 \end{minipage}%
 \hfill
@@ -1082,7 +1082,7 @@ L'objectif de ceph est d'obtenir un stockage 100\% distribué dans point unique 
 \end{minipage}% \\
 
 \paragraph{Installation}
-Par défaut, une section "Ceph" est disponible sur l'interface de chaque noeud de Proxmox. 
+Par défaut, une section \textit{Ceph} est disponible sur l'interface de chaque noeud de Proxmox. 
 Cette section permet d'installer Ceph lorsque ce n'est pas déjà le cas.
 L'installation se fait par un simple clique à réaliser sur chacun des noeuds.
 
@@ -1090,16 +1090,16 @@ L'installation se fait par un simple clique à réaliser sur chacun des noeuds.
 Ceph est basé sur l'utilisation de Object-based Storage Device (OSD).
 Cela représente un système de stockage qui organise les données sous forme d'objets et non pas sous forme de fichier comme on peut en avoir l'habitude.
 Cela permet le stockage non structuré de n'importe quel type d'objet.
-Les données sont identifiables par un ID unique, des métadonnées comme les dates, les autorisations, les auteurs etc.
+Les données sont identifiables par un ID unique et des métadonnées comme les dates, les autorisations, les auteurs etc.
 
 \begin{figure}
     \centering
-        \includegraphics[width=\textwidth]{src/types-de-storage.svg}
+        \includegraphics[width=\textwidth]{src/types-de-storage.jpeg}
     \caption{Représentation des types de storage par Scaleway's}
     \label{fig:storage_types}
 \end{figure}
 
-la configuration d'OSD nécessite sur les disques nécessite d'avoir des disque vierges, d'où l'étape de formatage au niveau matériel.
+La configuration d'OSD nécessite que les disques soient vierges, d'où l'étape de formatage au niveau matériel.
 Ensuite, j'ai ajouté chacun des disques disponibles au cluster Ceph.
 Cela donne la représentation suivante si l'on regarde les 4 disques d'an-virt-pmx-1:
 
@@ -1121,7 +1121,7 @@ Directement depuis l'interface Ceph, on peut visualiser l'ensemble des OSDs du c
 J'ai installé 2 autres composants pour Ceph:
 \begin{itemize}
     \item Ceph Monitor: démon qui conserve une copie maîtresse de la carte du cluster. 
-    La carte ou crush map est un fichier dans lequel est écrit l'ensemble de ressources Ceph: OSD, hosts, règles etc.
+    La carte ou \textit{crush map} est un fichier dans lequel est écrit l'ensemble de ressources Ceph: OSD, hosts, règles etc.
     Pour un niveau de disponiblité optimale, il est nécessaire d'avoir au moins 3 monitors.
     \item Ceph Manager: démon qui s'éxecute parallèlement aux monitors pour surveiller l'état du cluster.
     Il y a toujours au moins un monitor de présent, mais si il y en a plusieurs, alors seulement un est actif à la fois.
@@ -1234,21 +1234,21 @@ A présent que les machines virtuelles du cluster Kubernetes sont installées, i
 
 \paragraph{Kubespray}
 Kubespray est un utilitaire basé sur Ansible qui permet le déploiement automatisé de cluster Kubernetes.
-Le dépôt GitHub du projet est disponible ici: \url{https://github.com/kubernetes-sigs/kubespray}.
+Le dépôt GitHub du projet est disponible ici: \\ \url{https://github.com/kubernetes-sigs/kubespray}.
 
 \paragraph{Mise à jours de l'inventaire}
 La première étape consiste à mettre à jours l'inventaire Ansible.
 Pour cela, un exemple est donné dans le dépôt \href{https://github.com/kubernetes-sigs/kubespray/blob/master/inventory/sample/inventory.ini}{ici}.
 On y voit un inventaire basé autour des composants vitaux de Kubernetes:
 \begin{itemize}
-    \item kube_controle_plane: cerveau de kubernetes.
+    \item kube\_controle\_plane: cerveau de kubernetes.
     Ce composant doit donc être installé sur les noeuds master.
     \item etcd: base de données clé-valeur reposant sur un tableau à deux colonnes.
     La première contient la valeur.
     La second contient la clé.
     Cette base contient la totalité de la configuration du cluster Kubernetes.
     Ce fichier est vitale à la reconstruction d'un cluster en cas de sinistre.
-    \item kube_node: ce sont les travailleurs.
+    \item kube\_node: ce sont les travailleurs.
 \end{itemize}
 
 Cette structure permet l'installation des bons composants de Kubernetes au bons endroits.
@@ -1257,11 +1257,11 @@ Cette structure permet l'installation des bons composants de Kubernetes au bons 
 Le nombre de paramètres possibles est gigantesque.
 Pour cette partie je n'ai donc pas que paramétrer les paramètres que je connaissais:
 \begin{itemize}
-    \item loadbalancer_apiserver: les noeuds slaves communiquent via API aux masters.
-    \item loadbalancer_apiserver_port: port d'accès à l'API.
-    \item kube_network_plugin: différents plugin Kubernete existent pour le réseau.
+    \item loadbalancer\_apiserver: les noeuds slaves communiquent via API aux masters.
+    \item loadbalancer\_apiserver\_port: port d'accès à l'API.
+    \item kube\_network\_plugin: différents plugin Kubernete existent pour le réseau.
     Dans notre cas, on utilise calico.
-    \item kube_apiserver_ip: même valeur que le loadbalancer_apiserver.
+    \item kube\_apiserver\_ip: même valeur que le loadbalancer\_apiserver.
 \end{itemize}
 
 \subsubsection{Configuration des 2 haproxy}
