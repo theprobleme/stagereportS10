@@ -307,10 +307,10 @@ L'idée est d'utiliser des énergies renouvelables produites sur place, la perte
 Avec ce datacenter, Stratosfair et Empreinte Digitale lancent une offre similaire à celle OVH avec la location de machines virtuelles.
 Une application et une API ont été développés pour la création de machines virtuelles dans un cluster Proxmox depuis une interface web.
 
-Vous pouvez retrouver d'autres projets RSE ici : \url{https://blog.empreintedigitale.fr}.
+Vous pouvez retrouver d'autres projets RSE ici: \url{https://blog.empreintedigitale.fr}.
 
 \subsubsection{Pôle datacenter}
-Empreinte digitale est constitué de 5 pôles : production, accessibilité numérique, datacenter, RH et commercial/marketing.
+Empreinte digitale est constitué de 5 pôles: production, accessibilité numérique, datacenter, RH et commercial/marketing.
 
 J'étais intégré dans le pôle datacenter composé de 7 personnes. 
 Les activités sont découpeés de la manière suivante :
@@ -590,22 +590,22 @@ OCSInventory va permettre de récupérer les informations tandis que GLPI va les
 \newpage
 \subsubsection{Principe de fonctionnement}
 L'application OCSInventory fonctionne sur un système d'agent.
-C'est-à-dire qu'un agent est installé sur l'ensemble des machines, et celui-ci va par la suite envoyer des rapports quotidiennement via le protocole HTTP au serveur maître. 
+C'est-à-dire qu'un agent est installé sur l'ensemble des machines et celui-ci va envoyer des rapports quotidiennement via le protocole HTTP au serveur maître. 
 
-Ensuite, l'application GLPI avec un plugin dédié à l'import des données d'OCSInventory va se connecter à l'application OCSInventory et lire les données.
+Ensuite, l'application GLPI avec un plugin dédié à l'import des données d'OCSInventory va se connecter à OCSInventory et lire les données.
 Finalement, par une action manuelle à réaliser dans GLPI, je valide les imports.
 
-L'agent est paramétré avec un champ TAG pouvant être :
+L'agent est paramétré avec un champ TAG pouvant être:
 \begin{itemize}
-    \item \textbf{ANG-ORD} : ordinateurs des salariés d'Angers.
-    \item \textbf{ANG-DC} : serveurs physiques et machines virtuelles d'Angers.
-    \item \textbf{REN} : serveurs physiques et machines virtuelles de Rennes.
-    \item \textbf{TRS} : serveurs physiques et machines virtuelles de Tours.
+    \item \textbf{ANG-ORD}: ordinateurs des salariés d'Angers.
+    \item \textbf{ANG-DC}: serveurs physiques et machines virtuelles d'Angers.
+    \item \textbf{REN}: serveurs physiques et machines virtuelles de Rennes.
+    \item \textbf{TRS}: serveurs physiques et machines virtuelles de Tours.
 \end{itemize}
 
 Une fois l'import fait, je peux dans GLPI visualiser les machines avec les TAGs associés. 
 Le TAG va alors permettre d'effectuer un trie lors de l'import. 
-Par exemple, les machines dont le TAG est \textit{REN} seront placé dans l'entité "Datacenter de Rennes".
+Par exemple, les machines dont le TAG est \textit{REN} seront placées dans l'entité "Datacenter de Rennes".
 Lorsqu'un import est validé, GLPI écrit dans une base de données qui lui ait propre les informations.
 
 Une autre architecture aurait été possible en utilisant FusionInventory à la place d'OCSInventory. 
@@ -856,10 +856,6 @@ Enfin, OpenVas un outils opensource de scan de vulnérabilités de site WEB perm
 Je ne suis pas aller très loin dans l'expérimentation avec mais elle mériterait de passer plus de temps d'expérimentation.
 
 \newpage
-\subsection{Bilan}
-
-
-\newpage
 \section{Travaux d'administrateur système}
 \subsection{Nextcloud et Collabora}
 \noindent%
@@ -879,7 +875,7 @@ Cette suite logiciel est finalement une alternative libre et open-source à l'ut
 Empreinte Digitale installe et héberge régulièrement des instances Nextcloud et Collabora. 
 L'objectif est de simplifier et automatiser au mieux les installations mais également de facilité les mises à jours.
 
-Pour répondre à ces besoins, 4 outils sont utilisés :
+Pour répondre à ces besoins, 4 outils sont utilisés:
 \begin{itemize}
     \item \textbf{GitLab} pour stocker l'ensemble des ressources nécessaires à l'installation.
     \item \textbf{Ansible} pour exécuter différentes tâches.
@@ -1025,34 +1021,34 @@ Grâce à l'interface Web intégrée, nous pouvons facilement gérer les machine
 \subsubsection{Objectif}
 Les datacenters de Rennes et Tours utilisent une plate-forme de virtualisation nommé Proxmox. 
 L'objectif est de mettre en oeuvre la même plate-forme de virtualisation à Angers pour que celle-ci puisse servir principalement à des tests. 
-Pour cela, 3 serveurs sont disponibles afin de faire un cluster à 3 noeuds.
+Pour cela, 3 serveurs physiques sont disponibles afin de faire un cluster à 3 noeuds.
 
-\subsubsection{Matériel}
+\subsubsection{Installation physique}
 Dans un premier temps, j'ai ajouté une carte fibre 10G pour ajouter une interface supplémentaire au serveur. 
-Cette interface est destiné à faire transiter du traffic réseau ayant besoin de plus de débit qu'une simple interface 1G. 
+Cette interface est destinée à faire transiter du traffic réseau ayant besoin de plus de débit qu'une simple interface 1G. 
 L'interface 1G quant à elle sert à l'administration du serveur.
 Dans un second temps, j'ai racké les serveurs dans une baies. 
-Cela revient à positionner les différentes serveurs dans des tiroirs fixés.
-Enfin, j'ai formaté l'ensemble des disques durs.
- Dans chacun serveur, un disque est réservé à l'installation du système d'exploitation et les autres servent au stockage des machines virtuelles.
+Dans chaque serveur, un disque est réservé à l'installation du système d'exploitation et les autres servent au stockage des machines virtuelles.
+J'ai formaté les disques dédiés au stockage.
 
-\subsubsection{Logiciel}
+\subsubsection{Installation logiciel}
 \paragraph{Image}
 Le système d'exploitation de Proxmox s'installe à partir d'un fichier ISO. Celui-ci est basé sur une image Debian. 
-J'ai installé une version Proxmox VE 7.0 basé sur l'image Debian 11 nommé Bullseye à partir d'un disque dur externe IODD directement bootable. 
-Cela permet de ne pas avoir à créer une clé Bootable dédié à cela.
+J'ai installé une version Proxmox VE 7.0 basé sur l'image Debian 11 nommé Bullseye à partir d'un disque dur externe bootable IODD. 
+Cela permet de ne pas avoir à créer une clé bootable dédiée.
 
 \paragraph{Réseau}
 Depuis l'interface graphique, j'ai configuré la partie DNS sur le DNS interne et changé l'adresse IP sur un réseau en 192.168.22.0/23. 
 Le DHCP interne attribue par défaut des adresses sur le réseau 192.168.23.0/22.
 
-Une fois cette étape terminée, les interfaces web de Proxmox sont disponibles à l'adresse IP configurée. 
-Sur le DNS interne j'ai créé 3 enregistrements pour avoir les noms de domaines \verb|an-virt-pmx-1|, \verb|an-virt-pmx-2| et \verb|an-virt-pmx-3| pour chacun des noeuds.
+Une fois cette étape terminée, les interfaces web de Proxmox sont disponibles à l'adresse IP configurée sur le port par défaut 8006.
+Sur le DNS interne j'ai créé 3 enregistrements sur le domaine \verb|.vt| pour avoir les noms de domaines \verb|an-virt-pmx-1.vt|, \verb|an-virt-pmx-2.vt| et \verb|an-virt-pmx-3.vt| pour chacun des noeuds.
+Le domaine utilisé est accessible uniquement sur le réseau local.
 
 \paragraph{Regroupement en cluster}
 Depuis l'interface graphique, dans la section cluster, j'ai créé un cluster en lui donnant un nom et un réseau. Il se nomme \verb|an-virt-pmx|.
 Ensuite, afin d'ajouter les 2 noeuds restant, j'ai récupéré le token d'identification du cluster, puis je me suis connecté sur chacun des noeuds. 
-Sur chacun d'entres-eux, j'ai spécifié :
+Sur chacun d'entres-eux, j'ai spécifié:
 \begin{itemize}
     \item L'adresse IP du cluster, soit l'adresse IP d'\verb|an-virt-pmx-1|.
     \item Le token d'identification.
@@ -1067,12 +1063,89 @@ A partir de cette étape, depuis l'interface graphique de n'importe quel noeud P
     \label{fig:proxmox_virt1}
 \end{figure}
 
-\paragraph{OSDS et manager}
+Arrivé à ce stade, le cluster est fonctionnel. 
+Cependant, pour une raison de fiabilité du stockage, j'ai installé et paramétré une solution de stockage nommé Ceph.
 
+\subsubsection{Ceph}
+\paragraph{Description}
+\noindent%
+\begin{minipage}{.7\textwidth}%
+Ceph est une solution libre de stockage distribué qui propose trois protocoles avec Bloc, Fichiers et Objets.
+L'objectif de ceph est d'obtenir un stockage 100\% distribué dans point unique de défaillance.
 
-\paragraph{Stockage}
-J'ai créé un stockage CephFS afin d'y déposer l'ensemble des ISO qui pourraient être utiles. 
-On y trouve différentes images pour Ubuntu, Debian, Fedora, CentOS et RockyLinux.
+\end{minipage}%
+\hfill
+\begin{minipage}{.3\textwidth}%
+\begin{center}
+\includegraphics[width=0.5\textwidth]{src/ceph.png}
+\end{center}
+\end{minipage}% \\
+
+\paragraph{Installation}
+Par défaut, une section "Ceph" est disponible sur l'interface de chaque noeud de Proxmox. 
+Cette section permet d'installer Ceph lorsque ce n'est pas déjà le cas.
+L'installation se fait par un simple clique à réaliser sur chacun des noeuds.
+
+\paragraph{Object-based Storage Device}
+Ceph est basé sur l'utilisation de Object-based Storage Device (OSD).
+Cela représente un système de stockage qui organise les données sous forme d'objets et non pas sous forme de fichier comme on peut en avoir l'habitude.
+Cela permet le stockage non structuré de n'importe quel type d'objet.
+Les données sont identifiables par un ID unique, des métadonnées comme les dates, les autorisations, les auteurs etc.
+
+\begin{figure}
+    \centering
+        \includegraphics[width=\textwidth]{src/types-de-storage.svg}
+    \caption{Représentation des types de storage par Scaleway's}
+    \label{fig:storage_types}
+\end{figure}
+
+la configuration d'OSD nécessite sur les disques nécessite d'avoir des disque vierges, d'où l'étape de formatage au niveau matériel.
+Ensuite, j'ai ajouté chacun des disques disponibles au cluster Ceph.
+Cela donne la représentation suivante si l'on regarde les 4 disques d'an-virt-pmx-1:
+
+\begin{figure}
+    \centering
+        \includegraphics[width=\textwidth]{src/disk_node1.png}
+    \caption{Disques présent sur le noeud an-virt-pmx-1}
+    \label{fig:disk_node1}
+\end{figure}
+
+Directement depuis l'interface Ceph, on peut visualiser l'ensemble des OSDs du cluster:
+\begin{figure}
+    \centering
+        \includegraphics[width=\textwidth]{src/osd_cluster.png}
+    \caption{Ensemble des OSD du cluster an-virt-pmx}
+    \label{fig:osd_cluster}
+\end{figure}
+
+J'ai installé 2 autres composants pour Ceph:
+\begin{itemize}
+    \item Ceph Monitor: démon qui conserve une copie maîtresse de la carte du cluster. 
+    La carte ou crush map est un fichier dans lequel est écrit l'ensemble de ressources Ceph: OSD, hosts, règles etc.
+    Pour un niveau de disponiblité optimale, il est nécessaire d'avoir au moins 3 monitors.
+    \item Ceph Manager: démon qui s'éxecute parallèlement aux monitors pour surveiller l'état du cluster.
+    Il y a toujours au moins un monitor de présent, mais si il y en a plusieurs, alors seulement un est actif à la fois.
+\end{itemize}
+
+\paragraph{Pool de storage}
+J'ai créé 2 pools de storage pour le cluster.
+Le premier se nomme ssd. 
+Il est dédié aux systèmes d'exploitation et aux services nécessitant une vitesse de lecture et écriture rapide.
+Le second se nomme hdd.
+Il est dédié au stockage volumineux qui n'est que très rarement lu.
+
+Par exemple, pour une installation d'un Nextcloud volumineux, le système d'exploitation avec les applications de Nextcloud sont sur un pool ssd tandis que les données (les fichiers notamments) sont sur le pool hdd.
+
+\paragraph{CephFS}
+Ceph possède son propre FileSystem nommé CephFS.
+J'ai créé un stockage CephFS afin d'y déposer l'ensemble des ISO qui pourraient être utiles.
+Cela permet de stocker ces images sur un seul noeud et de présenter ce stockage aux autres.
+J'y ai déposé des ISO pour Ubuntu, Debian, Fedora, CentOS et RockyLinux.
+
+\paragraph{Template}
+L'utilisation de Proxmox et Terraform repose sur la création de Template Cloud Init.
+Pour faire un template, il suffit de créer une machine virtuelle avec le système d'exploitation souhaité puis de définir cette machine comme Template.
+L'idée ici étant d'avoir un cluster similaire à ceux de Rennes et Tours, ayant les même templates Cloud Init pour l'utilisation de Terraform et ainsi ne pas avoir à se poser de question.
 
 \newpage
 \subsection{Projet Dehon} \label{dehon}
@@ -1088,16 +1161,16 @@ L'objectif est donc de mettre en place une plateforme cloud pour centraliser l'e
 
 J'ai travailler à la réalisation de cette infrastructure avec 2 autres administrateurs systèmes.
 
-\subsubsection{Installation matériel}
-Pour des raisons de disponibilité, l'infrastructure du projet se trouve sur 3 sites :
+\subsubsection{Architecture}
+Pour des raisons de disponibilité, l'infrastructure du projet se trouve sur 3 sites:
 \begin{itemize}
-    \item \textbf{virt2} : Proxmox de Tours à Cyrès sur lequel se trouve un premier cluster Kubernetes.
-    \item \textbf{cogent} : Proxmox de Tours à Cogent sur lequel se trouve un répliqua du premier cluster de virt2.
-    \item \textbf{virt1} : Proxmox de Rennes sur lequel se trouve un arbiter MongoDB. 
+    \item \textbf{virt2}: Proxmox de Tours à Cyrès sur lequel se trouve un premier cluster Kubernetes.
+    \item \textbf{cogent}: Proxmox de Tours à Cogent sur lequel se trouve un répliqua du premier cluster de virt2.
+    \item \textbf{virt1}: Proxmox de Rennes sur lequel se trouve un arbiter MongoDB. 
 \end{itemize}
 
 \newpage
-En voici un schéma :
+En voici un schéma:
 \begin{figure}
     \centering
         \includegraphics[width=\textwidth]{src/Dehon1.png}
@@ -1109,39 +1182,105 @@ Les serveurs étaient déjà mis en place pour virt1 et virt2.
 Il a cependant fallu aller sur Tours chez cogent pour y installer une machine. 
 Cette machine contient un unique cluster proxmox. 
 Il a ensuite fallu relier les centres de Cogent et Cyrès. 
-La distance entre les 2 bâtiments est d'environ 2 km. Une fibre noir, soit une fibre optique par encore activée à préalablement était installé par le personnel de Cyrès.
+La distance entre les 2 bâtiments est d'environ 2 km. 
+Une fibre noir, soit une fibre optique par encore activée à préalablement était installé par le personnel de Cyrès.
 
-\subsubsection{Création des cluster de machines physiques avec proxmox et  terraform}
-Nous avons commencé par developper l'infrastructure sur virt2. Nous nous sommes servis de terraform pour deployer les machinnes virtuelles sur le cluster. 
-Nous avons donc 9 machines :
+
+\subsubsection{Déploiement des machines virtuelles avec Terraform}
+Nous avons commencé par developper l'infrastructure sur virt2. Nous nous sommes servis de terraform pour deployer les machines virtuelles sur le cluster. 
+
+\paragraph{Les machines et leur rôle}
+Nous avons donc 9 machines:
 
 \begin{itemize}
-    \item 3 machines virtuelles destinée a etre les masters. 
+    \item 3 machines virtuelles destinées à être les masters. 
     Dans le conception de kubernetes, ces machines vont etre les cerveaux du cluster.
-     c'est sur ces machines que des composant de kuberne vont permettre l'orchestration de runner.
-    \item 3 machines virtuelle destinée a etre les workers. 
+    C'est sur celles-ci que des composant de kuberne vont permettre l'orchestration de runner.
+    \item 3 machines virtuelle destinée à être les workers. 
     Ces 3 machines vont etre celles qui supportent la charge de travail dans le cluster.
     \item 2 machines virtuelle en tant que proxy. 
-    Elles seront le point d'entree de l'infrastructure. 
+    Elles seront le point d'entrée de l'infrastructure. 
     \item 1 machines virtuelle pour le stockage. 
     L'ensemble du cluster utilisera un stockage partagé.
 \end{itemize}
 
-la denomination de ces machines est réfléchie afin d'identifier le client, le role et le nombre de chaque composant. 
-Ces noms sont visibles sur le schema de l'infrastructure.
+La denomination de ces machines est réfléchie afin d'identifier le client, le role et le nombre de chaque composant. 
+Ces noms sont visibles sur le schéma de l'infrastructure.
 
-Avec Terragorm on declare dans un premier un format de machines virtuelle dans lequel on va attribuer des valeurs communes. 
-Cela est dans notre cas par exemple le numero de vlan, le nom du client, les clées SSH a autorisées etc. 
-La configurassions est par la suite appliquée a un template cloud\_init deja present sur les clusters.
+\paragraph{Les providers}
+Contrairement aux travaux précémment réalisé, on travaille ici avec des fichiers Terraform qui doivent prendre en considération la présence de 3 cluster Proxmox différent.
+Cela nécessite de déclarer 3 providers: \verb|proxmox-congent|, \verb|proxmox-virt1| et \verb|proxmox-virt2|.
+Chacun des provider possède son url, son nom d'utilisateur et son mot de passe.
+Ces variables sensibles sont stockées dans un fichier \verb|secret.tfvars|, le fichier Terraform pour les secrets.
 
-Ensuite, on declare des modules specifique. par exemple, etant donne que les master sont identiques et au nombre de 3, on va declarer que l'on souhaite 3 machines master, que chacune aura 50 Gb de Ram, 4 CPU etc. 
+\paragraph{Les modules}
+Ensuite, j'ai défini différent modules. Pour les cluster dupliqués, on utilise 4 modules:
+\begin{itemize}
+    \item dehon-k8s-master-virt2-main: module pour la création des masters sur virt2.
+    Un champ spécifique permet de définir que ce module doit être utilisé 3 fois pour ainsi créer 3 machines virtuelles.
+    Terraform permet de créer certain champ avec un système d'incrémentation, ainsi les adresses IP ou les noms des machines se feront automatiquement.
+    \item dehon-k8s-run-virt2-main: module pour la création des runners sur virt2.
+    \item dehon-k8s-pxy-virt2-main: module pour la création de 2 proxy.
+    \item dehon-k8s-storage-virt2-main: module pour la machine de stockage.
+    Celle-ci possède la particularité d'avoir 2 disques, le premier pour le système d'exploitation et le second de 2 To pour les données.
+\end{itemize}
 
-une fois les fichiers de configuration terminé, on initialiser terraform pour lui specifier son etat, ses providers 
+Le rôle et l'architecture des machines installées avec les 2 derniers modules de la liste ci-dessus seront présentés plus tard.
 
-Ensuite, on lance une "planification". c'est a dire que l'on va lancer la commande "terraform plan"
+A l'issue de cette étapes, on obtient le cluster présenté sur la figure \ref{fig:dehon1} avec 3 autres machines virtuelles.
 
-\subsubsection{Installation du clusters Kubernetes via Kubespray}
-\subsubsection{Configuration de proxy avec vip}
+\subsubsection{Déploiement du cluster Kubernetes avec Kubespray}
+A présent que les machines virtuelles du cluster Kubernetes sont installées, il a fallu installer le cluster Kubernetes.
+
+\paragraph{Kubespray}
+Kubespray est un utilitaire basé sur Ansible qui permet le déploiement automatisé de cluster Kubernetes.
+Le dépôt GitHub du projet est disponible ici: \url{https://github.com/kubernetes-sigs/kubespray}.
+
+\paragraph{Mise à jours de l'inventaire}
+La première étape consiste à mettre à jours l'inventaire Ansible.
+Pour cela, un exemple est donné dans le dépôt \href{https://github.com/kubernetes-sigs/kubespray/blob/master/inventory/sample/inventory.ini}{ici}.
+On y voit un inventaire basé autour des composants vitaux de Kubernetes:
+\begin{itemize}
+    \item kube_controle_plane: cerveau de kubernetes.
+    Ce composant doit donc être installé sur les noeuds master.
+    \item etcd: base de données clé-valeur reposant sur un tableau à deux colonnes.
+    La première contient la valeur.
+    La second contient la clé.
+    Cette base contient la totalité de la configuration du cluster Kubernetes.
+    Ce fichier est vitale à la reconstruction d'un cluster en cas de sinistre.
+    \item kube_node: ce sont les travailleurs.
+\end{itemize}
+
+Cette structure permet l'installation des bons composants de Kubernetes au bons endroits.
+
+\paragraph{Paramétrage de Kubespray}
+Le nombre de paramètres possibles est gigantesque.
+Pour cette partie je n'ai donc pas que paramétrer les paramètres que je connaissais:
+\begin{itemize}
+    \item loadbalancer_apiserver: les noeuds slaves communiquent via API aux masters.
+    \item loadbalancer_apiserver_port: port d'accès à l'API.
+    \item kube_network_plugin: différents plugin Kubernete existent pour le réseau.
+    Dans notre cas, on utilise calico.
+    \item kube_apiserver_ip: même valeur que le loadbalancer_apiserver.
+\end{itemize}
+
+\subsubsection{Configuration des 2 haproxy}
+
+\subsubsection{Configuration de la VIP sur les proxy}
+Précédemment, le champ \verb|loadbalancer_apiserver| avait été paramétré sur l'adresse 10.2.11.100.
+Cela correspond à la VIP entre les 2 proxy.
+Graĉe à cette VIP (Virtual IP), nous n'avons plus de SPOF pour l'API Server.
+Pour mettre en place cette VIP, j'ai utilisé un playbook Ansible qui permet d'installer KeepAlived.
+KeepAlived s'appuie sur le protocole VRRP (Virtual Router Redundancy Protocol) conçu pour gérer une adresse IP virtuelle entre plusieurs hôtes.
+Concrètement, c'est une adresse IP qui se balade entre les proxy.
+
+Après l'installation et la configuration de KeepAlived avec Ansible, l'interface réseau \verb|eth0| de \verb|dehon-k8s-pxy-1| possède 2 adresses: \verb|10.2.11.80| et \verb|10.2.11.100|.
+L'interface \verb|eth0| de \verb|dehon-k8s-pxy-2| ne possède que l'adresse \verb|10.2.11.81|.
+Si le service KeepAlived, Haproxy s'arrête, ou pire encore si une des machines s'arrête, alors la VIP \verb|10.2.11.100| bascule sur l'autre machine.
+
+On assure ainsi une redondance de l'accessibilité à l'API Server.
+
+
 \subsubsection{IngressController, Certmanager, namespace, rancher rke}
 \subsubsection{Stockage}
 \subsubsection{Autres éléments}

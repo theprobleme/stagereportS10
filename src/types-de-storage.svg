@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024px" height="597px" viewBox="0 0 1024 597" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.1 (89650) - https://sketch.com -->
+    <title>Schema_File/Block/OS_FR</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="17" y="100" width="76" height="38" rx="7.03999973"></rect>
+        <filter x="-26.3%" y="-52.6%" width="152.6%" height="205.3%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="2.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.933333333   0 0 0 0 0.933333333   0 0 0 0 1  0 0 0 0.473175262 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-3" x="119" y="100" width="76" height="38" rx="7.03999973"></rect>
+        <filter x="-26.3%" y="-52.6%" width="152.6%" height="205.3%" filterUnits="objectBoundingBox" id="filter-4">
+            <feMorphology radius="2.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.933333333   0 0 0 0 0.933333333   0 0 0 0 1  0 0 0 0.473175262 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-5" x="0" y="100" width="76" height="38" rx="7.03999973"></rect>
+        <filter x="-26.3%" y="-52.6%" width="152.6%" height="205.3%" filterUnits="objectBoundingBox" id="filter-6">
+            <feMorphology radius="2.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.933333333   0 0 0 0 0.933333333   0 0 0 0 1  0 0 0 0.473175262 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-7" x="83" y="100" width="182" height="38" rx="7.03999973"></rect>
+        <filter x="-11.0%" y="-52.6%" width="122.0%" height="205.3%" filterUnits="objectBoundingBox" id="filter-8">
+            <feMorphology radius="2.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.933333333   0 0 0 0 0.933333333   0 0 0 0 1  0 0 0 0.473175262 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-9" x="0" y="100" width="74" height="38" rx="7.03999973"></rect>
+        <filter x="-27.0%" y="-52.6%" width="154.1%" height="205.3%" filterUnits="objectBoundingBox" id="filter-10">
+            <feMorphology radius="2.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.933333333   0 0 0 0 0.933333333   0 0 0 0 1  0 0 0 0.473175262 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-11" x="82" y="100" width="199" height="38" rx="7.03999973"></rect>
+        <filter x="-10.1%" y="-52.6%" width="120.1%" height="205.3%" filterUnits="objectBoundingBox" id="filter-12">
+            <feMorphology radius="2.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.933333333   0 0 0 0 0.933333333   0 0 0 0 1  0 0 0 0.473175262 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Schema_File/Block/OS_FR" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="1024" height="597"></rect>
+        <g id="Block" transform="translate(33.000000, 25.000000)">
+            <rect id="Rectangle" fill="#FAFAFB" x="0" y="0" width="297" height="547" rx="16"></rect>
+            <g id="Group-3" transform="translate(43.000000, 24.000000)">
+                <g id="Group-16" transform="translate(0.000000, 210.876866)" fill="#FFFFFF" stroke="#DCE1EB">
+                    <path d="M0,243.57818 C0,261.548505 47.4344526,287.123134 105.998777,287.123134 C164.563101,287.123134 212.393973,267.110638 211.997554,243.57818 L211.604316,23.0067401 C211.604316,40.9770654 164.563101,45.1027835 105.998777,45.1027835 C47.4344526,45.1027835 0,40.093459 0,22.1231337 L0,243.57818 Z" id="Path"></path>
+                    <path d="M105.802158,0 C47.3464658,0 1.42108547e-14,11.635 1.42108547e-14,26 C1.42108547e-14,40.365 47.3464658,52 105.802158,52 C164.257851,52 211.604316,40.365 211.604316,26 C211.604316,11.635 164.257851,0 105.802158,0" id="Path" fill-rule="nonzero"></path>
+                </g>
+                <text id="Bloc" font-family="Asap-SemiBoldItalic, Asap SemiBold" font-size="32" font-style="italic" font-weight="500" fill="#151A2D">
+                    <tspan x="73.396" y="30">Bloc</tspan>
+                </text>
+                <g id="elements" transform="translate(22.000000, 284.000000)">
+                    <g id="Group-2" fill="#EEEEFF">
+                        <rect id="Rectangle" x="0" y="0" width="40" height="40" rx="20"></rect>
+                        <rect id="Rectangle-Copy-14" x="-1.13686838e-13" y="43" width="40" height="40" rx="20"></rect>
+                        <rect id="Rectangle-Copy-27" x="-1.13686838e-13" y="86" width="40" height="40" rx="20"></rect>
+                        <rect id="Rectangle-Copy-33" x="-1.13686838e-13" y="129" width="40" height="40" rx="20"></rect>
+                        <rect id="Rectangle-Copy-9" x="86" y="0" width="40" height="40" rx="20"></rect>
+                        <rect id="Rectangle-Copy-21" x="86" y="43" width="40" height="40" rx="20"></rect>
+                        <rect id="Rectangle-Copy-28" x="86" y="86" width="40" height="40" rx="20"></rect>
+                        <rect id="Rectangle-Copy-34" x="86" y="129" width="40" height="40" rx="20"></rect>
+                        <rect id="Rectangle-Copy-6" x="43" y="0" width="40" height="40" rx="20"></rect>
+                        <rect id="Rectangle-Copy-24" x="43" y="43" width="40" height="40" rx="20"></rect>
+                        <rect id="Rectangle-Copy-31" x="43" y="86" width="40" height="40" rx="20"></rect>
+                        <rect id="Rectangle-Copy-35" x="43" y="129" width="40" height="40" rx="20"></rect>
+                        <rect id="Rectangle-Copy-13" x="129" y="0" width="40" height="40" rx="20"></rect>
+                        <rect id="Rectangle-Copy-26" x="129" y="43" width="40" height="40" rx="20"></rect>
+                        <rect id="Rectangle-Copy-32" x="129" y="86" width="40" height="40" rx="20"></rect>
+                        <rect id="Rectangle-Copy-36" x="129" y="129" width="40" height="40" rx="20"></rect>
+                    </g>
+                    <text id="1" font-family="Asap-Medium, Asap Medium" font-size="18.8" font-weight="normal" fill="#4F0599">
+                        <tspan x="14.971" y="27">1</tspan>
+                    </text>
+                    <text id="4" font-family="Asap-Medium, Asap Medium" font-size="18.8" font-weight="normal" fill="#4F0599">
+                        <tspan x="143.971" y="27">4</tspan>
+                    </text>
+                    <text id="7" font-family="Asap-Medium, Asap Medium" font-size="18.8" font-weight="normal" fill="#4F0599">
+                        <tspan x="100.971" y="70">7</tspan>
+                    </text>
+                    <text id="10" font-family="Asap-Medium, Asap Medium" font-size="18.8" font-weight="normal" fill="#4F0599">
+                        <tspan x="52.942" y="113">10</tspan>
+                    </text>
+                    <text id="14" font-family="Asap-Medium, Asap Medium" font-size="18.8" font-weight="normal" fill="#4F0599">
+                        <tspan x="52.942" y="156">14</tspan>
+                    </text>
+                    <text id="2" font-family="Asap-Medium, Asap Medium" font-size="18.8" font-weight="normal" fill="#4F0599">
+                        <tspan x="57.971" y="27">2</tspan>
+                    </text>
+                    <text id="5" font-family="Asap-Medium, Asap Medium" font-size="18.8" font-weight="normal" fill="#4F0599">
+                        <tspan x="14.971" y="70">5</tspan>
+                    </text>
+                    <text id="8" font-family="Asap-Medium, Asap Medium" font-size="18.8" font-weight="normal" fill="#4F0599">
+                        <tspan x="143.971" y="70">8</tspan>
+                    </text>
+                    <text id="11" font-family="Asap-Medium, Asap Medium" font-size="18.8" font-weight="normal" fill="#4F0599">
+                        <tspan x="95.942" y="113">11</tspan>
+                    </text>
+                    <text id="15" font-family="Asap-Medium, Asap Medium" font-size="18.8" font-weight="normal" fill="#4F0599">
+                        <tspan x="95.942" y="156">15</tspan>
+                    </text>
+                    <text id="3" font-family="Asap-Medium, Asap Medium" font-size="18.8" font-weight="normal" fill="#4F0599">
+                        <tspan x="100.971" y="27">3</tspan>
+                    </text>
+                    <text id="6" font-family="Asap-Medium, Asap Medium" font-size="18.8" font-weight="normal" fill="#4F0599">
+                        <tspan x="57.971" y="70">6</tspan>
+                    </text>
+                    <text id="9" font-family="Asap-Medium, Asap Medium" font-size="18.8" font-weight="normal" fill="#4F0599">
+                        <tspan x="14.971" y="113">9</tspan>
+                    </text>
+                    <text id="13" font-family="Asap-Medium, Asap Medium" font-size="18.8" font-weight="normal" fill="#4F0599">
+                        <tspan x="9.94200003" y="156">13</tspan>
+                    </text>
+                    <text id="12" font-family="Asap-Medium, Asap Medium" font-size="18.8" font-weight="normal" fill="#4F0599">
+                        <tspan x="138.942" y="113">12</tspan>
+                    </text>
+                    <text id="16" font-family="Asap-Medium, Asap Medium" font-size="18.8" font-weight="normal" fill="#4F0599">
+                        <tspan x="138.942" y="156">16</tspan>
+                    </text>
+                </g>
+                <path id="Line-6" d="M54.3367712,138.500003 C54.5822298,138.499209 54.7869489,138.675424 54.8300386,138.908535 L54.8383847,138.998384 L55.1373783,231.501052 L55.156,237.589 L58.7007694,231.241251 C58.8353727,231.000136 59.1399527,230.913791 59.381068,231.048394 C59.5953927,231.168041 59.6874298,231.421991 59.6107003,231.64629 L59.5739251,231.728692 L55.0998066,239.743196 C54.9255917,240.055268 54.499952,240.082602 54.2821408,239.823716 L54.2282356,239.746013 L49.7024011,231.7606 C49.566242,231.52036 49.6506163,231.215228 49.8908564,231.079069 C50.1044031,230.958038 50.3692224,231.011257 50.5210636,231.193306 L50.5723874,231.267524 L54.156,237.59 L54.1373836,231.504284 L53.83839,139.001616 C53.8374974,138.725475 54.0606303,138.500895 54.3367712,138.500003 Z" fill="#3ED3B1" fill-rule="nonzero"></path>
+                <g id="Rectangle">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use stroke="#3ED3B1" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <text id="Bloc#1" font-family="Asap-Medium, Asap Medium" font-size="14" font-weight="normal" fill="#4A4F62">
+                    <tspan x="33.909" y="124">Bloc#1</tspan>
+                </text>
+                <g id="Rectangle-Copy">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                    <use stroke="#EF5774" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                </g>
+                <text id="Bloc#2" font-family="Asap-Medium, Asap Medium" font-size="14" font-weight="normal" fill="#4A4F62">
+                    <tspan x="135.909" y="124">Bloc#2</tspan>
+                </text>
+                <text id="Bloc-de-taille-fixe" font-family="Asap-Medium, Asap Medium" font-size="14" font-weight="normal" fill="#4A4F62">
+                    <tspan x="36.547" y="57">Bloc de taille fixe à un </tspan>
+                    <tspan x="29.036" y="73">emplacement spécifique</tspan>
+                </text>
+                <path id="Line-3" d="M157.882134,138.176993 L157.935788,138.254869 L162.435788,146.254869 C162.57117,146.495548 162.48581,146.800406 162.245131,146.935788 C162.031194,147.056127 161.766548,147.002053 161.615296,146.819515 L161.564212,146.745131 L158,140.408 L158,239 C158,239.276142 157.776142,239.5 157.5,239.5 C157.25454,239.5 157.050392,239.323125 157.008056,239.089876 L157,239 L157,140.408 L153.435788,146.745131 C153.315448,146.959067 153.061202,147.050283 152.837152,146.972829 L152.754869,146.935788 C152.540933,146.815448 152.449717,146.561202 152.527171,146.337152 L152.564212,146.254869 L157.064212,138.254869 C157.239435,137.943362 157.665161,137.917403 157.882134,138.176993 Z" fill="#EF5774" fill-rule="nonzero"></path>
+            </g>
+        </g>
+        <g id="File" transform="translate(363.000000, 25.000000)">
+            <rect id="Rectangle-Copy-29" fill="#FAFAFB" x="0" y="0" width="297" height="547" rx="16"></rect>
+            <g id="Group-4" transform="translate(16.000000, 24.000000)">
+                <g id="Group-16" transform="translate(17.000000, 210.876866)" fill="#FFFFFF" stroke="#DCE1EB">
+                    <path d="M0,243.57818 C0,261.548505 47.4344526,287.123134 105.998777,287.123134 C164.563101,287.123134 212.393973,267.110638 211.997554,243.57818 L211.604316,23.0067401 C211.604316,40.9770654 164.563101,45.1027835 105.998777,45.1027835 C47.4344526,45.1027835 0,40.093459 0,22.1231337 L0,243.57818 Z" id="Path"></path>
+                    <path d="M105.802158,0 C47.3464658,0 1.42108547e-14,11.635 1.42108547e-14,26 C1.42108547e-14,40.365 47.3464658,52 105.802158,52 C164.257851,52 211.604316,40.365 211.604316,26 C211.604316,11.635 164.257851,0 105.802158,0" id="Path" fill-rule="nonzero"></path>
+                </g>
+                <text id="Fichier" font-family="Asap-SemiBoldItalic, Asap SemiBold" font-size="32" font-style="italic" font-weight="500" fill="#151A2D">
+                    <tspan x="84.692" y="30">Fichier</tspan>
+                </text>
+                <g id="elements" transform="translate(34.000000, 280.000000)">
+                    <g id="Group-2" transform="translate(4.000000, 4.000000)" fill="#EEEEFF">
+                        <rect id="Rectangle" x="0" y="0" width="40" height="40" rx="20"></rect>
+                        <rect id="Rectangle-Copy-14" x="-1.13686838e-13" y="43" width="40" height="40" rx="20"></rect>
+                        <rect id="Rectangle-Copy-27" x="-1.13686838e-13" y="86" width="40" height="40" rx="20"></rect>
+                        <rect id="Rectangle-Copy-33" x="-1.13686838e-13" y="129" width="40" height="40" rx="20"></rect>
+                        <rect id="Rectangle-Copy-9" x="86" y="0" width="40" height="40" rx="20"></rect>
+                        <rect id="Rectangle-Copy-21" x="86" y="43" width="40" height="40" rx="20"></rect>
+                        <rect id="Rectangle-Copy-28" x="86" y="86" width="40" height="40" rx="20"></rect>
+                        <rect id="Rectangle-Copy-34" x="86" y="129" width="40" height="40" rx="20"></rect>
+                        <rect id="Rectangle-Copy-6" x="43" y="0" width="40" height="40" rx="20"></rect>
+                        <rect id="Rectangle-Copy-24" x="43" y="43" width="40" height="40" rx="20"></rect>
+                        <rect id="Rectangle-Copy-31" x="43" y="86" width="40" height="40" rx="20"></rect>
+                        <rect id="Rectangle-Copy-35" x="43" y="129" width="40" height="40" rx="20"></rect>
+                        <rect id="Rectangle-Copy-13" x="129" y="0" width="40" height="40" rx="20"></rect>
+                        <rect id="Rectangle-Copy-26" x="129" y="43" width="40" height="40" rx="20"></rect>
+                        <rect id="Rectangle-Copy-32" x="129" y="86" width="40" height="40" rx="20"></rect>
+                        <rect id="Rectangle-Copy-36" x="129" y="129" width="40" height="40" rx="20"></rect>
+                    </g>
+                    <text id="1" font-family="Asap-Medium, Asap Medium" font-size="18.8" font-weight="normal" fill="#4F0599">
+                        <tspan x="18.971" y="31">1</tspan>
+                    </text>
+                    <text id="4" font-family="Asap-Medium, Asap Medium" font-size="18.8" font-weight="normal" fill="#4F0599">
+                        <tspan x="147.971" y="31">4</tspan>
+                    </text>
+                    <text id="7" font-family="Asap-Medium, Asap Medium" font-size="18.8" font-weight="normal" fill="#4F0599">
+                        <tspan x="104.971" y="74">7</tspan>
+                    </text>
+                    <text id="10" font-family="Asap-Medium, Asap Medium" font-size="18.8" font-weight="normal" fill="#4F0599">
+                        <tspan x="56.942" y="117">10</tspan>
+                    </text>
+                    <text id="14" font-family="Asap-Medium, Asap Medium" font-size="18.8" font-weight="normal" fill="#4F0599">
+                        <tspan x="56.942" y="160">14</tspan>
+                    </text>
+                    <text id="2" font-family="Asap-Medium, Asap Medium" font-size="18.8" font-weight="normal" fill="#4F0599">
+                        <tspan x="61.971" y="31">2</tspan>
+                    </text>
+                    <text id="5" font-family="Asap-Medium, Asap Medium" font-size="18.8" font-weight="normal" fill="#4F0599">
+                        <tspan x="18.971" y="74">5</tspan>
+                    </text>
+                    <text id="8" font-family="Asap-Medium, Asap Medium" font-size="18.8" font-weight="normal" fill="#4F0599">
+                        <tspan x="147.971" y="74">8</tspan>
+                    </text>
+                    <text id="11" font-family="Asap-Medium, Asap Medium" font-size="18.8" font-weight="normal" fill="#4F0599">
+                        <tspan x="99.942" y="117">11</tspan>
+                    </text>
+                    <text id="15" font-family="Asap-Medium, Asap Medium" font-size="18.8" font-weight="normal" fill="#4F0599">
+                        <tspan x="99.942" y="160">15</tspan>
+                    </text>
+                    <text id="3" font-family="Asap-Medium, Asap Medium" font-size="18.8" font-weight="normal" fill="#4F0599">
+                        <tspan x="104.971" y="31">3</tspan>
+                    </text>
+                    <text id="6" font-family="Asap-Medium, Asap Medium" font-size="18.8" font-weight="normal" fill="#4F0599">
+                        <tspan x="61.971" y="74">6</tspan>
+                    </text>
+                    <text id="9" font-family="Asap-Medium, Asap Medium" font-size="18.8" font-weight="normal" fill="#4F0599">
+                        <tspan x="18.971" y="117">9</tspan>
+                    </text>
+                    <text id="13" font-family="Asap-Medium, Asap Medium" font-size="18.8" font-weight="normal" fill="#4F0599">
+                        <tspan x="13.942" y="160">13</tspan>
+                    </text>
+                    <text id="12" font-family="Asap-Medium, Asap Medium" font-size="18.8" font-weight="normal" fill="#4F0599">
+                        <tspan x="142.942" y="117">12</tspan>
+                    </text>
+                    <text id="16" font-family="Asap-Medium, Asap Medium" font-size="18.8" font-weight="normal" fill="#4F0599">
+                        <tspan x="142.942" y="160">16</tspan>
+                    </text>
+                    <rect id="Rectangle-Copy-37" stroke="#4F0599" transform="translate(45.500000, 24.000000) rotate(-270.000000) translate(-45.500000, -24.000000) " x="21.5" y="-21.5" width="48" height="91" rx="23.5"></rect>
+                </g>
+                <text id="Data-Copy-2" font-family="Asap-Medium, Asap Medium" font-size="12" font-weight="normal" fill="#4F0599">
+                    <tspan x="66.238" y="274">Data</tspan>
+                </text>
+                <g id="Rectangle-Copy-2">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                    <use stroke="#3ED3B1" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-5"></use>
+                </g>
+                <text id="Fichier" font-family="Asap-Medium, Asap Medium" font-size="14" font-weight="normal" fill="#4A4F62">
+                    <tspan x="17.084" y="124">Fichier</tspan>
+                </text>
+                <g id="Rectangle-Copy-3">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-7"></use>
+                    <use stroke="#EF5774" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-7"></use>
+                </g>
+                <text id="Emplacement-/-Propri" font-family="Asap-Medium, Asap Medium" font-size="14" font-weight="normal" fill="#4A4F62">
+                    <tspan x="96.314" y="124">Emplacement / Propriété</tspan>
+                </text>
+                <path id="Line-3-Copy-2" d="M37.9948456,138.500027 C38.2402925,138.497496 38.4462535,138.672257 38.4909917,138.905058 L38.4999734,138.994846 L39.4536317,231.499698 L39.516,237.581 L43.0150269,231.20807 C43.1479205,230.966009 43.4518819,230.87751 43.6939436,231.010404 C43.9091097,231.128532 44.0029415,231.381824 43.9278013,231.606661 L43.8916101,231.689321 L39.474319,239.735285 C39.3023169,240.048582 38.8768813,240.078928 38.6572435,239.821589 L38.6027898,239.74427 L34.0205591,231.791084 C33.8827033,231.551814 33.9649161,231.246092 34.2041867,231.108237 C34.4168716,230.985698 34.6820608,231.037041 34.8351866,231.218011 L34.8870343,231.291864 L38.516,237.59 L38.4536848,231.510006 L37.5000266,139.005154 C37.4971799,138.729027 37.7187179,138.502873 37.9948456,138.500027 Z" fill="#3ED3B1" fill-rule="nonzero"></path>
+                <text id="Dossier-spécifique-d" font-family="Asap-Medium, Asap Medium" font-size="14" font-weight="normal" line-spacing="16" fill="#4A4F62">
+                    <tspan x="51.282" y="57">Dossier spécifique dans un </tspan>
+                    <tspan x="57.512" y="73">ordre logique déterminé</tspan>
+                </text>
+                <g id="Group-9" transform="translate(61.000000, 157.000000)">
+                    <line x1="62.5499983" y1="5.84999985" x2="109.349997" y2="21.1499994" id="Line-5" stroke="#DCE1EB" stroke-width="0.899999976" stroke-linecap="square"></line>
+                    <line x1="15.7499996" y1="5.84999985" x2="62.5499983" y2="21.1499994" id="Line-5-Copy" stroke="#DCE1EB" stroke-width="0.899999976" stroke-linecap="square" transform="translate(39.149999, 13.500000) scale(-1, 1) translate(-39.149999, -13.500000) "></line>
+                    <g id="Group-8" transform="translate(91.799998, 18.000000)">
+                        <line x1="17.5499995" y1="4.87499987" x2="2.24999994" y2="17.6249995" id="Line-12" stroke="#979797" stroke-width="0.899999976" stroke-linecap="square"></line>
+                        <line x1="17.5499995" y1="4.87499987" x2="32.8499991" y2="17.6249995" id="Line-14" stroke="#979797" stroke-width="0.899999976" stroke-linecap="square"></line>
+                        <line x1="17.5499995" y1="4.81153833" x2="17.5499995" y2="20.388461" id="Line-13" stroke="#979797" stroke-width="0.899999976" stroke-linecap="square"></line>
+                        <rect id="Rectangle-Copy-23" fill="#D8D8D8" x="0" y="15.2999996" width="7.19999981" height="7.19999981"></rect>
+                        <rect id="Rectangle-Copy-18" fill="#D8D8D8" x="13.4999996" y="0" width="7.19999981" height="7.19999981"></rect>
+                        <rect id="Rectangle-Copy-22" fill="#D8D8D8" x="14.3999996" y="15.2999996" width="7.19999981" height="7.19999981"></rect>
+                        <rect id="Rectangle-Copy-25" fill="#D8D8D8" x="28.7999992" y="15.2999996" width="7.19999981" height="7.19999981"></rect>
+                    </g>
+                    <g id="Group-8" transform="translate(91.799998, 18.000000)">
+                        <line x1="17.5499995" y1="4.87499987" x2="2.24999994" y2="17.6249995" id="Line-12" stroke="#DCE1EB" stroke-width="0.899999976" stroke-linecap="square"></line>
+                        <line x1="17.5499995" y1="4.87499987" x2="32.8499991" y2="17.6249995" id="Line-14" stroke="#DCE1EB" stroke-width="0.899999976" stroke-linecap="square"></line>
+                        <line x1="17.5499995" y1="4.81153833" x2="17.5499995" y2="20.388461" id="Line-13" stroke="#DCE1EB" stroke-width="0.899999976" stroke-linecap="square"></line>
+                        <rect id="Rectangle-Copy-23" fill="#B2B6C3" x="0" y="15.2999996" width="7.19999981" height="7.19999981"></rect>
+                        <rect id="Rectangle-Copy-18" fill="#B2B6C3" x="13.4999996" y="0" width="7.19999981" height="7.19999981"></rect>
+                        <rect id="Rectangle-Copy-22" fill="#B2B6C3" x="14.3999996" y="15.2999996" width="7.19999981" height="7.19999981"></rect>
+                        <rect id="Rectangle-Copy-25" fill="#B2B6C3" x="28.7999992" y="15.2999996" width="7.19999981" height="7.19999981"></rect>
+                    </g>
+                    <g id="Group-8-Copy" transform="translate(44.999999, 18.000000)">
+                        <line x1="17.5499995" y1="4.87499987" x2="2.24999994" y2="17.6249995" id="Line-12" stroke="#DCE1EB" stroke-width="0.899999976" stroke-linecap="square"></line>
+                        <line x1="17.5499995" y1="4.87499987" x2="32.8499991" y2="17.6249995" id="Line-14" stroke="#DCE1EB" stroke-width="0.899999976" stroke-linecap="square"></line>
+                        <line x1="17.5499995" y1="4.81153833" x2="17.5499995" y2="20.388461" id="Line-13" stroke="#DCE1EB" stroke-width="0.899999976" stroke-linecap="square"></line>
+                        <rect id="Rectangle-Copy-23" fill="#B2B6C3" x="0" y="15.2999996" width="7.19999981" height="7.19999981"></rect>
+                        <rect id="Rectangle-Copy-18" fill="#B2B6C3" x="13.4999996" y="0" width="7.19999981" height="7.19999981"></rect>
+                        <rect id="Rectangle-Copy-22" fill="#B2B6C3" x="14.3999996" y="15.2999996" width="7.19999981" height="7.19999981"></rect>
+                        <rect id="Rectangle-Copy-25" fill="#B2B6C3" x="28.7999992" y="15.2999996" width="7.19999981" height="7.19999981"></rect>
+                    </g>
+                    <g id="Group-8-Copy-2" transform="translate(0.000000, 18.000000)">
+                        <line x1="17.5499995" y1="4.87499987" x2="2.24999994" y2="17.6249995" id="Line-12" stroke="#DCE1EB" stroke-width="0.899999976" stroke-linecap="square"></line>
+                        <line x1="17.5499995" y1="4.87499987" x2="32.8499991" y2="17.6249995" id="Line-14" stroke="#DCE1EB" stroke-width="0.899999976" stroke-linecap="square"></line>
+                        <line x1="17.5499995" y1="4.81153833" x2="17.5499995" y2="20.388461" id="Line-13" stroke="#DCE1EB" stroke-width="0.899999976" stroke-linecap="square"></line>
+                        <rect id="Rectangle-Copy-23" fill="#B2B6C3" x="0" y="15.2999996" width="7.19999981" height="7.19999981"></rect>
+                        <rect id="Rectangle-Copy-18" fill="#B2B6C3" x="13.4999996" y="0" width="7.19999981" height="7.19999981"></rect>
+                        <rect id="Rectangle-Copy-22" fill="#B2B6C3" x="14.3999996" y="15.2999996" width="7.19999981" height="7.19999981"></rect>
+                        <rect id="Rectangle-Copy-25" fill="#B2B6C3" x="28.7999992" y="15.2999996" width="7.19999981" height="7.19999981"></rect>
+                    </g>
+                    <line x1="62.0999984" y1="7.19999981" x2="62.5499983" y2="21.1499994" id="Line-2" stroke="#DCE1EB" stroke-width="0.899999976" stroke-linecap="square" transform="translate(62.549998, 13.950000) rotate(1.847610) translate(-62.549998, -13.950000) "></line>
+                    <rect id="Rectangle" fill="#B2B6C3" x="58.4999985" y="0" width="7.19999981" height="7.19999981"></rect>
+                    <rect id="Rectangle-Copy-20" fill="#B2B6C3" transform="translate(62.099998, 21.599999) scale(-1, 1) translate(-62.099998, -21.599999) " x="58.4999985" y="17.9999995" width="7.19999981" height="7.19999981"></rect>
+                    <rect id="Rectangle-Copy-19" fill="#B2B6C3" x="13.4999996" y="17.9999995" width="7.19999981" height="7.19999981"></rect>
+                </g>
+                <path id="Line-3-Copy" d="M208.882134,138.176993 L208.935788,138.254869 L213.435788,146.254869 C213.57117,146.495548 213.48581,146.800406 213.245131,146.935788 C213.031194,147.056127 212.766548,147.002053 212.615296,146.819515 L212.564212,146.745131 L209,140.408 L209,239.0001 C209,239.276242 208.776142,239.5001 208.5,239.5001 C208.25454,239.5001 208.050392,239.323225 208.008056,239.089976 L208,239.0001 L208,140.408 L204.435788,146.745131 C204.315448,146.959067 204.061202,147.050283 203.837152,146.972829 L203.754869,146.935788 C203.540933,146.815448 203.449717,146.561202 203.527171,146.337152 L203.564212,146.254869 L208.064212,138.254869 C208.239435,137.943362 208.665161,137.917403 208.882134,138.176993 Z" fill="#EF5774" fill-rule="nonzero"></path>
+            </g>
+        </g>
+        <g id="Object" transform="translate(693.000000, 25.000000)">
+            <rect id="Rectangle-Copy-30" fill="#FAFAFB" x="0" y="0" width="297" height="547" rx="16"></rect>
+            <g id="Group" transform="translate(8.000000, 24.000000)">
+                <g id="Group-16" transform="translate(31.000000, 210.876866)" fill="#FFFFFF" stroke="#DCE1EB">
+                    <path d="M0,243.57818 C0,261.548505 47.4344526,287.123134 105.998777,287.123134 C164.563101,287.123134 212.393973,267.110638 211.997554,243.57818 L211.604316,23.0067401 C211.604316,40.9770654 164.563101,45.1027835 105.998777,45.1027835 C47.4344526,45.1027835 0,40.093459 0,22.1231337 L0,243.57818 Z" id="Path"></path>
+                    <path d="M105.802158,0 C47.3464658,0 1.42108547e-14,11.635 1.42108547e-14,26 C1.42108547e-14,40.365 47.3464658,52 105.802158,52 C164.257851,52 211.604316,40.365 211.604316,26 C211.604316,11.635 164.257851,0 105.802158,0" id="Path" fill-rule="nonzero"></path>
+                </g>
+                <text id="Objet" font-family="Asap-SemiBoldItalic, Asap SemiBold" font-size="32" font-style="italic" font-weight="500" fill="#151A2D">
+                    <tspan x="99.947996" y="30">Objet</tspan>
+                </text>
+                <g id="Group-3-Copy-2" transform="translate(36.000000, 273.000000)">
+                    <g id="Group-2">
+                        <g id="Group-Copy-2">
+                            <g id="Group-14" transform="translate(42.000000, 89.000000)" fill="#EEEEFF">
+                                <rect id="Rectangle-Copy-8" x="1.42108547e-13" y="-8.52651283e-14" width="27.3599976" height="27.3599976" rx="13.6799988"></rect>
+                            </g>
+                            <g id="Group-15-Copy" transform="translate(119.000000, 167.000000)" fill="#EEEEFF">
+                                <rect id="Rectangle-Copy-12" x="2.84217094e-14" y="-8.52651283e-14" width="27.3599976" height="27.3599976" rx="2.87999975"></rect>
+                            </g>
+                            <g id="Group-15-Copy-2" transform="translate(129.000000, 101.000000)" fill="#EEEEFF">
+                                <rect id="Rectangle-Copy-12" x="2.84217094e-14" y="-8.52651283e-14" width="27.3599976" height="27.3599976" rx="2.87999975"></rect>
+                            </g>
+                            <g id="Group-15-Copy-3" transform="translate(157.000000, 144.000000)" fill="#EEEEFF">
+                                <rect id="Rectangle-Copy-12" x="1.42108547e-13" y="-8.52651283e-14" width="27.3599976" height="27.3599976" rx="13.6799988"></rect>
+                            </g>
+                            <g id="Group-15-Copy-4" transform="translate(18.000000, 130.000000)" fill="#EEEEFF">
+                                <rect id="Rectangle-Copy-12" x="0" y="-8.52651283e-14" width="27.3599976" height="27.3599976" rx="2.87999975"></rect>
+                            </g>
+                            <g id="Group-15-Copy-5" transform="translate(88.000000, 130.000000)" fill="#EEEEFF">
+                                <rect id="Rectangle-Copy-12" x="1.42108547e-13" y="-8.52651283e-14" width="27.3599976" height="27.3599976" rx="13.6799988"></rect>
+                            </g>
+                            <g id="Group-6">
+                                <rect id="Rectangle-Copy-10" fill="#EEEEFF" x="158" y="34" width="27.3599976" height="27.3599976" rx="13.6799988"></rect>
+                                <rect id="Rectangle-Copy-7" fill="#EEEEFF" x="53" y="34" width="27.3599976" height="27.3599976" rx="2.87999975"></rect>
+                                <rect id="Rectangle-Copy-11" fill="#EEEEFF" x="18" y="22" width="27.3599976" height="27.3599976" rx="13.6799988"></rect>
+                                <text id="Données" font-family="Asap-Medium, Asap Medium" font-size="12" font-weight="normal" fill="#4F0599">
+                                    <tspan x="29.786" y="14">Données</tspan>
+                                </text>
+                                <text id="Méta-données" font-family="Asap-Medium, Asap Medium" font-size="12" font-weight="normal" fill="#4F0599">
+                                    <tspan x="109.032" y="14">Méta-données</tspan>
+                                </text>
+                                <path d="M101,-65 C120.882251,-65 137,-48.882251 137,-29 L137,101 C137,120.882251 120.882251,137 101,137 C81.117749,137 65,120.882251 65,101 L65,-29 C65,-48.882251 81.117749,-65 101,-65 Z" id="Rectangle-Copy-16" stroke="#4F0599" stroke-linejoin="round" stroke-dasharray="4" transform="translate(101.000000, 36.000000) rotate(-270.000000) translate(-101.000000, -36.000000) "></path>
+                                <rect id="Rectangle-Copy-16" stroke="#4F0599" transform="translate(53.500000, 42.000000) rotate(-270.000000) translate(-53.500000, -42.000000) " x="29.5" y="-3.5" width="48" height="91" rx="23.5"></rect>
+                                <rect id="Rectangle-Copy-17" stroke="#4F0599" transform="translate(148.500000, 42.000000) rotate(-270.000000) translate(-148.500000, -42.000000) " x="124.5" y="-3.5" width="48" height="91" rx="23.5"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <g id="Rectangle-Copy-4">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-10)" xlink:href="#path-9"></use>
+                    <use stroke="#3ED3B1" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-9"></use>
+                </g>
+                <text id="Données" font-family="Asap-Medium, Asap Medium" font-size="14" font-weight="normal" fill="#4A4F62">
+                    <tspan x="9.917" y="124">Données</tspan>
+                </text>
+                <g id="Rectangle-Copy-5">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-12)" xlink:href="#path-11"></use>
+                    <use stroke="#EF5774" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-11"></use>
+                </g>
+                <text id="Méta-données-/-ID-de" font-family="Asap-Medium, Asap Medium" font-size="14" font-weight="normal" fill="#4A4F62">
+                    <tspan x="93.692" y="124">Méta-données / ID de l’objet</tspan>
+                </text>
+                <text id="Scalable-et-géré-par" font-family="Asap-Medium, Asap Medium" font-size="14" font-weight="normal" fill="#4A4F62">
+                    <tspan x="89.604" y="57">Scalable et géré</tspan>
+                    <tspan x="83.101" y="73">par méta-données</tspan>
+                </text>
+                <polygon id="Triangle-Copy-3" fill="#EEEEFF" points="139 361 153 389 125 389"></polygon>
+                <polygon id="Triangle-Copy" fill="#EEEEFF" points="102 424 116 452 88 452"></polygon>
+                <polygon id="Triangle-Copy-2" fill="#EEEEFF" points="163 301 177 329 149 329"></polygon>
+                <path id="Line-3-Copy-3" d="M51.5,138 L51.5,237.591 L55.0642122,231.254869 L55.3093429,230.819082 L56.1809184,231.309343 L55.9357878,231.745131 L51.4357878,239.745131 L51,240.519864 L50.5642122,239.745131 L46.0642122,231.745131 L45.8190816,231.309343 L46.6906571,230.819082 L46.9357878,231.254869 L50.5,237.591 L50.5,138 L51.5,138 Z" fill="#3ED3B1" fill-rule="nonzero"></path>
+                <path id="Line-3-Copy-4" d="M223.5,137.480136 L223.935788,138.254869 L228.435788,146.254869 L228.680918,146.690657 L227.809343,147.180918 L227.564212,146.745131 L224,140.408 L224,239.5 L223,239.5 L223,140.408 L219.435788,146.745131 L219.190657,147.180918 L218.319082,146.690657 L218.564212,146.254869 L223.064212,138.254869 L223.5,137.480136 Z" fill="#EF5774" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>
