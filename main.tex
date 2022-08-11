@@ -18,6 +18,8 @@
 \usepackage[acronym,toc,nopostdot]{glossaries}
 \usepackage{fancyref}
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
 \setlength{\abovecaptionskip}{0pt plus 0pt minus 0pt}
 \pagestyle{fancy}
 
@@ -26,6 +28,7 @@
 \makeglossaries
 \setglossarystyle{listhypergroup}
 \loadglsentries{glossery}
+
 
 % Informations de la page de garde
 \title{Rapport de stage S10}
@@ -63,7 +66,7 @@
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[scale=0.8]{src/ed_logo.png}
+    \includegraphics[scale=0.8]{src/logo_ed.png}
     \label{fig:ed_logo}
 \end{figure}
 
@@ -86,7 +89,7 @@
 Je déclare m'y conformer dans le cadre de la rédaction de ce document. 
 Je déclare sur l'honneur que le contenu du présent mémoire est original et reflète mon travail personnel. 
 J'atteste que les citations sont correctement signalées par des guillemets et que les sources de tous les emprunts ponctuels à d'autres auteur(e)s, textuels ou non textuels, sont indiquées. 
-Le non-respect de cet engagement m'exposerait à des sanctions dont j'ai bien pris connaissance.} \\
+Le non-respect de cet engagement m'exposerait à des sanctions dont j'ai bien pris connaissance.}
 
 \textit{Fait à Angers le 11 février 2021.}
 
@@ -131,7 +134,7 @@ Dans une troisième partie, j'évoquerai les travaux de sécurité avec les thé
 Viendra en 4ème parties les divers travaux d'administrateur système. 
 Enfin, je conclurai par un bilan personnel. \\
 
-Ce rapport a été rédigé en \LaTeX à partir du template de M Woodward. 
+Ce rapport a été rédigé en \LaTeX  à partir du template de M Woodward. 
 Les liens internet, les liens vers des sections ou des acronymes et définition sont interractifs.
 Les ressources sont disponibles sur le dépôt GitHub \url{https://github.com/theprobleme/stagereportS10}.
 
@@ -160,7 +163,7 @@ Elle travaille dans la réalisation de solutions numériques responsables et sur
 \hfill
 \begin{minipage}{.3\textwidth}%
 \begin{center}
-    \includegraphics[scale=0.3]{src/ed_logo.png}
+    \includegraphics[scale=0.3]{src/logo_ed.png}
 \end{center}
 \end{minipage}%
 
@@ -204,7 +207,7 @@ Les informations liées à la vie de l’entreprise circulent en toute transpare
 \hfill
 \begin{minipage}{.3\textwidth}%
 \begin{center}
-    \includegraphics[scale=0.7]{src/scop.png}
+    \includegraphics[scale=0.7]{src/logo_scop.png}
 \end{center}
 \end{minipage}%
 
@@ -256,7 +259,7 @@ LUCIE est une certification qui prouve qu'une entreprise, un produit ou un servi
 \hfill
 \begin{minipage}{.3\textwidth}%
 \begin{center}
-\includegraphics[width=0.7\textwidth]{src/lucie.png}
+\includegraphics[width=0.7\textwidth]{src/logo_lucie.png}
 \end{center}
 \end{minipage}% \\
 
@@ -339,6 +342,54 @@ Cela tiens compte du développement, de l'hébergement, la documentation et les 
 Le pôle a une réunion hebdomadaire pour suivre l'avancement de divers sujets.
 
 \newpage
+\subsection{Gestion de projet}
+Deux outils sont très utilisés dans la gestion de projet chez Empreinte Digitale. \\
+
+\noindent%
+\begin{minipage}{.7\textwidth}%
+Redmine est une application web libre de gestion de projets.
+Elle est utilisée pour le ticketing en interne et avec les clients.
+Les clients possèdent des accès au Redmine et peuvent eux-même créer des tickets.
+L'outils permet également d'avoir une liste de contacts rattachés aux projets. \\
+\end{minipage}%
+\hfill
+\begin{minipage}{.3\textwidth}%
+\begin{center}
+\includegraphics[width=0.5\textwidth]{src/logo_redmine.jpeg}
+\end{center}
+\end{minipage}% \\
+
+Redmine à un rôle important dans l'exploitation car il sert pour deux autres aspects.
+
+Dans la comptabilitsation du temps, il n'y a pas de système de badgeuse par exemple.
+Le temps est calculé à partir de la saisie hebdomadaire de chaque employé.
+
+L'autre aspect important concerne la comptabilité.
+A partir du système de classification des tickets, la saisie de temps permet de sortir des analytiques comptables.
+Par exemple, sur un projet vendu en temps de développement, c'est avec Redmine que l'administratif sort les chiffres effectifs. \\
+
+\noindent%
+\begin{minipage}{.7\textwidth}%
+Mattermost est un logiciel libre de messagerie instantanée auto-hébergeable.
+Il est une altervative libre à Slack ou Microsoft Teams.
+Comme Redmine, certains clients possèdent des canaux Mattermost en plus de Redmine.
+Cela évite notamment de passer par les mails lors d'échanges répétés. \\
+\end{minipage}%
+\hfill
+\begin{minipage}{.3\textwidth}%
+\begin{center}
+\includegraphics[width=0.5\textwidth]{src/logo_mattermost.png}
+\end{center}
+\end{minipage}% \\
+
+Le vendredi en début d'après-midi, une réunion à lieu pour commencer à établir les tâches pour la semaine à venir.
+Cela permet d'avoir une première idée du volume horaire.
+Le lundi aprsè-midi, tout est validé pour le reste de la semaine.
+
+En tant que stagiaire, je n'avais pas toujours de tickets.
+Mes travaux étant souvent internes, je créais des tickets que je m'attribuais.
+
+\newpage
 \subsection{Sujet}
 \subsubsection{Contexte}
 Empreinte digitale développe son offre DATACENTER. 
@@ -386,7 +437,7 @@ Grâce à l'interface Web intégrée, nous pouvons facilement gérer les machine
 \hfill
 \begin{minipage}{.3\textwidth}%
 \begin{center}
-\includegraphics[width=0.5\textwidth]{src/proxmox.JPG}
+\includegraphics[width=0.5\textwidth]{src/logo_proxmox.JPG}
 \end{center}
 \end{minipage}% \\
 
@@ -399,7 +450,7 @@ Grâce à l'interface Web intégrée, nous pouvons facilement gérer les machine
 \end{minipage}%
 \hfill
 \begin{minipage}{.53\textwidth}%
-Proxmox possède 3 outils pour manipuler l'ensemble des ressources :
+Proxmox possède 3 outils pour manipuler l'ensemble des ressources:
  \begin{itemize}
      \item Un utilitaire en ligne de commande installé.
      \item Une API.
@@ -427,7 +478,7 @@ Dans des fichiers de configuration structurés, basé sur un système d'état, o
 \hfill
 \begin{minipage}{.3\textwidth}%
 \begin{center}
-\includegraphics[scale=0.5]{src/Terraform.png}
+\includegraphics[scale=0.5]{src/logo_terraform.png}
 \end{center}
 \end{minipage}%
 
@@ -481,7 +532,7 @@ Cela lui donne l'avantage de ne pas avoir besoin d'installer d'agents sur les ma
 \hfill
 \begin{minipage}{.2\textwidth}%
 \begin{center}
-\includegraphics[scale=0.3]{src/ansible.png}
+\includegraphics[scale=0.3]{src/logo_ansible.png}
 \end{center}
 \end{minipage}%
 
@@ -525,7 +576,7 @@ Mon sujet \textbf{Analyse et réalisation d'audits automatisés de l'infrastruct
 
 \begin{enumerate}
     \item \textbf{Analyse abstraite et bonnes pratiques}. J'ai réalisé une veille technologique sur les logiciels et outils utilisés par les administrateurs systèmes. 
-    De plus, j'ai pris le temps de me cultiver sur les sujets de sécurité avec les documentations et livres blanc de sécurité de l'ANSSI ainsi que les sites de conseils de sécurité sur Internet.
+    De plus, j'ai pris le temps de me cultiver sur les sujets de sécurité avec les documentations et livres blanc de sécurité de l'ANSSI ainsi que les sites de conseils de sécurité.
     \item \textbf{Analyse}. J'ai débuté une analyse de l'infrastructure en me basant sur les critères du référentiel secNumCloud de l'ANSSI. 
     Cette analyse n'était pas uniquement technique car parmi les critères de certification, de nombreux points concernent de la documentation.
     \item \textbf{Préconisations}. J'ai rédigé des documentations pour le pôle \gls{sysadmin} et l'ensemble des salariées : livre blanc de sécurité, PSSI (Plan de sécurité des systèmes d'information), etc.
@@ -533,7 +584,7 @@ Mon sujet \textbf{Analyse et réalisation d'audits automatisés de l'infrastruct
 \end{enumerate}
 
 A l'issue de mes travaux, j'ai rédigé un PSSI et un tableau de suivi d'audit de l'infrastructure. 
-Les deux documents sont composés de 16 thématiques présentés en annexe de ce document aux pages \pageref{tab:16thematiques1} et \pageref{tab:16thematiques2}.
+Les deux documents sont composés de 16 thématiques présentées en annexe de ce document aux pages \pageref{tab:16thematiques1} et \pageref{tab:16thematiques2}.
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=\textwidth]{src/table_example.png}
@@ -595,7 +646,7 @@ C'est-à-dire qu'un agent est installé sur l'ensemble des machines et celui-ci 
 Ensuite, l'application GLPI avec un plugin dédié à l'import des données d'OCSInventory va se connecter à OCSInventory et lire les données.
 Finalement, par une action manuelle à réaliser dans GLPI, je valide les imports.
 
-L'agent est paramétré avec un champ TAG pouvant être:
+J'ai défini la nomenclature suivante pour les TAGs:
 \begin{itemize}
     \item \textbf{ANG-ORD}: ordinateurs des salariés d'Angers.
     \item \textbf{ANG-DC}: serveurs physiques et machines virtuelles d'Angers.
@@ -606,18 +657,34 @@ L'agent est paramétré avec un champ TAG pouvant être:
 Une fois l'import fait, je peux dans GLPI visualiser les machines avec les TAGs associés. 
 Le TAG va alors permettre d'effectuer un trie lors de l'import. 
 Par exemple, les machines dont le TAG est \textit{REN} seront placées dans l'entité "Datacenter de Rennes".
-Lorsqu'un import est validé, GLPI écrit dans une base de données qui lui ait propre les informations.
+Lorsqu'un import est validé, GLPI écrit dans sa base de données les informations. \\
+
+\noindent%
+\begin{minipage}{.5\textwidth}%
+\begin{center}
+\includegraphics[width=\textwidth]{src/interface_ocsinventory.png} \\
+\end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}{.5\textwidth}%
+\begin{center}
+\includegraphics[width=\textwidth]{src/interface_glpi.png} \\
+\end{center}
+\end{minipage}% \\
 
 Une autre architecture aurait été possible en utilisant FusionInventory à la place d'OCSInventory. 
 L'avantage de FusionInventory est qu'il ne possède pas sa propre base de données. 
 Une fois les données récupérées, il les inscrit directement dans la base de données de GLPI. 
 Cette solution n'a pas été retenue car un serveur OCSInventory était déjà utilisé.
 
+\newpage
 \subsubsection{Serveur maitre}
 Le serveur maitre de d'OCSInventory est installé dans un conteneur dans le cluster Proxmox d'Angers.
 Je n'ai pas eu à installer cette partie, l'application existait déjà.
 
 J'ai installé GLPI avec Docker sur une machine dédié aux conteneurs.
+L'installation se fait avec docker-compose pour 3 services, mariadb, glpi et automysqlbackup.
+La partie réseau est gérée avec un routeur traefik.
 
 \subsubsection{Ajout d'un plugin}
 Par défaut, OCSInventory ne possède pas de plugin permettant d'inventorier les vhosts. 
@@ -629,21 +696,33 @@ Cela se fait pas un traitement du même résultat que pour les vhost.
 Ce script va dans un premier temps vérifier la présence ou non de la base de données \textit{vhost}.
 Si celle-ci existe déjà, il ne fait aucune action, sinon il créer la base de données.
 Ensuite, pour récupérer les vhosts des serveurs Nginx, les fichiers de configuration présents dans \\ \verb|/etc/nginx/sites-enabled| sont filtrés par une série de commandes Linux.
-Voici le résultat :
-\begin{verbatim}
+Voici le résultat:
+
+\begin{hilite}
+\line(1,0){\textwidth}
+    \begin{verbatim}
     grep -EhR 'server_name\\s' $dir | 
     sed 's/^.*server_name\\s\\+\\(.\\+\\)\\s*;/\\1/' |
     sort | uniq |
-\end{verbatim}
+    \end{verbatim}
+\line(1,0){\textwidth}
+\end{hilite}
+
 Enfin, pour récupérer les vhosts des conteneur dockers, cela se fait avec la commande docker et jquery (jq).
 La commande \verb|docker ps| permet de récupérer l'ensemble des identifiants de conteneurs, une boucle va ensuite effectuer un \verb|docker inspect| sur chacun des conteneurs puis la commande \verb|jq| va en sortir le vhost.
-Cela donne la commande :
-\begin{verbatim}
+Cela donne la commande:
+
+\begin{hilite}
+\line(1,0){\textwidth}
+    \begin{verbatim}
     docker inspect $1 | jq '.[0] |
     .Config.Labels | to_entries |
     .[] | select(.key | test(".*http.*rule")) |
     .value' | sed 's/.*`\(.*\)`.*/\1/' | uniq
-\end{verbatim}
+    \end{verbatim}
+\line(1,0){\textwidth}
+\end{hilite}
+
 
 Merci à Raphaël Poitevin qui avait largement entamé ce travail avant que je le reprenne.
 
@@ -828,7 +907,7 @@ Cette application permet de rédiger des documents en markdown depuis une interf
 \hfill
 \begin{minipage}{.3\textwidth}%
 \begin{center}
-\includegraphics[width=.6\textwidth]{src/wikijs.jpeg}
+\includegraphics[width=.6\textwidth]{src/logo_wikijs.jpeg}
 \end{center}
 \end{minipage}%
 
@@ -867,7 +946,7 @@ Cette suite logiciel est finalement une alternative libre et open-source à l'ut
 \hfill
 \begin{minipage}{.3\textwidth}%
 \begin{center}
-\includegraphics[width=0.5\textwidth]{src/nextcloud.jpeg}
+\includegraphics[width=0.5\textwidth]{src/logo_nextcloud.jpeg}
 \end{center}
 \end{minipage}% \\
 
@@ -1013,7 +1092,7 @@ Grâce à l'interface Web intégrée, nous pouvons facilement gérer les machine
 \hfill
 \begin{minipage}{.3\textwidth}%
 \begin{center}
-\includegraphics[width=0.5\textwidth]{src/proxmox.JPG}
+\includegraphics[width=0.5\textwidth]{src/logo_proxmox.jpg}
 \end{center}
 \end{minipage}% \\
 
@@ -1077,7 +1156,7 @@ L'objectif de Ceph est d'obtenir un stockage 100\% distribué sans point unique 
 \hfill
 \begin{minipage}{.3\textwidth}%
 \begin{center}
-\includegraphics[width=0.5\textwidth]{src/ceph.png}
+\includegraphics[width=0.5\textwidth]{src/logo_ceph.png}
 \end{center}
 \end{minipage}% \\
 
@@ -1171,7 +1250,7 @@ Pour des raisons de disponibilité, l'infrastructure du projet se trouve sur 3 s
 
 \newpage
 En voici un schéma:
-\begin{figure}
+\begin{figure}[!ht]
     \centering
         \includegraphics[width=\textwidth]{src/Dehon1.png}
     \caption{Infrastructure sur 3 sites physique du projet Dehon}
@@ -1264,43 +1343,267 @@ Pour cette partie je n'ai donc pas que paramétrer les paramètres que je connai
     \item kube\_apiserver\_ip: même valeur que le loadbalancer\_apiserver.
 \end{itemize}
 
-\subsubsection{Configuration des 2 haproxy}
+\subsubsection{Configuration des 2 Haproxy}
+La configuration des 2 proxys se fait avec un rôles Ansible.
+Le paramétrage des variables permet la génération des fichiers de configurations à partir de template Jinja.
+4 fichiers sont dédiés aux configurations de bases de l'Haproxy.
+Un autre fichier, qui est le plus important, contient les différentes configurations des frontend et backend.
+
+J'ai édité ce fichier de façon à qu'il se génère le fichier de configuration en fonction du nom du projet, des adresses IP autorisées etc.
+La présence de boucle dans le template Jinja permet d'auto-générer un ensemble de \verb|server| à partir de la liste des serveurs.
+C'est par exemple le cas pour les différents backend sur l'ensemble des master et runner.
 
 \subsubsection{Configuration de la VIP sur les proxy}
 Précédemment, le champ \verb|loadbalancer_apiserver| avait été paramétré sur l'adresse 10.2.11.100.
 Cela correspond à la VIP entre les 2 proxy.
-Graĉe à cette VIP (Virtual IP), nous n'avons plus de SPOF pour l'API Server.
+Graĉe à cette VIP (Virtual IP), nous n'avons plus de SPOF (Single Point Of Failure) pour l'API Server.
 Pour mettre en place cette VIP, j'ai utilisé un playbook Ansible qui permet d'installer KeepAlived.
 KeepAlived s'appuie sur le protocole VRRP (Virtual Router Redundancy Protocol) conçu pour gérer une adresse IP virtuelle entre plusieurs hôtes.
-Concrètement, c'est une adresse IP qui se balade entre les proxy.
+Concrètement, c'est une adresse IP qui se balade entre les 2 proxys.
 
 Après l'installation et la configuration de KeepAlived avec Ansible, l'interface réseau \verb|eth0| de \verb|dehon-k8s-pxy-1| possède 2 adresses: \verb|10.2.11.80| et \verb|10.2.11.100|.
 L'interface \verb|eth0| de \verb|dehon-k8s-pxy-2| ne possède que l'adresse \verb|10.2.11.81|.
-Si le service KeepAlived, Haproxy s'arrête, ou pire encore si une des machines s'arrête, alors la VIP \verb|10.2.11.100| bascule sur l'autre machine.
+Si le service KeepAlived ou Haproxy s'arrête, ou pire encore si une des machines s'arrête, alors la VIP \verb|10.2.11.100| bascule sur l'autre machine.
 
 On assure ainsi une redondance de l'accessibilité à l'API Server.
 
+\subsubsection{Stockage NFS externalisé}
+Ansible est à nouveau utilisé pour déployer le NFS sur la machine de storage.
+L'installation est basée sur l'utilisation du paquet apt \verb|nfs-kernel-server|.
+Le chemin d'export est également paramétré sur le point de montage \verb|/srv/nfs/shared|.
 
-\subsubsection{IngressController, Certmanager, namespace, rancher rke}
-\subsubsection{Stockage}
-\subsubsection{Autres éléments}
-Ex : mongo arbiter
+La machine possède un premier disque de 50G pour le système d'exploitation et un second pour le stockage de 2To.
+J'ai fais un point de montage \verb|/srv/nfs/shared| sur l'entierté du disque de stockage.
+
+La suite de la configuration se fait au niveau du cluster Kubernetes.
+Il faut déclarer une nouvelle StorageClass (sc) qui utilisera le serveur NFS.
+Pour cela, j'ai utilisé le provider "Helm" avec la ressource "kubernetes\_storage\_class".
+Les paramètres principaux à spécifier sont l'adresse du serveur et le chemin:
+\begin{verbatim}
+    parameters = {
+        server = "10.2.11.70"
+        share  = "/srv/nfs/shared"
+      }
+\end{verbatim}
+
+Le Physical Volume Claim (PVC) des applications utilisant la StorageClass (SC) nfs-csi sont alors montés sur le serveur NFS.
+A l'issue de cette installation, j'ai réalisé de performance des disques.
+Pour cela, j'ai utilisé les commandes \verb|hdparm| et \verb|fio|.
+
+\subsubsection{Les ressources Kubernetes}
+J'ai participé à l'installation de nombreuses ressources du Cluster Kubernetes.
+Toutes ces ressources on été installées avec le provider "Helm" de Terraform.
+
+Voici la liste de ces ressources:
+\paragraph{Ingress Controller}
+Ingress Controller nginx. Un Ingress est un composant Kubernetes qui permet de relier une URL à un service.
+Un IngressController est un composant qui permet de piloter l'implémentation de l'ensemble des Ingress.
+L'IngressController va gérer le traffic externe au cluster vers l'ensemble des PODS.
+
+L'image ci-dessous présente le fonctionenemnt de l'IngressController d'Nginx :
+
+\begin{figure}[!ht]
+    \centering
+        \includegraphics[width=\textwidth]{src/ic_nginx.png}
+    \caption{Schéma de l'IngressController Nginx provenant de la documentation Nginx}
+    \label{fig:ic_nginx}
+\end{figure}
+
+\paragraph{Cert Manager}
+Cert manager permet la centralisation des demandes certificats pour les différentes ressources du cluster Kubernetes.
+Cela simplifie l'option, le renouvelle et l'utilisation des certificats.
+
+\paragraph{Rancher}
+Rancher est une application qui permet de nombreuses choses dans un cluster Kubernetes: managements des ressources, droits utilisateurs, règles réseaux etc. 
+Rancher fournit une interface WEB optimale pour la gestion d'un cluster.
+
+\begin{figure}[!ht]
+    \centering
+        \includegraphics[width=\textwidth]{src/rancher_interface.png}
+    \caption{Interface Rancher de l'infrastructure Kubernetes du projet Dehon}
+    \label{fig:rancher_interface}
+\end{figure}
+
+Terraform m'a également permis de configurer les accès utilisateurs à l'application de Rancher ainsi que la création des namespaces (n) prod, qualif et test.
+
+\paragraph{Monitoring}
+Je n'ai pas travaillé sur la partie interface de monitoring.
+A titre indicatif, les solutions utilisées sont: Alertmanager, Grafana et Prometheus.
+
+\paragraph{Journaux de log}
+La gestion de l'ensemble des logs se fait avec Loki.
+Loki est un système d'agrégation de journaux inspité de Prometheus.
+Il est utilisé en combinaison de Grafana.
+
+\paragraph{Sauvegardes}
+La solution de backup retenue est Velero.
+C'est une solution de backup opensource dédié à Kubernetes.
+Cette solution permet le disaster recovery, la migration des données et leur protection.
+
+Pour externaliser les sauvegarde, j'ai utilisé minIO.
+MinIO est un serveur compatible S3 facile à mettre en oeuvre.
+Un serveur S3 est un serveur de stockage sous forme d'objet manipulable via HTTP.
+Ainsi, on intéragit avec les objets aves des requêtes PUT, GET, DELETE etc.
+
+\paragraph{Base de données MongoDB et MongoArbiter}
+Les applications utilisent une base de données MongoDB.
+J'ai travaillé sur l'installation et la configuration d'une partie.
+
+Il faut garder à l'esprit qu'en cas de désastre, l'applicatif doit basculer l'écritures des données d'une base de données présente sur le premier cluster vers une autres base sur le cluster de Backup.
+Ce mécanismes est pris en compte avec MongoDB avec un composant MongoArbiter.
+MongoArbiter permet de simplement de déclarer la base de données dans laquel l'applicatif doit écrire.
+
+Après l'installation de la machine virtuelle comme à son habitude avec Terraform, j'ai automatisé l'installation de l'Arbiter avec Terraform sur celle-ci.
+L'arbiter est dans une application docker.
+L'utilisation des commandes docker et docker-compose n'est pas prise en compte par défaut avec Ansible.
+Il est nécessaire dans un premier temps d'installer la commande \verb|pip| et les module \verb|docker| et \verb|docker-compose|.
+
+Avec ce module, j'ai créer une task Ansible qui lance la création d'un conteneur à partir de l'image \verb|killercentury/mongo-arbiter|.
+J'ai ajouté dans la section \verb|environnement| les identifiants de connexion à la base de données maître ainsi que son URL.
+
+\subsubsection{Bilan}
+Ce projet a été extrêment intéressant sur de nombreux point.
+Il a tout d'abord renforcer mes compétences dans l'utilisation d'Ansible et Terraform avec des besoins plus compliqués que ce que j'avais pu mettre en oeuvre précédemment.
+
+De plus, le projet portant sur Kubernetes, j'ai pu mettre oeuvre les compétences acquises en cours. 
+Cela m'a permis de renforcer mes compétences sur Kubernetes tout en les développants avec la découverte de nouveaux composants Kubernetes.
+J'ai vu la différence entre le cluster mis en place lors de cours et celui d'un cluster de production.
+Toujours lié à Kubernetes, cela m'a permis de découvrir les helm, kubespray, k9s etc.
+
+Du début à la fin, j'ai pu travaillé sur la mise en oeuvre de chaque étape d'une infrastructure: réseau, sécurité, supervision, sauvegarde, tests, redondance etc.
+J'ai observé tout le cheminement de pensé permettant de répondre à un besoin spécifique.
+
+
 
 \newpage
-\subsection{Actualisation et mise en oeuvre de la procédure d'arrivée}
+\subsection{Procédure d'arrivée}
 \subsubsection{Objectif}
-Formaliser le besoin afin de rendre l'arrivée d'une nouvelle personne plus fluide et simple
+L'arrivée d'une nouvelle personne au sein d'Empreinte Digitale nécessite l'installation et la configuration de nombreuses choses.
+Une procédure existait déjà précédemment mais elle n'allait pas suffisamment dans le détail et elle ne faisait pas la distinction entre une installation pour un développeur, un sysadmin ou quelqu'un qui travaillerait dans l'administratif.
+L'objectif est donc d'étoffé l'existant afin de rendre l'arrivé d'un nouvel employé plus fluide.
+
 \subsubsection{Description}
+Empreinte Digtiale utilise l'outil de Ticketing Redmine.
+Parmi les tickets, il existe un ticket de template pour les nouveaux arrivants.
+C'est ce ticket qui à pour objectif d'être modifié.
+
+La documentation en interne se trouve sur 2 Wiki.js.
+Le premier est à destination de l'ensemble des salariés et le second concerne uniquement les sysadmins.
+La nouvel documentation étant destiné uniquement aux sysadmins, celle-ci est sur le second wiki.js.
+
+Précédemment, lorsqu'un nouvel employer arrivait, c'était à lui de suivre la documentation interne pour installer les applications nécessaires.
+Aujourd'hui, lorsqu'un nouveau salarié arrive, tout est déjà prêt et il possède les accès minimum. 
+
 \subsubsection{Documentation}
+J'ai rédigé un ensemble de fichier Markdown pour la documentation. 
+Celle-ci comprend 13 sections dont certaines sont spécifique au rôle de l'employer dans l'entreprise.
+
+La première partie concern le matériel en fonction des besoins du nouveau salarié.
+En effet, en amont de son arrivé, le nouvel arrivant est contacté afin qu'il spécifie le matériel avec lequel il souhaite travailler: nombre d'écran, taille de PC, système d'exploitation etc.
+En fonction des stocks, on passe commande.
+
+Dans un second il y a la création de comptes mail, LDAP etc. et le paramétrage des droits.
+
+Enfin, il y a l'installation et le paramétrage de l'ensemble des applications sur la machines.
+Cela comprend une petite dizaine d'applications.
+
+Globalement, l'installation d'un nouveau poste prend 2H. 
+Je prenanis plus de temps que ça au départ car je rédigeais la documentation en parrallèle. 
+De plus, étant donné qu'il n'y avait pas de documentation existante, cela prenanit parfois du temps d'avoir les informations. 
+
 \subsubsection{Groupe de Travail Embarquement}
+Lorsqu'une problématique générale survient comme celle de la gestion des nouveaux arrivants, des groupes de travail (GT) se forment pour discuter et mettre en oeuvre une solution.
+Etant la personne en charge de l'installation des PCs pour les nouveaux arrivants, j'ai été ajouté au GT embarquement qui porte sur l'intégration et les prépratifs avant une nouvelle arrivée.
+Le groupe de travail était constitué d'un sysadmin (moi), une RH et trois développeurs.
+
+Celui-ci s'est conclu par l'ajout de nouvelles installations :
+\begin{itemize}
+    \item Pour les développeur: docker, docker-compose et un outils interne nommé pocker.
+    \item Pour l'ensemble des salariés: un logiciel de bookmarks partagés paramétrable dans Nextcloud.
+    Les bookmarks sont les favoris dans un navigateur. 
+    Ainsi, chaque membre du GT est chargé de complété les bookmarks propre à son domaine.
+    J'intègre alors dans l'installation d'un PC l'ajout des bookmarks dans le navigateur.
+\end{itemize}
+
+
 
 \newpage
-\subsubsection{Autres}
+\subsection{Autres}
 \paragraph{Commandes Linux}
+En 2ème année de cycle ingénieur, nous avons des cours d'administration des systèmes Linux.
+Lors de mon stage, je n'ai travaillé que sur des OS Linux.
+Cela m'a permis de développer mes compétences sur le domaine en apprennant de nombreux outils.
 
-\paragraph{Outils}
+Quelques commandes que je ne connaissais pas:
+\begin{itemize}
+    \item dig, nslookup: outils permettant le questionnement sur un lien vers un serveur DNS. 
+    \item dmesg: affiche les logs du "kernel ring buffer" = espace mémoire qui contient les messages du noyau.
+    \item smartctl: permet d'afficher des informations sur un disque dur. 
+    \item env: print les variables d'environnement du système.
+    \item dpkg-reconfigure: permet de reconfigurer un paquet déjà installé.
+    \item zfh: interpréteur de commandes, tout comme bash. 
+    Il fournit une interface entre l'utilisateur et le système.
+    \item brctl: permet de configurer les interfaces de bridges.
+    \item history: permet de récupérer l'historique des commandes utilisées.
+    \item arp-scan: utilise le protocole arp pour découvrir et marquer des hôtes IP sur le réseau local.
+    \item tcp-dump: analyseur de paquets en ligne de commande.
+    \item tmux: terminal multiplexeur.
+    \item time: affiche un résumé des ressources utilisées par le système
+    \item iptables-save: permet de faire un dump de l'ensemble des règles iptables
+    \item watch: permet d'exécuter une commande en affichant directement la sortie.
+    \item docker-compose down -v: stop tous les services, les retourneurs, les réseaux et les volumes.
+    \item blkid: affiche les informations sur les block devices de la machine.
+    \item fio: outils pour produire des écritures ou des processus d'entrées/sorties spécifié par l'utilisateur.
+    \item lsmod: afficher la liste des modules du noyau chargés en mémoire. 
+    \item etc\dots
+\end{itemize}
 
-\paragraph{Logiciels}
+Je tiens un fichier avec l'ensemble des commandes que je ne connais pas.
+J'y note la description et parfois des exemple ou contextes d'utilisation.
+
+
+\paragraph{Tmux}
+L'outil qui a totalement changé mon utilisation et on efficacité sur une console est Tmux.
+Tmux est un multiplexeur de terminal.
+C'est-à-dire que depuis une même fenêtre je peux avoir plusieurs terminals d'ouvert en même temps.
+Je peux agir sur le nom, la taille, le découpage etc.
+C'est un outil qui s'utilise uniquement avec des raccourcis clavier.
+Cela demande donc une période d'adaptation mais une fois maîtrisé le gain est considérable.
+
+\begin{figure}[!ht]
+    \centering
+        \includegraphics[width=\textwidth]{src/tmux.png}
+    \caption{Interface Tmux avec 3 fenêtre}
+    \label{fig:tmux}
+\end{figure}
+
+Un autre outil très utile tous les jours est l'interpréteur ZSH.
+C'est un interpréteur paramétrable avec beaucoup de fonctionnalité.
+Il est notamment intéressant dans l'utilisation de Git en terminal.
+
+\begin{figure}[!ht]
+    \centering
+        \includegraphics[width=\textwidth]{src/zsh.png}
+    \caption{Interface zsh dans un dossier Git}
+    \label{fig:zsh}
+\end{figure}
+
+\newpage
+\paragraph{K9s}
+
+Enfin, l'outils K9S est très pratique dans l'utilisation de Kubernetes.
+Il permet de facilement visualiser l'ensemble des informations d'un cluster et donne la possiblité d'agir dessus.
+On peut détruire, créer ou éditer des ressources directement depuis l'interface.
+
+Dans le cadre du projet Dehon, je n'ai pas eu à m'en servir souvent.
+Cependant, pour les tâches à venir, je sais que c'est un outils que pourrais être amener à utiliser quotidiennement.
+
+\begin{figure}[!ht]
+    \centering
+        \includegraphics[width=\textwidth]{src/k9s.png}
+    \caption{Visualisation des pods avec K9s}
+    \label{fig:k9s}
+\end{figure}
 
 
 \newpage
@@ -1423,13 +1726,13 @@ Formaliser le besoin afin de rendre l'arrivée d'une nouvelle personne plus flui
 \end{table}
 
 \newpage
-\subsection*{CV}
+\subsection{CV}
 \begin{center}
     \includegraphics[scale=0.9]{src/cv.png}
 \end{center}
 
 \newpage
-\subsection*{Planning détaillé de la période d'alternance}
+\subsection{Planning détaillé de la période d'alternance}
 \begin{table}[!ht]
 \newcolumntype{M}[1]{>{\raggedright}m{#1}}
 \center
@@ -1562,7 +1865,7 @@ Formaliser le besoin afin de rendre l'arrivée d'une nouvelle personne plus flui
 
 
 \newpage
-\subsection*{Planning détaillé de la période de stage}
+\subsection{Planning détaillé de la période de stage}
 \begin{table}[!ht]
 \newcolumntype{M}[1]{>{\raggedright}m{#1}}
 \center
@@ -1792,7 +2095,7 @@ Formaliser le besoin afin de rendre l'arrivée d'une nouvelle personne plus flui
 \end{table}
 
 \newpage
-\subsection*{Bibliographie}
+\subsection{Bibliographie}
 % Bibliography
 \bibliographystyle{unsrt}
 \nocite{*}
@@ -1800,15 +2103,15 @@ Formaliser le besoin afin de rendre l'arrivée d'une nouvelle personne plus flui
 
 
 \newpage
-\subsection*{Liste des figures}
+\subsection{Liste des figures}
 \listoffigures
 
 \newpage
-\subsection*{Liste des tables}
+\subsection{Liste des tables}
 \listoftables
 
 \newpage
-\subsection*{Acronymes et définition}
+\subsection{Acronymes et définition}
 L'ensemble des acronymes et définition du glossaires proviennent de Wikipédia.
 \glsaddall
 \printglossaries
