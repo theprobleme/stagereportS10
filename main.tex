@@ -16,19 +16,25 @@
 \usepackage{lscape}
 \usepackage{amssymb}
 \usepackage[acronym,toc,nopostdot]{glossaries}
+\usepackage[
+    backend=biber,
+    style=ieee,
+  ]{biblatex}
 \usepackage{fancyref}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{etoolbox}
 
 \setlength{\abovecaptionskip}{0pt plus 0pt minus 0pt}
 \pagestyle{fancy}
-
 
 % Import du glossaire
 \makeglossaries
 \setglossarystyle{listhypergroup}
 \loadglsentries{glossery}
 
+% Import bibliography
+\addbibresource{bibliography.bib}
 
 % Informations de la page de garde
 \title{Rapport de stage S10}
@@ -50,17 +56,25 @@
 \renewcommand{\listtablename}{}
 \renewcommand{\thebibliography}{}
 \renewcommand{\glossarysection}[2][]{}
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+\defbibheading{bibliography}[\refname]{}
+
+% Modifications pour les espaces de verbatim
+\makeatletter
+\preto{\@verbatim}{\topsep=0pt \partopsep=0pt }
+\makeatother
+\AtBeginEnvironment{verbatim}{\setlist[trivlist]{nolistsep}}
 
 % Page de de garde
 \maketitle
 \thispagestyle{empty}
 \begin{center}
 	\begin{tabular}{ m{5cm} m{11.5cm} }
-	\textbf{TYPE} : & \mbox{\ooalign{$\checkmark$\cr\hidewidth$\square$\hidewidth\cr}}  Stage de fin d'études (Stage ingénieur - S10) \\
-   \textbf{ENTREPRISE} :  & Empreinte digitale \\
-   \textbf{DATES} : & Du 31 janvier 2022 au 11 septembre 2022 \\
-   \textbf{SUJET MISSION} : & Analyse et réalisation d'audits automatisés de l'infrastructure \\
-   \textbf{TUTEUR ENTREPRISE} :  & Valentin Baraise et Yves-Gaël Cheny \\
+	\textbf{TYPE}: & \mbox{\ooalign{$\checkmark$\cr\hidewidth$\square$\hidewidth\cr}}  Stage de fin d'études (Stage ingénieur - S10) \\
+   \textbf{ENTREPRISE}:  & Empreinte digitale \\
+   \textbf{DATES}: & Du 31 janvier 2022 au 11 septembre 2022 \\
+   \textbf{SUJET MISSION}: & Analyse et réalisation d'audits automatisés de l'infrastructure \\
+   \textbf{TUTEUR ENTREPRISE}:  & Valentin Baraise et Yves-Gaël Cheny \\
  \end{tabular}
 \end{center}
 
@@ -72,10 +86,10 @@
 
 \begin{center}
 	\begin{tabular}{ m{5cm} m{11.5cm} }
-	\textbf{OPTION} : &  \mbox{\ooalign{$\checkmark$\cr\hidewidth$\square$\hidewidth\cr}} CSS  \\
-    \textbf{CONFIDENTIALITÉ} :  & Mon rapport est confidentiel niveau : \mbox{\ooalign{$\checkmark$\cr\hidewidth$\square$\hidewidth\cr}} 0 \\
-    \textbf{DOMAINE ENTREPRISE} : & \mbox{\ooalign{$\checkmark$\cr\hidewidth$\square$\hidewidth\cr}} Autres (précisez) : Développement d'applications, hébergement web, conformité RGPD, audit d'accessibilité. \\
-    \textbf{AUTRES POINTS} : &  $\square$ Stage à dominante \textbf{management} \\
+	\textbf{OPTION}: &  \mbox{\ooalign{$\checkmark$\cr\hidewidth$\square$\hidewidth\cr}} CSS  \\
+    \textbf{CONFIDENTIALITÉ}:  & Mon rapport est confidentiel niveau : \mbox{\ooalign{$\checkmark$\cr\hidewidth$\square$\hidewidth\cr}} 0 \\
+    \textbf{DOMAINE ENTREPRISE}: & \mbox{\ooalign{$\checkmark$\cr\hidewidth$\square$\hidewidth\cr}} Autres (précisez) : Développement d'applications, hébergement web, conformité RGPD, audit d'accessibilité. \\
+    \textbf{AUTRES POINTS}: &  $\square$ Stage à dominante \textbf{management} \\
                              &  $\square$ Stage à dominante \textbf{recherche} \\
                              & \mbox{\ooalign{$\checkmark$\cr\hidewidth$\square$\hidewidth\cr}} E5e effectuée sous Contrat Pro \\
                              &  \mbox{\ooalign{$\checkmark$\cr\hidewidth$\square$\hidewidth\cr}} Mon tuteur sera présent à ma soutenance \\
@@ -175,7 +189,7 @@ L'activité de l'entreprise se découpe en 5 axes :
 
 \textbf{Développement sur-mesure} : réalisation de logiciels répondant à un besoin métier.
 
-\textbf{Hébergement en cloud privé} : hébergement Web responsable en \gls{cloud privé} indépendant dans des datacenter en France. 
+\textbf{Hébergement en cloud privé} : hébergement Web responsable en \gls{cloud privé} indépendant dans des datacenters en France. 
 Les serveurs sont exclusivement gérés avec des technologies libres et open source, garantissant une indépendance d'entreprises tierces.
 
 \textbf{Accessibilité numérique} : audit de services numériques, formations et accompagnement dans la mise en place de démarche de mise en accessibilité des sites et services.
@@ -696,33 +710,48 @@ Cela se fait pas un traitement du même résultat que pour les vhost.
 Ce script va dans un premier temps vérifier la présence ou non de la base de données \textit{vhost}.
 Si celle-ci existe déjà, il ne fait aucune action, sinon il créer la base de données.
 Ensuite, pour récupérer les vhosts des serveurs Nginx, les fichiers de configuration présents dans \\ \verb|/etc/nginx/sites-enabled| sont filtrés par une série de commandes Linux.
-Voici le résultat:
 
-\begin{hilite}
-\line(1,0){\textwidth}
-    \begin{verbatim}
+Voici le résultat:
+\vspace{-1ex}
+\begin{code}
+\vspace{-1ex}
+\begin{center} 
+    \line(1,0){0.9\textwidth} 
+\end{center}
+\vspace{-1ex}
+\begin{verbatim}
     grep -EhR 'server_name\\s' $dir | 
     sed 's/^.*server_name\\s\\+\\(.\\+\\)\\s*;/\\1/' |
     sort | uniq |
-    \end{verbatim}
-\line(1,0){\textwidth}
-\end{hilite}
+\end{verbatim}
+    \vspace{-1ex}
+\begin{center} 
+    \line(1,0){0.9\textwidth} 
+\end{center}
+\end{code}
+
 
 Enfin, pour récupérer les vhosts des conteneur dockers, cela se fait avec la commande docker et jquery (jq).
 La commande \verb|docker ps| permet de récupérer l'ensemble des identifiants de conteneurs, une boucle va ensuite effectuer un \verb|docker inspect| sur chacun des conteneurs puis la commande \verb|jq| va en sortir le vhost.
+
 Cela donne la commande:
-
-\begin{hilite}
-\line(1,0){\textwidth}
-    \begin{verbatim}
-    docker inspect $1 | jq '.[0] |
-    .Config.Labels | to_entries |
-    .[] | select(.key | test(".*http.*rule")) |
-    .value' | sed 's/.*`\(.*\)`.*/\1/' | uniq
-    \end{verbatim}
-\line(1,0){\textwidth}
-\end{hilite}
-
+\vspace{-1ex}
+\begin{code}
+\vspace{-1ex}
+\begin{center} 
+    \line(1,0){0.9\textwidth} 
+\end{center}
+\vspace{-1ex}
+\begin{verbatim}
+    grep -EhR 'server_name\\s' $dir | 
+    sed 's/^.*server_name\\s\\+\\(.\\+\\)\\s*;/\\1/' |
+    sort | uniq |
+\end{verbatim}
+\vspace{-1ex}
+\begin{center} 
+    \line(1,0){0.9\textwidth} 
+\end{center}
+\end{code}
 
 Merci à Raphaël Poitevin qui avait largement entamé ce travail avant que je le reprenne.
 
@@ -748,15 +777,28 @@ Cependant, après avoir visualisé l'inventaire sous forme d'arborescence avec l
 J'ai corrigé ces erreurs petit à petit en me basant sur la représentation de l'inventaire sous forme de graphique.
 
 \paragraph{Rôle Ansible}
-Un rôle est découpé de la manière suivante :
+Un rôle est découpé de la manière suivante:
+\vspace{-1ex}
+\begin{code}
+\vspace{-1ex}
+\begin{center} 
+    \line(1,0){0.9\textwidth} 
+\end{center}
+\vspace{-1ex}
 \begin{verbatim}
-|-- ocsinventory-agent
-|   |-- /default            # Variables par défaut
-|   |-- /files              # Fichiers supplémentaires
-|   |-- /meta               # Nécessaire pour d'Ansible Galaxy
-|   |-- /tasks              # Ensemble des playbooks
-|   |-- /vars               # Fichier de variables supplémentaires
+    ocsinventory-agent/
+    |-- /default     # Variables par défaut
+    |-- /files       # Fichiers supplémentaires
+    |-- /meta        # Nécessaire à Ansible Galaxy
+    |-- /tasks       # Ensemble des playbooks
+    |-- /vars        # Variables supplémentaires
 \end{verbatim}
+\vspace{-1ex}
+\begin{center} 
+    \line(1,0){0.9\textwidth} 
+\end{center}
+\vspace{-1ex}
+\end{code}
 
 \begin{itemize}
     \item \textbf{Default} : variables pour le TAG, le nom des paquets, etc.
@@ -1006,24 +1048,53 @@ Finalement, à partir d'un template Jinja et d'Ansible, on génère un fichier \
 \subsubsection{Inventaire Ansible}
 Le paramétrage des variables pour le rôle et le vault est la première étape. 
 Ensuite, il faut mettre à jours l'inventaire Ansible du rôle. Dans le dépôt GitLab dans lequel se trouve le playbook générique, un dossier \verb|group_vars| permet de distinguer les différentes vaults.
-Par exemple :
+Par exemple:
+\vspace{-1ex}
+\begin{code}
+\vspace{-1ex}
+\begin{center} 
+    \line(1,0){0.9\textwidth} 
+\end{center}
+\vspace{-1ex}
 \begin{verbatim}
-|-- group_vars
-|   |-- aicla               # Vault du client aicla
-|   |   |-- vault.yaml
-|   |-- ed                  # Vault du client ed
-|       |--vault.yaml
+    |-- group_vars
+    |   |-- aicla               # Vault du client aicla
+    |   |   |-- vault.yaml
+    |   |-- ed                  # Vault du client ed
+    |       |--vault.yaml
 \end{verbatim}
+\vspace{-1ex}
+\begin{center} 
+    \line(1,0){0.9\textwidth} 
+\end{center}
+\vspace{-1ex}
+\end{code}
+
+
 
 Pour appliquer correctement le vault pour aicla et ed, il faut créer un groupe dans l'inventaire Ansible portant le même nom. 
-Le fichier \verb|host| contient :
+Le fichier \verb|host| contient:
+\vspace{-1ex}
+\begin{code}
+\vspace{-1ex}
+\begin{center} 
+    \line(1,0){0.9\textwidth} 
+\end{center}
+\vspace{-1ex}
 \begin{verbatim}
-[aicla]
-aicla-cloud-1 ansible_host=192.168.X.X
-
-[test]
-an-nextcloud-test ansible_host=192.168.X.X
+    [aicla]
+    aicla-cloud-1 ansible_host=192.168.X.X
+    
+    [test]
+    an-nextcloud-test ansible_host=192.168.X.X
 \end{verbatim}
+\vspace{-1ex}
+\begin{center} 
+    \line(1,0){0.9\textwidth} 
+\end{center}
+\vspace{-1ex}
+\end{code}
+
 
 Il faut comprendre que le groupe \verb|aicla| possède une machine nommée \verb|aicla-cloud-1| dont l'adresse IP est \verb|192.168.X.X|. 
 Ce groupe possède des variables de groupe, d'où le nom \verb|group_vars|, spécifié dans le fichier \verb|group_vars/vault.yaml|.
@@ -1379,12 +1450,27 @@ La suite de la configuration se fait au niveau du cluster Kubernetes.
 Il faut déclarer une nouvelle StorageClass (sc) qui utilisera le serveur NFS.
 Pour cela, j'ai utilisé le provider "Helm" avec la ressource "kubernetes\_storage\_class".
 Les paramètres principaux à spécifier sont l'adresse du serveur et le chemin:
+\vspace{-1ex}
+\begin{code}
+\vspace{-1ex}
+\begin{center} 
+    \line(1,0){0.9\textwidth} 
+\end{center}
+\vspace{-1ex}
 \begin{verbatim}
     parameters = {
         server = "10.2.11.70"
         share  = "/srv/nfs/shared"
       }
 \end{verbatim}
+\vspace{-1ex}
+\begin{center} 
+    \line(1,0){0.9\textwidth} 
+\end{center}
+\vspace{-1ex}
+\end{code}
+
+
 
 Le Physical Volume Claim (PVC) des applications utilisant la StorageClass (SC) nfs-csi sont alors montés sur le serveur NFS.
 A l'issue de cette installation, j'ai réalisé de performance des disques.
@@ -1460,6 +1546,15 @@ Il est nécessaire dans un premier temps d'installer la commande \verb|pip| et l
 
 Avec ce module, j'ai créer une task Ansible qui lance la création d'un conteneur à partir de l'image \verb|killercentury/mongo-arbiter|.
 J'ai ajouté dans la section \verb|environnement| les identifiants de connexion à la base de données maître ainsi que son URL.
+
+\newpage
+\subsubsection{Schéma de le partie applicative}
+\begin{figure}[!ht]
+    \centering
+        \includegraphics[width=\textwidth]{src/graph_dehon.png}
+    \caption{Cluster Kubernetes de dehon sur virt2-prd-pmx}
+    \label{fig:graph_dehon}
+\end{figure}
 
 \subsubsection{Bilan}
 Ce projet a été extrêment intéressant sur de nombreux point.
@@ -1605,6 +1700,8 @@ Cependant, pour les tâches à venir, je sais que c'est un outils que pourrais �
     \label{fig:k9s}
 \end{figure}
 
+\paragraph{vim}
+La prochaine étape est d'apprendre à utiliser pleinement vim.
 
 \newpage
 \subsection{Bilan}
@@ -2096,12 +2193,8 @@ Cependant, pour les tâches à venir, je sais que c'est un outils que pourrais �
 
 \newpage
 \subsection{Bibliographie}
-% Bibliography
-\bibliographystyle{unsrt}
 \nocite{*}
-\bibliography{bibliography}
-
-
+\printbibliography
 \newpage
 \subsection{Liste des figures}
 \listoffigures
