@@ -2,37 +2,43 @@
 \newglossaryentry{ANSSI}
 {
     name=ANSSI,
-    description={Agence nationale de la sécurité des systèmes d'information}
+    description={Agence Nationale de la Sécurité des Systèmes d'Information. Organisme Français expert dans le domaine de la sécurité}
 }
 
 \newglossaryentry{API}
 {
     name=API,
-    description={Une API (application programming interface ou « interface de programmation d'application ») est une interface logicielle qui permet de « connecter » un logiciel ou un service à un autre logiciel ou service afin d'échanger des données et des fonctionnalités.}
+    description={Application Programming interface. Interface logicielle qui permet de « connecter » un logiciel ou un service à un autre logiciel ou service afin d'échanger des données et des fonctionnalités.}
 }
 
 \newglossaryentry{Apache}
 {
     name=Apache,
-    description={Le logiciel libre Apache HTTP Server est un serveur HTTP créé et maintenu au sein de la fondation Apache}
+    description={Serveur HTTP libre créé et maintenu au sein de la fondation Apache}
 }
 
 \newglossaryentry{Alma}
 {
     name=Alma,
-    description={AlmaLinux est une distribution Linux gratuite et open source, créée à l'origine par CloudLinux pour fournir un système d'exploitation d'entreprise de niveau production soutenu par la communauté et compatible binaire avec Red Hat Enterprise Linux}
+    description={Distrubtion Linux. Système d'exploitation d'entreprise de niveau production soutenu par la communauté et compatible binaire avec Red Hat Enterprise Linux}
 }
 
 \newglossaryentry{Ansible CMDB}
 {
     name=Ansible CMDB,
-    description={Ansible est une plate-forme logicielle libre pour la configuration et la gestion des ordinateurs. Il permet notamment de récupéré les informations des machines et d'en faire une synthèse dans une page web. C'est ce à quoi sert Ansible CMDB}
+    description={Ansible est une plateforme logicielle libre pour la configuration et la gestion des ordinateurs. Il permet notamment de récupéré les informations des machines et d'en faire une synthèse dans une page web}
 }
 \newglossaryentry{Ansible}
 {
     name=Ansible,
-    description={Ansible est une plate-forme logicielle libre pour la configuration et la gestion des ordinateurs}
+    description={Ansible est une plateforme logicielle libre pour la configuration et la gestion des ordinateurs}
 }
+\newglossaryentry{apt}
+{
+    name=apt,
+    description={Advanced Packaging Tool. Gestionnaire de paquets utilisé par Debian et ses dérivés}
+}
+
 % BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 
 \newglossaryentry{backups}
@@ -69,13 +75,19 @@
 \newglossaryentry{CNI}
 {
     name=CNI,
-    description={CNI signifie Container Network Interface. De façon simplifier, les conteneurs dans un cluster Kubernetes ont besoin d'un réseau pour communiquer entre eux. C'est le rôle du CNI. Il existe de nombreux CNI disponibles pour Kubernetes}
+    description={Container Network Interface. De façon simplifier, les conteneurs dans un cluster Kubernetes ont besoin d'un réseau pour communiquer entre eux. C'est le rôle du CNI. Il existe de nombreux CNI disponibles pour Kubernetes}
 }
 
 \newglossaryentry{Calico}
 {
     name=Calico,
-    description={Calico est un nombreux CNI disponibles pour Kubernetes}
+    description={Calico est un des nombreux CNI disponibles pour Kubernetes}
+}
+
+\newglossaryentry{CLI}
+{
+    name=CLI,
+    description={Command Line Interface. Interface en ligne de commande}
 }
 
 \newglossaryentry{cloud privé}
@@ -87,7 +99,7 @@
 \newglossaryentry{cluster}
 {
     name=Cluster,
-    description={Groupe de serveurs et d’autres ressources qui agissent comme un système unique et permettent une haute disponibilité}
+    description={Groupement de serveurs et d’autres ressources qui agissent comme un système unique et permettent une haute disponibilité}
 }
 
 \newglossaryentry{Ceph}
@@ -98,7 +110,7 @@
 \newglossaryentry{CentOS}
 {
     name=CentOS,
-    description={CentOS est une distribution GNU/Linux destinée aux serveurs}
+    description={Distribution Linux. CentOS est une distribution GNU/Linux destinée aux serveurs}
 }
 \newglossaryentry{Collabora}
 {
@@ -120,21 +132,19 @@
 \newglossaryentry{DHCP}
 {
     name=DHCP,
-    description={Dynamic Host Configuration Protocol est un protocole réseau dont le rôle est d’assurer la configuration automatique des paramètres IP d’une station ou d'une machine, notamment en lui attribuant automatiquement une adresse IP et un masque de sous-réseau}
+    description={Dynamic Host Configuration Protocol. Protocole réseau dont le rôle est d’assurer la configuration automatique des paramètres IP d’une station ou d'une machine, notamment en lui attribuant automatiquement une adresse IP et un masque de sous-réseau}
 }
 % DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
 \newglossaryentry{DNS}
 {
     name=DNS,
-    description={Le Domain Name System ou DNS est un service informatique distribué utilisé qui traduit les noms de domaine Internet en adresse IP ou autres enregistrements}
+    description={Domain Name System. Service informatique distribué utilisé qui traduit les noms de domaine Internet en adresse IP ou autres enregistrements}
 }
-
 \newglossaryentry{DPO}
 {
     name=DPO,
-    description={Délégué à la protection des données. En droit européen, le Délégué à la protection des données est la personne chargée de la protection des données personnelles au sein d'une organisation}
+    description={Délégué à la Protection des Données. En droit européen, le Délégué à la protection des données est la personne chargée de la protection des données personnelles au sein d'une organisation}
 }
-
 \newglossaryentry{Debian}
 {
     name=Debian,
@@ -148,7 +158,7 @@
 \newglossaryentry{Docker}
 {
     name=Docker,
-    description={Docker est une plate-forme permettant de lancer certaines applications dans des conteneurs logiciels}
+    description={Docker est une plateforme permettant de lancer certaines applications dans des conteneurs logiciels}
 }
 
 % EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
@@ -159,64 +169,101 @@
 }
 
 % FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+\newglossaryentry{FileSystem}
+{
+    name=Système de fichiers,
+    description={Organisation des fichiers au sein d'un volume physique ou logique, qui peut être de différents types, et qui a également une racine mais peut en avoir plusieurs}
+}
+
 \newglossaryentry{Framemo}
 {
     name=Framemo,
-    description={Application de tableau blanc avec des colonnnes pour y déposer des postits}
+    description={Application de tableau blanc avec des colonnes pour y déposer des postits}
 }
-
-
 % GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
 \newglossaryentry{GLPI}
 {
     name=GLPI,
-    description={GLPI est un logiciel libre de gestion des services informatiques et de gestion des services d'assistance. Cette solution libre est éditée en PHP et distribuée sous licence GPL. En tant que technologie libre, toute personne peut exécuter, modifier ou développer le code qui est libre}
+    description={Gestionnaire Libre de Parc Informatique. Logiciel libre de gestion des services informatiques et de gestion des services d'assistance. Cette solution libre est éditée en PHP et distribuée sous licence GPL. En tant que technologie libre, toute personne peut exécuter, modifier ou développer le code qui est libre}
+}
+\newglossaryentry{GitLab}
+{
+    name=GitLab,
+    description={GitLab est un logiciel libre de forge basé sur git proposant les fonctionnalités de wiki, un système de suivi des bugs, l’intégration continue et la livraison continue}
 }
 
 % HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+\newglossaryentry{HDD}
+{
+    name=HDD,
+    description={Hard Disk Drive. Mémoire de masse à disque tournant magnétique utilisée principalement dans les ordinateurs}
+}
+\newglossaryentry{Helm}
+{
+    name=Helm,
+    description={Helm est un outil d'empaquetage open source qui vous aide à installer et à gérer le cycle de vie d'applications Kubernetes}
+}
 \newglossaryentry{Haproxy}
 {
     name=Haproxy,
-    description={HAProxy est un logiciel gratuit et open source qui fournit un équilibreur de charge haute disponibilité et un proxy inverse pour les applications TCP et HTTP qui répartissent les requêtes sur plusieurs serveurs}
+    description={High Availability Proxy. Logiciel gratuit et open source qui fournit un équilibreur de charge haute disponibilité et un proxy inverse pour les applications TCP et HTTP qui répartissent les requêtes sur plusieurs serveurs}
 }
 
 \newglossaryentry{HTTP}
 {
     name=HTTP,
-    description={L’Hypertext Transfer Protocol, généralement abrégé HTTP, littéralement « protocole de transfert hypertexte », est un protocole de communication client-serveur}
+    description={Hypertext Transfer Protocol. Protocole de communication client-serveur}
 }
 
 \newglossaryentry{HTTPS}
 {
     name=HTTPS,
-    description={L'HyperText Transfer Protocol Secure est la combinaison du HTTP avec une couche de chiffrement comme SSL ou TLS. HTTPS permet au visiteur de vérifier l'identité du site web auquel il accède, grâce à un certificat d'authentification émis par une autorité tierce, réputée fiable}
+    description={HyperText Transfer Protocol Secure. Combinaison du HTTP avec une couche de chiffrement comme SSL ou TLS. HTTPS permet au visiteur de vérifier l'identité du site web auquel il accède, grâce à un certificat d'authentification émis par une autorité tierce, réputée fiable}
 }
 
 \newglossaryentry{HTML}
 {
     name=HTML,
-    description={Le HyperText Markup Language, généralement abrégé HTML ou, dans sa dernière version, HTML5, est le langage de balisage conçu pour représenter les pages web}
+    description={HyperText Markup Language. Langage de balisage conçu pour représenter les pages web}
 }
 % IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 \newglossaryentry{IPsec}
 {
     name=IPsec,
-    description={Internet Protocol Security .Regroupe un ensemble de protocoles, qui utilisent des algorithmes destinés à transporter des données sur un réseau de façon sécurisée}
+    description={Internet Protocol Security. Regroupe un ensemble de protocoles, qui utilisent des algorithmes destinés à transporter des données sur un réseau de façon sécurisée}
 }
 
 \newglossaryentry{IP}
 {
     name=IP,
-    description={Une adresse IP est un numéro d'identification qui est attribué de façon permanente ou provisoire à chaque périphérique relié à un réseau informatique qui utilise l'Internet Protocol. L'adresse IP est à la base du système d'acheminement des paquets de données sur Internet}
+    description={Internal Protocole. Numéro d'identification qui est attribué de façon permanente ou provisoire à chaque périphérique relié à un réseau informatique qui utilise l'Internet Protocol. L'adresse IP est à la base du système d'acheminement des paquets de données sur Internet}
 }
 
+\newglossaryentry{IaC}
+{
+    name=IaC,
+    description={Infrastructure as Code. Consiste à gérer et à approvisionner une infrastructure à l'aide de code}
+}
+\newglossaryentry{ISO}
+{
+    name=ISO,
+    description={Optical disc image. Image de disque qui contient tout ce qui serait écrit sur un disque optique, secteur de disque par secteur de disque, y compris le système de fichiers du disque optique}
+}
+
+
 % JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
+\newglossaryentry{Jinja}
+{
+    name=Jinja,
+    description={Jinja est un moteur de templates pour le langage de programmation Python. Il aurait inspiré Twig, moteur de template PHP}
+}
+
 
 % KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
 \newglossaryentry{Kubernetes}
 {
     name=Kubernetes,
-    description={Kubernetes est un système open source qui vise à fournir une « plate-forme permettant d'automatiser le déploiement, la montée en charge et la mise en œuvre de conteneurs d'application sur des clusters de serveurs »}
+    description={Kubernetes est un système open source qui vise à fournir une « plateforme permettant d'automatiser le déploiement, la montée en charge et la mise en œuvre de conteneurs d'application sur des clusters de serveurs »}
 }
 
 \newglossaryentry{Kubespray}
@@ -229,65 +276,79 @@
 \newglossaryentry{LAMP}
 {
     name=LAMP,
-    description={LAMP est un acronyme désignant un ensemble de logiciels libres permettant de construire des serveurs de sites web. Linux Apache Mysql Mariadb}
+    description={Linux Apache MySQL Php. LAMP est un acronyme désignant un ensemble de logiciels libres permettant de construire des serveurs de sites web. Linux Apache Mysql Mariadb}
 }
 
 \newglossaryentry{LDAP}
 {
     name=LDAP,
-    description={Lightweight Directory Access Protocol est un protocole permettant l'interrogation et la modification des services d'annuaire électronique.}
+    description={Lightweight Directory Access Protocol. Protocole permettant l'interrogation et la modification des services d'annuaire électronique.}
 }
 
 \newglossaryentry{Linux}
 {
     name=Linux,
-    description={Linux ou GNU/Linux est une famille de systèmes d'exploitation open source de type Unix fondé sur le noyau Linux, créé en 1991 par Linus Torvalds}
+    description={Famille de systèmes d'exploitation open source de type Unix fondé sur le noyau Linux, créé en 1991 par Linus Torvalds}
 }
 \newglossaryentry{LimeSurvey}
 {
     name=LimeSurvey,
-    description={LimeSurvey est un logiciel d'enquête statistique, de sondage, et de création de formulaires en ligne}
+    description={Logiciel d'enquête statistique, de sondage, et de création de formulaires en ligne}
 }
 % MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+\newglossaryentry{Microsoft Teams}
+{
+    name=Microsoft Teams,
+    description={Microsoft Teams est une application de communication collaborative propriétaire en mode SaaS officiellement lancée par Microsoft en novembre 2016}
+}
 \newglossaryentry{Matomo}
 {
     name=Matomo,
-    description={Matomo, anciennement Piwik jusqu’au début de 2018, est un logiciel libre et open source de mesure de statistiques web, successeur de PhpMyVisites et conçu pour être une alternative libre à Google Analytics}
+    description={Logiciel libre et open source de mesure de statistiques web, successeur de PhpMyVisites et conçu pour être une alternative libre à Google Analytics}
+}
+\newglossaryentry{Markdown}
+{
+    name=Markdown,
+    description={Langage de balisage léger. Il a été créé dans le but d'offrir une syntaxe facile à lire et à écrire. Un document balisé par Markdown peut être lu en l'état sans donner l’impression d'avoir été balisé ou formaté par des instructions particulières.}
 }
 \newglossaryentry{Master/Slave}
 {
     name=Master/Slave,
-    description={Le principe de Master/Slave consiste à avoir 2 logiciels ou base de données interdépendant. Dans l'idée, une modification apportée au Master sera par la suite automatiquement appliquée au Slave.}
+    description={Le principe de Master/Slave consiste à avoir deyx logiciels ou base de données interdépendant. Dans l'idée, une modification apportée au Master sera par la suite automatiquement appliquée au Slave.}
 }
 
 \newglossaryentry{Mariadb}
 {
     name=Mariadb,
-    description={MariaDB est un système de gestion de base de données édité sous licence GPL. Il s'agit d'un embranchement communautaire de MySQL : la gouvernance du projet est assurée par la fondation MariaDB, et sa maintenance par la société Monty Program AB, créateur du projet}
+    description={Système de gestion de base de données édité sous licence GPL. Il s'agit d'un embranchement communautaire de MySQL : la gouvernance du projet est assurée par la fondation MariaDB, et sa maintenance par la société Monty Program AB, créateur du projet}
 }
 
 
 \newglossaryentry{Mattermost}
 {
     name=Mattermost,
-    description={Mattermost est un logiciel et un service de messagerie instantanée libre auto-hébergeable. Il est conçu comme un chat interne pour les organisations et les entreprises, et il est présenté comme une alternative à Slack et Microsoft Teams}
+    description={Logiciel et un service de messagerie instantanée libre auto-hébergeable. Il est conçu comme un chat interne pour les organisations et les entreprises, et il est présenté comme une alternative à Slack et Microsoft Teams}
 }
 \newglossaryentry{Moodle}
 {
     name=Moodle,
-    description={Moodle est une plate-forme d'apprentissage en ligne libre distribuée sous la Licence publique générale GNU écrite en PHP. Développée à partir de principes pédagogiques, elle permet de créer des communautés s'instruisant autour de contenus et d'activités}
+    description={Plateforme d'apprentissage en ligne libre distribuée sous la Licence publique générale GNU écrite en PHP. Développée à partir de principes pédagogiques, elle permet de créer des communautés s'instruisant autour de contenus et d'activités}
 }
 % NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
-
+\newglossaryentry{NFS}
+{
+    name=NFS,
+    description={Network File System. Protocole permettant d'accéder à des fichiers via un réseau}
+}
 \newglossaryentry{Nginx}
 {
     name=Nginx,
-    description={Nginx est un logiciel libre de serveur Web ainsi qu'un proxy inverse}
+    description={Logiciel libre de serveur Web ainsi qu'un proxy inverse}
 }
 \newglossaryentry{Nextcloud}
 {
     name=Nextcloud,
-    description={Nextcloud est un logiciel libre de site d'hébergement de fichiers et une plate-forme de collaboration}
+    description={Logiciel libre de site d'hébergement de fichiers et une plateforme de collaboration}
 }
 \newglossaryentry{NocoDB}
 {
@@ -299,13 +360,13 @@
 \newglossaryentry{openvas}
 {
     name=Openvas,
-    description={OpenVAS, est un fork sous licence GNU GPL du scanner de vulnérabilité Nessus dont le but est de permettre un développement libre de l’outil qui est maintenant sous licence propriétaire}
+    description={Scanner de vulnérabilité Nessus dont le but est de permettre un développement libre de l’outil qui est maintenant sous licence propriétaire}
 }
 
 \newglossaryentry{OpenSCAP}
 {
     name=OpenSCAP,
-    description={OpenSCAP fournit plusieurs outils pour aider les administrateurs et les auditeurs à évaluer, mesurer et appliquer les lignes de base de sécurité}
+    description={Outils pour aider les administrateurs et les auditeurs à évaluer, mesurer et appliquer les lignes de base de sécurité}
 }
 
 \newglossaryentry{OSD}
@@ -317,11 +378,21 @@
 \newglossaryentry{OCSInventory}
 {
     name=OCSInventory,
-    description={OCS Inventory NG soit Open Computer and Software Inventory est une application permettant de réaliser un inventaire sur la configuration matérielle des machines du réseau, sur les logiciels qui y sont installés et de visualiser ces informations grâce à une interface web}
+    description={Open Computer and Software Inventory. Application permettant de réaliser un inventaire sur la configuration matérielle des machines du réseau, sur les logiciels qui y sont installés et de visualiser ces informations grâce à une interface web}
 }
 
-
 % PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP
+\newglossaryentry{PWA}
+{
+    name=PWA,
+    description={Une progressive web app est une application web qui consiste en des pages ou des sites web, et qui peuvent apparaître à l'utilisateur de la même manière que les applications natives ou les applications mobiles}
+}
+
+\newglossaryentry{PAS}
+{
+    name=PAS,
+    description={Plan d'Assurance Sécurité a pour but de préciser comment les prestataires se conforment aux exigences de cybersécurité}
+}
 
 \newglossaryentry{plugin}
 {
@@ -341,16 +412,16 @@
     description={Les Playbooks Ansible offrent un système de gestion de configuration et de déploiement multi-machine reproductible, réutilisable et simple, bien adapté au déploiement d'applications complexes}
 }
 
-\newglossaryentry{plate-forme web}
+\newglossaryentry{plateforme web}
 {
-    name=plate-forme web,
-    description={Une plate-forme web est un ensemble de services web. Le contenu des plate-formes web provient en grande partie des utilisateurs qui peuvent diffuser et partager des contenus de nature textuelle ou multimédia}
+    name=plateforme web,
+    description={Une plateforme web est un ensemble de services web. Le contenu des plate-formes web provient en grande partie des utilisateurs qui peuvent diffuser et partager des contenus de nature textuelle ou multimédia}
 }
 
 \newglossaryentry{Peertube}
 {
     name=Peertube,
-    description={PeerTube est un logiciel libre d'hébergement de vidéo décentralisé permettant la diffusion en pair à pair, et un média social sur lequel les utilisateurs peuvent envoyer, regarder, commenter, évaluer et partager des vidéos en streaming}
+    description={Logiciel libre d'hébergement de vidéo décentralisé permettant la diffusion en pair à pair, et un média social sur lequel les utilisateurs peuvent envoyer, regarder, commenter, évaluer et partager des vidéos en streaming}
 }
 
 \newglossaryentry{POC}
@@ -362,51 +433,57 @@
 \newglossaryentry{PSSI}
 {
     name=PSSI,
-    description={Politique de sécurité du système d'information. Plan d'actions définies pour maintenir un certain niveau de sécurité. Elle reflète la vision stratégique de la direction de l'organisme en matière de sécurité des systèmes d'information}
+    description={Politique de Sécurité du Système d'Information. Plan d'actions définies pour maintenir un certain niveau de sécurité. Elle reflète la vision stratégique de la direction de l'organisme en matière de sécurité des systèmes d'information}
 }
 
 \newglossaryentry{PFE}
 {
     name=PFE,
-    description={Projet de fin d'étude. Désigne à l'ESEO à un projet d'une durée d'un semestre pouvant être effectué en entreprise ou non}
+    description={Projet de Fin d'Etude. Désigne à l'ESEO à un projet d'une durée d'un semestre pouvant être effectué en entreprise ou non}
 }
 
 \newglossaryentry{Proxmox}
 {
     name=Proxmox,
-    description={Proxmox Virtual Environment est une solution de virtualisation libre basée sur l'hyperviseur Linux KVM, et offre aussi une solution de containers avec LXC}
+    description={Solution de virtualisation libre basée sur l'hyperviseur Linux KVM, et offre aussi une solution de containers avec LXC}
 }
 
 \newglossaryentry{proxy}
 {
     name=Proxy,
-    description={Un proxy est un composant logiciel informatique qui joue le rôle d'intermédiaire en se plaçant entre deux hôtes pour faciliter ou surveiller leurs échanges}
+    description={Composant logiciel informatique qui joue le rôle d'intermédiaire en se plaçant entre deux hôtes pour faciliter ou surveiller leurs échanges}
 }
 \newglossaryentry{Passhport}
 {
     name=Passhport,
-    description={Passhport est une solution de gestion et de sécurisation des accès SSH}
+    description={Solution de gestion et de sécurisation des accès SSH}
 }
 \newglossaryentry{PHP}
 {
     name=PHP,
-    description={PHP: Hypertext Preprocessor est un langage de programmation principalement utilisé pour produire des pages Web dynamiques via un serveur HTTP, mais pouvant également fonctionner comme n'importe quel langage interprété de façon locale. PHP est un langage impératif orienté objet}
+    description={Hypertext Preprocessor. Langage de programmation principalement utilisé pour produire des pages Web dynamiques via un serveur HTTP, mais pouvant également fonctionner comme n'importe quel langage interprété de façon locale. PHP est un langage impératif orienté objet}
 }
 
 
 % QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
 
 % RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+\newglossaryentry{RSE}
+{
+    name=RSE,
+    description={Responsabilité Sociétale des Entreprises. La responsabilité sociétale des entreprises désigne la prise en compte par les entreprises, sur une base volontaire, et parfois juridique, des enjeux environnementaux, sociaux, économiques et éthiques dans leurs activités.}
+}
+
 \newglossaryentry{Rudder}
 {
     name=Rudder,
-    description={Rudder est un logiciel libre de configuration automatique de serveurs. Il se veut simple d'utilisation, orienté web et applique un raisonnement dirigé par les rôles. Il s'appuie sur des agents légers installés localement sur chaque machine gérée}
+    description={Logiciel libre de configuration automatique de serveurs. Il se veut simple d'utilisation, orienté web et applique un raisonnement dirigé par les rôles. Il s'appuie sur des agents légers installés localement sur chaque machine gérée}
 }
 
 \newglossaryentry{Rocky}
 {
     name=Rocky Linux,
-    description={Rocky Linux est une distribution Linux basée sur le code source du système d'exploitation Red Hat Enterprise Linux.}
+    description={Distribution Linux. Basée sur le code source du système d'exploitation Red Hat Enterprise Linux.}
 }
 
 \newglossaryentry{RGPD}
@@ -417,10 +494,51 @@
 \newglossaryentry{Redmine}
 {
     name=Redmine,
-    description={Redmine est une application web libre de gestion de projets, développée en Ruby sur la base du framework Ruby on Rails}
+    description={Application web libre de gestion de projets, développée en Ruby sur la base du framework Ruby on Rails}
+}
+\newglossaryentry{RBAC}
+{
+    name=RBAC,
+    description={Role-Based Access Control. Le contrôle d'accès basé sur les rôles est un modèle de contrôle d'accès à un système d'information dans lequel chaque décision d'accès est basée sur le rôle auquel l'utilisateur est associé}
 }
 
+
 % SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+\newglossaryentry{Slack}
+{
+    name=Slack,
+    description={Slack est une plateforme de communication collaborative propriétaire ainsi qu'un logiciel de gestion de projets}
+}
+\newglossaryentry{SAS}
+{
+    name=SAS,
+    description={Société par Actions Simplifiée}
+}
+
+\newglossaryentry{SA}
+{
+    name=SA,
+    description={Société à Responsabilité Limitée. Société de capitaux à risque limité répandue dans les pays de tradition civiliste}
+}
+
+\newglossaryentry{SARL}
+{
+    name=SA,
+    description={Société Anonyme. Société commerciale où la responsabilité est limitée jusqu'à concurrence des apports, et qui présente des caractéristiques d'une société de personnes (2 à 100 personnes), notamment parce que les parts détenues dans le capital ne sont pas librement accessibles sans accord de tout ou partie des associés. }
+}
+
+\newglossaryentry{SCAP}
+{
+    name=SCAP,
+    description={Security Content Automation Protocol. Ses spécifications visent à faciliter et automatiser les échanges d'informations entre les outils de sécurité pour tous les types d'équipements connectés au réseau : inventaire, vulnérabilités, éléments de configuration et de durcissement}
+}
+
+\newglossaryentry{SSD}
+{
+    name=SSD,
+    description={Solid State Drive. Matériel informatique peremttant le stockage de données}
+}
+
 \newglossaryentry{sysadmin}
 {
     name=Sysadmin,
@@ -430,13 +548,13 @@
 \newglossaryentry{SQL}
 {
     name=SQL,
-    description={SQL est un langage informatique normalisé servant à exploiter des bases de données relationnelles. La partie langage de manipulation des données de SQL permet de rechercher, d'ajouter, de modifier ou de supprimer des données dans les bases de données relationnelles}
+    description={Langage informatique normalisé servant à exploiter des bases de données relationnelles. La partie langage de manipulation des données de SQL permet de rechercher, d'ajouter, de modifier ou de supprimer des données dans les bases de données relationnelles}
 }
 
 \newglossaryentry{SCOP}
 {
     name=SCOP,
-    description={Société coopérative et participative}
+    description={Société COopérative et Participative}
 }
 
 \newglossaryentry{SI}
@@ -448,35 +566,35 @@
 \newglossaryentry{SSH}
 {
     name=SSH,
-    description={Protocole de communication sécurisée basé sur un échange de clé privé et publique}
+    description={Secure SHell. Protocole de communication sécurisée basé sur un échange de clé privé et publique}
 }
 
 \newglossaryentry{SSL}
 {
     name=SSL,
-    description={Le protocole SSL (Secure Sockets Layer) était le protocole cryptographique le plus largement utilisé pour assurer la sécurité des communications sur Internet}
+    description={Secure Sockets Layer. Protocole cryptographique le plus largement utilisé pour assurer la sécurité des communications sur Internet}
 }
 \newglossaryentry{SNMP}
 {
     name=SNMP,
-    description={Simple Network Management Protocol, en français « protocole simple de gestion de réseau », est un protocole de communication qui permet aux administrateurs réseau de gérer les équipements du réseau, de superviser et de diagnostiquer des problèmes réseaux et matériels à distance}
+    description={Simple Network Management Protocol ou Protocole simple de gestion de réseau. Protocole de communication qui permet aux administrateurs réseau de gérer les équipements du réseau, de superviser et de diagnostiquer des problèmes réseaux et matériels à distance}
 }
 
 % TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 \newglossaryentry{TLS}
 {
     name=TLS,
-    description={Transport Layer Security ou Sécurité de la couche de transport est un protocole de sécurisation des échanges par réseau informatique, notamment par Internet}
+    description={Transport Layer Security ou Sécurité de la couche de transport. Protocole de sécurisation des échanges par réseau informatique, notamment par Internet}
 }
 \newglossaryentry{Traefik}
 {
     name=Traefik,
-    description={Traefik est donc un reverse-proxy et un load-balancer fait pour déployer principalement des conteneurs}
+    description={Reverse-proxy et un load-balancer fait pour déployer principalement des conteneurs}
 }
 \newglossaryentry{Terraform}
 {
     name=Terraform,
-    description={Terraform est un environnement logiciel d'« infrastructure as code » publié en open-source par la société HashiCorp. Cet outil permet d'automatiser la construction des ressources d'une infrastructure de centre de données comme un réseau, des machines virtuelles, un groupe de sécurité ou une base de données}
+    description={Logiciel d'« infrastructure as code » publié en open-source par la société HashiCorp. Cet outil permet d'automatiser la construction des ressources d'une infrastructure de centre de données comme un réseau, des machines virtuelles, un groupe de sécurité ou une base de données}
 }
 
 % UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU
@@ -485,38 +603,38 @@
 \newglossaryentry{vip}
 {
     name=vip,
-    description={Une adresse IP virtuelle est une adresse IP non connectée à un ordinateur ou une carte réseau spécifiques. Les paquets entrants sont envoyés à l'adresse IP virtuelle, mais en réalité ils circulent tous via des interfaces réseau réelles}
+    description={Virtual IP. Adresse IP virtuelle non connectée à un ordinateur ou une carte réseau spécifiques. Les paquets entrants sont envoyés à l'adresse IP virtuelle, mais en réalité ils circulent tous via des interfaces réseau réelles}
 }
 
 \newglossaryentry{vhosts}
 {
     name=Vhosts,
-    description={En informatique, l'hébergement virtuel est une méthode que les serveurs tels que serveurs Web utilisent pour accueillir plus d'un nom de domaine sur le même ordinateur, parfois sur la même adresse IP, tout en maintenant une gestion séparée de chacun de ces noms}
+    description={Virutal Host. Méthode que les serveurs tels que serveurs Web utilisent pour accueillir plus d'un nom de domaine sur le même ordinateur, parfois sur la même adresse IP, tout en maintenant une gestion séparée de chacun de ces noms}
 }
 
 % WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
 \newglossaryentry{Wifi}
 {
     name=Wifi,
-    description={Le terme Wifi correspond au protocole IEEE 802.11 est un ensemble de normes concernant les réseaux sans fil locaux}
+    description={Protocole IEEE 802.11. Ensemble de normes concernant les réseaux sans fil locaux}
 }
 
-\newglossaryentry{webinaires}
+\newglossaryentry{webinaire}
 {
     name=Webinaire,
-    description={Webinaire est un mot-valise associant les mots Web et séminaire, créé pour désigner toutes les formes de réunions interactives de type séminaire faites par Internet généralement dans un but de travail collaboratif ou de transmission d'informations pour une audience plus ou moins importante en nombre}
+    description={Mot-valise associant les mots Web et séminaire, créé pour désigner toutes les formes de réunions interactives de type séminaire faites par Internet généralement dans un but de travail collaboratif ou de transmission d'informations pour une audience plus ou moins importante en nombre}
 }
 
 
 \newglossaryentry{Windows}
 {
     name=Windows,
-    description={Windows est au départ une interface graphique unifiée produite par Microsoft, qui est devenue ensuite une gamme de systèmes d’exploitation à part entière, principalement destinés aux ordinateurs compatibles PC}
+    description={Interface graphique unifiée produite par Microsoft, qui est devenue ensuite une gamme de systèmes d’exploitation à part entière, principalement destinés aux ordinateurs compatibles PC}
 }
 \newglossaryentry{Wazuh}
 {
     name=Wazuh,
-    description={Wazuh est une plate-forme open source utilisée pour la prévention, la détection et la réponse aux menaces}
+    description={Plateforme open source utilisée pour la prévention, la détection et la réponse aux menaces}
 }
 
 % XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -525,14 +643,14 @@
 \newglossaryentry{YesWeHack}
 {
     name=YesWeHack,
-    description={YesWeHack est une plate-forme permettant la mise en contact entre des entreprises et des hackers éthiques}
+    description={Plateforme permettant la mise en contact entre des entreprises et des hackers éthiques}
 }
 
 % ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
 \newglossaryentry{Zammad}
 {
     name=Zammad,
-    description={Zammad est un service d'assistance gratuit ou un système de suivi des problèmes}
+    description={Service d'assistance gratuit ou un système de suivi des problèmes}
 }
 
 

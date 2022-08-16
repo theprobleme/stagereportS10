@@ -71,8 +71,8 @@
 \begin{center}
 	\begin{tabular}{ m{5cm} m{11.5cm} }
 	\textbf{TYPE}: & \mbox{\ooalign{$\checkmark$\cr\hidewidth$\square$\hidewidth\cr}}  Stage de fin d'études (Stage ingénieur - S10) \\
-   \textbf{ENTREPRISE}:  & Empreinte digitale \\
-   \textbf{DATES}: & Du 31 janvier 2022 au 11 septembre 2022 \\
+   \textbf{ENTREPRISE}:  & Empreinte Digitale \\
+   \textbf{DATES}: & Du 31 janvier 2022 au 7 septembre 2022 \\
    \textbf{SUJET MISSION}: & Analyse et réalisation d'audits automatisés de l'infrastructure \\
    \textbf{TUTEUR ENTREPRISE}:  & Valentin Baraise et Yves-Gaël Cheny \\
  \end{tabular}
@@ -88,7 +88,7 @@
 	\begin{tabular}{ m{5cm} m{11.5cm} }
 	\textbf{OPTION}: &  \mbox{\ooalign{$\checkmark$\cr\hidewidth$\square$\hidewidth\cr}} CSS  \\
     \textbf{CONFIDENTIALITÉ}:  & Mon rapport est confidentiel niveau : \mbox{\ooalign{$\checkmark$\cr\hidewidth$\square$\hidewidth\cr}} 0 \\
-    \textbf{DOMAINE ENTREPRISE}: & \mbox{\ooalign{$\checkmark$\cr\hidewidth$\square$\hidewidth\cr}} Autres (précisez) : Développement d'applications, hébergement web, conformité RGPD, audit d'accessibilité. \\
+    \textbf{DOMAINE ENTREPRISE}: & \mbox{\ooalign{$\checkmark$\cr\hidewidth$\square$\hidewidth\cr}} Autres (précisez) : Développement d'applications, hébergement web, conformité RGPD, audit d'accessibilité \\
     \textbf{AUTRES POINTS}: &  $\square$ Stage à dominante \textbf{management} \\
                              &  $\square$ Stage à dominante \textbf{recherche} \\
                              & \mbox{\ooalign{$\checkmark$\cr\hidewidth$\square$\hidewidth\cr}} E5e effectuée sous Contrat Pro \\
@@ -110,15 +110,15 @@ Le non-respect de cet engagement m'exposerait à des sanctions dont j'ai bien pr
 % Remerciements %
 \newpage
 \section*{Remerciements}
-Je tiens à remercier Yves-Gaël Cheny, Nicolas Gourichon et Valentin Baraise pour l'opportunité qu'ils m'ont donné en m'acceptant en contrat de professionnalisation. 
-L'expérience acquise lors de la période de Projet de Fin d'Etude (PFE) est inestimable compare à celle que j'aurai eu si j'avais travaillé sur un PFE scolaire. \\
+Je tiens à remercier Yves-Gaël Cheny, Nicolas Gourichon et Valentin Baraise pour l'opportunité qu'ils m'ont donnée en m'acceptant en contrat de professionnalisation. 
+L'expérience acquise lors de la période de Projet de Fin d'Etude (\gls{PFE}) est inestimable comparé à celle que j'aurais eu si j'avais travaillé sur un \gls{PFE} scolaire. \\
 
 Je remercie particulièrement Valentin Baraise, mon tuteur, pour son accompagnement durant toute cette année. 
-Bien que très occupé, il a toujours pris le temps de m'accompagner lorsque j'étais bloqué. 
+Bien que très occupé, il a toujours pris le temps de m'aider lorsque j'étais bloqué. 
 Il a également (malgré lui), pris la peine de réparer les quelques erreurs que j'ai pu commettre. \\
 
-Je remercie également Inès Audouin et Nicolas Gourichon, qui m'ont accompagné sur mes premières installations et utilisations d'Ansible. 
-Ils m'ont apportés de nombreuses connaissance sur le sujet, ce qui fait qu'à ce jour, je suis automome sur l'utilisation des outils Ansible et AWX. \\
+Je remercie également Inès Audouin et Nicolas Gourichon qui m'ont accompagné sur mes premières installations et utilisations d'\gls{Ansible}. 
+Ils m'ont apporté de nombreuses connaissances sur le sujet, ce qui fait qu'à ce jour, je suis automome sur l'utilisation des outils \gls{Ansible} et AWX. \\
 
 Enfin, merci à Yves-Gaël Cheny et Raphaël Poitevin pour l'aide qu'ils m'ont apportés, notamment sur les aspects réseaux et mail.
 
@@ -130,8 +130,8 @@ Enfin, merci à Yves-Gaël Cheny et Raphaël Poitevin pour l'aide qu'ils m'ont a
 % Fiche de synthèse du stage %
 \newpage
 \section*{Introduction}
-Mon sujet de stage S10 porte sur la mise en place de nouveaux outils de sécurité pour améliorer l'infrastructure. 
-J'ai principalement travaillé sur des outils d'inventaire des machines du système d'information et sur le durcissement des systèmes Linux. 
+Mon sujet de stage S10 porte sur la mise en place de nouveaux outils de sécurité pour améliorer le système d'information d'Empreinte Digitale. 
+J'ai principalement travaillé sur des outils d'inventaire des machines et sur le durcissement des systèmes \gls{Linux}. 
 En parallèle de ces travaux de sécurité, j'ai mis en place de nouvelles infrastructures ou logiciels pour des clients, amélioré le processus pour les nouveaux arrivants et rédigé de la documentation technique propre aux administrateurs système. \\
 
 Ce stage à eu lieu dans le cadre d'un contrat de professionnalisation chez Empreinte Digitale, située au 11 rue des Noyers à Angers. 
@@ -139,18 +139,18 @@ J'y ai effectué mon stage de 7 mois du 30 janvier 2022 au 8 septembre 2022.
 Ce rapport à donc été rendu 2 semaines avant la fin du stage. \\
 
 Ce stage fait suite à un besoin grandissant d'Empreinte Digitale d'améliorer en continu la sécurité de l'infrastructure. 
-Étant une entreprise développant des applications web et hébergeant des applications open-source, elle se trouve impacté par la menace grandissante des attaques informatiques. \\
+Étant une entreprise développant des applications web et hébergeant des applications open-source, elle est impactée par la menace grandissante des attaques informatiques. \\
 
-Mon rapport s'organise en 4 parties. 
+Mon rapport s'organise en quatre parties. 
 Dans la première, j'exposerai l'environnement et le contexte du stage. 
-La seconde partie sera consacrée à la présentation de 3 outils techniques régulièrement utilisées et cités dans ce document. 
-Dans une troisième partie, j'évoquerai les travaux de sécurité avec les thématiques de sécurité, l'inventaire des machines, le durcissement des systèmes Linux et la documentation. 
-Viendra en 4ème parties les divers travaux d'administrateur système. 
+La seconde partie sera consacrée à la présentation de trois outils techniques régulièrement utilisées et cités dans ce document. 
+Dans une troisième partie, j'évoquerai les travaux de sécurité avec les thématiques de sécurité, l'inventaire des machines, le durcissement des systèmes \gls{Linux} et la documentation. 
+Je présenterai en quatrième partie les divers travaux d'administrateur système. 
 Enfin, je conclurai par un bilan personnel. \\
 
-Ce rapport a été rédigé en \LaTeX  à partir du template de M Woodward. 
+Ce rapport a été rédigé en \LaTeX à partir du template de M. Woodward. 
 Les liens internet, les liens vers des sections ou des acronymes et définition sont interractifs.
-Les ressources sont disponibles sur le dépôt GitHub \url{https://github.com/theprobleme/stagereportS10}.
+Les ressources sont disponibles sur le dépôt GitHub \begin{hilite} \url{https://github.com/theprobleme/stagereportS10} \end{hilite}.
 
 % Abstract %
 \newpage
@@ -159,15 +159,6 @@ Les ressources sont disponibles sur le dépôt GitHub \url{https://github.com/th
 % 1ère Partie : L'environnement et le contexte du stage %
 \newpage
 \section{L'environnement et le contexte du stage}
-
-\subsection{Contrat de professionnalisation}
-Pour rappel, j'ai effectué mon stage en contrat de professionnalisation. 
-J'étais donc présent en entreprise la plupart des jeudis et vendredis du 8 Septembre 2021 au 30 janvier 2022. 
-J'ai par la suite débuté la période de stage du 31 Janvier 2022 au 7 Septembre 2022.
-
-Dès le début de mon contrat de professionnalisation, le sujet portait sur la sécurité. 
-Les travaux effectués durant l'alternance sont donc les prémices des travaux effectués lors du stage.
-
 \subsection{Empreinte Digitale}
 \noindent%
 \begin{minipage}{.7\textwidth}%
@@ -182,19 +173,19 @@ Elle travaille dans la réalisation de solutions numériques responsables et sur
 \end{minipage}%
 
 \subsubsection{Activités}
-L'activité de l'entreprise se découpe en 5 axes :
+L'activité de l'entreprise se découpe en 5 axes:
 
 \noindent%
 \begin{minipage}{.7\textwidth}%
 
-\textbf{Développement sur-mesure} : réalisation de logiciels répondant à un besoin métier.
+\textbf{Développement sur-mesure}: réalisation de logiciels répondant à un besoin métier.
 
-\textbf{Hébergement en cloud privé} : hébergement Web responsable en \gls{cloud privé} indépendant dans des datacenters en France. 
+\textbf{Hébergement en cloud privé}: hébergement Web responsable en \gls{cloud privé} indépendant dans des datacenters en France. 
 Les serveurs sont exclusivement gérés avec des technologies libres et open source, garantissant une indépendance d'entreprises tierces.
 
-\textbf{Accessibilité numérique} : audit de services numériques, formations et accompagnement dans la mise en place de démarche de mise en accessibilité des sites et services.
+\textbf{Accessibilité numérique}: audit de services numériques, formations et accompagnement dans la mise en place de démarche de mise en accessibilité des sites et services.
 
-\textbf{Système d'information archivistique} : suite logicielle Ligeo Archives, un système d'information archivistique. 
+\textbf{Système d'information archivistique}: suite logicielle Ligeo Archives, un système d'information archivistique. 
 Il répond aux besoins de gestion et de valorisation du patrimoine archivistique, tout en garantissant une souplesse d'utilisation, de paramétrage et une ergonomie moderne.
 
 \textbf{Mise en conformité \gls{RGPD}}: évaluation du niveau de conformité \gls{RGPD} avec pilotage de la mise en oeuvre des préconisations essentielles à la mise en conformité au \gls{RGPD}.
@@ -212,11 +203,11 @@ Il répond aux besoins de gestion et de valorisation du patrimoine archivistique
 
 \noindent%
 \begin{minipage}{.7\textwidth}%
-Juridiquement, une SCOP (Société coopérative et participative) est une société coopérative de forme SA, SARL ou SAS dont les salariés sont les associés majoritaires et le pouvoir y est exercé démocratiquement.
+Juridiquement, une \gls{SCOP} (Société coopérative et participative) est une société coopérative de forme \gls{SA}, \gls{SARL} ou \gls{SAS} dont les salariés sont les associés majoritaires et le pouvoir y est exercé démocratiquement.
 Les salariés détiennent au moins 51 \% du capital social et 65 \% des droits de vote. 
 Si tous les salariés ne sont pas associés, tous ont vocation à le devenir. 
 Chaque salarié associé dispose d’une voix, quel que soit son statut, son ancienneté et le montant du capital investi.
-Les informations liées à la vie de l’entreprise circulent en toute transparence et les décisions stratégiques sont l’expression du plus grand nombre.  \\
+Les informations liées à la vie de l’entreprise circulent en toute transparence et les décisions stratégiques sont l’expression du plus grand nombre. \cite{Scop} \\
 \end{minipage}%
 \hfill
 \begin{minipage}{.3\textwidth}%
@@ -227,20 +218,20 @@ Les informations liées à la vie de l’entreprise circulent en toute transpare
 
 Financièrement, cela signifie qu'Empreinte Digitale fonctionne sur un principe de réserve, avec une répartition d'au moins 25 \% du résultat reversé sous forme de participation pour tous les salariés en fonction de leur ancienneté.
 
-La SCOP apporte un avantage dans la pérennisation de l'entreprise et ses emplois avec un modèle attirant pour les futur collaborateurs. 
+La \gls{SCOP} apporte un avantage dans la pérennisation de l'entreprise et ses emplois avec un modèle attirant pour les futur collaborateurs. 
 La transparence et la collaboration est un facteur clé dans l'entretien de l'implication et la motivations des salariés.
 
 Empreinte Digitale à commencé sa transition en \gls{SCOP} à partir de 2018 pour officiellement le devenir en janvier 2020.
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=\textwidth]{src/transition_scop.png}
-    \caption{Les étapes du passage en SCOP d'Empreinte Digitale}
+    \caption{Les étapes du passage en \gls{SCOP} d'Empreinte Digitale}
     \label{fig:transition_scop}
 \end{figure}
 
 
 \newpage
-La gouvernance se découpe de la manière suivante :
+La gouvernance se découpe de la manière suivante:
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=\textwidth]{src/gouvernance_ed.png}
@@ -251,10 +242,10 @@ La gouvernance se découpe de la manière suivante :
 La gouvernance coopérative est similaire au fonctionnement d'une association loi 1901 avec les membres de l'association et le conseil d'administration. 
 Le conseil d'administration a pour rôle de déterminer les orientations de l'activité de la société. 
 Actuellement, l'assemblée générale est consisté de 32 salariés. 
-Un salarié ne peut pas rester dans l'entreprise si au bout de 3 ans d'ancienneté celui-ci ne veut pas adhérer à la SCOP. 
+Un salarié ne peut pas rester dans l'entreprise si au bout de 3 ans d'ancienneté celui-ci ne veut pas adhérer à la \gls{SCOP}. 
 Cette assemblée générale mandate le conseil d'administration constitué des membres élus et en "échange", les membres de conseil anime, représente et rend compte aux associés.
 
-De l'autre côté on trouve la gouvernance de l'entreprise, avec un directeur général, responsable légale qui travail avec un comité opérationnel ou COMOP. 
+De l'autre côté on trouve la gouvernance de l'entreprise, avec un directeur général, responsable légale qui travail avec un comité opérationnel. 
 Ils travaillent avec les différents pôles dans la mise en oeuvre de la stratégie d'entreprise.
 
 La partie décisionnel est aux salariés car c'est bien la gouvernance coopérative qui mandate et pilote la gouvernance d'entreprise qui elle propose et rend compte de l'activité.
@@ -262,12 +253,12 @@ La partie décisionnel est aux salariés car c'est bien la gouvernance coopérat
 Une assemblée générale ordinaire à lieu une fois par an pour voter les grandes orientations de l'entreprise, valider les comptes, voter la répartition des bénéfices et également voter pour les nouveaux associées.
 
 \subsubsection{Responsabilité sociétale et environnemental}
-L'axe principal de la démarche RSE chez Empreinte Digitale porte sur le numérique responsable, qui intègre à la fois des problématiques environnementales et sociétales.
+L'axe principal de la démarche \gls{RSE} chez Empreinte Digitale porte sur le numérique responsable, qui intègre à la fois des problématiques environnementales et sociétales.
 
 \noindent%
 \begin{minipage}{.7\textwidth}%
-Empreinte digitale est officiellement engagés dans une démarche Responsabilité Sociétales des Entreprises (RSE) depuis 2018, année de sa labellisation Lucie ISO 26000. 
-LUCIE est une certification qui prouve qu'une entreprise, un produit ou un service à une démarche réussie en matières de RSE.
+Empreinte digitale est officiellement engagés dans une démarche Responsabilité Sociétales des Entreprises (\gls{RSE}) depuis 2018, année de sa labellisation Lucie ISO 26000. 
+LUCIE est une certification qui prouve qu'une entreprise, un produit ou un service à une démarche réussie en matières de \gls{RSE}. \cite{Lucie}
 
 \end{minipage}%
 \hfill
@@ -277,17 +268,17 @@ LUCIE est une certification qui prouve qu'une entreprise, un produit ou un servi
 \end{center}
 \end{minipage}% \\
 
-Voici quelques projets RSE d'Empreinte Digitale :
+Voici quelques projets \gls{RSE} d'Empreinte Digitale:
 \paragraph{Design4Green}
 Le Design4Green est un challenge organisé depuis 5 par l'ESAIP, une école d'ingénieur Angevine.
-Durant ce hackathon de 48h, les équipes doivent répondre sur un sujet autour de l'éco-conception. 
-Le sujet porte chaque année sur la réalisation d'un projet web avec l'obligation de limiter son empreinte environnementale.
+Durant ce hackathon de 48h, les équipes doivent répondre sur un sujet autour d'un projet web et de l'éco-conception.
+Le projet web doit prendre en considération son empreinte environnementale.
 
-En 2021, il fallait développer une interface pour les professionnel de suivi de l'éco-conception d'un projet web intégrant 491 critères.
+En 2021, le thème portait sur le développement d'une interface pour les professionnel de suivi de l'éco-conception d'un projet web intégrant 491 critères.
 Empreinte Digitale à participé à cette édition et l'a remporté avec une application statique, éco-conçu et accessible.
-Le site est une "Progressive Web App" (PWA), il est alors téléchargé une seule fois et mise en cache dans le navigateur, ainsi il n'y a pas d'aller-retour avec le serveur.
+Le site est une "Progressive Web App" (\gls{PWA}), il est alors téléchargé une seule fois et mise en cache dans le navigateur, ainsi il n'y a pas d'aller-retour avec le serveur.
 
-A la clé de ce challenge, un chèque de 1000€ qui fut par la suite placé dans un autre projet RSE, le budget participatif.
+A la clé de ce challenge, un chèque de 1000€ qui fut par la suite placé dans un autre projet \gls{RSE}, le budget participatif.
 
 \begin{figure}[!ht]
     \centering
@@ -301,15 +292,15 @@ En 2022, Empreinte Digitale a lancé un appel à projet nommé Budget Participat
 Chaque employé pouvait présenter un ou plusieurs projets qui ont été ensuite soumis à vote. 
 Le prix gagné au Design4Green à été mis en jeu et une participation supplémentaire de 1000€ a été attribué par l'entreprise. 
 Ainsi, c'est 2000€ de projets, proposés par les salariés, qui ont vu le jours. 
-Les proposotions fûrent nombreuses : console de jeu, abri pour oiseaux, salle de sport, jeu de fléchette etc.
+Les proposotions fûrent nombreuses: console de jeu, abri pour oiseaux, salle de sport, jeu de fléchettes etc.
 
 \paragraph{Stratosfair}
 En 2020, Empreinte Digitale à lancé un partenariat avec Stratosfair. 
-L'objectif : créer un datacenter responsable. 
+L'objectif: créer un datacenter responsable. 
 Ce nouveau datacenter à vu le jour deux ans après à Lanester, une ville voisine de Lorient. 
 L'idée est d'utiliser des énergies renouvelables produites sur place, la perte d'énergie (chaleur) engendrée par les serveurs et de se "fondre" dans le milieu naturel.
 \begin{itemize}
-    \item Le datacenter n'est pas posé à même le sol, ne bloquant pas la circulation des organismes vivant.
+    \item Le datacenter n'est pas posé à même le sol, ne bloquant pas la circulation des organismes vivants.
     \item Une partie de l'énergie qui alimente les serveurs est une énergie renouvelable générée par des panneaux solaires.
     \item La chaleur des serveurs est redirigée dans une serre pour la culture de légumes bio.
 \end{itemize}
@@ -317,41 +308,41 @@ L'idée est d'utiliser des énergies renouvelables produites sur place, la perte
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=\textwidth]{src/strato.jpg}
-    \caption{Maquette 3D du datacenter de Stratosfair}
+    \caption{Maquette en trois dimensions du datacenter de Stratosfair}
     \label{fig:strato}
 \end{figure}
 
 Avec ce datacenter, Stratosfair et Empreinte Digitale lancent une offre similaire à celle OVH avec la location de machines virtuelles.
-Une application et une API ont été développés pour la création de machines virtuelles dans un cluster Proxmox depuis une interface web.
+Une application et une \gls{API} ont été développés pour la création de machines virtuelles dans un \gls{cluster} \gls{Proxmox} depuis une interface web.
 
-Vous pouvez retrouver d'autres projets RSE ici: \url{https://blog.empreintedigitale.fr}.
+Vous pouvez retrouver d'autres projets \gls{RSE} ici: \begin{hilite} \url{https://blog.empreintedigitale.fr} \end{hilite}.
 
 \subsubsection{Pôle datacenter}
 Empreinte digitale est constitué de 5 pôles: production, accessibilité numérique, datacenter, RH et commercial/marketing.
 
 J'étais intégré dans le pôle datacenter composé de 7 personnes. 
-Les activités sont découpeés de la manière suivante :
+Les activités sont découpées de la manière suivante:
 \begin{itemize}
-    \item \textbf{Ligeo} : deux personnes travaillent principalement sur les produits Ligeo. 
+    \item \textbf{Ligeo}: deux personnes travaillent principalement sur les produits Ligeo. 
     Cela comprend les installations, les mises à jours et la maintenance.
-    \item \textbf{Cloud} : une personne travaille sur la conception, les installations et la maintenance des produits cloud. 
-    Cela va de l'installation de produits tels que Nextcloud, Zammad, Bitwarden jusqu'à la conception et l'installation d'architecture spécifique à un besoin. 
+    \item \textbf{Cloud}: une personne travaille sur la conception, les installations et la maintenance des produits cloud. 
+    Cela va de l'installation de produits tels que \gls{Nextcloud}, Zammad jusqu'à la conception et l'installation d'architecture spécifique à un besoin. 
     C'est le cas par exemple pour le projet Dehon.
-    \item \textbf{Travaux interne} : deux personnes, moi y compris, travaillons sur divers travaux interne. 
-    Cela concerne notamment les besoins de salariés : PC, mail, comptes, accès, nouveaux outils etc.
-    \item \textbf{Commercial} : une personne gère la partie commercial et facturation.
-    \item \textbf{Chef de projet} : une personne travaille sur la gestion de projet, en lien avec le commercial.
+    \item \textbf{Travaux internes}: deux personnes, moi y compris, travaillons sur divers travaux internes. 
+    Cela concerne par exemple les installations de PC, les mail, les accès et les installations de nouveaux outils.
+    \item \textbf{Commercial}: une personne gère la partie commercial et facturation.
+    \item \textbf{Chef de projet}: une personne travaille sur la gestion de projet, en lien avec le commercial.
 \end{itemize}
 
-Mise à part la partie commercial et chef de projet, les activités ne sont pas à ce point-là segmentées. 
+Les activités ne sont pas à ce point-là segmentées. 
 Dû au astreinte et à l'entre-aide collective, tout le monde "touche à tout". 
-Par exemple, bien qu'ayant travaillé majoritairement sur des travaux interne, j'ai également travaillé sur des offres cloud.
+Par exemple, bien qu'ayant travaillé majoritairement sur des travaux internes, j'ai aussi travaillé sur des offres cloud.
 
 \subsubsection{Comité sécurité}
 Empreinte Digitale possède un comité sécurité dans lequel j'ai été intégré à mon arrivé.
-Celui-ci est composé d'une dizaine de personnes aux profils variés : développeurs, administrateurs systèmes, testeurs et chefs de projet.
+Celui-ci est composé d'une dizaine de personnes aux profils variés: développeurs, administrateurs systèmes, testeurs et chefs de projet.
 
-Le pôle sécurité étant assez récent, ça mission est pour le moment de maintenir une veille sur la sécurité afin d'apporter des axes d'améliorations. 
+Le pôle sécurité étant assez récent, sa mission est pour le moment de maintenir une veille sur la sécurité afin d'apporter des axes d'améliorations. 
 Cela tiens compte du développement, de l'hébergement, la documentation et les bonnes pratiques générales à l'attention de tous. 
 Le pôle a une réunion hebdomadaire pour suivre l'avancement de divers sujets.
 
@@ -361,9 +352,9 @@ Deux outils sont très utilisés dans la gestion de projet chez Empreinte Digita
 
 \noindent%
 \begin{minipage}{.7\textwidth}%
-Redmine est une application web libre de gestion de projets.
+\gls{Redmine} est une application web libre de gestion de projets.
 Elle est utilisée pour le ticketing en interne et avec les clients.
-Les clients possèdent des accès au Redmine et peuvent eux-même créer des tickets.
+Les clients possèdent des accès au \gls{Redmine} et peuvent eux-même créer des tickets.
 L'outils permet également d'avoir une liste de contacts rattachés aux projets. \\
 \end{minipage}%
 \hfill
@@ -373,20 +364,20 @@ L'outils permet également d'avoir une liste de contacts rattachés aux projets.
 \end{center}
 \end{minipage}% \\
 
-Redmine à un rôle important dans l'exploitation car il sert pour deux autres aspects.
+\gls{Redmine} à un rôle important dans l'exploitation car il sert pour deux autres aspects.
 
-Dans la comptabilitsation du temps, il n'y a pas de système de badgeuse par exemple.
+Dans la comptabilitsation du temps, il n'y a pas de système de badgeuse.
 Le temps est calculé à partir de la saisie hebdomadaire de chaque employé.
 
 L'autre aspect important concerne la comptabilité.
 A partir du système de classification des tickets, la saisie de temps permet de sortir des analytiques comptables.
-Par exemple, sur un projet vendu en temps de développement, c'est avec Redmine que l'administratif sort les chiffres effectifs. \\
+Par exemple, sur un projet vendu en temps de développement, c'est avec \gls{Redmine} que les chiffres effectifs vont être calculé. \\
 
 \noindent%
 \begin{minipage}{.7\textwidth}%
 Mattermost est un logiciel libre de messagerie instantanée auto-hébergeable.
-Il est une altervative libre à Slack ou Microsoft Teams.
-Comme Redmine, certains clients possèdent des canaux Mattermost en plus de Redmine.
+Il est une altervative libre à \gls{Slack} ou \gls{Microsoft Teams}.
+Comme \gls{Redmine}, certains clients possèdent des canaux Mattermost en plus de \gls{Redmine}.
 Cela évite notamment de passer par les mails lors d'échanges répétés. \\
 \end{minipage}%
 \hfill
@@ -398,7 +389,7 @@ Cela évite notamment de passer par les mails lors d'échanges répétés. \\
 
 Le vendredi en début d'après-midi, une réunion à lieu pour commencer à établir les tâches pour la semaine à venir.
 Cela permet d'avoir une première idée du volume horaire.
-Le lundi aprsè-midi, tout est validé pour le reste de la semaine.
+Le lundi après-midi, tout est validé pour le reste de la semaine.
 
 En tant que stagiaire, je n'avais pas toujours de tickets.
 Mes travaux étant souvent internes, je créais des tickets que je m'attribuais.
@@ -409,15 +400,15 @@ Mes travaux étant souvent internes, je créais des tickets que je m'attribuais.
 Empreinte digitale développe son offre DATACENTER. 
 Cela engendre une évolution rapide de l'infrastructure ce qui demande de nouveaux besoins notamment en matière de sécurité. 
 En effet, l'entreprise ne possède pas pour le moment d'outils de conformité, d'outils de contrôle de sécurité ni d'outils de \gls{CVE}. 
-De plus, il n'y a pas de documentations mis à disposition des salariés afin de spécifier le comportement à avoir lors de l'utilisation du SI ou en cas de faille de sécurité révélée.
+De plus, il n'y a pas de documentations mis à disposition des salariés afin de spécifier le comportement à avoir lors de l'utilisation du \gls{SI} ou en cas de faille de sécurité révélée.
 
 \subsubsection{Problématique}
-Les problématiques sont multiples :
+Les problématiques sont multiples:
 \begin{itemize}
-    \item Comment réaliser un état des lieux du système d'information actuel ?
-    \item Comment établir les besoins en hiérarchisant les priorités ?
-    \item Comment faire un choix parmi l'ensemble des outils d'audits disponibles ?
-    \item Comment pérenniser les solutions mises en oeuvre ? 
+    \item Comment réaliser un état des lieux du système d'information actuel?
+    \item Comment établir les besoins en hiérarchisant les priorités?
+    \item Comment faire un choix parmi l'ensemble des outils d'audits disponibles?
+    \item Comment pérenniser les solutions mises en oeuvre? 
 \end{itemize}
 
 \subsubsection{Objectifs}
@@ -431,27 +422,27 @@ Les principaux sont ceux cités dans la section \ref{sec: preambule_technique}.
 
 Il n'y a pas de limitation de ressources et matériels.
 L'accès aux plateformes vitales à la réalisation des projets est donné avec des droits administrateurs.
-Pour les autres plateformes, l'accès est donné ponctuellement lorsque cela est nécessaire et justifié.
+Pour les autres plateformes, l'accès est donné ponctuellement lorsque cela est justifié.
 
-L'objectif n'étant pas concentré sur un sujet en particulier, les divers documentations de l'ANSSI servent de conseil.
+L'objectif n'étant pas concentré sur un sujet en particulier, les divers documentations de l'\gls{ANSSI} servent de conseil.
 
 \newpage
 \section{Préambule technique}
 \label{sec: preambule_technique}
 Les travaux effectués on fait appels à des logiciels régulièrement cités dans ce document. 
-Afin de rendre la compréhension de ce rapport plus aisée, cette section décrit brièvement Proxmox, Terraform et Ansible.
+Afin de rendre la compréhension de ce rapport plus aisée, cette section décrit brièvement \gls{Proxmox}, Terraform et \gls{Ansible}.
 
-\subsection{Proxmox}
+\subsection{\gls{Proxmox}}
 \noindent%
 \begin{minipage}{.7\textwidth}%
-Proxmox est une plate-forme open-source complète pour la virtualisation d'entreprise. 
+\gls{Proxmox} est une plateforme open-source complète pour la virtualisation d'entreprise. 
 Grâce à l'interface Web intégrée, nous pouvons facilement gérer les machines virtuelles et les conteneurs, le stockage défini par logiciel, la mise en réseau, le clustering haute disponibilité et plusieurs outils prêts à l'emploi sur une seule solution. \\
 
 \end{minipage}%
 \hfill
 \begin{minipage}{.3\textwidth}%
 \begin{center}
-\includegraphics[width=0.5\textwidth]{src/logo_proxmox.JPG}
+\includegraphics[width=0.7\textwidth]{src/logo_proxmox.JPG}
 \end{center}
 \end{minipage}% \\
 
@@ -464,15 +455,15 @@ Grâce à l'interface Web intégrée, nous pouvons facilement gérer les machine
 \end{minipage}%
 \hfill
 \begin{minipage}{.53\textwidth}%
-Proxmox possède 3 outils pour manipuler l'ensemble des ressources:
+\gls{Proxmox} possède 3 outils pour manipuler l'ensemble des ressources:
  \begin{itemize}
-     \item Un utilitaire en ligne de commande installé.
-     \item Une API.
+     \item Un utilitaire en ligne de commande.
+     \item Une \gls{API}.
      \item Une interface web.
  \end{itemize}
 
-Depuis l'interface, on visualise l'élément \textit{Datacenter}, correspondant au cluster. 
-On visualise également chacun des noeuds du cluster avec leur nom et leur état. 
+Depuis l'interface, on visualise l'élément \textit{Datacenter}, correspondant au \gls{cluster}. 
+On visualise également chacun des noeuds du \gls{cluster} avec leur nom et leur état. 
 On peut y modifier les noeuds, les différents stockages, la configuration de backup avec l'ajout de serveur de backup, les permissions utilisateurs, la haute disponibilité du cluster (HA), les statistiques et le support. \\
 
 Il est également possible d'agir sur les machines virtuelles. 
@@ -484,7 +475,7 @@ On peut y modifier les caractéristiques hardware des machines virtuelles direct
 \subsection{Terraform}
 \noindent%
 \begin{minipage}{.7\textwidth}%
-Terraform est un outil open source d'infrastructure as code développé par Hashicorp. 
+Terraform est un outil open source d'infrastructure as code (\gls{IaC}) développé par Hashicorp. 
 Il permet de déclarer sous forme de code l'infrastructure que l'on souhaite obtenir. 
 Dans des fichiers de configuration structurés, basé sur un système d'état, on va pouvoir manager l'infrastructure et mettre à jours son état. \\
 
@@ -497,7 +488,7 @@ Dans des fichiers de configuration structurés, basé sur un système d'état, o
 \end{minipage}%
 
 Au travers de scripts dans un langage propre à Terraform, on décrit l'état de l'infrastructure souhaité. 
-Son workflow le rend facile à comprendre et à mettre en oeuvre :
+Son workflow le rend facile à comprendre et à mettre en oeuvre:
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=\textwidth]{src/Terraform_schema.png}
@@ -505,40 +496,41 @@ Son workflow le rend facile à comprendre et à mettre en oeuvre :
     \label{fig:terraform_schemal}
 \end{figure}
 
-Après les quelques première écritures de configuration, on va :
+Après les quelques première écritures de configuration, on va:
 \begin{itemize}
-    \item Initialiser le projet avec un nouvel état. Commande : \texttt{terraform init}.
-    \item Planifier les configurations. Commande : \texttt{terraform plan}.
-    \item Appliquer les configurations. Commande: \texttt{terraform apply}.
-    \item Détruire les configurations si nécessaire. Commande : \texttt{terraform destroy}
+    \item Initialiser le projet avec un nouvel état. Commande: \begin{code} \texttt{terraform init} \end{code}
+    \item Planifier les configurations. Commande: \begin{code} \texttt{terraform plan} \end{code}
+    \item Appliquer les configurations. Commande: \begin{code} \texttt{terraform apply} \end{code}
+    \item Détruire les configurations si nécessaire. Commande: \begin{code} \texttt{terraform destroy} \end{code}
 \end{itemize}
 
-L'étape d'initialisation permet la création d'un état de l'infrastructure qui sera stocké sous la forme d'un fichier \texttt{terraform.tfstate}. 
+L'étape d'initialisation permet la création d'un état de l'infrastructure qui sera stocké sous la forme d'un fichier \begin{code}\texttt{terraform.tfstate}\end{code}. 
 Cet état permet d'assurer la cohérence entre ce qui est écrit localement et ce qui a déjà été appliqué. 
-Dans un travail collaboratif, cette état peut être configuré sur GitLab de façon à assurer la cohérence des états entre différents développeurs.
+Dans un travail collaboratif, cet état peut être configuré sur \gls{GitLab} de façon à assurer la cohérence des états entre différents développeurs.
 
 Terraform se base sur un fonctionnement autour de \textit{providers} ou fournisseurs. 
-Un provider est là pour manager une ressource donnée. Ces provider sont nombreux : Amazon Web Services, Google Cloud Plateform, Azure, VmWare Vsphere, Proxmox etc.
+Un provider est là pour manager une ressource donnée. 
+Ces provider sont nombreux: Amazon Web Services, Google Cloud Plateform, Azure, VmWare Vsphere, \gls{Proxmox} etc.
 
-A ces providers on spécifie des ressources. 
+À ces providers on spécifie des ressources. 
 Chaque bloc de ressources décrit un ou plusieurs objets d'un service. 
-La construction d'une ressource est basé sur le provider qui la fournie.
+La construction d'une ressource est basée sur le provider qui la fournie.
 
 Il est également possible de créer des modules afin de les réutiliser. 
 Utile par exemple dans le cas de template de machines virtuelles, où les variables sont toujours les mêmes mais où seuls les valeurs changent.
 
-Chez Empreinte Digitale, Terraform permet le déploiement dans un premier de temps de machines virtuelles sur des cluster Proxmox. 
+Chez Empreinte Digitale, Terraform permet le déploiement dans un premier de temps de machines virtuelles sur des \gls{cluster} \gls{Proxmox}. 
 Par la suite, Terraform permet d'installer des composants sur ces machines telles que des ressources Kubernetes, MongoDB, Helm, etc.
 
 \newpage
-\subsection{Ansible}
-Nous avons vu précédemment l'intérêt de Terraform dans l'installation de machine de machines virtuelles ou logicielle à partir de différents fournisseurs. 
-Une fois cette étapes effectuée, il peut être nécessaire d'effectuer des configuration supplémentaires. 
-C'est là qu'Ansible intervient.
+\subsection{\gls{Ansible}}
+Nous avons vu précédemment l'intérêt de Terraform dans l'installation de machines virtuelles ou logicielles à partir de différents fournisseurs. 
+Une fois cette étapes effectuée, il peut être nécessaire d'effectuer des configurations supplémentaires. 
+C'est là qu'\gls{Ansible} intervient.
 
 \noindent%
 \begin{minipage}{.8\textwidth}%
-Ansible est un logiciel libre de gestion des configurations qui automatise le déploiement de configurations sur un ensemble de machines. 
+\gls{Ansible} est un logiciel libre de gestion des configurations qui automatise le déploiement de configurations sur un ensemble de machines. 
 Celui-ci est basé sur l'utilisation du protocole SSH. 
 Cela lui donne l'avantage de ne pas avoir besoin d'installer d'agents sur les machines, parfois consommateur de ressources.
 
@@ -562,43 +554,43 @@ On distingue trois principaux types de scripts :
 
 L'utilisation de rôle n'est pas toujours nécessaire. 
 Un rôle à surtout pour vocation de créer une configuration qui sera réutilisée régulièrement. 
-Il donc possible de se limiter à l'utilisation de playbook.
+Il est donc possible de se limiter à l'utilisation de playbook.
 
-Comme indiqué précédemment, Ansible est dit "agentless". 
+Comme indiqué précédemment, \gls{Ansible} est dit "agentless". 
 Cela signifie qu'il n'est pas nécessaire d'installer d'agents sur les cibles. 
-Pour réaliser sa mission, Ansible n'a donc besoin que 3 de pré-requis :  une connexion SSH vers ces cibles, la bonne version de python d'installé sur ces cibles et un inventaire de l'ensemble des cibles.
+Pour réaliser sa mission, \gls{Ansible} n'a donc besoin que trois de pré-requis:  une connexion SSH vers ces cibles, la bonne version de python d'installé sur ces cibles et un inventaire de l'ensemble des cibles.
 
-Lorsqu'un script Ansible est exécuté, la première étape consiste toujours à récupérer les \textit{facts}. 
+Lorsqu'un script \gls{Ansible} est exécuté, la première étape consiste toujours à récupérer les \textit{facts}. 
 Ces facts sont l'ensemble des informations de la machine cible. 
 On aura le nom de la machine, sa version de système d'exploitation, son numéro de version, etc.
 
-A partir de ces informations on peut paramétrer l'utilisation d'Ansible. 
+A partir de ces informations on peut paramétrer l'utilisation d'\gls{Ansible}. 
 Cela va notamment permettre de faire une distinction entre les différents systèmes d'exploitation, leurs versions, leurs logiciels installés etc.
 
-Lorsqu'une task Ansible est jouée, il y a 4 états principaux :
+Lorsqu'une tâche \gls{Ansible} est jouée, il y a quatre états principaux:
 \begin{itemize}
-    \item \textbf{OK} : la configuration était déjà correcte, Ansible n'a rien changé.
-    \item \textbf{SKIPPED} : les conditions d'application de la tâche ne sont pas validées. La tâche est ignorée.
-    \item \textbf{CHANGED} : la configuration n'était pas correcte, Ansible à apporté les changements nécessaires avec succès.
-    \item \textbf{ERROR} : la configuration ne s'est pas bien passé, Ansible renvoit l'erreur associée.
+    \item \begin{code}\texttt{OK}\end{code}: la configuration était déjà correcte, \gls{Ansible} n'a rien changé.
+    \item \begin{code}\texttt{SKIPPED}\end{code}: les conditions d'application de la tâche ne sont pas validées. La tâche est ignorée.
+    \item \begin{code}\texttt{CHANGED}\end{code}: la configuration n'était pas correcte, \gls{Ansible} à apporté les changements nécessaires avec succès.
+    \item \begin{code}\texttt{ERROR}\end{code}: la configuration ne s'est pas bien passé, \gls{Ansible} renvoit l'erreur associée.
 \end{itemize}
 
 \newpage
 \section{Travaux de sécurité}
 \subsection{Période d'alternance}
-Mon sujet \textbf{Analyse et réalisation d'audits automatisés de l'infrastructure} s'est découpé en 4 phases :
+Mon sujet \textbf{Analyse et réalisation d'audits automatisés de l'infrastructure} s'est découpé en quatres phases :
 
 \begin{enumerate}
     \item \textbf{Analyse abstraite et bonnes pratiques}. J'ai réalisé une veille technologique sur les logiciels et outils utilisés par les administrateurs systèmes. 
-    De plus, j'ai pris le temps de me cultiver sur les sujets de sécurité avec les documentations et livres blanc de sécurité de l'ANSSI ainsi que les sites de conseils de sécurité.
-    \item \textbf{Analyse}. J'ai débuté une analyse de l'infrastructure en me basant sur les critères du référentiel secNumCloud de l'ANSSI. 
+    De plus, j'ai pris le temps de me cultiver sur les sujets de sécurité avec les documentations et livres blanc de sécurité de l'\gls{ANSSI} ainsi que les sites de conseils de sécurité.
+    \item \textbf{Analyse}. J'ai débuté une analyse de l'infrastructure en me basant sur les critères du référentiel secNumCloud de l'\gls{ANSSI}. 
     Cette analyse n'était pas uniquement technique car parmi les critères de certification, de nombreux points concernent de la documentation.
     \item \textbf{Préconisations}. J'ai rédigé des documentations pour le pôle \gls{sysadmin} et l'ensemble des salariées : livre blanc de sécurité, PSSI (Plan de sécurité des systèmes d'information), etc.
-    \item \textbf{Mise en oeuvre}. J'ai effectué des \gls{POC} sur Rudder et Ansible CMDB.
+    \item \textbf{Mise en oeuvre}. J'ai effectué des \gls{POC} sur Rudder et \gls{Ansible CMDB}.
 \end{enumerate}
 
 A l'issue de mes travaux, j'ai rédigé un PSSI et un tableau de suivi d'audit de l'infrastructure. 
-Les deux documents sont composés de 16 thématiques présentées en annexe de ce document aux pages \pageref{tab:16thematiques1} et \pageref{tab:16thematiques2}.
+Les deux documents sont composés de 16 thématiques présentées en annexe de ce document aux pages \begin{hilite} \pageref{tab:16thematiques1} \end{hilite} et \begin{hilite} \pageref{tab:16thematiques2} \end{hilite}.
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=\textwidth]{src/table_example.png}
@@ -614,11 +606,11 @@ J'ai par la suite complété ce tableau afin de mettre en avant les points déj�
 
 Dans le cadre de la 4\textsuperscript{ème} thématique portant sur la gestion des actifs, il est nécessaire de tenir un inventaire des ressources informatiques. 
 Cela comprend l'ensemble des ordinateurs du personnel, les machines physiques liées au différents datacenters ainsi que les machines virtuelles qu'elles hébergent.
-La solution retenue est d'utiliser 2 logiciels open-source :
+La solution retenue est d'utiliser 2 logiciels open-source:
 
 \noindent%
 \begin{minipage}{.7\textwidth}%
-\textbf{Open Computers and Software Inventory (OCSInventory)} une solution open-source de gestion technique de parc informatique. 
+\textbf{Open Computers and Software Inventory (\gls{OCSInventory})} une solution open-source de gestion technique de parc informatique. 
 Ce logiciel libre permet l’inventaire hardware et software. 
 On va ainsi inventorier des machines avec leurs caractéristiques matériels et les logiciels qui y sont installés.
 \end{minipage}%
@@ -631,48 +623,50 @@ On va ainsi inventorier des machines avec leurs caractéristiques matériels et 
 
 \noindent%
 \begin{minipage}{.7\textwidth}%
-\textbf{Gestionnaire Libre de Parc Informatique (GLPI)} est une solution open-source de gestion de parc informatique qui permet la classification des différentes ressources. 
+\textbf{Gestionnaire Libre de Parc Informatique (\gls{GLPI})} est une solution open-source de gestion de parc informatique qui permet la classification des différentes ressources. 
 Ce logiciel libre permet l’inventaire hardware et software. 
-On va ainsi inventorier des machines avec leurs caractéristiques matériels et les logiciels qui y sont installés.
+On va ainsi inventorier des machines avec leurs caractéristiques matériels et les logiciels qui y sont installés. \\
 \end{minipage}%
 \hfill
 \begin{minipage}{.3\textwidth}%
 \begin{center}
-\includegraphics[width=0.7\textwidth]{src/logo_glpi.png}
+\includegraphics[width=0.7\textwidth]{src/logo_glpi.png} 
 \end{center}
 \end{minipage}% \\
 
-OCSInventory va permettre de récupérer les informations tandis que GLPI va les trier en fonction de règles.
+Finalement, \gls{GLPI} va permettre de trier les informations récupérées par OcsInventory.
 
 \subsubsection{Architecture}
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=\textwidth]{src/Fonctionne GLPI.png}
     \label{fig:glpi}
-    \caption{Architecture entre OcsInventory et GLPI}
+    \caption{Architecture entre OcsInventory et \gls{GLPI}}
 \end{figure}
 
 \newpage
 \subsubsection{Principe de fonctionnement}
-L'application OCSInventory fonctionne sur un système d'agent.
+L'application \gls{OCSInventory} fonctionne sur un système d'agent.
 C'est-à-dire qu'un agent est installé sur l'ensemble des machines et celui-ci va envoyer des rapports quotidiennement via le protocole HTTP au serveur maître. 
 
-Ensuite, l'application GLPI avec un plugin dédié à l'import des données d'OCSInventory va se connecter à OCSInventory et lire les données.
-Finalement, par une action manuelle à réaliser dans GLPI, je valide les imports.
+Ensuite, l'application \gls{GLPI} avec un plugin va se connecter à \gls{OCSInventory} et lire les données.
+Finalement, par une action manuelle à réaliser dans \gls{GLPI}, je valide les imports.
 
+Un champ TAG configuré au niveau des agents permet une segmentation des machines.
 J'ai défini la nomenclature suivante pour les TAGs:
 \begin{itemize}
-    \item \textbf{ANG-ORD}: ordinateurs des salariés d'Angers.
-    \item \textbf{ANG-DC}: serveurs physiques et machines virtuelles d'Angers.
-    \item \textbf{REN}: serveurs physiques et machines virtuelles de Rennes.
-    \item \textbf{TRS}: serveurs physiques et machines virtuelles de Tours.
+    \item \begin{code} \texttt{ANG-ORD} \end{code}: ordinateurs des salariés d'Angers.
+    \item \begin{code} \texttt{ANG-DC} \end{code}: serveurs physiques et machines virtuelles d'Angers.
+    \item \begin{code} \texttt{REN} \end{code}: serveurs physiques et machines virtuelles de Rennes.
+    \item \begin{code} \texttt{TRS} \end{code}: serveurs physiques et machines virtuelles de Tours.
 \end{itemize}
 
-Une fois l'import fait, je peux dans GLPI visualiser les machines avec les TAGs associés. 
+Une fois l'import fait, je peux dans \gls{GLPI} visualiser les machines avec les TAGs associés. 
 Le TAG va alors permettre d'effectuer un trie lors de l'import. 
-Par exemple, les machines dont le TAG est \textit{REN} seront placées dans l'entité "Datacenter de Rennes".
-Lorsqu'un import est validé, GLPI écrit dans sa base de données les informations. \\
+Par exemple, les machines dont le TAG est \begin{code}\texttt{REN}\end{code} seront placées dans l'entité "Datacenter de Rennes".
+Lorsqu'un import est validé, \gls{GLPI} écrit dans sa base de données les informations. \\
 
+\begin{figure}[ht!]
 \noindent%
 \begin{minipage}{.5\textwidth}%
 \begin{center}
@@ -685,33 +679,31 @@ Lorsqu'un import est validé, GLPI écrit dans sa base de données les informati
 \includegraphics[width=\textwidth]{src/interface_glpi.png} \\
 \end{center}
 \end{minipage}% \\
-
-Une autre architecture aurait été possible en utilisant FusionInventory à la place d'OCSInventory. 
-L'avantage de FusionInventory est qu'il ne possède pas sa propre base de données. 
-Une fois les données récupérées, il les inscrit directement dans la base de données de GLPI. 
-Cette solution n'a pas été retenue car un serveur OCSInventory était déjà utilisé.
+    \caption{Interfaces de \gls{OCSInventory} et \gls{GLPI}}
+\end{figure}
 
 \newpage
 \subsubsection{Serveur maitre}
-Le serveur maitre de d'OCSInventory est installé dans un conteneur dans le cluster Proxmox d'Angers.
+Le serveur maitre de d'\gls{OCSInventory} est une application conteneurisée sur le \gls{cluster} \gls{Proxmox} d'Angers.
 Je n'ai pas eu à installer cette partie, l'application existait déjà.
 
-J'ai installé GLPI avec Docker sur une machine dédié aux conteneurs.
-L'installation se fait avec docker-compose pour 3 services, mariadb, glpi et automysqlbackup.
+J'ai installé \gls{GLPI} avec Docker sur une machine virtuelle dédiée aux conteneurs.
+J'ai utilisé docker-compose pour les trois services: mariadb, glpi et automysqlbackup.
 La partie réseau est gérée avec un routeur traefik.
 
 \subsubsection{Ajout d'un plugin}
-Par défaut, OCSInventory ne possède pas de plugin permettant d'inventorier les vhosts. 
+Par défaut, \gls{OCSInventory} ne possède pas de plugin permettant d'inventorier les vhosts. 
 Les vhosts sont les noms des sites webs hébergés sur une machine et il est intéréssant de pouvoir déterminer sur quelle machine est installé un site. 
-Afin de répondre à ce besoin interne, j'ai repris le travail d'un collègue avec l'écriture d'un script Perl permettant d'inventorier les vhosts des serveurs web Nginx, des conteneurs Docker et de les écrires dans la base de données d'OCSInventory.
+Afin de répondre à ce besoin interne, j'ai repris le travail d'un collègue avec l'écriture de scripts Perl permettant d'inventorier les vhosts des serveurs web Nginx, des conteneurs Docker et de les écrires dans la base de données d'\gls{OCSInventory}.
 Le nom des sites ayant une structure comprenant à la fois le service et le nom du client, il est possible de faire du traitement afin de créer une nouvelle table spécifiquement pour le nom des clients.
 Cela se fait pas un traitement du même résultat que pour les vhost.
 
 Ce script va dans un premier temps vérifier la présence ou non de la base de données \textit{vhost}.
 Si celle-ci existe déjà, il ne fait aucune action, sinon il créer la base de données.
-Ensuite, pour récupérer les vhosts des serveurs Nginx, les fichiers de configuration présents dans \\ \verb|/etc/nginx/sites-enabled| sont filtrés par une série de commandes Linux.
 
-Voici le résultat:
+Ensuite, pour récupérer les vhosts des serveurs Nginx, les fichiers de configuration présents dans \begin{code} \texttt{/etc/nginx/sites-enabled}\end{code} sont filtrés par une série de commandes \gls{Linux}.
+
+Voici la commande utilisée pour les vhost des serveurs Nginx.
 \vspace{-1ex}
 \begin{code}
 \vspace{-1ex}
@@ -731,10 +723,10 @@ Voici le résultat:
 \end{code}
 
 
-Enfin, pour récupérer les vhosts des conteneur dockers, cela se fait avec la commande docker et jquery (jq).
-La commande \verb|docker ps| permet de récupérer l'ensemble des identifiants de conteneurs, une boucle va ensuite effectuer un \verb|docker inspect| sur chacun des conteneurs puis la commande \verb|jq| va en sortir le vhost.
+Enfin, pour récupérer les vhosts des conteneur docker, cela se fait avec la commande docker et jquery (jq).
+La commande \begin{code} \texttt{docker ps}\end{code} permet de récupérer l'ensemble des identifiants de conteneurs, une boucle va ensuite effectuer un \begin{code} \texttt{docker inspect}\end{code} sur chacun des IDs puis la commande \begin{code} \texttt{jq}\end{code}  va en sortir le vhost dans le JSON retourné.
 
-Cela donne la commande:
+Cela donne la commande suivante pour les vhots conteneurs docker:
 \vspace{-1ex}
 \begin{code}
 \vspace{-1ex}
@@ -753,30 +745,28 @@ Cela donne la commande:
 \end{center}
 \end{code}
 
-Merci à Raphaël Poitevin qui avait largement entamé ce travail avant que je le reprenne.
-
-\subsubsection{Installation et configuration avec Ansible}
+\subsubsection{Installation et configuration avec \gls{Ansible}}
 \paragraph{Bastion SSH}
-L'une des problématiques du projet est d'installer les agents sur chacune des machines du SI. 
+L'une des problématiques du projet est d'installer les agents sur chacune des machines du \gls{SI}. 
 Cela représente environ 700 machines virtuelles. 
 Heureusement, l'accès aux différentes machines passe par un Bastion SSH. 
-Cela fonctionne par un contrôle d'accès basé sur les rôles (RBAC). 
-Le rôle \textit{sysadmin} dont je fais partie donne les droits sur toutes les machines. 
-La machine Passhport permet d'avoir un accès SSH à l'ensemble des machines virtuelles.
-C'est donc par cette machine que les scripts Ansible seront exécutés.
+Cela fonctionne par un contrôle d'accès basé sur les rôles (\gls{RBAC}). 
+Le rôle \begin{code}\texttt{sysadmin}\end{code} dont je fais partie donne les droits sur toutes les machines. 
+La machine \begin{code}\texttt{Passhport}\end{code} permet d'avoir un accès SSH à l'ensemble des machines virtuelles.
+C'est donc par cette machine que les scripts \gls{Ansible} seront exécutés.
 
 \paragraph{Inventaire}
-Ansible se base sur des fichiers d'inventaire dans lequel on décrit le nom des machines dans différents niveaux de catégories. 
+\gls{Ansible} se base sur des fichiers d'inventaire dans lequel on décrit le nom des machines dans différents niveaux de catégories. 
 La première chose que j'ai fais est de mettre à jours l'inventaire. 
-En effet, la différence de nombre de machines entre le Bastion SSH et l'inventaire Ansible mettait en avant qu'il en manquait au niveau d'Ansible. 
-J'ai alors fais une comparaison entre le listing du Bastion et celui d'Ansible pour en ressortir les machines manquantes.
+En effet, la différence de nombre de machines entre le Bastion SSH et l'inventaire \gls{Ansible} mettait en avant qu'il en manquait au niveau d'\gls{Ansible}. 
+J'ai alors fais une comparaison entre le listing du Bastion et celui d'\gls{Ansible} pour en ressortir les machines manquantes.
 
 Ensuite j'ai repris la structure de l'inventaire. 
-Parmi les différents groupes de celui-ci, il y a 3 groupes permettant de distinguer les machines se trouvant sur Angers, Rennes et Tours. 
+Parmi les différents groupes de celui-ci, il y a trois groupes permettant de distinguer les machines se trouvant sur Angers, Rennes et Tours. 
 Cependant, après avoir visualisé l'inventaire sous forme d'arborescence avec la commande \verb|ansible-inventory|, j'ai remarqué qu'il y avait des petites erreurs. 
 J'ai corrigé ces erreurs petit à petit en me basant sur la représentation de l'inventaire sous forme de graphique.
 
-\paragraph{Rôle Ansible}
+\paragraph{Rôle \gls{Ansible}}
 Un rôle est découpé de la manière suivante:
 \vspace{-1ex}
 \begin{code}
@@ -789,7 +779,7 @@ Un rôle est découpé de la manière suivante:
     ocsinventory-agent/
     |-- /default     # Variables par défaut
     |-- /files       # Fichiers supplémentaires
-    |-- /meta        # Nécessaire à Ansible Galaxy
+    |-- /meta        # Nécessaire à \gls{Ansible} Galaxy
     |-- /tasks       # Ensemble des playbooks
     |-- /vars        # Variables supplémentaires
 \end{verbatim}
@@ -801,54 +791,87 @@ Un rôle est découpé de la manière suivante:
 \end{code}
 
 \begin{itemize}
-    \item \textbf{Default} : variables pour le TAG, le nom des paquets, etc.
-    \item \textbf{Files} : scripts supplémentaire d'installation du plugin.
-    \item \textbf{Meta} : enregistrement du créateur du rôle. Ce dossier est nécessaire pour utiliser Ansible-Galaxy.
-    \item \textbf{Tasks} : ensemble des tâches Ansibles.
-    \item \textbf{Vars} : variables supplémentaires s'il est nécessaire de modifier les valeurs pas défaut.
+    \item \begin{code}\texttt{default}\end{code}: variables pour le TAG, le nom des paquets, etc.
+    \item \begin{code}\texttt{files}\end{code}: scripts supplémentaires d'installation du plugin.
+    \item \begin{code}\texttt{meta}\end{code}: enregistrement du créateur du rôle. Ce dossier est nécessaire pour utiliser \gls{Ansible}-Galaxy.
+    \item \begin{code}\texttt{tasks}\end{code}: ensemble des tâches Ansibles.
+    \item \begin{code}\texttt{vars}\end{code}: variables supplémentaires s'il est nécessaire de modifier les valeurs pas défaut.
 \end{itemize}
 
 \newpage
-Le diagramme de séquence ci-dessous met en lumière de façon simplifié les différentes tâches Ansible. On considère que l'ensemble des tâches se sont déroulés sans erreurs.
+Le diagramme de séquence ci-dessous met en lumière de façon simplifié les différentes tâches \gls{Ansible}. On considère que l'ensemble des tâches se sont déroulés sans erreurs.
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{src/Ansible OCS.png}
+    \includegraphics[width=\textwidth]{src/graph_ansible_ocs.png}
     \label{fig:ansible_ocs}
-    \caption{Diagramme de séquence de l'installation d'OCSInventory avec Ansible}
+    \caption{Diagramme de séquence de l'installation d'\gls{OCSInventory} avec \gls{Ansible}}
 \end{figure}
 
-L'utilisateur exécute le rôle Ansible.
-Cela va lancer une série d'étapes durant lesquelles Ansible va se connecter en SSH à la cible.
-Dans un soucis de simplicité, on considère ici que la connexion est acceptée et Ansible récupère l'ensemble des facts.
-A lieu ensuite un paramétrage dépendant des facts. 
-Dans le cas de cette installation d'OCSInventory, cela prend en compte la famille du systèmes d'exploitation et sa version.
+L'administrateur exécute le rôle \gls{Ansible}.
+Cela va lancer une série d'étapes durant lesquelles \gls{Ansible} va se connecter en SSH à la cible.
+Dans un soucis de simplicité, on considère ici que la connexion est acceptée et \gls{Ansible} récupère l'ensemble des facts.
+Débute ensuite un paramétrage dépendant des facts. 
+Dans le cas de cette installation d'\gls{OCSInventory}, cela prend en compte la famille du systèmes d'exploitation et sa version.
 A l'issues de ces étapes, divers tâches vont permettre l'installation et la configuration de l'agent sur la cible.
 
-Afin que les salariés installent pas eux-même l'agent, j'ai rédigé une documentation décrivant comment installer et configurer l'agent OCSInventory sur Windows, Linux et ArchLinux.
+Afin que les salariés installent pas eux-même l'agent, j'ai rédigé une documentation décrivant comment installer et configurer l'agent \gls{OCSInventory} sur Windows, \gls{Linux} et ArchLinux.
+
+La figure \ref{fig:fonctionnement_roles_ocs} à la page \pageref{fig:fonctionnement_roles_ocs} a été réalisé avec \begin{code}\texttt{ansible-playbook-grapher}\end{code}.
+Cet outils permet de généré un graphique à partir d'un playbook \gls{Ansible}.
+Cela fonctionne également avec les roles.
+L'ensemble des tâches effectuées lors de l'installation d'un agent \gls{OCSInventory} sur une machine correspond au schéma suivant:
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[scale=0.43]{src/fonctionnement_roles_ocs.png}
+    \label{fig:fonctionnement_roles_ocs}
+    \caption{Tâches \gls{Ansible} exécutée lors de l'installation d'un agent \gls{OCSInventory}}
+\end{figure}
+
 \newpage
 \subsubsection{Bilan}
-L'installation sur les machines accessibles via le réseau d'Angers est terminée.
-L'ensemble des salariés ont également installé l'agent.
-L'agent est installé sur la majorité des machines du datacenter de Rennes.
-L'agent est installé sur les machines de Tours. 
-Cependant, le réseau d'Angers et Tours n'étant pas encore relié à la date de ces installations, les agents ne peuvent pas joindre le serveur OCSInventory.
+\begin{itemize}
+    \item L'installation sur les machines d'Angers est terminée.
+    \item L'agent est installé sur la majorité des machines de Rennes?
+    \item L'agent n'est pas installé sur les machines de Tours. 
+    Le réseau d'Angers et Tours n'étant pas encore relié, les agents sur Tours ne peuvent pas communiquer avec le serveur maître sur Rennes.
+    \item L'ensemble des salariés ont installés l'agent.
+\end{itemize}
+
+Concernant les installations, mes travaux sont largement perfectible.
+Pour le moment, je n'ai pas mis de règles de supression au niveau du serveur \gls{OCSInventory}.
+C'est-à-dire qu'il faudrait paramétrer le serveur afin qu'il supprime une machine s'il n'a pas de nouvelles de celle-ci dans les 30 jours.
+On pourra alors considérer qu'elle n'existe plus.
+
+Je n'ai pas paramétré de mailing.
+Il serait intéressant d'avoir une boîte mail distiné à la reception des informations du serveur \gls{OCSInventory}.
+Cela serait important notamment avant suppression d'une machine pour s'assurer que cela soit justifié.
+
+La solution n'est pas pérenne dans le temps.
+La procédure d'installation du nouvelle machine est encore à revoir.
+Pour cette raison, les dernières machines installées n'ont pas l'agent pour le moment.
+
+\gls{OCSInventory} n'était pas la seule solution.
+Une autre architecture aurait été possible en utilisant FusionInventory à la place d'\gls{OCSInventory}. 
+L'avantage de FusionInventory est qu'il ne possède pas sa propre base de données. 
+Une fois les données récupérées, elles sont inscritent dans la base de données de \gls{GLPI}. 
+Cette solution n'a pas été retenue car un serveur \gls{OCSInventory} était déjà utilisé.
 
 \newpage
-\subsection{Durcissement Linux}
+\subsection{Durcissement \gls{Linux}}
 \subsubsection{Objectif}
-Dans le cadre de la 8\textsuperscript{ème} thématique portant sur la sécurité liée à l'exploitation, il est nécessaire d'effectuer un durcissement des systèmes Linux à l'installation d'une nouvelle machine. 
+Dans le cadre de la 8\textsuperscript{ème} thématique portant sur la sécurité liée à l'exploitation, il est nécessaire d'effectuer un durcissement des systèmes \gls{Linux} à l'installation d'une nouvelle machine. 
 En effet, une machine installée à partir de l'image d'origine n'est pas suffisamment sécurisée.
 
-Pour répondre à ce besoin, j'ai décidé d'utiliser OpenSCAP et Ansible. 
-L'objectif est d'utiliser les fonctionnalité d'OpenSCAP en les automatisant avec Ansible.
-Je cherche à obtenir pour chaque machine un rapport initial, le script Ansible de correctif et un rapport finale après application des correctifs. 
+Pour répondre à ce besoin, j'ai décidé d'utiliser \gls{OpenSCAP} et \gls{Ansible}. 
+L'objectif est d'utiliser les fonctionnalité d'\gls{OpenSCAP} en les automatisant avec \gls{Ansible}.
+Je cherche à obtenir pour chaque machine un rapport initial, le script \gls{Ansible} de correctif et un rapport finale après application des correctifs. 
 
 \subsubsection{Openscap}
 \noindent%
 \begin{minipage}{.7\textwidth}%
-OpenSCAP représente à la fois une bibliothèque et un outil de ligne de commande qui peuvent être utilisés pour analyser et évaluer chaque composant de la norme SCAP. 
-L'outil de ligne de commande, appelé oscap, offre un outil polyvalent conçu pour formater le contenu en documents ou analyser le système en fonction de ce contenu. \\
+OpenSCAP représente à la fois une bibliothèque et un outil de ligne de commande qui peuvent être utilisés pour analyser et évaluer chaque composant de la norme \gls{SCAP}. 
+L'outil en ligne de commande (\gls{CLI}), appelé oscap, offre un outil polyvalent conçu pour formater le contenu en documents ou analyser le système en fonction de ce contenu. \cite{OpenSCAP} \\
 \end{minipage}%
 \hfill
 \begin{minipage}{.3\textwidth}%
@@ -857,12 +880,12 @@ L'outil de ligne de commande, appelé oscap, offre un outil polyvalent conçu po
 \end{center}
 \end{minipage}%
 
-Egalement, il permet d'effectuer un scan d'une machine et de générer un rapport HTML.
-Depuis ce même rapport, il est possible de générer une ensemble de tâches Ansible corrigeant les erreurs.
+Le \gls{CLI} permet également d'effectuer un scan d'une machine et de générer un rapport HTML.
+Depuis ce même rapport, il est possible de générer une ensemble de tâches \gls{Ansible} corrigeant les erreurs.
 
 \subsubsection{Création de machines virtuelles de test}
 Avant de procéder à l'installation et l'exécution d'Openscap sur l'ensemble des machines, il est nécessaire de le tester. En effet, l'outil effectuant de nombreuses modifications à la volé, il faut d'abord éprouver la solution afin de s'assurer qu'elle n'entraîne pas de modifications handicapent pour l'exploitation.
-Ainsi, afin d'avoir un panel assez large pour effectuer des tests, j'ai créé sur le Proxmox d'Angers 6 machines virtuelles :
+Ainsi, afin d'avoir un panel assez large pour effectuer des tests, j'ai créé sur le \gls{Proxmox} d'Angers 6 machines virtuelles :
 \begin{table}[ht!]
     \begin{center}
         \begin{tabular}{| c | c | c | c | c |}
@@ -896,15 +919,16 @@ Ainsi, afin d'avoir un panel assez large pour effectuer des tests, j'ai créé s
         \hline
         \end{tabular}
     \end{center}
-    \caption{Machines virtuelles créés pour les tests avec OpenSCAP}
+    \caption{Machines virtuelles créés pour les tests avec \gls{OpenSCAP}}
 \end{table}
 
 \subsubsection{Création d'une archive Debian}
-Le paquet ne se trouve pas dans les listes des sources apt de Debian 11. 
+L'outil s'installe avec \begin{code} \texttt{\gls{apt}}\end{code}.
+Cependant, celui-ci n'est pas les listes des sources de Debian 11. 
 J'ai débuté la création de l'archive Debian à partir des sources du paquet mais je n'ai pas réussi pour le moment.
 
-\subsubsection{Installation et configuration avec Ansible}
-A nouveau, c'est avec Ansible que la configuration d'Openscap est faite. 
+\subsubsection{Installation et configuration avec \gls{Ansible}}
+À nouveau, c'est avec \gls{Ansible} que la configuration d'Openscap est faite. 
 Le diagramme de séquence suivant décrit le processus d'installation. 
 Afin de le simplifier, la différenciation entre distribution et version n'est pas représentée.
 
@@ -912,7 +936,7 @@ Afin de le simplifier, la différenciation entre distribution et version n'est p
     \centering
     \includegraphics[width=\textwidth]{src/Ansible oscap.png}
     \label{fig:ansible_oscap}
-    \caption{Diagramme de séquence du fonctionnement d'Ansible avec OpenSCAP}
+    \caption{Diagramme de séquence du fonctionnement d'\gls{Ansible} avec OpenSCAP}
 \end{figure}
 
 \newpage
@@ -921,7 +945,7 @@ Au moment de la rédaction de ce rapport, l'installation et l'exécution d'Opens
 Cependant l'ensemble des tests en fonction des distributions est fonctionnel.
 En l'état, l'outil est intéressant. 
 Il ne peut pour autant pas être mis oeuvre tel quel car certaines règles sont trop restrictives.
-Par exemple, une des modifications apportées avec OpenSCAP fait que la connexion SSH à l'utilisateur root est désactivée.
+Par exemple, une des modifications apportées avec \gls{OpenSCAP} fait que la connexion SSH à l'utilisateur root est désactivée.
 Cependant, lorsque l'on passe par le bastion SSH, toutes les connexions se font sur l'utilisateur root.
 Appliqué la script en l'état empêcherait l'utilisation du bastion.
 
@@ -935,13 +959,13 @@ L'objectif est d'avancer sur les documentations manquantes et d'établir un fonc
 \subsubsection{Documents}
 Lors de l'alternance j'ai travaillé sur la Politique de Sécurité des Systèmes d'Information (PSSI) ainsi que sur la charte informatique. 
 Durant la période de stage, j'ai travaillé sur la reprise de la documentation interne du datacenter afin de rédiger surtout les procédures, politiques et processus déjà mis en oeuvre mais dont il manquait l'aspect documentaire.
-De plus, suite à la demande d'un client, j'ai rédigé un Plan d'Assurance Sécurité (PSA) spécifiant les devoirs entre prestataires et clients au niveau de l'exploitation des services installés par Empreinte Digitale.
+De plus, suite à la demande d'un client, j'ai rédigé un Plan d'Assurance Sécurité (\gls{PAS}) spécifiant les devoirs entre prestataires et clients au niveau de l'exploitation des services installés par Empreinte Digitale.
 
 \subsubsection{Outils}
 
 \noindent%
 \begin{minipage}{.7\textwidth}%
-La documentation à destination des clients et prestataire est rédigée soit sur le Google Drive soit sur le Nextcloud de l'entreprise. 
+La documentation à destination des clients et prestataire est rédigée soit sur le Google Drive soit sur le \gls{Nextcloud} de l'entreprise. 
 Quant aux documentations internes au Sysadmin ou à l'ensemble des salariés, celles-ci sont rédigés sur un Wiki.js, une application open-source hébergée en interne. 
 Cette application permet de rédiger des documents en markdown depuis une interface web.
 
@@ -953,64 +977,79 @@ Cette application permet de rédiger des documents en markdown depuis une interf
 \end{center}
 \end{minipage}%
 
-\subsubsection{Bilan}
-Il reste encore de nombreuses documentation à rédiger et notamment de la documentation qui nécessite la mise en place de révision annuelle.
-Bilan en temps :
+Wiki.js est une application parfois installée pour des clients. 
+Dans le cadre de cette reprise de la documentation, j'ai installé une nouvelle instance avec docker-compose.
 
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\textwidth]{src/interface_wikijs.png}
+    \label{fig:interface_wikijs}
+    \caption{Interface web de l'application Wiki.js}
+\end{figure}
+
+Je ne suis pas allé plus loin que l'installation et la configuration.
+En effet, l'application n'est pas accessible.
+Il est nécessaire de changer d'application pour un outil open-source et accessible.
+Pour le moment aucune solution n'est retenue.
 
 \newpage
-\subsection{Autres pistes d'étude}
+\subsection{Bilan}
 Les outils présentés précédemment ont été mis en application sur l'ensemble du système d'information. 
-Cependant, d'autres essaies ont été fait.
+Cependant, d'autres essaies ont été fait. \\
 
-Durant la période de d'alternance, j'ai fais des essaies avec Ansible CMDB. Cette solution bien que non retenue pourrait être reconsidérer. 
-Son aspect ne nécessitant qu'une connexion SSH permet de gérer la totalité du parc, contrairement à d'autres comme OcsInventory qui posait des problèmes liés au réseau.
+Durant la période de d'alternance, j'ai fais des essaies avec \gls{Ansible CMDB}. 
+Cette solution bien que non retenue pourrait être reconsidérée. 
+En effet, l'aspect réseau est problématique.
+L'application Ligeo Gestion est majoritairement installée chez les clients.
+Pour c'est machines il faudrait donc mettre en place des mécanismes supplémentaires.
+Cependant, nous avons une connexion SSH à ces machines.
+Cela serait donc plus de mettre d'utiliser \gls{Ansible CMDB}. \\
 
 J'ai également testé Rudder durant l'alternance. 
-Techniquement, la solution est intéressante mais possède un coût important.
+Techniquement, la solution est intéressante mais coûteuse. \\
 
-Wazuh une plate-forme gratuite et opensource de sécurité basé sur un fonctionnement d'agent était également intéressante. 
-Celle-ci permet de réaliser du monitoring de sécurité ainsi que de l'application de correctifs. reposant sur ElasticSearch et Kinana, l'interface web paramétrable permet une excellente vision de l'ensemble du SI en temps réel. 
+De plus, j'ai essayé Wazuh, une plateforme gratuite et opensource de sécurité basé sur un fonctionnement d'agent. 
+Celle-ci permet de réaliser du monitoring de sécurité ainsi que de l'application de correctifs.
 Néanmoins, le fonctionnement par agent est contraignent et la configuration uniquement via des fichiers XML rend le travail fastidieux.
 
-Enfin, OpenVas un outils opensource de scan de vulnérabilités de site WEB permet de générer des rapports sur un nombre illimité de sites. 
-Je ne suis pas aller très loin dans l'expérimentation avec mais elle mériterait de passer plus de temps d'expérimentation.
+Enfin, j'ai essayé OpenVas un outils opensource de scan de vulnérabilités de site WEB permet de générer des rapports sur un nombre illimité de sites. 
+Je ne suis pas aller très loin dans l'expérimentation avec mais elle mériterait d'y passer plus temps.
 
 \newpage
 \section{Travaux d'administrateur système}
-\subsection{Nextcloud et Collabora}
+\subsection{\gls{Nextcloud} et \gls{Collabora}}
 \noindent%
 \begin{minipage}{.7\textwidth}%
-Nextcloud est une application web libre d'hébergement de fichiers et une plateforme de collaboration. 
-Associé à Collabora, une suite bureautique, il est possible d'intégrer dans Nextcloud l'édition de fichiers en tout genre de façon Collaborative. 
+\gls{Nextcloud} est une application web libre d'hébergement de fichiers et une plateforme de collaboration. 
+Associé à \gls{Collabora}, une suite bureautique, il est possible d'intégrer dans \gls{Nextcloud} l'édition de fichiers en tout genre de façon Collaborative. 
 Cette suite logiciel est finalement une alternative libre et open-source à l'utilisation d'outils tels que Google Drive ou OneDrive.
 \end{minipage}%
 \hfill
 \begin{minipage}{.3\textwidth}%
 \begin{center}
-\includegraphics[width=0.5\textwidth]{src/logo_nextcloud.jpeg}
+\includegraphics[width=0.7\textwidth]{src/logo_nextcloud.jpeg}
 \end{center}
 \end{minipage}% \\
 
 \subsubsection{Objectif}
-Empreinte Digitale installe et héberge régulièrement des instances Nextcloud et Collabora. 
+Empreinte Digitale installe et héberge régulièrement des instances \gls{Nextcloud} et \gls{Collabora}. 
 L'objectif est de simplifier et automatiser au mieux les installations mais également de facilité les mises à jours.
 
-Pour répondre à ces besoins, 4 outils sont utilisés:
+Pour répondre à ces besoins, quatre outils sont utilisés:
 \begin{itemize}
-    \item \textbf{GitLab} pour stocker l'ensemble des ressources nécessaires à l'installation.
-    \item \textbf{Ansible} pour exécuter différentes tâches.
-    \item \textbf{Ansible Tower/AWX} pour gérer depuis une interface graphique l'application des tâches Ansible et assurer un maintien dans le temps.
-    \item et \textbf{Jinja} couplé à Ansible pour permettre de générer les fichiers de configurations avec les bonnes variables en se basant sur des templates.
+    \item \textbf{\gls{GitLab}} pour stocker l'ensemble des ressources nécessaires à l'installation.
+    \item \textbf{\gls{Ansible}} pour exécuter différentes tâches.
+    \item \textbf{\gls{Ansible} Tower/AWX} pour gérer depuis une interface graphique l'application des tâches \gls{Ansible} et assurer un maintien dans le temps.
+    \item \textbf{\gls{Jinja}} couplé à \gls{Ansible} pour permettre de générer les fichiers de configurations avec les bonnes variables en se basant sur des templates.
 \end{itemize}
 
 \subsubsection{Description}
-L'application repose sur des conteneurs Docker hébergés sur une machine virtuelle, elle-même dans un cluster Promox. On compte 5 composants :
+L'application repose sur des conteneurs Docker hébergés sur une machine virtuelle, elle-même dans un \gls{cluster} \gls{Proxmox}. On compte cinq composants:
 \begin{itemize}
-    \item \textbf{Nextcloud} notre application principale associée à un serveur web apache dans un unique conteneur.
-    \item \textbf{Collabora} l'application supplémentaire pour l'édition de texte.
-    \item \textbf{Traefik} le reverse proxy qui va exposer les sites web \verb| collabora.cloud-ed.fr | et  \verb| nextcloud.cloud-ed.fr|. 
-    C'est également au niveau de Traefik que sont gérés les certificats HTTPs.
+    \item \textbf{\gls{Nextcloud}} notre application principale associée à un serveur web apache dans un unique conteneur.
+    \item \textbf{\gls{Collabora}} l'application supplémentaire pour l'édition de texte.
+    \item \textbf{\gls{Traefik}} le reverse proxy qui va exposer les sites web \begin{code}\texttt{collabora.cloud-ed.fr}\end{code} et \begin{code}\texttt{nextcloud.cloud-ed.fr}\end{code} représentés sur la figure \ref{fig:nextcloudXcollabora}
+    C'est également au niveau de \gls{Traefik} que sont gérés les certificats HTTPs.
     \item Une base de donnée \textbf{PostgreSQL} pour l'applicatif.
     \item Un cache applicatif \textbf{Redis}.
 \end{itemize}
@@ -1019,36 +1058,47 @@ L'application repose sur des conteneurs Docker hébergés sur une machine virtue
 \subsubsection{Schéma applicatif}
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=0.7\textwidth]{src/Nextcloud stack.png}
-    \caption{Schéma applicatif de Nextcloud avec Collabora}
+    \includegraphics[width=\textwidth]{src/Nextcloud stack.png}
+    \caption{Schéma applicatif de \gls{Nextcloud} avec \gls{Collabora}}
     \label{fig:nextcloudXcollabora}
 \end{figure}
 
+\newpage
 \subsubsection{Utilisation des variables}
 Automatiser aux mieux l'installation revient à créer un "Template" d'installation, n'utilisant que des variables. 
-On distingue 2 types de variables :
+On distingue deux types de variables :
 \begin{itemize}
-    \item \textbf{Les variables d'environnements}. Celles-ci vont décrire le nom du client, la version de Nextcloud à installer, les images Docker à utiliser etc. 
+    \item \textbf{Les variables d'environnements}. Celles-ci vont décrire le nom du client, la version de \gls{Nextcloud} à installer, les images Docker à utiliser etc. 
     Ce sont les variables qui n'ont pas besoin d'êtres secrètes.
     \item \textbf{Les secrets}. Ce sont d'autres variables obligatoires sauf qu'elles sont sensibles et donc à protéger. 
     C'est le cas notamment des identifiant et mots de passes des services.
 \end{itemize}
 
-Les variables sont utilisées à 3 endroits différents :
+Les variables sont utilisées à trois endroits différents:
 \begin{itemize}
-    \item Dans les fichiers docker-compose, qui prennent leurs valeurs dans le fichier \verb|.env|.
-    \item Dans le fichier \verb|.env|, qui est généré depuis Ansible avec un template Jinja.
-    \item Dans le template Jinja, qui prend ses valeurs dans l'\verb|inventory| AWX et également dans le coffre-fort Ansible.
+    \item Dans les fichiers docker-compose, qui prennent leurs valeurs dans le fichier \begin{code}\texttt{.env}\end{code}.
+    \item Dans le fichier \begin{code}\texttt{.env}\end{code}, qui est généré depuis \gls{Ansible} avec un template \gls{Jinja}.
+    \item Dans le template \gls{Jinja}, qui prend ses valeurs dans l'\begin{code}\texttt{inventory}\end{code} AWX et également dans le coffre-fort \gls{Ansible}.
 \end{itemize}
 
-La personne qui réalise l'installation doit spécifier les variables dans l'\verb|inventory| AWX et dans le coffre-fort Ansible.
+J'ai créer un template \gls{Jinja} qui va généré le fichier \begin{code}\texttt{.env}\end{code} en utilisant les variables de l'\begin{code}\texttt{inventory}\end{code} AWX ou le coffre-fort \gls{Ansible}.
+Le fichier généré est par la suite déplacé dans le bon répertoire pour être utiliser lors du lancement de la commande \begin{code}\texttt{docker-compose up}\end{code}. 
 
-Finalement, à partir d'un template Jinja et d'Ansible, on génère un fichier \verb|.env| que l'on place dans le dossier de l'application Nextcloud afin qu'il soit utilisé par les scripts docker-compose.
+Au moment d'une nouvelle installation, la personne qui l'effectue doit uniquement spécifier les variables dans l'\begin{code}\texttt{inventory}\end{code} AWX et dans le coffre-fort \gls{Ansible}.
 
-\subsubsection{Inventaire Ansible}
-Le paramétrage des variables pour le rôle et le vault est la première étape. 
-Ensuite, il faut mettre à jours l'inventaire Ansible du rôle. Dans le dépôt GitLab dans lequel se trouve le playbook générique, un dossier \verb|group_vars| permet de distinguer les différentes vaults.
-Par exemple:
+\subsubsection{Inventaire \gls{Ansible}}
+Le paramétrage des variables pour le rôle et le vault était la première étape. 
+Ensuite, il faut mettre à jours l'inventaire \gls{Ansible}.
+
+Avec \gls{Ansible} on peut créer des variables en fonction des groupes.
+Je me suis servis de ce mécanismes pour créer une distinction entre les différents vault.
+
+Tout d'abord, j'ai créer le dossier \begin{code}\texttt{group\_vars}\end{code}, dans lequel se trouve 2 dossiers:
+\begin{itemize}
+    \item  \begin{code}\texttt{aicla}\end{code}: contient le fichier vault.yaml du client aicla.
+    \item  \begin{code}\texttt{ed}\end{code}: contient le fichier vault.yaml du client ed.
+\end{itemize}
+
 \vspace{-1ex}
 \begin{code}
 \vspace{-1ex}
@@ -1070,10 +1120,10 @@ Par exemple:
 \vspace{-1ex}
 \end{code}
 
+Si un nouveau client doit être ajouté, il suffit de créer un nouveau dossier au nom du client et d'y mettre le fichier de vault.
 
-
-Pour appliquer correctement le vault pour aicla et ed, il faut créer un groupe dans l'inventaire Ansible portant le même nom. 
-Le fichier \verb|host| contient:
+Ensuite, pour que les \begin{code}\texttt{group\_vars}\end{code} soient effectifs, il faut créer un groupe dans l'inventaire \gls{Ansible} portant le même nom. 
+Le fichier \begin{code}\texttt{host}\end{code} faisant office d'inventaire contient:
 \vspace{-1ex}
 \begin{code}
 \vspace{-1ex}
@@ -1096,67 +1146,74 @@ Le fichier \verb|host| contient:
 \end{code}
 
 
-Il faut comprendre que le groupe \verb|aicla| possède une machine nommée \verb|aicla-cloud-1| dont l'adresse IP est \verb|192.168.X.X|. 
-Ce groupe possède des variables de groupe, d'où le nom \verb|group_vars|, spécifié dans le fichier \verb|group_vars/vault.yaml|.
+Il faut comprendre que le groupe \begin{code}\texttt{aicla}\end{code} possède une machine nommée \begin{code}\texttt{aicla-cloud-1}\end{code} dont l'adresse \gls{IP} est \begin{code}\texttt{192.168.X.X}\end{code}. 
+Ce groupe possède des variables de groupe, d'où le nom \begin{code}\texttt{group\_vars}\end{code}, spécifiées dans le fichier \begin{code}\texttt{group\_vars/vault.yaml}\end{code}.
 
 \subsubsection{Utilisation d'AWX}
-Une fois l'inventaire et les variables mis à jour, il faut paramétrer AXW. Tout se fait par le biais d'une interface web comme ci-dessous :
+Une fois l'inventaire et les variables mis à jour, il faut paramétrer AWX. 
+Tout se fait par le biais d'une interface web comme ci-dessous:
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{src/awx.png}
+    \includegraphics[width=\textwidth]{src/interface_awx.png}
     \caption{Interface web d'AWX}
     \label{fig:awx}
 \end{figure}
 
-Dans AWX, j'ai créé un projet \verb|Nextcloud|. 
-Dans ce projet, je fais appel à une source \verb|Git| qui est mon dépôt GitLab avec le nom de la branche et les identifiants à utiliser. 
-Le principe est que ce projet n'est pas à être changer.
+Dans AWX, j'ai créé un projet \begin{code}\texttt{\gls{Nextcloud}}\end{code}. 
+Dans ce projet, j'ai fais appel à une source \begin{code}\texttt{Git}\end{code} qui est mon dépôt \gls{GitLab} avec le nom de la branche et les identifiants à utiliser. 
 
-Ensuite je créer un \verb|Template|, utilisant mon projet \verb|Nextcloud| et d'autres ressources. 
-Les ressources supplémentaires à créer sont :
-\begin{enumerate}
-    \item Inventaires : variables d'environnement. 
-    \item Script d'inventaire : nom de la machine et son adresse IP.
-    \item Informations d'identification : accès au dépôt GitLab et mot de passe du Vault Ansible.
-    \item Modèles : spécifier l'utilisation des éléments précédemment créé, c'est-à-dire l'inventory, l'host, les credentials et le projet Nextcloud.
-\end{enumerate}
+Ce projet AWX n'a pas à être modifié.
+Dans la logique d'AWX, on peut avoir de multiples templates utilisant un unique projet.
+Ainsi, on aura plusieurs template de création d'instance \gls{Nextcloud} par client utilisant le même Projet.
 
-\subsubsection{Rôle Ansible}
-Le schéma ci-dessous décrit les actions réalisées par le rôle Ansible appelé par Ansible AWX. 
-Celui-ci ne fait pas apparaître les différentes tâches liés aux dépendances tels que l'installation du module \verb|pip| pour Python.
+Ensuite j'ai créé un \begin{code}\texttt{Template}\end{code} utilisant mon projet \begin{code}\texttt{\gls{Nextcloud}}\end{code} et d'autres ressources. 
+Les ressources supplémentaires à créer sont:
+\begin{itemize}
+    \item \textbf{Inventories}: variables d'environnement. 
+    \item \textbf{Hosts}: nom de la machine et son adresse \gls{IP}.
+    \item \textbf{Credentials}:  accès au dépôt \gls{GitLab} et mot de passe du Vault \gls{Ansible}.
+    \item \textbf{Templates}: spécifie l'utilisation des éléments précédemment créé, c'est-à-dire l'inventory, l'host, les credentials et le projet \gls{Nextcloud}.
+\end{itemize}
+
+Cela correspond aux sections à gauche sur l'image \refname{fig:awx} au niveau de l'onglet \begin{code}\texttt{Ressource}\end{code}.
+
+\subsubsection{Rôle \gls{Ansible}}
+Le schéma ci-dessous décrit les actions réalisées par le rôle \gls{Ansible} appelé par \gls{Ansible} AWX. 
+Celui-ci ne fait pas apparaître les différentes tâches liés aux dépendances tels que l'installation du module \begin{code}\texttt{pip}\end{code} pour Python.
 
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=\textwidth]{src/ansible_nextcloud.png}
-    \caption{Diagramme de séquences des tâches Ansible lors de l'installation de Nextcloud}
+    \caption{Diagramme de séquences des tâches \gls{Ansible} lors de l'installation de \gls{Nextcloud}}
     \label{fig:nextcloud_ansible}
 \end{figure}
 
+\newpage
 \subsubsection{Conclusion}
-Lorsqu'une personne souhaite installer une nouvelle instance, il lui suffit de télécharger le dépôt GitLab et éditer la partie inventaire et vault puis de push ses modifications. 
-Ensuite, dans Ansible AWX, il ajoute les ressources dont un inventaire, un script d'inventaire, deux informations d'identification et un modèle. 
+Lorsqu'une personne souhaite installer une nouvelle instance, il lui suffit de télécharger le dépôt \gls{GitLab} et éditer la partie inventaire et vault puis de push ses modifications. 
+Ensuite, dans \gls{Ansible} AWX, il ajoute les ressources dont un inventaire, un script d'inventaire, deux informations d'identification et un modèle. 
 Enfin, il exécute le modèles, ce qui lance l'installation de l'application.
 
 Dans le cadre d'une installation, il aurait été possible de se limiter à la partie avec les fichiers docker-compose, sans se servir d'AWX. 
 Cependant, AWX est particulièrement intéressant dans le maintien à jours des différentes instances. 
-En effet, depuis AWX, en allant sur le projet \verb|nextcloud|, on peut y visualiser l'ensemble des ressources liées.
+En effet, depuis AWX, en allant sur le projet \begin{code}\texttt{\gls{Nextcloud}}\end{code}, on peut y visualiser l'ensemble des ressources liées.
 
 Cela fait donc office de listing de l'ensemble des instances nextcloud installé. 
 Si la version d'un composant de nextcloud évolue, il suffit alors de modifier l'inventaire de chacun des modèles.
 
 Ajouté à cela, on assure une installation homogène du produit. 
-Dans le cas d'astreinte, on sait où trouver les ressources de l'application directement et ceux peu importe le Nextcloud sur lequel il faut intervenir.
+Dans le cas d'astreinte, on sait où trouver les ressources de l'application directement et ceux peu importe le \begin{code}\texttt{\gls{Nextcloud}}\end{code} sur lequel il faut intervenir.
 
-De plus, il arrive souvent de laisser le fichier \verb|.env| directement sur la machine, ce qui est à éviter. 
-Avec l'installation actuelle, le fichier \verb|.env| est généré, utilisé puis supprimé. 
+De plus, il arrive souvent de laisser le fichier \begin{code}\texttt{.env}\end{code} directement sur la machine, ce qui est à éviter. 
+Avec l'installation actuelle, le fichier \begin{code}\texttt{.env}\end{code} est généré, utilisé puis supprimé. 
 Pour l'administration, l'ensemble des sysadmins enregistrent les mots de passes des vaults dans l'application Bitwarden, ce qui leurs permets dans tous les cas de récupéré les accès à une base de données par exemple.
 
 \newpage
-\subsection{Proxmox}
+\subsection{\gls{Proxmox}}
 \subsubsection{Rappel}
 \noindent%
 \begin{minipage}{.7\textwidth}%
-Proxmox est une plate-forme open-source complète pour la virtualisation d'entreprise. 
+\gls{Proxmox} est une plateforme open-source complète pour la virtualisation d'entreprise. 
 Grâce à l'interface Web intégrée, nous pouvons facilement gérer les machines virtuelles et les conteneurs, le stockage défini par logiciel, la mise en réseau, le clustering haute disponibilité et plusieurs outils prêts à l'emploi sur une seule solution.
 
 \end{minipage}%
@@ -1169,59 +1226,61 @@ Grâce à l'interface Web intégrée, nous pouvons facilement gérer les machine
 
 
 \subsubsection{Objectif}
-Les datacenters de Rennes et Tours utilisent une plate-forme de virtualisation nommé Proxmox. 
-L'objectif est de mettre en oeuvre la même plate-forme de virtualisation à Angers pour que celle-ci puisse servir principalement à des tests. 
-Pour cela, 3 serveurs physiques sont disponibles afin de construire un cluster à 3 noeuds.
+Les datacenters de Rennes et Tours utilisent une plateforme de virtualisation nommé \gls{Proxmox}. 
+L'objectif est de mettre en oeuvre la même plateforme de virtualisation à Angers pour que celle-ci puisse servir principalement à des tests. 
+Pour cela, 3 serveurs physiques sont disponibles afin de construire un \gls{cluster} à 3 noeuds.
 
 \subsubsection{Installation physique}
-Dans un premier temps, j'ai ajouté une carte fibre 10G pour disposer d'une interface supplémentaire au serveur. 
+Dans un premier temps, j'ai ajouté une carte fibre 10G pour disposer d'une interface supplémentaire. 
 Cette interface est destinée à faire transiter du traffic réseau ayant besoin de plus de débit qu'une simple interface 1G. 
 L'interface 1G quant à elle sert à l'administration du serveur.
 Dans un second temps, j'ai racké les serveurs dans une baies. 
-Enfin, j'ai ajouté des disques ssh et hdd supplémentaires.
+Enfin, j'ai ajouté des disques \gls{SSD} et \gls{HDD} supplémentaires.
 Pour chaque serveur, un disque est réservé à l'installation du système d'exploitation et les autres servent au stockage pour les machines virtuelles.
 J'ai formaté chacun des disques destinés au stockage.
 
 \subsubsection{Installation logiciel}
 \paragraph{Image}
-Le système d'exploitation de Proxmox s'installe à partir d'un fichier ISO. Celui-ci est basé sur une image Debian. 
-J'ai installé une version Proxmox VE 7.0 basé sur l'image Debian 11 nommé Bullseye à partir d'un disque dur externe bootable IODD. 
+Le système d'exploitation de \gls{Proxmox} s'installe à partir d'un fichier \gls{ISO}. 
+Celui-ci est basé sur une image \gls{Debian}. 
+J'ai installé une version \gls{Proxmox} VE 7.0 basé sur l'image \gls{Debian} 11 nommé Bullseye à partir d'un disque dur externe bootable IODD. 
 Cela permet de ne pas avoir à créer une clé bootable dédiée.
 
 \paragraph{Réseau}
-Depuis l'interface graphique, j'ai configuré la partie DNS sur le DNS interne et changé l'adresse IP sur un réseau en 192.168.22.0/23. 
-Le DHCP interne attribue par défaut des adresses sur le réseau 192.168.23.0/22.
+Depuis l'interface graphique, j'ai configuré la partie \gls{DNS} sur le \gls{DNS} interne et changé l'adresse \gls{IP} sur un réseau en 192.168.22.0/23. 
+Le DHCP interne attribue par défaut des adresses sur le réseau 192.168.23.0/23.
 
-Une fois cette étape terminée, les interfaces web de Proxmox sont disponibles à l'adresse IP configurée sur le port par défaut 8006.
-Sur le DNS interne, j'ai créé 3 enregistrements sur le domaine \verb|.vt| pour avoir accèder aux site aux noms \verb|an-virt-pmx-1.vt|, \verb| an-virt-pmx-2.vt| et \verb|an-virt-pmx-3.vt|.
+Une fois cette étape terminée, les interfaces web de \gls{Proxmox} sont disponibles à l'adresse \gls{IP} configurée sur le port par défaut 8006.
+Sur le \gls{DNS} interne, j'ai créé trois enregistrements sur le domaine \begin{code}\texttt{.vt}\end{code}: \begin{code}\texttt{an-virt-pmx-1.vt}\end{code}, \begin{code}\texttt{an-virt-pmx-2.vt}\end{code} et \begin{code}\texttt{an-virt-pmx-3.vt}\end{code}.
 Le domaine utilisé est accessible uniquement sur le réseau local.
 
-\paragraph{Regroupement en cluster}
-Depuis l'interface graphique, dans la section cluster, j'ai créé un cluster en lui donnant un nom et un réseau. Il se nomme \verb|an-virt-pmx|.
-Ensuite, afin d'ajouter les 2 noeuds restant, j'ai récupéré le token d'identification du cluster, puis je me suis connecté sur chacun des noeuds. 
+\paragraph{Regroupement en \gls{cluster}}
+Depuis l'interface graphique, dans la section \gls{cluster}, j'ai créé un \gls{cluster} en lui donnant un nom et un réseau. 
+Il se nomme \begin{code}\texttt{an-virt-pmx}\end{code}.
+Ensuite, afin d'ajouter les deux noeuds restants, j'ai récupéré le token d'identification du \gls{cluster}, puis je me suis connecté sur chacun des noeuds. 
 Sur chacun d'entres-eux, j'ai spécifié:
 \begin{itemize}
-    \item L'adresse IP du cluster, soit l'adresse IP d'\verb|an-virt-pmx-1|.
+    \item L'adresse \gls{IP} du \gls{cluster}, soit l'adresse \gls{IP} d'\begin{code}\texttt{an-virt-pmx-1}\end{code}.
     \item Le token d'identification.
 \end{itemize}
 
-A partir de cette étape, depuis l'interface graphique de n'importe quel noeud Proxmox, l'ensemble des noeuds sont visibles et accessibles.
+A partir de cette étape, depuis l'interface graphique de n'importe quel noeud \gls{Proxmox}, l'ensemble des noeuds sont visibles et accessibles.
 
-\begin{figure}
+\begin{figure}[ht!]
     \centering
         \includegraphics[width=\textwidth]{src/proxmox_interface.png}
-    \caption{Interface du cluster Proxmox an-virt-pmx}
+    \caption{Interface du \gls{cluster} \gls{Proxmox} an-virt-pmx}
     \label{fig:proxmox_virt1}
 \end{figure}
 
-Arrivé à ce stade, le cluster est fonctionnel. 
-Cependant, pour une raison de fiabilité du stockage, j'ai installé et paramétré une solution de stockage nommé Ceph.
+Arrivé à ce stade, le \gls{cluster} est fonctionnel. 
+Cependant, pour une raison de fiabilité du stockage, j'ai installé et paramétré une solution de stockage nommé \gls{Ceph}.
 
-\subsubsection{Ceph}
+\subsubsection{\gls{Ceph}}
 \noindent%
 \begin{minipage}{.7\textwidth}%
-Ceph est une solution libre de stockage distribué qui propose trois protocoles: Bloc, Fichiers et Objets.
-L'objectif de Ceph est d'obtenir un stockage 100\% distribué sans point unique de défaillance.
+\gls{Ceph} est une solution libre de stockage distribué qui propose trois protocoles: Bloc, Fichiers et Objets.
+L'objectif de \gls{Ceph} est d'obtenir un stockage 100\% distribué sans point unique de défaillance.
 
 \end{minipage}%
 \hfill
@@ -1232,70 +1291,72 @@ L'objectif de Ceph est d'obtenir un stockage 100\% distribué sans point unique 
 \end{minipage}% \\
 
 \paragraph{Installation}
-Par défaut, une section \textit{Ceph} est disponible sur l'interface de chaque noeud de Proxmox. 
-Cette section permet d'installer Ceph lorsque ce n'est pas déjà le cas.
+Par défaut, une section \begin{code}\texttt{\gls{Ceph}}\end{code} est disponible sur l'interface de chaque noeud de \gls{Proxmox}. 
+Cette section permet d'installer \gls{Ceph} lorsque ce n'est pas déjà le cas.
 L'installation se fait par un simple clique à réaliser sur chacun des noeuds.
 
 \paragraph{Object-based Storage Device}
-Ceph est basé sur l'utilisation de Object-based Storage Device (OSD).
+\gls{Ceph} est basé sur l'utilisation de Object-based Storage Device (\gls{OSD}).
 Cela représente un système de stockage qui organise les données sous forme d'objets et non pas sous forme de fichier comme on peut en avoir l'habitude.
 Cela permet le stockage non structuré de n'importe quel type d'objet.
 Les données sont identifiables par un ID unique et des métadonnées comme les dates, les autorisations, les auteurs etc.
 
-\begin{figure}
+\begin{figure}[ht!]
     \centering
         \includegraphics[width=\textwidth]{src/types-de-storage.jpeg}
-    \caption{Représentation des types de storage par Scaleway's}
+    \caption{Représentation des types de storage par Scaleway's \cite{Scaleway}}
     \label{fig:storage_types}
 \end{figure}
 
-La configuration d'OSD nécessite que les disques soient vierges, d'où l'étape de formatage au niveau matériel.
-Ensuite, j'ai ajouté chacun des disques disponibles au cluster Ceph.
-Cela donne la représentation suivante si l'on regarde les 4 disques d'an-virt-pmx-1:
+\newpage
+La configuration d'\gls{OSD} nécessite que les disques soient vierges, d'où l'étape de formatage au niveau matériel.
+Ensuite, j'ai ajouté chacun des disques disponibles au \gls{cluster} \gls{Ceph}.
+Cela donne la représentation suivante si l'on regarde les quatre disques d'\begin{code}\texttt{an-virt-pmx-1}\end{code}:
 
-\begin{figure}
+\begin{figure}[ht!]
     \centering
         \includegraphics[width=\textwidth]{src/disk_node1.png}
-    \caption{Disques présent sur le noeud an-virt-pmx-1}
+    \caption{Disques présent sur le noeud \begin{code}\texttt{an-virt-pmx-1}\end{code}}
     \label{fig:disk_node1}
 \end{figure}
 
-Directement depuis l'interface Ceph, on peut visualiser l'ensemble des OSDs du cluster:
-\begin{figure}
+Directement depuis l'interface \gls{Ceph}, on peut visualiser l'ensemble des \gls{OSD}s du \gls{cluster}:
+\begin{figure}[ht!]
     \centering
         \includegraphics[width=\textwidth]{src/osd_cluster.png}
-    \caption{Ensemble des OSD du cluster an-virt-pmx}
+    \caption{Ensemble des \gls{OSD} du \gls{cluster} \begin{code}\texttt{an-virt-pmx}\end{code}}
     \label{fig:osd_cluster}
 \end{figure}
 
-J'ai installé 2 autres composants pour Ceph:
+\newpage
+J'ai installé deux autres composants pour \gls{Ceph}:
 \begin{itemize}
-    \item Ceph Monitor: démon qui conserve une copie maîtresse de la carte du cluster. 
-    La carte ou \textit{crush map} est un fichier dans lequel est écrit l'ensemble de ressources Ceph: OSD, hosts, règles etc.
-    Pour un niveau de disponiblité optimale, il est nécessaire d'avoir au moins 3 monitors.
-    \item Ceph Manager: démon qui s'éxecute parallèlement aux monitors pour surveiller l'état du cluster.
+    \item \textbf{\gls{Ceph} Monitor}: démon qui conserve une copie maîtresse de la carte du \gls{cluster}. 
+    La carte ou \textit{crush map} est un fichier dans lequel est écrit l'ensemble de ressources \gls{Ceph}: \gls{OSD}, hosts, règles etc.
+    Pour un niveau de disponiblité optimale, il est nécessaire d'avoir au moins trois monitors.
+    \item \textbf{\gls{Ceph} Manager}: démon qui s'éxecute parallèlement aux monitors pour surveiller l'état du \gls{cluster}.
     Il y a toujours au moins un monitor de présent, mais si il y en a plusieurs, alors seulement un est actif à la fois.
 \end{itemize}
 
 \paragraph{Pool de storage}
-J'ai créé 2 pools de storage pour le cluster.
-Le premier se nomme ssd. 
+J'ai créé deux pools de storage pour le \gls{cluster}.
+Le premier se nomme \begin{code}\texttt{ssd}\end{code}. 
 Il est dédié aux systèmes d'exploitation et aux services nécessitant une vitesse de lecture et écriture rapide.
-Le second se nomme hdd.
+Le second se nomme \begin{code}\texttt{hdd}\end{code}.
 Il est dédié au stockage volumineux qui n'est que très rarement lu.
 
-Par exemple, pour une installation d'un Nextcloud volumineux, le système d'exploitation avec les applications de Nextcloud sont sur un pool ssd tandis que les données (les fichiers notamments) sont sur le pool hdd.
+Par exemple, pour une installation d'un \gls{Nextcloud} volumineux, le système d'exploitation avec les applications de \gls{Nextcloud} sont sur un pool \begin{code}\texttt{ssd}\end{code} tandis que les données (les fichiers notamments) sont sur le pool \begin{code}\texttt{hdd}\end{code}.
 
 \paragraph{CephFS}
-Ceph possède son propre FileSystem nommé CephFS.
-J'ai créé un stockage CephFS afin d'y déposer l'ensemble des ISO qui pourraient être utiles.
+\gls{Ceph} possède son propre FileSystem nommé CephFS.
+J'ai créé un stockage CephFS afin d'y déposer l'ensemble des \gls{ISO} qui pourraient être utiles.
 Cela permet de stocker ces images sur un seul noeud et de présenter ce stockage aux autres.
-J'y ai déposé des ISO pour Ubuntu, Debian, Fedora, CentOS et RockyLinux.
+J'y ai déposé des \gls{ISO} pour Ubuntu, Debian, Fedora, CentOS et RockyLinux.
 
 \paragraph{Template}
-L'utilisation de Proxmox et Terraform repose sur la création de Template Cloud Init.
+L'utilisation de \gls{Proxmox} et Terraform repose sur la création de Template Cloud Init.
 Pour faire un template, il suffit de créer une machine virtuelle avec le système d'exploitation souhaité puis de définir cette machine comme Template.
-L'idée ici étant d'avoir un cluster similaire à ceux de Rennes et Tours, ayant les même templates Cloud Init pour l'utilisation de Terraform et ainsi ne pas avoir à se poser de question.
+L'idée ici étant d'avoir un \gls{cluster} similaire à ceux de Rennes et Tours, ayant les même templates Cloud Init pour l'utilisation de Terraform et ainsi ne pas avoir à se poser de question.
 
 \newpage
 \subsection{Projet Dehon} \label{dehon}
@@ -1303,20 +1364,20 @@ L'idée ici étant d'avoir un cluster similaire à ceux de Rennes et Tours, ayan
 
 Le groupe Dehon met en oeuvre un dispositif permettant la détection de fuite sur les installations frigorifiques. 
 Un Détecteur de Niveau Intelligent (DNI) est donc installé sur chacune des installations frigorifique afin de détecter les fuites par méthodes de mesures indirectes.
-Chaque DNI est également connecté au système de l'entreprise et les données sont remontées sur une plate-forme centralisée et consultable via un portail web. 
+Chaque DNI est également connecté au système de l'entreprise et les données sont remontées sur une plateforme centralisée et consultable via un portail web. 
 
 Une évolution des réglementation impose aux détenteurs d'installations frigorifiques de justifier d'un contrôle continu de leurs installations et de pouvoir présenter l'ensemble des vérifications ainsi que les opérations d'entretien effectuées.
 
 L'objectif est donc de mettre en place une plateforme cloud pour centraliser l'exploitation de l'ensemble des DNI et proposer une offre de service complète de suivi et d'expertise en temps réel des installations frigorifiques.
 
-J'ai travailler à la réalisation de cette infrastructure avec 2 autres administrateurs systèmes.
+J'ai travailler à la réalisation de cette infrastructure avec deux autres administrateurs systèmes.
 
 \subsubsection{Architecture}
-Pour des raisons de disponibilité, l'infrastructure du projet se trouve sur 3 sites:
+Pour des raisons de disponibilité, l'infrastructure du projet se trouve sur trois sites:
 \begin{itemize}
-    \item \textbf{virt2}: Proxmox de Tours à Cyrès sur lequel se trouve un premier cluster Kubernetes.
-    \item \textbf{cogent}: Proxmox de Tours à Cogent sur lequel se trouve un répliqua du premier cluster de virt2.
-    \item \textbf{virt1}: Proxmox de Rennes sur lequel se trouve un arbiter MongoDB. 
+    \item \begin{code}\texttt{virt1}\end{code}: \gls{Proxmox} de Rennes sur lequel se trouve un arbiter MongoDB. 
+    \item \begin{code}\texttt{virt2}\end{code}: \gls{Proxmox} de Tours à Cyrès sur lequel se trouve un premier \gls{cluster} \gls{Kubernetes}.
+    \item \begin{code}\texttt{cogent}\end{code}: \gls{Proxmox} de Tours à Cogent sur lequel se trouve un replica du premier \gls{cluster} de virt2.
 \end{itemize}
 
 \newpage
@@ -1324,129 +1385,128 @@ En voici un schéma:
 \begin{figure}[!ht]
     \centering
         \includegraphics[width=\textwidth]{src/Dehon1.png}
-    \caption{Infrastructure sur 3 sites physique du projet Dehon}
+    \caption{Infrastructure sur trois sites physique du projet Dehon}
     \label{fig:dehon1}
 \end{figure}
 
-Les serveurs étaient déjà mis en place pour virt1 et virt2. 
-Il a cependant fallu aller sur Tours chez cogent pour y installer une machine. 
-Cette machine contient un unique cluster proxmox. 
-Il a ensuite fallu relier les centres de Cogent et Cyrès. 
-La distance entre les 2 bâtiments est d'environ 2 km. 
-Une fibre noir, soit une fibre optique par encore activée à préalablement était installé par le personnel de Cyrès.
+Les serveurs étaient déjà mis en place pour \begin{code}\texttt{virt1}\end{code} et \begin{code}\texttt{virt2}\end{code}. 
+Il a cependant fallu allé sur Tours à Cogent pour y installer une machine. 
+Cette machine contient un unique \gls{cluster} \gls{Proxmox}. 
 
+Le rattachement du réseau de Cyrès vers Cogent s'est fait avec une fibre noir.
+Celle-ci a été installée par le personnel de Cyrès.
+La distance entre les deux bâtiments est d'environ 2km.
 
 \subsubsection{Déploiement des machines virtuelles avec Terraform}
-Nous avons commencé par developper l'infrastructure sur virt2. Nous nous sommes servis de terraform pour deployer les machines virtuelles sur le cluster. 
+Nous avons commencé par developper l'infrastructure sur \begin{code}\texttt{virt2}\end{code}. 
+Nous nous sommes servis de terraform pour déployer les machines virtuelles sur le \gls{cluster}. 
 
 \paragraph{Les machines et leur rôle}
-Nous avons donc 9 machines:
-
 \begin{itemize}
-    \item 3 machines virtuelles destinées à être les masters. 
-    Dans le conception de kubernetes, ces machines vont etre les cerveaux du cluster.
+    \item trois machines virtuelles destinées à être les masters. 
+    Dans le conception de \gls{Kubernetes}, ces machines vont etre les cerveaux du \gls{cluster}.
     C'est sur celles-ci que des composant de kuberne vont permettre l'orchestration de runner.
-    \item 3 machines virtuelle destinée à être les workers. 
-    Ces 3 machines vont etre celles qui supportent la charge de travail dans le cluster.
-    \item 2 machines virtuelle en tant que proxy. 
+    \item trois machines virtuelle destinée à être les workers. 
+    Ces trois machines vont être celles qui supportent la charge de travail dans le \gls{cluster}.
+    \item deux machines virtuelle en tant que proxy. 
     Elles seront le point d'entrée de l'infrastructure. 
-    \item 1 machines virtuelle pour le stockage. 
-    L'ensemble du cluster utilisera un stockage partagé.
+    \item une machines virtuelle pour le stockage. 
+    L'ensemble du \gls{cluster} utilisera un stockage partagé.
 \end{itemize}
 
 La denomination de ces machines est réfléchie afin d'identifier le client, le role et le nombre de chaque composant. 
 Ces noms sont visibles sur le schéma de l'infrastructure.
 
 \paragraph{Les providers}
-Contrairement aux travaux précémment réalisé, on travaille ici avec des fichiers Terraform qui doivent prendre en considération la présence de 3 cluster Proxmox différent.
-Cela nécessite de déclarer 3 providers: \verb|proxmox-congent|, \verb|proxmox-virt1| et \verb|proxmox-virt2|.
+Contrairement aux travaux précémment réalisés, on travaille ici avec Terraform, on travaille ici avec trois \gls{cluster} \gls{Proxmox} différents.
+Cela nécessite de déclarer trois providers: \begin{code}\texttt{proxmox-cogent}\end{code},\begin{code}\texttt{proxmox-virt1}\end{code} et\begin{code}\texttt{proxmox-virt2}\end{code}.
 Chacun des provider possède son url, son nom d'utilisateur et son mot de passe.
-Ces variables sensibles sont stockées dans un fichier \verb|secret.tfvars|, le fichier Terraform pour les secrets.
+Ces variables sensibles sont stockées dans un fichier \begin{code}\texttt{secret.tfvars}\end{code}, le fichier Terraform pour les secrets.
 
 \paragraph{Les modules}
-Ensuite, j'ai défini différent modules. Pour les cluster dupliqués, on utilise 4 modules:
+Ensuite, j'ai défini différent modules. Pour les \gls{cluster} dupliqués, on utilise quatre modules:
 \begin{itemize}
-    \item dehon-k8s-master-virt2-main: module pour la création des masters sur virt2.
-    Un champ spécifique permet de définir que ce module doit être utilisé 3 fois pour ainsi créer 3 machines virtuelles.
-    Terraform permet de créer certain champ avec un système d'incrémentation, ainsi les adresses IP ou les noms des machines se feront automatiquement.
-    \item dehon-k8s-run-virt2-main: module pour la création des runners sur virt2.
-    \item dehon-k8s-pxy-virt2-main: module pour la création de 2 proxy.
-    \item dehon-k8s-storage-virt2-main: module pour la machine de stockage.
-    Celle-ci possède la particularité d'avoir 2 disques, le premier pour le système d'exploitation et le second de 2 To pour les données.
+    \item \textbf{dehon-k8s-master-virt2-main}: module pour la création des masters sur \begin{code}\texttt{virt2}\end{code}.
+    Un champ spécifique permet de définir que ce module doit être utilisé trois fois pour ainsi créer trois machines virtuelles.
+    Terraform permet de créer certain champ avec un système d'incrémentation, ainsi les adresses \gls{IP} ou les noms des machines se feront automatiquement.
+    \item \textbf{dehon-k8s-run-virt2-main}: module pour la création des runners sur \begin{code}\texttt{virt2}\end{code}.
+    \item \textbf{dehon-k8s-pxy-virt2-main}: module pour la création de deux proxy.
+    \item \textbf{dehon-k8s-storage-virt2-main}: module pour la machine de stockage.
+    Celle-ci possède la particularité d'avoir deux disques, le premier pour le système d'exploitation et le second de 2 To pour les données.
 \end{itemize}
 
-Le rôle et l'architecture des machines installées avec les 2 derniers modules de la liste ci-dessus seront présentés plus tard.
+Le rôle et l'architecture des machines installées avec les deux derniers modules de la liste ci-dessus seront présentés plus tard.
 
-A l'issue de cette étapes, on obtient le cluster présenté sur la figure \ref{fig:dehon1} avec 3 autres machines virtuelles.
+A l'issue de cette étapes, on obtient le \gls{cluster} présenté sur la figure \ref{fig:dehon1} avec trois autres machines virtuelles.
 
-\subsubsection{Déploiement du cluster Kubernetes avec Kubespray}
-A présent que les machines virtuelles du cluster Kubernetes sont installées, il a fallu installer le cluster Kubernetes.
+\subsubsection{Déploiement du \gls{cluster} \gls{Kubernetes} avec \gls{Kubespray}}
+A présent que les machines virtuelles du \gls{cluster} \gls{Kubernetes} sont installées, il a fallu installer le \gls{cluster} \gls{Kubernetes}.
 
-\paragraph{Kubespray}
-Kubespray est un utilitaire basé sur Ansible qui permet le déploiement automatisé de cluster Kubernetes.
-Le dépôt GitHub du projet est disponible ici: \\ \url{https://github.com/kubernetes-sigs/kubespray}.
+\paragraph{\gls{Kubespray}}
+\gls{Kubespray} est un utilitaire basé sur \gls{Ansible} qui permet le déploiement automatisé d'un \gls{cluster} \gls{Kubernetes}.
+Le dépôt GitHub du projet est disponible ici: \\ \begin{hilite}\url{https://github.com/kubernetes-sigs/kubespray}\end{hilite}.
 
 \paragraph{Mise à jours de l'inventaire}
-La première étape consiste à mettre à jours l'inventaire Ansible.
+La première étape consiste à mettre à jours l'inventaire \gls{Ansible}.
 Pour cela, un exemple est donné dans le dépôt \href{https://github.com/kubernetes-sigs/kubespray/blob/master/inventory/sample/inventory.ini}{ici}.
-On y voit un inventaire basé autour des composants vitaux de Kubernetes:
+On y voit un inventaire basé autour des composants vitaux de \gls{Kubernetes}:
 \begin{itemize}
-    \item kube\_controle\_plane: cerveau de kubernetes.
+    \item \textbf{kube\_controle\_plane}: cerveau de \gls{Kubernetes}.
     Ce composant doit donc être installé sur les noeuds master.
-    \item etcd: base de données clé-valeur reposant sur un tableau à deux colonnes.
+    \item \textbf{etcd}: base de données clé-valeur reposant sur un tableau à deux colonnes.
     La première contient la valeur.
     La second contient la clé.
-    Cette base contient la totalité de la configuration du cluster Kubernetes.
-    Ce fichier est vitale à la reconstruction d'un cluster en cas de sinistre.
-    \item kube\_node: ce sont les travailleurs.
+    Cette base contient la totalité de la configuration du \gls{cluster} \gls{Kubernetes}.
+    Ce fichier est vitale à la reconstruction d'un \gls{cluster} en cas de sinistre.
+    \item \textbf{kube\_node}: ce sont les travailleurs.
 \end{itemize}
 
-Cette structure permet l'installation des bons composants de Kubernetes au bons endroits.
+Cette structure permet l'installation des bons composants de \gls{Kubernetes} au bons endroits.
 
-\paragraph{Paramétrage de Kubespray}
+\paragraph{Paramétrage de \gls{Kubespray}}
 Le nombre de paramètres possibles est gigantesque.
 Pour cette partie je n'ai donc pas que paramétrer les paramètres que je connaissais:
 \begin{itemize}
-    \item loadbalancer\_apiserver: les noeuds slaves communiquent via API aux masters.
-    \item loadbalancer\_apiserver\_port: port d'accès à l'API.
-    \item kube\_network\_plugin: différents plugin Kubernete existent pour le réseau.
+    \item \textbf{loadbalancer\_apiserver}: les noeuds slaves communiquent via \gls{API} aux masters.
+    \item \textbf{loadbalancer\_apiserver\_port}: port d'accès à l'\gls{API}.
+    \item \textbf{kube\_network\_plugin}: différents plugin Kubernete existent pour le réseau.
     Dans notre cas, on utilise calico.
-    \item kube\_apiserver\_ip: même valeur que le loadbalancer\_apiserver.
+    \item \textbf{kube\_apiserver\_ip}: même valeur que le loadbalancer\_apiserver.
 \end{itemize}
 
 \subsubsection{Configuration des 2 Haproxy}
-La configuration des 2 proxys se fait avec un rôles Ansible.
-Le paramétrage des variables permet la génération des fichiers de configurations à partir de template Jinja.
+La configuration des 2 proxys se fait avec un rôles \gls{Ansible}.
+Le paramétrage des variables permet la génération des fichiers de configurations à partir de template \gls{Jinja}.
 4 fichiers sont dédiés aux configurations de bases de l'Haproxy.
 Un autre fichier, qui est le plus important, contient les différentes configurations des frontend et backend.
 
-J'ai édité ce fichier de façon à qu'il se génère le fichier de configuration en fonction du nom du projet, des adresses IP autorisées etc.
-La présence de boucle dans le template Jinja permet d'auto-générer un ensemble de \verb|server| à partir de la liste des serveurs.
+J'ai édité ce fichier de façon à qu'il se génère le fichier de configuration en fonction du nom du projet, des adresses \gls{IP} autorisées etc.
+La présence de boucle dans le template \gls{Jinja} permet d'auto-générer un ensemble de \verb|server| à partir de la liste des serveurs.
 C'est par exemple le cas pour les différents backend sur l'ensemble des master et runner.
 
 \subsubsection{Configuration de la VIP sur les proxy}
 Précédemment, le champ \verb|loadbalancer_apiserver| avait été paramétré sur l'adresse 10.2.11.100.
 Cela correspond à la VIP entre les 2 proxy.
-Graĉe à cette VIP (Virtual IP), nous n'avons plus de SPOF (Single Point Of Failure) pour l'API Server.
-Pour mettre en place cette VIP, j'ai utilisé un playbook Ansible qui permet d'installer KeepAlived.
-KeepAlived s'appuie sur le protocole VRRP (Virtual Router Redundancy Protocol) conçu pour gérer une adresse IP virtuelle entre plusieurs hôtes.
-Concrètement, c'est une adresse IP qui se balade entre les 2 proxys.
+Graĉe à cette VIP (Virtual \gls{IP}), nous n'avons plus de SPOF (Single Point Of Failure) pour l'\gls{API} Server.
+Pour mettre en place cette VIP, j'ai utilisé un playbook \gls{Ansible} qui permet d'installer KeepAlived.
+KeepAlived s'appuie sur le protocole VRRP (Virtual Router Redundancy Protocol) conçu pour gérer une adresse \gls{IP} virtuelle entre plusieurs hôtes.
+Concrètement, c'est une adresse \gls{IP} qui se balade entre les 2 proxys.
 
-Après l'installation et la configuration de KeepAlived avec Ansible, l'interface réseau \verb|eth0| de \verb|dehon-k8s-pxy-1| possède 2 adresses: \verb|10.2.11.80| et \verb|10.2.11.100|.
+Après l'installation et la configuration de KeepAlived avec \gls{Ansible}, l'interface réseau \verb|eth0| de \verb|dehon-k8s-pxy-1| possède 2 adresses: \verb|10.2.11.80| et \verb|10.2.11.100|.
 L'interface \verb|eth0| de \verb|dehon-k8s-pxy-2| ne possède que l'adresse \verb|10.2.11.81|.
 Si le service KeepAlived ou Haproxy s'arrête, ou pire encore si une des machines s'arrête, alors la VIP \verb|10.2.11.100| bascule sur l'autre machine.
 
-On assure ainsi une redondance de l'accessibilité à l'API Server.
+On assure ainsi une redondance de l'accessibilité à l'\gls{API} Server.
 
 \subsubsection{Stockage NFS externalisé}
-Ansible est à nouveau utilisé pour déployer le NFS sur la machine de storage.
+\gls{Ansible} est à nouveau utilisé pour déployer le NFS sur la machine de storage.
 L'installation est basée sur l'utilisation du paquet apt \verb|nfs-kernel-server|.
 Le chemin d'export est également paramétré sur le point de montage \verb|/srv/nfs/shared|.
 
 La machine possède un premier disque de 50G pour le système d'exploitation et un second pour le stockage de 2To.
 J'ai fais un point de montage \verb|/srv/nfs/shared| sur l'entierté du disque de stockage.
 
-La suite de la configuration se fait au niveau du cluster Kubernetes.
+La suite de la configuration se fait au niveau du \gls{cluster} \gls{Kubernetes}.
 Il faut déclarer une nouvelle StorageClass (sc) qui utilisera le serveur NFS.
 Pour cela, j'ai utilisé le provider "Helm" avec la ressource "kubernetes\_storage\_class".
 Les paramètres principaux à spécifier sont l'adresse du serveur et le chemin:
@@ -1476,15 +1536,15 @@ Le Physical Volume Claim (PVC) des applications utilisant la StorageClass (SC) n
 A l'issue de cette installation, j'ai réalisé de performance des disques.
 Pour cela, j'ai utilisé les commandes \verb|hdparm| et \verb|fio|.
 
-\subsubsection{Les ressources Kubernetes}
-J'ai participé à l'installation de nombreuses ressources du Cluster Kubernetes.
+\subsubsection{Les ressources \gls{Kubernetes}}
+J'ai participé à l'installation de nombreuses ressources du Cluster \gls{Kubernetes}.
 Toutes ces ressources on été installées avec le provider "Helm" de Terraform.
 
 Voici la liste de ces ressources:
 \paragraph{Ingress Controller}
-Ingress Controller nginx. Un Ingress est un composant Kubernetes qui permet de relier une URL à un service.
+Ingress Controller nginx. Un Ingress est un composant \gls{Kubernetes} qui permet de relier une URL à un service.
 Un IngressController est un composant qui permet de piloter l'implémentation de l'ensemble des Ingress.
-L'IngressController va gérer le traffic externe au cluster vers l'ensemble des PODS.
+L'IngressController va gérer le traffic externe au \gls{cluster} vers l'ensemble des PODS.
 
 L'image ci-dessous présente le fonctionenemnt de l'IngressController d'Nginx :
 
@@ -1496,17 +1556,17 @@ L'image ci-dessous présente le fonctionenemnt de l'IngressController d'Nginx :
 \end{figure}
 
 \paragraph{Cert Manager}
-Cert manager permet la centralisation des demandes certificats pour les différentes ressources du cluster Kubernetes.
+Cert manager permet la centralisation des demandes certificats pour les différentes ressources du \gls{cluster} \gls{Kubernetes}.
 Cela simplifie l'option, le renouvelle et l'utilisation des certificats.
 
 \paragraph{Rancher}
-Rancher est une application qui permet de nombreuses choses dans un cluster Kubernetes: managements des ressources, droits utilisateurs, règles réseaux etc. 
-Rancher fournit une interface WEB optimale pour la gestion d'un cluster.
+Rancher est une application qui permet de nombreuses choses dans un \gls{cluster} \gls{Kubernetes}: managements des ressources, droits utilisateurs, règles réseaux etc. 
+Rancher fournit une interface WEB optimale pour la gestion d'un \gls{cluster}.
 
 \begin{figure}[!ht]
     \centering
         \includegraphics[width=\textwidth]{src/rancher_interface.png}
-    \caption{Interface Rancher de l'infrastructure Kubernetes du projet Dehon}
+    \caption{Interface Rancher de l'infrastructure \gls{Kubernetes} du projet Dehon}
     \label{fig:rancher_interface}
 \end{figure}
 
@@ -1523,7 +1583,7 @@ Il est utilisé en combinaison de Grafana.
 
 \paragraph{Sauvegardes}
 La solution de backup retenue est Velero.
-C'est une solution de backup opensource dédié à Kubernetes.
+C'est une solution de backup opensource dédié à \gls{Kubernetes}.
 Cette solution permet le disaster recovery, la migration des données et leur protection.
 
 Pour externaliser les sauvegarde, j'ai utilisé minIO.
@@ -1535,16 +1595,16 @@ Ainsi, on intéragit avec les objets aves des requêtes PUT, GET, DELETE etc.
 Les applications utilisent une base de données MongoDB.
 J'ai travaillé sur l'installation et la configuration d'une partie.
 
-Il faut garder à l'esprit qu'en cas de désastre, l'applicatif doit basculer l'écritures des données d'une base de données présente sur le premier cluster vers une autres base sur le cluster de Backup.
+Il faut garder à l'esprit qu'en cas de désastre, l'applicatif doit basculer l'écritures des données d'une base de données présente sur le premier \gls{cluster} vers une autres base sur le \gls{cluster} de Backup.
 Ce mécanismes est pris en compte avec MongoDB avec un composant MongoArbiter.
 MongoArbiter permet de simplement de déclarer la base de données dans laquel l'applicatif doit écrire.
 
 Après l'installation de la machine virtuelle comme à son habitude avec Terraform, j'ai automatisé l'installation de l'Arbiter avec Terraform sur celle-ci.
 L'arbiter est dans une application docker.
-L'utilisation des commandes docker et docker-compose n'est pas prise en compte par défaut avec Ansible.
+L'utilisation des commandes docker et docker-compose n'est pas prise en compte par défaut avec \gls{Ansible}.
 Il est nécessaire dans un premier temps d'installer la commande \verb|pip| et les module \verb|docker| et \verb|docker-compose|.
 
-Avec ce module, j'ai créer une task Ansible qui lance la création d'un conteneur à partir de l'image \verb|killercentury/mongo-arbiter|.
+Avec ce module, j'ai créer une task \gls{Ansible} qui lance la création d'un conteneur à partir de l'image \verb|killercentury/mongo-arbiter|.
 J'ai ajouté dans la section \verb|environnement| les identifiants de connexion à la base de données maître ainsi que son URL.
 
 \newpage
@@ -1552,18 +1612,18 @@ J'ai ajouté dans la section \verb|environnement| les identifiants de connexion 
 \begin{figure}[!ht]
     \centering
         \includegraphics[width=\textwidth]{src/graph_dehon.png}
-    \caption{Cluster Kubernetes de dehon sur virt2-prd-pmx}
+    \caption{Cluster \gls{Kubernetes} de dehon sur virt2-prd-pmx}
     \label{fig:graph_dehon}
 \end{figure}
 
 \subsubsection{Bilan}
 Ce projet a été extrêment intéressant sur de nombreux point.
-Il a tout d'abord renforcer mes compétences dans l'utilisation d'Ansible et Terraform avec des besoins plus compliqués que ce que j'avais pu mettre en oeuvre précédemment.
+Il a tout d'abord renforcer mes compétences dans l'utilisation d'\gls{Ansible} et Terraform avec des besoins plus compliqués que ce que j'avais pu mettre en oeuvre précédemment.
 
-De plus, le projet portant sur Kubernetes, j'ai pu mettre oeuvre les compétences acquises en cours. 
-Cela m'a permis de renforcer mes compétences sur Kubernetes tout en les développants avec la découverte de nouveaux composants Kubernetes.
-J'ai vu la différence entre le cluster mis en place lors de cours et celui d'un cluster de production.
-Toujours lié à Kubernetes, cela m'a permis de découvrir les helm, kubespray, k9s etc.
+De plus, le projet portant sur \gls{Kubernetes}, j'ai pu mettre oeuvre les compétences acquises en cours. 
+Cela m'a permis de renforcer mes compétences sur \gls{Kubernetes} tout en les développants avec la découverte de nouveaux composants \gls{Kubernetes}.
+J'ai vu la différence entre le \gls{cluster} mis en place lors de cours et celui d'un \gls{cluster} de production.
+Toujours lié à \gls{Kubernetes}, cela m'a permis de découvrir les helm, \gls{Kubespray}, k9s etc.
 
 Du début à la fin, j'ai pu travaillé sur la mise en oeuvre de chaque étape d'une infrastructure: réseau, sécurité, supervision, sauvegarde, tests, redondance etc.
 J'ai observé tout le cheminement de pensé permettant de répondre à un besoin spécifique.
@@ -1574,15 +1634,15 @@ J'ai observé tout le cheminement de pensé permettant de répondre à un besoin
 \subsection{Procédure d'arrivée}
 \subsubsection{Objectif}
 L'arrivée d'une nouvelle personne au sein d'Empreinte Digitale nécessite l'installation et la configuration de nombreuses choses.
-Une procédure existait déjà précédemment mais elle n'allait pas suffisamment dans le détail et elle ne faisait pas la distinction entre une installation pour un développeur, un sysadmin ou quelqu'un qui travaillerait dans l'administratif.
-L'objectif est donc d'étoffé l'existant afin de rendre l'arrivé d'un nouvel employé plus fluide.
+Une procédure existait déjà mais elle n'était pas suffisamment exhaustive.
+L'objectif est d'étoffer l'existant afin de rendre l'arrivé d'un nouvel employé plus fluide.
 
 \subsubsection{Description}
-Empreinte Digtiale utilise l'outil de Ticketing Redmine.
+Empreinte Digitale utilise l'outil de gestion de projet \gls{Redmine}.
 Parmi les tickets, il existe un ticket de template pour les nouveaux arrivants.
 C'est ce ticket qui à pour objectif d'être modifié.
 
-La documentation en interne se trouve sur 2 Wiki.js.
+La documentation en interne se trouve sur deux Wiki.js.
 Le premier est à destination de l'ensemble des salariés et le second concerne uniquement les sysadmins.
 La nouvel documentation étant destiné uniquement aux sysadmins, celle-ci est sur le second wiki.js.
 
@@ -1590,67 +1650,54 @@ Précédemment, lorsqu'un nouvel employer arrivait, c'était à lui de suivre la
 Aujourd'hui, lorsqu'un nouveau salarié arrive, tout est déjà prêt et il possède les accès minimum. 
 
 \subsubsection{Documentation}
-J'ai rédigé un ensemble de fichier Markdown pour la documentation. 
-Celle-ci comprend 13 sections dont certaines sont spécifique au rôle de l'employer dans l'entreprise.
+J'ai rédigé un ensemble de fichier \gls{Markdown} pour la documentation. 
+Celle-ci comprend treizes sections dont certaines sont spécifiques au rôle de l'employer dans l'entreprise (peu de chance qu'un RH utilise docker).
 
-La première partie concern le matériel en fonction des besoins du nouveau salarié.
+La première partie concerne le matériel en fonction des besoins du nouveau salarié.
 En effet, en amont de son arrivé, le nouvel arrivant est contacté afin qu'il spécifie le matériel avec lequel il souhaite travailler: nombre d'écran, taille de PC, système d'exploitation etc.
-En fonction des stocks, on passe commande.
-
-Dans un second il y a la création de comptes mail, LDAP etc. et le paramétrage des droits.
-
+La seconde partie décrit la création de comptes mail, LDAP etc. et le paramétrage des droits.
 Enfin, il y a l'installation et le paramétrage de l'ensemble des applications sur la machines.
 Cela comprend une petite dizaine d'applications.
 
 Globalement, l'installation d'un nouveau poste prend 2H. 
-Je prenanis plus de temps que ça au départ car je rédigeais la documentation en parrallèle. 
-De plus, étant donné qu'il n'y avait pas de documentation existante, cela prenanit parfois du temps d'avoir les informations. 
+Je prenais plus de temps que cela au départ car je rédigeais la documentation en parrallèle. 
+De plus, étant donné qu'il n'y avait pas de documentation existante, cela prenait parfois du temps d'avoir les informations. 
 
 \subsubsection{Groupe de Travail Embarquement}
 Lorsqu'une problématique générale survient comme celle de la gestion des nouveaux arrivants, des groupes de travail (GT) se forment pour discuter et mettre en oeuvre une solution.
-Etant la personne en charge de l'installation des PCs pour les nouveaux arrivants, j'ai été ajouté au GT embarquement qui porte sur l'intégration et les prépratifs avant une nouvelle arrivée.
+Étant la personne en charge de l'installation des PCs pour les nouveaux arrivants, j'ai représenté la partie sysadmin au GT embarquement qui porte sur l'intégration et les prépratifs avant une nouvelle arrivée.
 Le groupe de travail était constitué d'un sysadmin (moi), une RH et trois développeurs.
 
-Celui-ci s'est conclu par l'ajout de nouvelles installations :
-\begin{itemize}
-    \item Pour les développeur: docker, docker-compose et un outils interne nommé pocker.
-    \item Pour l'ensemble des salariés: un logiciel de bookmarks partagés paramétrable dans Nextcloud.
-    Les bookmarks sont les favoris dans un navigateur. 
-    Ainsi, chaque membre du GT est chargé de complété les bookmarks propre à son domaine.
-    J'intègre alors dans l'installation d'un PC l'ajout des bookmarks dans le navigateur.
-\end{itemize}
-
-
-
+Celui-ci s'est conclu par l'ajout de nouvelles installations telles que docker, un système de bookmarks etc.
 \newpage
 \subsection{Autres}
-\paragraph{Commandes Linux}
-En 2ème année de cycle ingénieur, nous avons des cours d'administration des systèmes Linux.
-Lors de mon stage, je n'ai travaillé que sur des OS Linux.
+\paragraph{Commandes \gls{Linux}}
+En 2ème année de cycle ingénieur, nous avons des cours d'administration des systèmes \gls{Linux}.
+Lors de mon stage, je n'ai travaillé que sur des OS \gls{Linux}.
 Cela m'a permis de développer mes compétences sur le domaine en apprennant de nombreux outils.
 
 Quelques commandes que je ne connaissais pas:
 \begin{itemize}
-    \item dig, nslookup: outils permettant le questionnement sur un lien vers un serveur DNS. 
-    \item dmesg: affiche les logs du "kernel ring buffer" = espace mémoire qui contient les messages du noyau.
-    \item smartctl: permet d'afficher des informations sur un disque dur. 
-    \item env: print les variables d'environnement du système.
-    \item dpkg-reconfigure: permet de reconfigurer un paquet déjà installé.
-    \item zfh: interpréteur de commandes, tout comme bash. 
+    \item \begin{code}\texttt{dig, nslookup}\end{code}: outils permettant le questionnement sur un lien vers un serveur \gls{DNS}. 
+    \item \begin{code}\texttt{dmesg}\end{code}: affiche les logs du "kernel ring buffer" = espace mémoire qui contient les messages du noyau.
+    \item \begin{code}\texttt{smartctl}\end{code}: permet d'afficher des informations sur un disque dur. 
+    \item \begin{code}\texttt{env}\end{code}: print les variables d'environnement du système.
+    \item \begin{code}\texttt{dpkg-reconfigure}\end{code}: permet de reconfigurer un paquet déjà installé.
+    \item \begin{code}\texttt{zsh}\end{code}: interpréteur de commandes, tout comme bash. 
     Il fournit une interface entre l'utilisateur et le système.
-    \item brctl: permet de configurer les interfaces de bridges.
-    \item history: permet de récupérer l'historique des commandes utilisées.
-    \item arp-scan: utilise le protocole arp pour découvrir et marquer des hôtes IP sur le réseau local.
-    \item tcp-dump: analyseur de paquets en ligne de commande.
-    \item tmux: terminal multiplexeur.
-    \item time: affiche un résumé des ressources utilisées par le système
-    \item iptables-save: permet de faire un dump de l'ensemble des règles iptables
-    \item watch: permet d'exécuter une commande en affichant directement la sortie.
-    \item docker-compose down -v: stop tous les services, les retourneurs, les réseaux et les volumes.
-    \item blkid: affiche les informations sur les block devices de la machine.
-    \item fio: outils pour produire des écritures ou des processus d'entrées/sorties spécifié par l'utilisateur.
-    \item lsmod: afficher la liste des modules du noyau chargés en mémoire. 
-    \item etc\dots
+    \item \begin{code}\texttt{brctl}\end{code}: permet de configurer les interfaces de bridges.
+    \item \begin{code}\texttt{history}\end{code}: permet de récupérer l'historique des commandes utilisées.
+    \item \begin{code}\texttt{arp-scan}\end{code}: utilise le protocole arp pour découvrir et marquer des hôtes \gls{IP} sur le réseau local.
+    \item \begin{code}\texttt{tcp-dump}\end{code}: analyseur de paquets en ligne de commande.
+    \item \begin{code}\texttt{tmux}\end{code}: terminal multiplexeur.
+    \item \begin{code}\texttt{time}\end{code}: affiche un résumé des ressources utilisées par le système
+    \item \begin{code}\texttt{iptables-save}\end{code}: permet de faire un dump de l'ensemble des règles iptables
+    \item \begin{code}\texttt{watch}\end{code}: permet d'exécuter une commande en affichant directement la sortie.
+    \item \begin{code}\texttt{docker-compose down -v}\end{code}: stop tous les services, les retourneurs, les réseaux et les volumes.
+    \item \begin{code}\texttt{blkid}\end{code}: affiche les informations sur les block devices de la machine.
+    \item \begin{code}\texttt{fio}\end{code}: outils pour produire des écritures ou des processus d'entrées/sorties spécifié par l'utilisateur.
+    \item \begin{code}\texttt{lsmod}\end{code}: afficher la liste des modules du noyau chargés en mémoire. 
+    \item \begin{code}\texttt{etc\dots}\end{code}
 \end{itemize}
 
 Je tiens un fichier avec l'ensemble des commandes que je ne connais pas.
@@ -1658,7 +1705,7 @@ J'y note la description et parfois des exemple ou contextes d'utilisation.
 
 
 \paragraph{Tmux}
-L'outil qui a totalement changé mon utilisation et on efficacité sur une console est Tmux.
+L'outil qui a totalement changé mon utilisation et mon efficacité sur une console est Tmux.
 Tmux est un multiplexeur de terminal.
 C'est-à-dire que depuis une même fenêtre je peux avoir plusieurs terminals d'ouvert en même temps.
 Je peux agir sur le nom, la taille, le découpage etc.
@@ -1668,7 +1715,7 @@ Cela demande donc une période d'adaptation mais une fois maîtrisé le gain est
 \begin{figure}[!ht]
     \centering
         \includegraphics[width=\textwidth]{src/tmux.png}
-    \caption{Interface Tmux avec 3 fenêtre}
+    \caption{Interface Tmux avec trois fenêtres}
     \label{fig:tmux}
 \end{figure}
 
@@ -1686,8 +1733,8 @@ Il est notamment intéressant dans l'utilisation de Git en terminal.
 \newpage
 \paragraph{K9s}
 
-Enfin, l'outils K9S est très pratique dans l'utilisation de Kubernetes.
-Il permet de facilement visualiser l'ensemble des informations d'un cluster et donne la possiblité d'agir dessus.
+Enfin, l'outils K9S est très pratique dans l'utilisation de \gls{Kubernetes}.
+Il permet de facilement visualiser l'ensemble des informations d'un \gls{cluster} et donne la possiblité d'agir dessus.
 On peut détruire, créer ou éditer des ressources directement depuis l'interface.
 
 Dans le cadre du projet Dehon, je n'ai pas eu à m'en servir souvent.
@@ -1701,7 +1748,7 @@ Cependant, pour les tâches à venir, je sais que c'est un outils que pourrais �
 \end{figure}
 
 \paragraph{vim}
-La prochaine étape est d'apprendre à utiliser pleinement vim.
+C'est la prochaine étape.
 
 \newpage
 \subsection{Bilan}
@@ -1725,7 +1772,7 @@ La prochaine étape est d'apprendre à utiliser pleinement vim.
         
         \hline
         1 & Politique de l'information et gestion du risque & Il s'agit d'assurer l'utilisation de logiciels stables avec des suivi de correctifs. 
-        De la documentation approuvée par la direction doit être rédigée afin d'assurer l'évolution du SI en matière de sécurité.
+        De la documentation approuvée par la direction doit être rédigée afin d'assurer l'évolution du \gls{SI} en matière de sécurité.
         \tabularnewline
         
         \hline
@@ -1733,16 +1780,16 @@ La prochaine étape est d'apprendre à utiliser pleinement vim.
         \tabularnewline
         
         \hline
-        3 & Sécurité des ressources humaines & L'exploitation d'un SI passant par ses utilisateurs, ils sont une sources indéniables de faille possible. 
-        Les employés doivent être formés à la sécurité du SI et avoir accès en permanence à des documentations rappelant les règles de sécurités à appliquer. 
+        3 & Sécurité des ressources humaines & L'exploitation d'un \gls{SI} passant par ses utilisateurs, ils sont une sources indéniables de faille possible. 
+        Les employés doivent être formés à la sécurité du \gls{SI} et avoir accès en permanence à des documentations rappelant les règles de sécurité à appliquer. 
         \tabularnewline
         
         \hline
-        4 & Gestion des actifs & Le matériel du personnel ainsi que toutes autres machines sur lesquelles reposent l'exploitation du SI doit être inventorié.
+        4 & Gestion des actifs & Le matériel du personnel ainsi que toutes autres machines sur lesquelles reposent l'exploitation du \gls{SI} doit être inventorié.
         \tabularnewline
         
         \hline
-        5 & Contrôle d'accès et gestion des identités & L'utilisation du SI doit se faire de manière à pouvoir en tout temps identifier l'identité d'une personne l'exploitant. 
+        5 & Contrôle d'accès et gestion des identités & L'utilisation du \gls{SI} doit se faire de manière à pouvoir en tout temps identifier l'identité d'une personne l'exploitant. 
         Même si cela peut être contraignant dans l'exploitation, il n'est pas question d'ouvrir les accès à une ressources si la personne n'en a pas besoin. 
         L'ajout, la modification ou la suppression d'un accès quel-qu'il soit doit être documenté et archivé afin d'assurer un suivi.
         \tabularnewline
@@ -1778,9 +1825,9 @@ La prochaine étape est d'apprendre à utiliser pleinement vim.
         \end{center} 
         \tabularnewline
         \hline
-        9 & Sécurité des communications et réseau & Les différents équipements réseaux nécessite des configurations supplémentaires. 
-        Cela concerne les différentes réseaux Wifi, Ethernet ainsi que les accès aux ressources distantes. 
-        Des mécanismes de surveillance sur le SI doivent permettre la mise en avant d'une activité non-autorisée.
+        9 & Sécurité des communications et réseau & Les différents équipements réseaux nécessitent des configurations supplémentaires. 
+        Cela concerne les réseaux Wifi et Ethernet ainsi que les accès aux ressources distantes. 
+        Des mécanismes de surveillance sur le \gls{SI} doivent permettre la mise en avant d'une activité non-autorisée.
         \tabularnewline
 
         \hline
@@ -1790,8 +1837,8 @@ La prochaine étape est d'apprendre à utiliser pleinement vim.
         \tabularnewline
 
         \hline
-        11 & Relations avec les tiers & L'ouverture d'accès aux tiers sur des ressources du SI nécessite des procédures et documentations engageant la responsabilité des tiers en cas de faille. 
-        Il est nécessaire de maintenir un listing des tiers et des ressources auxquels ils sont accès.
+        11 & Relations avec les tiers & L'ouverture d'accès aux tiers sur des ressources du \gls{SI} nécessite des procédures et documentations engageant la responsabilité des tiers en cas de faille. 
+        Il est nécessaire de maintenir un listing des tiers et des ressources auxquels ils ont accès.
         \tabularnewline
 
         \hline
@@ -1813,7 +1860,7 @@ La prochaine étape est d'apprendre à utiliser pleinement vim.
         \tabularnewline
 
         \hline
-        16 & Exigences supplémentaires & Les certifications imposent des aspects supplémentaire tels que la mise en oeuvre de convention de service avec les clients, l'obligation de stockage sur le territoire Européens etc.
+        16 & Exigences supplémentaires & Les certifications imposent des aspects supplémentaires tels que la mise en oeuvre de convention de service avec les clients, l'obligation de stockage sur le territoire Européens etc.
         \tabularnewline
 
         \hline
@@ -1847,7 +1894,7 @@ La prochaine étape est d'apprendre à utiliser pleinement vim.
     \tabularnewline
     
     \hline
-    37 & 13/09/21 - 19/09/21 & Pas de jours en entreprise cette semaine.
+    37 & 13/09/21 - 19/09/21 & Pas de jours en entreprise.
     \tabularnewline
     
     \hline
@@ -1862,7 +1909,7 @@ La prochaine étape est d'apprendre à utiliser pleinement vim.
     \tabularnewline
     
     \hline
-    40 & 04/10/21 - 10/10/21 & Réunion avec le responsable le \gls{DPO} pour identifier les besoins de sécurité liés à la \gls{RGPD}. 
+    40 & 04/10/21 - 10/10/21 & Réunion avec le \gls{DPO} pour identifier les besoins de sécurité liés à la \gls{RGPD}. 
     \gls{POC} sur le logiciel \gls{Rudder} pour de la conformité d'infrastructure.
     \tabularnewline
     
@@ -1883,7 +1930,7 @@ La prochaine étape est d'apprendre à utiliser pleinement vim.
     \hline
     44 & 01/11/21 - 07/11/21 & Semaine complète excepté pour le lundi férié. 
     Amélioration du tableau d'audit et poursuite de celle-ci. 
-    Veille sur les recommandations de l'ANSSI pour les protocoles \gls{IPsec}, \gls{TLS} et \gls{SSH}. 
+    Veille sur les recommandations de l'\gls{ANSSI} pour les protocoles \gls{IPsec}, \gls{TLS} et \gls{SSH}. 
     Rédaction du livre blanc de sécurité.
     \tabularnewline
     
@@ -1923,14 +1970,14 @@ La prochaine étape est d'apprendre à utiliser pleinement vim.
         \tabularnewline
 
         \hline
-        50 & 13/12/21 - 19/11/21 & Avancement le \gls{PSSI}. 
-        Réunion de présentation final de la \gls{POC} \gls{Ansible CMDB}. 
+        50 & 13/12/21 - 19/11/21 & Avancement sur le \gls{PSSI}. 
+        Réunion de présentation finale de la \gls{POC} \gls{Ansible CMDB}. 
         Nouvelle \gls{POC} sur Rudder pour reproduire une conformité similaire à \gls{Ansible CMDB}.
         \tabularnewline
         
         \hline
         51 & 20/12/21 - 26/12/21 & Semaine complète en entreprise excepté le vendredi pour congé de Noël. 
-        Avancement sur le \gls{PSSI}. Présentation bilan moral et financier de l'entreprise sur l'année 2020. 
+        Avancement sur le \gls{PSSI}. Présentation bilan moral et financier de l'entreprise sur l'année 2021. 
         Vision sur les objectifs de 2022. Premier ticket client réalisé.
         \tabularnewline
         
@@ -1943,7 +1990,7 @@ La prochaine étape est d'apprendre à utiliser pleinement vim.
         Intervention et découverte du datacenter de Rennes. 
         \tabularnewline
         \hline
-        2 & 10/01/22 - 16/02/22 & Avancement sur le \gls{PSSI}, démonstration à un collégien du travail d'administrateur système avec l'installation d'un \gls{LAMP}. 
+        2 & 10/01/22 - 16/02/22 & Avancement sur le \gls{PSSI}, démonstration à un collégien du travail d'administrateur système avec l'installation d'une pile \gls{LAMP}. 
         Préparation de la soutenance de fin de \gls{PFE}.
         \tabularnewline
         
@@ -1986,7 +2033,7 @@ La prochaine étape est d'apprendre à utiliser pleinement vim.
     10 & 07/03/22 - 13/03/22 & Configuration du serveur \gls{OCSInventory} en \gls{HTTPS} avec un certificat auto-signé pour pouvoir effectuer des scans \gls{SNMP} à partir d'agent spécifique. 
     Modifications du comportement de l'agent vers \gls{HTTPS} avec activation \gls{SSL}. 
     Poursuite des travaux sur la documentation technique et rédaction du rapport de stage. 
-    Maintenance d'un ordinateur qui ne boot plus : changements depuis un disque externe pour revenir sur un ancien noyau Linux mais problème lié au driver graphique. 
+    Maintenance d'un ordinateur qui ne boot plus : changements depuis un disque externe pour revenir sur un ancien noyau \gls{Linux} mais problème lié au driver graphique. 
     Installation d'une carte d'extension 10G sur un noeud \gls{Proxmox}. 
     Installation d'un \gls{LimeSurvey} de test en conteneur pour un client. 
     Installation d'un noeud \gls{Proxmox} puis début de configuration d'un \gls{cluster} \gls{Ceph}.
@@ -2032,7 +2079,7 @@ La prochaine étape est d'apprendre à utiliser pleinement vim.
     \hline
     14 & 04/04/22 - 10/04/22 & Fin de l'installation des agents \gls{OCSInventory} pour les machines du datacenter d'Angers. 
     Début de l'installation des agents pour le datacenter de Tours. Poursuite des travaux sur la documentation. 
-    Installation pour un client d'un \gls{Nextcloud}/\gls{Collabora} pour un client sur le datacenter de Rennes via Docker-compose.  
+    Installation pour un client d'un \gls{Nextcloud}/\gls{Collabora} pour un client sur le datacenter de Rennes via docker-compose.  
     \tabularnewline
     
     \hline
@@ -2055,7 +2102,7 @@ La prochaine étape est d'apprendre à utiliser pleinement vim.
     \hline
     18 & 02/05/22 - 08/05/22 &  Mise à jour de l'inventaire \gls{Ansible} qui avait des défauts dans sa constructions. 
     Modifications de différents problèmes empêchant l'installation des agents \gls{OCSInventory}. 
-    Installation d'une nouvelle instance d'un site internet pour réaliser des \gls{webinaires}.
+    Installation d'une nouvelle instance d'un site internet pour réaliser des \gls{webinaire}s.
     \tabularnewline
     
     \hline
@@ -2075,9 +2122,9 @@ La prochaine étape est d'apprendre à utiliser pleinement vim.
     \tabularnewline
 
     \hline
-    19 & 09/05/22 - 15/05/22 &  Mise à jours de l'une des instances de \gls{webinaires}. 
+    19 & 09/05/22 - 15/05/22 &  Mise à jours de l'une des instances de \gls{webinaire}. 
     Modification des scripts Perl/Bash pour récupérer les \gls{vhosts} des machines que ce soit pour des vhosts hébergés sous \gls{Docker}/\gls{Nginx} ou \gls{Apache}. 
-    Mise en place d'une \gls{plate-forme web}\gls{Peertube} pour faire de l'hébergement vidéo et des lives. 
+    Mise en place d'une \gls{plateforme web}\gls{Peertube} pour faire de l'hébergement vidéo et des lives. 
     Installation d'un 2nd \gls{bastion SSH} (\gls{passhport}) destiné à être un slave du 1er afin d'y exécuter des \gls{playbooks} \gls{Ansible} globaux sans impact sur l'utilisation des autres utilisateurs. 
     Création de la 2nd base de données en \gls{Master/Slave} sur \gls{Mariadb}.
     \tabularnewline
@@ -2111,7 +2158,7 @@ La prochaine étape est d'apprendre à utiliser pleinement vim.
     
     \hline
     24 & 13/06/22 - 19/06/22 & Création des machines virtuelles pour le projet Dehon. 
-    Création du \gls{cluster} \gls{Kubernetes} avec \gls{Calico} en \gls{CNI} sur les 6 précédentes machines virtuelles avec \gls{Kubespray}. 
+    Création du \gls{cluster} \gls{Kubernetes} avec \gls{Calico} en \gls{CNI} sur les six précédentes machines virtuelles avec \gls{Kubespray}. 
     Installation d'un ordinateur portable pour un nouvel arrivant. 
     Poursuite des travaux sur \gls{OpenSCAP}.
     \tabularnewline
@@ -2138,13 +2185,14 @@ La prochaine étape est d'apprendre à utiliser pleinement vim.
     \hline
     25 & 20/06/22 - 26/06/22 & Poursuite des travaux sur \gls{OpenSCAP}. 
     Rédaction d'une documentation utilisateur sur la configuration de l'agenda \gls{Nextcloud} sur téléphone. 
-    Début de recherches pour la mise en place d'un outil de scan du réseau. Rédaction du rapport de stage. 
+    Début des recherches pour la mise en place d'un outil de scan du réseau. 
+    Rédaction du rapport de stage. 
     Intervention aux datacenters de Tours et Cogent. 
     Ticket client pour la configuration d'un agenda \gls{Nextcloud}.
     \tabularnewline
 
     \hline
-    26 & 27/06/22 - 03/07/22 & Recherche et intervention pour planifiée pour les travaux sur \gls{Nextcloud}. 
+    26 & 27/06/22 - 03/07/22 & Recherche et intervention pour les travaux sur \gls{Nextcloud}. 
     Poursuite des travaux sur Dehon avec le lancement des 2 \gls{Haproxy} avec \gls{vip}. 
     Configuration et test des configurations \gls{Haproxy}. 
     Mise en place sur Dehon des IngressController, CertManager, Namespaces et Rancher rke.
@@ -2156,34 +2204,39 @@ La prochaine étape est d'apprendre à utiliser pleinement vim.
     Journée Team Building au lac de Maine avec présentation du bilan du premier semestre de l'entreprise. 
     Mise en place des environnements/namespaces de prod/qualif/test avec \gls{Terraform} en passant l'\gls{API} de Rancher. 
     Installation de la machine de stockage avec Terraform. 
-    Particularité devoir ajouter un second disque et donc recréer un module Terraform.
+    Particularité de devoir ajouter un second disque et donc recréer un module Terraform.
     \tabularnewline
     
     \hline
     28 & 11/07/22 - 17/07/22 & Déploiement de la machine Mongo Arbiter sur Rennes. 
     Configuration du service Mongo via Terraform pour une application sous Docker. 
-    Installation via Terraform de 3 opérateurs percona pour les environnements de test, qualif et prod. 
-    Installation de mongoarbiter via Ansible. 
+    Installation via Terraform de trois opérateurs percona pour les environnements de test, qualif et prod. 
+    Installation de mongoarbiter via \gls{Ansible}. 
     Congé le vendredi, pont de 4 jours.
     \tabularnewline
     
     \hline
     29 & 18/07/22 - 24/07/22 & Commandes pour les nouveaux arrivants. 
     Création de compte rancher depuis Terraform. 
-    Déploiement de Loki lié à Grafana en tant que serveur de log pour l'ensemble du cluster. 
-    Ajout de minio en serveur S3. Ajout de Velero-server pour les backups. 
+    Déploiement de Loki lié à Grafana en tant que serveur de log pour l'ensemble du \gls{cluster}. 
+    Ajout de minio en serveur S3. 
+    Ajout de Velero-server pour les backups. 
     Fin de la mise à jours de la documentation pour les nouveaux arrivants. 
     Reprise de la partie backup pour un matomo de la région Normandie.
     \tabularnewline
 
     \hline
-    30 & 25/07/22 - 31/07/22 & Installation d'un Nextcloud pour l'association AICLA. 
-    Automatisation de l'installation des instances Nextcloud via Docker-compose, Ansible, AWX et Terraform.
+    30 & 25/07/22 - 31/07/22 & Installation d'un \gls{Nextcloud} pour l'association AICLA. 
+    Automatisation de l'installation des instances \gls{Nextcloud} via Docker-compose, \gls{Ansible}, AWX et Terraform.
     \tabularnewline
     
     \hline
-    31 & 01/08/22 - 07/08/22 & Configuration d'un stockage CephFS sur le Proxmox d'Angers. 
-    Accompagnement d'un client dans la configuration de son Nextcloud. Congés maladie pour Covid.
+    31 & 01/08/22 - 07/08/22 & Configuration d'un stockage CephFS sur le \gls{Proxmox} d'Angers. 
+    Congés maladie pour Covid.
+    \tabularnewline
+
+    \hline
+    32 & 01/08/22 - 07/08/22 & Rapport de stage et congé jusqu'à la rentrée.
     \tabularnewline
     
     \hline    
