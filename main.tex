@@ -224,7 +224,7 @@ La transparence et la collaboration est un facteur clé dans l'entretien de l'im
 Empreinte Digitale à commencé sa transition en \gls{SCOP} à partir de 2018 pour officiellement le devenir en janvier 2020.
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{src/transition_scop.png}
+    \includegraphics[width=\textwidth]{src/graph_scop.png}
     \caption{Les étapes du passage en \gls{SCOP} d'Empreinte Digitale}
     \label{fig:transition_scop}
 \end{figure}
@@ -234,7 +234,7 @@ Empreinte Digitale à commencé sa transition en \gls{SCOP} à partir de 2018 po
 La gouvernance se découpe de la manière suivante:
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{src/gouvernance_ed.png}
+    \includegraphics[width=\textwidth]{src/scheme_scop_ed.png}
     \caption{Schéma de la gouvernance chez Empreinte Digitale}
     \label{fig:gouvernance_ed}
 \end{figure}
@@ -282,7 +282,7 @@ A la clé de ce challenge, un chèque de 1000€ qui fut par la suite placé dan
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{src/design4fgreen.png}
+    \includegraphics[width=\textwidth]{src/interface_d4g.png}
     \caption{Application web réalisé par Empreinte Digitale pour le Design4Green}
     \label{fig:design4greenl}
 \end{figure}
@@ -307,7 +307,7 @@ L'idée est d'utiliser des énergies renouvelables produites sur place, la perte
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{src/strato.jpg}
+    \includegraphics[width=\textwidth]{src/scheme_strato.jpg}
     \caption{Maquette en trois dimensions du datacenter de Stratosfair}
     \label{fig:strato}
 \end{figure}
@@ -449,7 +449,7 @@ Grâce à l'interface Web intégrée, nous pouvons facilement gérer les machine
 \noindent%
 \begin{minipage}{.4\textwidth}%
 \begin{center}
-\includegraphics[scale=0.65]{src/proxmox_interface_side.png}
+\includegraphics[scale=0.65]{src/interface_proxmox_side.png}
 \end{center}
 
 \end{minipage}%
@@ -491,9 +491,9 @@ Au travers de scripts dans un langage propre à Terraform, on décrit l'état de
 Son workflow le rend facile à comprendre et à mettre en oeuvre:
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{src/Terraform_schema.png}
+    \includegraphics[width=\textwidth]{src/graph_terraform.png}
     \caption{Workflow de Terraform}
-    \label{fig:terraform_schemal}
+    \label{fig:graph_terraform.png}
 \end{figure}
 
 Après les quelques première écritures de configuration, on va:
@@ -593,7 +593,7 @@ A l'issue de mes travaux, j'ai rédigé un PSSI et un tableau de suivi d'audit d
 Les deux documents sont composés de 16 thématiques présentées en annexe de ce document aux pages \begin{hilite} \pageref{tab:16thematiques1} \end{hilite} et \begin{hilite} \pageref{tab:16thematiques2} \end{hilite}.
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{src/table_example.png}
+    \includegraphics[width=\textwidth]{src/table_ssi.png}
     \label{fig:pssi_table}
     \caption{Extrait du tableau de suivi de sécurité}
 \end{figure}
@@ -639,7 +639,7 @@ Finalement, \gls{GLPI} va permettre de trier les informations récupérées par 
 \subsubsection{Architecture}
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{src/Fonctionne GLPI.png}
+    \includegraphics[width=\textwidth]{src/graph_glpi.png}
     \label{fig:glpi}
     \caption{Architecture entre OcsInventory et \gls{GLPI}}
 \end{figure}
@@ -817,14 +817,14 @@ A l'issues de ces étapes, divers tâches vont permettre l'installation et la co
 
 Afin que les salariés installent pas eux-même l'agent, j'ai rédigé une documentation décrivant comment installer et configurer l'agent \gls{OCSInventory} sur Windows, \gls{Linux} et ArchLinux.
 
-La figure \ref{fig:fonctionnement_roles_ocs} à la page \pageref{fig:fonctionnement_roles_ocs} a été réalisé avec \begin{code}\texttt{ansible-playbook-grapher}\end{code}.
+La figure \ref{fig:graph_roles_ocs.png} à la page \pageref{fig:graph_roles_ocs.png} a été réalisé avec \begin{code}\texttt{ansible-playbook-grapher}\end{code}.
 Cet outils permet de généré un graphique à partir d'un playbook \gls{Ansible}.
 Cela fonctionne également avec les roles.
 L'ensemble des tâches effectuées lors de l'installation d'un agent \gls{OCSInventory} sur une machine correspond au schéma suivant:
 \begin{figure}[!ht]
     \centering
-    \includegraphics[scale=0.43]{src/fonctionnement_roles_ocs.png}
-    \label{fig:fonctionnement_roles_ocs}
+    \includegraphics[scale=0.43]{src/graph_roles_ocs.png}
+    \label{fig:graph_roles_ocs.png}
     \caption{Tâches \gls{Ansible} exécutée lors de l'installation d'un agent \gls{OCSInventory}}
 \end{figure}
 
@@ -934,7 +934,7 @@ Afin de le simplifier, la différenciation entre distribution et version n'est p
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{src/Ansible oscap.png}
+    \includegraphics[width=\textwidth]{src/graph_ansible_oscap.png}
     \label{fig:ansible_oscap}
     \caption{Diagramme de séquence du fonctionnement d'\gls{Ansible} avec OpenSCAP}
 \end{figure}
@@ -1058,7 +1058,7 @@ L'application repose sur des conteneurs Docker hébergés sur une machine virtue
 \subsubsection{Schéma applicatif}
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{src/Nextcloud stack.png}
+    \includegraphics[width=\textwidth]{src/graph_nextcloud.png}
     \caption{Schéma applicatif de \gls{Nextcloud} avec \gls{Collabora}}
     \label{fig:nextcloudXcollabora}
 \end{figure}
@@ -1183,7 +1183,7 @@ Celui-ci ne fait pas apparaître les différentes tâches liés aux dépendances
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\textwidth]{src/ansible_nextcloud.png}
+    \includegraphics[width=\textwidth]{src/graph_ansible_nextcloud.png}
     \caption{Diagramme de séquences des tâches \gls{Ansible} lors de l'installation de \gls{Nextcloud}}
     \label{fig:nextcloud_ansible}
 \end{figure}
@@ -1268,7 +1268,7 @@ A partir de cette étape, depuis l'interface graphique de n'importe quel noeud \
 
 \begin{figure}[ht!]
     \centering
-        \includegraphics[width=\textwidth]{src/proxmox_interface.png}
+        \includegraphics[width=\textwidth]{src/interface_proxmox_main.png}
     \caption{Interface du \gls{cluster} \gls{Proxmox} an-virt-pmx}
     \label{fig:proxmox_virt1}
 \end{figure}
@@ -1276,7 +1276,7 @@ A partir de cette étape, depuis l'interface graphique de n'importe quel noeud \
 Arrivé à ce stade, le \gls{cluster} est fonctionnel. 
 Cependant, pour une raison de fiabilité du stockage, j'ai installé et paramétré une solution de stockage nommé \gls{Ceph}.
 
-\subsubsection{\gls{Ceph}}
+\subsubsection{Ceph}
 \noindent%
 \begin{minipage}{.7\textwidth}%
 \gls{Ceph} est une solution libre de stockage distribué qui propose trois protocoles: Bloc, Fichiers et Objets.
@@ -1303,7 +1303,7 @@ Les données sont identifiables par un ID unique et des métadonnées comme les 
 
 \begin{figure}[ht!]
     \centering
-        \includegraphics[width=\textwidth]{src/types-de-storage.jpeg}
+        \includegraphics[width=\textwidth]{src/graph_storage.jpeg}
     \caption{Représentation des types de storage par Scaleway's \cite{Scaleway}}
     \label{fig:storage_types}
 \end{figure}
@@ -1315,7 +1315,7 @@ Cela donne la représentation suivante si l'on regarde les quatre disques d'\beg
 
 \begin{figure}[ht!]
     \centering
-        \includegraphics[width=\textwidth]{src/disk_node1.png}
+        \includegraphics[width=\textwidth]{src/interface_proxmox_disk.png}
     \caption{Disques présent sur le noeud \begin{code}\texttt{an-virt-pmx-1}\end{code}}
     \label{fig:disk_node1}
 \end{figure}
@@ -1323,7 +1323,7 @@ Cela donne la représentation suivante si l'on regarde les quatre disques d'\beg
 Directement depuis l'interface \gls{Ceph}, on peut visualiser l'ensemble des \gls{OSD}s du \gls{cluster}:
 \begin{figure}[ht!]
     \centering
-        \includegraphics[width=\textwidth]{src/osd_cluster.png}
+        \includegraphics[width=\textwidth]{src/interface_proxmox_osd.png}
     \caption{Ensemble des \gls{OSD} du \gls{cluster} \begin{code}\texttt{an-virt-pmx}\end{code}}
     \label{fig:osd_cluster}
 \end{figure}
@@ -1384,9 +1384,9 @@ Pour des raisons de disponibilité, l'infrastructure du projet se trouve sur tro
 En voici un schéma:
 \begin{figure}[!ht]
     \centering
-        \includegraphics[width=\textwidth]{src/Dehon1.png}
+        \includegraphics[width=\textwidth]{src/graph_dehon1.png}
     \caption{Infrastructure sur trois sites physique du projet Dehon}
-    \label{fig:dehon1}
+    \label{fig:graph_dehon1}
 \end{figure}
 
 Les serveurs étaient déjà mis en place pour \begin{code}\texttt{virt1}\end{code} et \begin{code}\texttt{virt2}\end{code}. 
@@ -1550,9 +1550,9 @@ L'image ci-dessous présente le fonctionenemnt de l'IngressController d'Nginx :
 
 \begin{figure}[!ht]
     \centering
-        \includegraphics[width=\textwidth]{src/ic_nginx.png}
+        \includegraphics[width=\textwidth]{src/graph_nginx.png}
     \caption{Schéma de l'IngressController Nginx provenant de la documentation Nginx}
-    \label{fig:ic_nginx}
+    \label{fig:graph_nginx.png}
 \end{figure}
 
 \paragraph{Cert Manager}
@@ -1565,7 +1565,7 @@ Rancher fournit une interface WEB optimale pour la gestion d'un \gls{cluster}.
 
 \begin{figure}[!ht]
     \centering
-        \includegraphics[width=\textwidth]{src/rancher_interface.png}
+        \includegraphics[width=\textwidth]{src/interface_rancher.png}
     \caption{Interface Rancher de l'infrastructure \gls{Kubernetes} du projet Dehon}
     \label{fig:rancher_interface}
 \end{figure}
@@ -1611,9 +1611,9 @@ J'ai ajouté dans la section \verb|environnement| les identifiants de connexion 
 \subsubsection{Schéma de le partie applicative}
 \begin{figure}[!ht]
     \centering
-        \includegraphics[width=\textwidth]{src/graph_dehon.png}
+        \includegraphics[width=\textwidth]{src/graph_dehon2.png}
     \caption{Cluster \gls{Kubernetes} de dehon sur virt2-prd-pmx}
-    \label{fig:graph_dehon}
+    \label{fig:graph_dehon2}
 \end{figure}
 
 \subsubsection{Bilan}
@@ -1714,7 +1714,7 @@ Cela demande donc une période d'adaptation mais une fois maîtrisé le gain est
 
 \begin{figure}[!ht]
     \centering
-        \includegraphics[width=\textwidth]{src/tmux.png}
+        \includegraphics[width=\textwidth]{src/interface_tmux.png}
     \caption{Interface Tmux avec trois fenêtres}
     \label{fig:tmux}
 \end{figure}
@@ -1725,7 +1725,7 @@ Il est notamment intéressant dans l'utilisation de Git en terminal.
 
 \begin{figure}[!ht]
     \centering
-        \includegraphics[width=\textwidth]{src/zsh.png}
+        \includegraphics[width=\textwidth]{src/interface_shell.png}
     \caption{Interface zsh dans un dossier Git}
     \label{fig:zsh}
 \end{figure}
@@ -1742,7 +1742,7 @@ Cependant, pour les tâches à venir, je sais que c'est un outils que pourrais �
 
 \begin{figure}[!ht]
     \centering
-        \includegraphics[width=\textwidth]{src/k9s.png}
+        \includegraphics[width=\textwidth]{src/interface_k9s.png}
     \caption{Visualisation des pods avec K9s}
     \label{fig:k9s}
 \end{figure}
@@ -1872,7 +1872,7 @@ C'est la prochaine étape.
 \newpage
 \subsection{CV}
 \begin{center}
-    \includegraphics[scale=0.9]{src/cv.png}
+    \includegraphics[scale=0.9]{src/annexe_cv.png}
 \end{center}
 
 \newpage
