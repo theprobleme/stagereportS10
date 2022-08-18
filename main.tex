@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[12pt, a4paper, twoside]{article}
 \usepackage[oddeven,baseline=innovation]{EseoArticle}
 \pretitle{%
   \begin{center}
@@ -43,6 +43,9 @@
 
 \begin{document}
 
+% Set figure numerotation
+\setcounter{figure}{0}
+
 % Footer et Header
 \lfoot{Paul LEFAY}
 \cfoot{\thepage}
@@ -51,7 +54,7 @@
 % Modification des paramètres globaux
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
-\renewcommand{\contentsname}{Table des matières}
+\renewcommand{\contentsname}{}
 \renewcommand{\listfigurename}{}
 \renewcommand{\listtablename}{}
 \renewcommand{\thebibliography}{}
@@ -116,47 +119,123 @@ Je tiens à remercier Yves-Gaël Chény, Nicolas Gourichon et Valentin Baraise p
 L'expérience acquise lors de la période de Projet de Fin d'Etude (\gls{PFE}) est inestimable comparé à celle que j'aurais eue si j'avais travaillé sur un \gls{PFE} scolaire. \\
 
 Je remercie particulièrement Valentin Baraise, mon tuteur, pour son accompagnement durant toute cette année. 
-Bien que très occupé, il a toujours pris le temps de m'aider lorsque j'étais bloqué. 
+Bien que très occupé, il a toujours pris le temps de m'aider. 
 Il a également (malgré lui), pris la peine de réparer les quelques erreurs que j'ai pu commettre. \\
 
 Je remercie également Inès Audouin et Nicolas Gourichon qui m'ont accompagné sur mes premières installations et utilisations d'\gls{Ansible}. 
-Ils m'ont apporté de nombreuses connaissances sur le sujet, ce qui fait qu'à ce jour, je suis automome sur l'utilisation des outils \gls{Ansible} et AWX. \\
+Ils m'ont apporté de nombreuses connaissances sur le sujet. \\
 
 Enfin, merci à Yves-Gaël Chény et Raphaël Poitevin pour l'aide qu'ils m'ont apportés, notamment sur les aspects réseaux et mail.
 
 
 % Sommaire %
 \newpage
+\section*{Table des matières}
 \tableofcontents
 
 % Fiche de synthèse du stage %
 \newpage
+\section*{Fiche de synthèse}
+J'ai effectué mon stage dans le cadre d'un contrat de professionnalisation chez Empreinte Digitale située au 11 rue des Noyers à Angers.
+Cela signifie que j'y étais présent en tant qu'alternant du 7 septembre 2021 au 29 janvier 2022, puis en tant que stagiaire du 30 janvier 2022 au 8 septembre 2022. \\
+
+Empreinte Digitale est une entreprise développant des applications web et hébergeant des applications open-source.
+De ce fait, celle-ci est impactée par la menance croissante des attaques informatiques.\\
+
+Mon sujet de stage S10 a porté sur la mise en place de nouveau outils de sécurité pour améliorer le système d'information d'Empreinte Digitale.
+Ce sujet ne portait pas sur la mise en place d'un outil en particulier.
+J'ai donc dans un premier temps réaliser une veille technologique durant la période d'alternance.
+Cette veille consistait en des recherches sur Internet et la lecture d'un ensemble de livres blanc rédigés par l'\gls{ANSSI}.
+Suite à cela, j'ai déterminé les axes d'améliorations de l'infrastructure. \\
+
+J'ai travaillé sur deux aspects de sécurité: 
+\begin{itemize}
+    \item Inventaire des ressources: une entreprise doit être en mesure de lister l'ensemble des ressources informatiques.
+    Afin de réaliser et automatiser cet inventaire, j'ai mis en place les applications \gls{OCSInventory} et \gls{GLPI}.
+    \item Durcissement des systèmes \gls{Linux}: suite à l'installation d'un système d'exploitation, il est nécessaire de le renforcer.
+    Pour cela, j'ai utilisé l'application \gls{OpenSCAP}.
+\end{itemize} 
+
+En parallèle de mes travaux de sécurité, j'ai travaillé sur divers tâches d'administrateur système qui ont porté sur:
+\begin{itemize}
+    \item L'automatisation des installations des applications \gls{Nextcloud} et \gls{Collabora}.
+    \item L'installation d'un cluster \gls{Proxmox} sur le site d'Angers.
+    \item La mise en place d'une infrastructure complète pour Dehon.
+    \item La mise à jours de la documentation et du processus pour les nouveaux arrivants.
+\end{itemize} 
+
+De façon général, durant les sept derniers mois, j'ai passé 60\% de mon temps sur les tâches d'administrateur système et 40\% sur les travaux de sécurité.
+N'ayant pas d'appétence particulière sur le sujet de la sécurité, j'ai beaucoup apprécié cette bifurcation.
+Cela me conforte dans l'idée que je souhaite à l'avenir travailler dans le domaine de l'administration système et du \gls{DevOps}.\\
+
+Les difficultés rencontrée étaient toutes techniques.
+Mon manque de connaissances sur des aspects bas niveau, réseau notamment, m'ont parfois ralentie dans l'avancement de mes projets.
+Cela n'était pas un problème pour autant, car l'aide de l'ensemble de administrateurs systèmes et particulièrement de Valentin Baraise m'a permis d'avancer et d'apprendre.
+
+% Abstract %
+\newpage
+\section*{Abstract}
+The threat of cyberattacks is a subject that has always existed for all companies.
+Nevertheless, in recent years, the scale of attacks has increased, to such an extent that it is difficult for companies to follow the movement.
+As a result, it has become essential for companies to implement a reinforced policy for the security of information systems. \\
+
+I worked on improving the information system in order to make it more secure and thus be more serene in the face of attacks.
+Having no specific objective, I initially carried out a technological watch. 
+For this, I relied on the many security white papers from the \gls{ANSSI}, a French security agency. \\
+
+\gls{ANSSI}'s documentation revolves around 16 themes. 
+I selected two of them.
+First, the need for a company to keep an inventory of all the IT resources that make up the information system. 
+Second, the need to harden an operating system as soon as the installation is completed.
+I then started researching to find a solution for these two subjects. \\
+
+The criteria focused on: an open-source tool, free, without limitation in time or resources with a significant learning curve
+The final objective is to obtain a solution in production for the inventory and the reinforcement of the systems. 
+This means that the use over time of these tools must be done with the minimum of manual actions. \\
+
+For the inventory, this led me to the use of \gls{OCSInventory} and \gls{GLPI}. 
+Both tools validate each of my criteria. 
+Moreover, they have the advantage of being flexible in use. \\
+
+For hardening Linux systems, I first considered developing a tool myself. 
+Nevertheless, I finally found the OpenSCAP tool which also validates all the criteria. \\
+
+To simplify the tool installations as much as possible, I decided to use docker.
+This makes it possible to synthetically declare parameters of the applications. 
+Moreover, if it is necessary to carry out any modification, it is enough to modify the configuration file. 
+At the end of my work, the two tools are in production. \\
+
+I explain in this document the methodology implemented in the installation of these two tools.
+I also give the axes which will allow to go further on the implementation and the use.
+
+% Introduction %
+\newpage
 \section*{Introduction}
-Mon sujet de stage S10 porte sur la mise en place de nouveaux outils de sécurité pour améliorer le système d'information d'Empreinte Digitale. 
-J'ai principalement travaillé sur des outils d'inventaire des machines et sur le durcissement des systèmes \gls{Linux}. 
-En parallèle de ces travaux de sécurité, j'ai mis en place de nouvelles infrastructures ou logiciels pour des clients, amélioré le processus pour les nouveaux arrivants et rédigé de la documentation technique propre aux administrateurs système. \\
+La menace des cyberattaques est un sujet qui a toujours existé pour toutes les entreprises.
+Néanmoins, ces dernières années, l'ampleur des attaques est grandissante, à un point tel qu'il est compliqué pour les entreprises de suivre le mouvement.
+En effet, d'après l'\gls{ANSSI}, l'Agence Nationale de la Sécurité des Systèmes d'Information, le nombre d'attaques a augmentée de 37\% entre 2020 et 2021.
+Cela représente un évolution de 786 intrusions avérées à 1082. \\
 
-Ce stage à eu lieu dans le cadre d'un contrat de professionnalisation chez Empreinte Digitale, située au 11 rue des Noyers à Angers. 
-J'y ai effectué mon stage de 7 mois du 30 janvier 2022 au 8 septembre 2022. 
-Ce rapport à donc été rendu 2 semaines avant la fin du stage. \\
+Une partie importante de la sécurité concerne l'amélioration du SI sur un vaste panel de sujets.
+Cependant, la plupart des attaques utilisent l'hameçonnage ou \textit{phishing}.
+Cette technique consiste à récupérer des données personnelles par la tromperie puis de les utiliser de manière maveillante.
+Dans la vie courante, l'intêret peut être d'obtenir les informations bancaire d'un individu, mais dans le cadre d'une entreprise, cette méthode peut permettre une intrusion dans le \gls{SI}.
+Pour cette raison, la sécurité d'une entreprise passe également par les utilisateurs qui y accèdent.
+On peut aller jusqu'à dire que si une priorisation devait être faite, la formation et la sensiblisation des salariés à la sécurité du \gls{SI} est prioritaire.\\
 
-Ce stage fait suite à un besoin grandissant d'Empreinte Digitale d'améliorer en continu la sécurité de l'infrastructure. 
-Étant une entreprise développant des applications web et hébergeant des applications open-source, elle est impactée par la menace croissante des attaques informatiques. \\
+Du fait de cette croissance des incidents de sécurité, Empreinte Digitale a décidé de renforcer son système d'information avec de nouveaux outils de sécurité.
+L'entreprise à également fait auditer le \gls{SI} afin d'établir un premier état des lieux. \\
 
 Mon rapport s'organise en quatre parties. 
 Dans la première, j'exposerai l'environnement et le contexte du stage. 
 La seconde partie sera consacrée à la présentation de trois outils techniques régulièrement utilisées et cités dans ce document. 
 Dans une troisième partie, j'évoquerai les travaux de sécurité avec les thématiques de sécurité, l'inventaire des machines, le durcissement des systèmes \gls{Linux} et la documentation. 
 Je présenterai en quatrième partie les divers travaux d'administrateur système. 
-Enfin, je conclurai par un bilan personnel. \\
+Enfin, je conclurai par un bilan personnel.\\
 
 Ce rapport a été rédigé en \LaTeX à partir du template de M. Woodward. 
-Les liens hypertexte, les liens vers des sections ou des acronymes et définition sont interactifs.
-Les ressources sont disponibles sur le dépôt GitHub \begin{hilite} \url{https://github.com/theprobleme/stagereportS10} \end{hilite}.
-
-% Abstract %
-\newpage
-\section*{Abstract}
+Les liens hypertexte, les liens vers des sections ou des acronymes et définitions sont interactifs.
+Les ressources sont disponibles sur le dépôt GitHub \begin{hilite}\url{https://github.com/theprobleme/stagereportS10}\end{hilite}.
 
 % 1ère Partie : L'environnement et le contexte du stage %
 \newpage
@@ -166,6 +245,7 @@ Les ressources sont disponibles sur le dépôt GitHub \begin{hilite} \url{https:
 \begin{minipage}{.7\textwidth}%
 Empreinte Digitale est une \gls{SCOP} d'une cinquantaine de collaborateurs basée sur Angers depuis 29 ans. 
 Elle travaille à la réalisation de solutions numériques responsables et sur-mesure.
+L'entreprise est basée à Angers, au 11 rue des Noyers.
 \end{minipage}%
 \hfill
 \begin{minipage}{.3\textwidth}%
@@ -175,28 +255,29 @@ Elle travaille à la réalisation de solutions numériques responsables et sur-m
 \end{minipage}%
 
 \subsection{Activités}
-L'activité de l'entreprise se découpe en 5 axes:
+\noindent%
+L'activité de l'entreprise se découpe en cinq axes:
 
 \noindent%
 \begin{minipage}{.7\textwidth}%
 
-\textbf{Développement sur-mesure}: réalisation de logiciels répondant à un besoin métier.
+\begin{hilite}Développement sur-mesure\end{hilite}: réalisation de logiciels répondant à un besoin métier.
 
-\textbf{Hébergement en cloud privé}: hébergement Web responsable en \gls{cloud privé} indépendant dans des datacenters en France. 
+\begin{hilite}Hébergement en cloud privé\end{hilite}: hébergement Web responsable en \gls{cloud privé} indépendant dans des datacenters en France. 
 Les serveurs sont exclusivement gérés avec des technologies libres et open source, garantissant une indépendance vis-à-vis d'entreprises tierces.
 
-\textbf{Accessibilité numérique}: audit de services numériques, formations et accompagnement dans la mise en place de démarche de mise en accessibilité des sites et services.
+\begin{hilite}Accessibilité numérique\end{hilite}: audit de services numériques, formations et accompagnement dans la mise en place de démarche de mise en accessibilité des sites et services.
 
-\textbf{Système d'information archivistique}: suite logicielle Ligeo Archives, un système d'information archivistique. 
+\begin{hilite}Système d'information archivistique\end{hilite}: suite logicielle Ligeo Archives, un système d'information archivistique. 
 Il répond aux besoins de gestion et de valorisation du patrimoine archivistique, tout en garantissant une souplesse d'utilisation, de paramétrage et une ergonomie moderne.
 
-\textbf{Mise en conformité \gls{RGPD}}: évaluation du niveau de conformité \gls{RGPD} avec pilotage de la mise en oeuvre des préconisations essentielles à la mise en conformité au \gls{RGPD}.
+\begin{hilite}Mise en conformité \gls{RGPD}\end{hilite}: évaluation du niveau de conformité \gls{RGPD} avec pilotage de la mise en oeuvre des préconisations essentielles à la mise en conformité au \gls{RGPD}.
 
 \end{minipage}%
 \hfill
 \begin{minipage}{.3\textwidth}%
 \begin{center}
-    \includegraphics[scale=0.22]{src/logo_ligeo.png}
+    \includegraphics[scale=0.2]{src/logo_ligeo.png}
 \end{center}
 \end{minipage}%
 
@@ -245,18 +326,19 @@ La gouvernance coopérative est similaire au fonctionnement d'une association lo
 Le conseil d'administration a pour rôle de déterminer les orientations de l'activité de la société. 
 Actuellement, l'assemblée générale est consisté de 32 salariés. 
 Un salarié ne peut pas rester dans l'entreprise si au bout de 3 ans d'ancienneté celui-ci ne veut pas adhérer à la \gls{SCOP}. 
-Cette assemblée générale mandate le conseil d'administration constitué des membres élus et en "échange", les membres de conseil anime, représente et rend compte aux associés.
+Cette assemblée générale mandate le conseil d'administration constitué des membres élus et en "échange", les membres de conseil animent, représentent et rendent compte aux associés.
 
-De l'autre côté on trouve la gouvernance de l'entreprise, avec un directeur général, responsable légale qui travail avec un comité opérationnel. 
+De l'autre côté on trouve la gouvernance de l'entreprise, avec un directeur général, responsable légale qui travaille avec un comité opérationnel. 
 Ils travaillent avec les différents pôles dans la mise en oeuvre de la stratégie d'entreprise.
 
-La partie décisionnel est aux salariés car c'est bien la gouvernance coopérative qui mandate et pilote la gouvernance d'entreprise qui, elle, propose et rend compte de l'activité.
+La partie décisionnelle est aux salariés car c'est bien la gouvernance coopérative qui mandate et pilote la gouvernance d'entreprise qui, elle, propose et rend compte de l'activité.
 
 Une assemblée générale ordinaire à lieu une fois par an pour voter les grandes orientations de l'entreprise, valider les comptes, voter la répartition des bénéfices et également voter pour les nouveaux associées.
 
 \subsection{Responsabilité sociétale et environnemental}
 L'axe principal de la démarche \gls{RSE} chez Empreinte Digitale porte sur le numérique responsable, qui intègre à la fois des problématiques environnementales et sociétales.
 
+\subsubsection{Label Lucie}
 \noindent%
 \begin{minipage}{.7\textwidth}%
 Empreinte digitale est officiellement engagée dans une démarche Responsabilité Sociétales des Entreprises (\gls{RSE}) depuis 2018, année de sa labellisation Lucie \gls{ISO} 26000. 
@@ -266,7 +348,7 @@ LUCIE est une certification qui prouve qu'une entreprise, un produit ou un servi
 \hfill
 \begin{minipage}{.3\textwidth}%
 \begin{center}
-\includegraphics[width=0.6\textwidth]{src/logo_lucie.png}
+\includegraphics[width=0.5\textwidth]{src/logo_lucie.png}
 \end{center}
 \end{minipage}% \\
 
@@ -275,9 +357,8 @@ Le Design4Green est un challenge organisé depuis 5 par l'ESAIP, une école d'in
 Durant ce hackathon de 48h, les équipes doivent répondre sur un sujet autour d'un projet web et de l'éco-conception.
 Le projet web doit prendre en considération son empreinte environnementale.
 
-En 2021, le thème portait sur le développement d'une interface pour les professionnel de suivi de l'éco-conception d'un projet web intégrant 491 critères.
-Empreinte Digitale à participé à cette édition et l'a remporté avec une application statique, éco-conçu et accessible.
-Le site est une "Progressive Web App" (\gls{PWA}), il est alors téléchargé une seule fois et mise en cache dans le navigateur, ainsi il n'y a pas d'aller-retour avec le serveur.
+En 2021, le thème portait sur le développement d'une interface pour les professionnels de suivi de l'éco-conception d'un projet web intégrant 491 critères.
+Empreinte Digitale à participé à cette édition et l'a remportée avec une application statique, éco-conçue et accessible.
 
 A la clé de ce challenge, un chèque de 1000€ qui fut par la suite placé dans un autre projet \gls{RSE}, le budget participatif.
 
@@ -317,21 +398,21 @@ L'idée est d'utiliser des énergies renouvelables produites sur place, la perte
 Avec ce datacenter, Stratosfair et Empreinte Digitale lancent une offre similaire à celle OVH avec la location de machines virtuelles.
 Une application et une \gls{API} ont été développés pour la création de machines virtuelles dans un \gls{cluster} \gls{Proxmox} depuis une interface web.
 
-Vous pouvez retrouver d'autres projets \gls{RSE} ici: \begin{hilite} \url{https://blog.empreintedigitale.fr} \end{hilite}.
+Retrouvez d'autres projets \gls{RSE} ici: \begin{hilite}\url{https://blog.empreintedigitale.fr}\end{hilite}.
 
 \subsection{Pôle datacenter}
 Empreinte digitale est constitué de 5 pôles: production, accessibilité numérique, datacenter, RH et commercial/marketing.
-
 J'étais intégré dans le pôle datacenter composé de 7 personnes. 
+\noindent%
 Les activités sont découpées de la manière suivante:
 \begin{itemize}
     \item \textbf{Ligeo}: deux personnes travaillent principalement sur les produits Ligeo. 
     Cela comprend les installations, les mises à jours et la maintenance.
     \item \textbf{Cloud}: une personne travaille sur la conception, les installations et la maintenance des produits cloud. 
-    Cela va de l'installation de produits tels que \gls{Nextcloud}, Zammad jusqu'à la conception et l'installation d'architecture spécifique à un besoin. 
+    Cela va de l'installation de produits tels que \gls{Nextcloud}, Zammad jusqu'à la conception et l'installation d'architectures spécifiques à un besoin. 
     C'est le cas par exemple pour le projet Dehon.
     \item \textbf{Travaux internes}: deux personnes, moi y compris, travaillons sur divers travaux internes. 
-    Cela concerne par exemple les installations de PC, les mail, les accès et les installations de nouveaux outils.
+    Cela concerne par exemple les installations des postes de travail, les mails, les accès et les installations de nouveaux outils.
     \item \textbf{Commercial}: une personne gère la partie commercial et facturation.
     \item \textbf{Chef de projet}: une personne travaille sur la gestion de projet, en lien avec le commercial.
 \end{itemize}
@@ -345,19 +426,18 @@ Empreinte Digitale possède un comité sécurité dans lequel j'ai été intégr
 Celui-ci est composé d'une dizaine de personnes aux profils variés: développeurs, administrateurs systèmes, testeurs et chefs de projet.
 
 Sa mission est pour le moment de maintenir une veille sur la sécurité afin d'apporter des axes d'améliorations. 
-Cela tiens compte du développement, de l'hébergement, la documentation et les bonnes pratiques générales à l'attention de tous. 
+Cela tiens compte du développement, de l'hébergement, la documentation et des bonnes pratiques générales à l'attention de tous. 
 Le comité a une réunion mensuel pour suivre l'avancement de divers sujets.
 
-\newpage
 \subsection{Gestion de projet}
 Deux outils sont très utilisés dans la gestion de projet chez Empreinte Digitale. \\
 
 \noindent%
 \begin{minipage}{.7\textwidth}%
-\gls{Redmine} est une application web libre de gestion de projets.
+Tout d'abord \gls{Redmine}, une application web libre de gestion de projets.
 Elle est utilisée pour le ticketing en interne et avec les clients.
-Les clients possèdent des accès au \gls{Redmine} et peuvent eux-même créer des tickets.
-L'outils permet également d'avoir une liste de contacts rattachés aux projets. \\
+Ils possèdent des accès au \gls{Redmine} et peuvent eux-même créer des tickets.
+L'outils permet également d'avoir une liste de contacts rattachées aux projets. \\
 \end{minipage}%
 \hfill
 \begin{minipage}{.3\textwidth}%
@@ -367,19 +447,18 @@ L'outils permet également d'avoir une liste de contacts rattachés aux projets.
 \end{minipage}% \\
 
 \gls{Redmine} a un rôle important dans l'exploitation car il sert pour deux autres aspects.
-
 Dans la comptabilisation du temps, il n'y a pas de système de badgeuse.
 Le temps est calculé à partir de la saisie hebdomadaire de chaque employé.
 
 L'autre aspect important concerne la comptabilité.
-A partir du système de classification des tickets, la saisie de temps permet de sortir des analytiques comptables.
+À partir du système de classification des tickets, la saisie de temps permet de sortir des analytiques comptables.
 Par exemple, sur un projet vendu en temps de développement, c'est avec \gls{Redmine} que les chiffres effectifs vont être calculés. \\
 
 \noindent%
 \begin{minipage}{.7\textwidth}%
-Mattermost est un logiciel libre de messagerie instantanée auto-hébergeable.
+Le second outil est Mattermost, un logiciel libre de messagerie instantanée auto-hébergeable.
 Il est une altervative libre à \gls{Slack} ou \gls{Microsoft Teams}.
-Comme \gls{Redmine}, certains clients possèdent des canaux Mattermost en plus de \gls{Redmine}.
+Certains clients possèdent des canaux Mattermost en plus de \gls{Redmine}.
 Cela évite notamment de passer par les mails lors d'échanges répétés. \\
 \end{minipage}%
 \hfill
@@ -414,16 +493,16 @@ Les problématiques sont multiples:
 \end{itemize}
 
 \subsection{Objectifs}
-Travailler en mode projet sur l'infrastructure de l'entreprise afin d'améliorer celle-ci en continu. 
+L'objectif est de travailler en mode projet sur l'infrastructure de l'entreprise afin d'améliorer celle-ci en continu. 
 Cela passe par la mise en oeuvre de nouveaux outils mais également de nouvelles procédures afin de pérenniser les solutions. 
-En parallèle, travailler sur des tâches annexes d'administration système comme installer des plateformes pour les clients, préparer le matériel pour les nouveaux arrivants, etc.
+En parallèle, il y a des tâches annexes d'administration système comme installer des plateformes pour les clients, préparer le matériel pour les nouveaux arrivants, etc.
 
 \subsection{Outils et ressources}
 Les outils sont nombreux et il n'y a pas de restriction à en mettre en oeuvre de nouveaux. 
 Les principaux sont ceux cités dans la section \ref{part: preambule_technique}.
 
 Il n'y a pas de limitation de ressources et matériels.
-L'accès aux plateformes vitales à la réalisation des projets est donné avec des droits administrateurs.
+L'accès aux plateformes vitales à la réalisation des projets est donné avec des droits administrateur.
 Pour les autres plateformes, l'accès est donné ponctuellement lorsque cela est justifié.
 
 L'objectif n'étant pas concentré sur un sujet en particulier, les divers documentations de l'\gls{ANSSI} servent de conseil.
@@ -435,7 +514,7 @@ L'objectif n'étant pas concentré sur un sujet en particulier, les divers docum
 \noindent%
 \begin{minipage}{.7\textwidth}%
 \gls{Proxmox} est une plateforme open-source complète pour la virtualisation d'entreprise. 
-Grâce à l'interface Web intégrée, nous pouvons facilement gérer les machines virtuelles et les conteneurs, le stockage défini par logiciel, la mise en réseau, le clustering haute disponibilité et plusieurs outils prêts à l'emploi sur une seule solution. \\
+Grâce à l'interface Web intégrée, nous pouvons facilement gérer les machines virtuelles, les conteneurs, le stockage, la mise en réseau, le clustering haute disponibilité et plusieurs outils prêts à l'emploi sur une seule solution. \\
 
 \end{minipage}%
 \hfill
@@ -463,11 +542,15 @@ Grâce à l'interface Web intégrée, nous pouvons facilement gérer les machine
 
 Depuis l'interface, on visualise l'élément \textit{Datacenter}, correspondant au \gls{cluster}. 
 On visualise également chacun des noeuds du \gls{cluster} avec leur nom et leur état. 
-On peut y modifier les noeuds, les différents stockages, la configuration de backup avec l'ajout de serveur de backup, les permissions utilisateurs, la haute disponibilité du cluster (HA), les statistiques et le support. \\
+On peut y modifier les noeuds, les différents stockages, la configuration de backup avec l'ajout de serveur de backup, les permissions utilisateurs, la haute disponibilité du \gls{cluster} (HA), les statistiques et le support. \\
 
 Il est également possible d'agir sur les machines virtuelles. 
 La vision sur les machines virtuelles résume son état, ses caractéristiques telles que l'usage du CPU, de la mémoire, la taille du disque et les adresses IPs. 
-On peut y modifier les caractéristiques hardware des machines virtuelles directement à chaud, agir sur le template, accéder à la console de la machine etc. \\
+On peut y modifier les caractéristiques hardware à chaud, agir sur le template, accéder à la console etc. \\
+
+Proxmox intègre une solution de stockage nommé \gls{Ceph}.
+\gls{Ceph} permet la haute disponibilité et durabilité des données dans un \gls{cluster}.
+
 \end{minipage}% \\
 
 \newpage
@@ -475,9 +558,10 @@ On peut y modifier les caractéristiques hardware des machines virtuelles direct
 \noindent%
 \begin{minipage}{.7\textwidth}%
 \gls{Terraform}est un outil open source d'infrastructure as code (\gls{IaC}) développé par Hashicorp. 
-Il permet de déclarer sous forme de code l'infrastructure que l'on souhaite obtenir. 
-Dans des fichiers de configuration structurés, basé sur un système d'état, on va pouvoir manager l'infrastructure et mettre à jours son état. \\
-
+Il permet de déclarer sous forme de code l'état d'une infrastructure que l'on souhaite obtenir. 
+Dans des fichiers de configuration structurés, on va manager l'infrastructure et mettre à jours son état.
+Au travers de scripts dans un langage propre à \gls{Terraform}, on décrit l'état de l'infrastructure souhaité. 
+Son workflow le rend facile à comprendre et à mettre en oeuvre: 
 \end{minipage}%
 \hfill
 \begin{minipage}{.3\textwidth}%
@@ -486,8 +570,6 @@ Dans des fichiers de configuration structurés, basé sur un système d'état, o
 \end{center}
 \end{minipage}%
 
-Au travers de scripts dans un langage propre à \gls{Terraform}, on décrit l'état de l'infrastructure souhaité. 
-Son workflow le rend facile à comprendre et à mettre en oeuvre:
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=\textwidth]{src/graph_terraform.png}
@@ -505,33 +587,26 @@ Après les quelques première écritures de configuration, on va:
 
 L'étape d'initialisation permet la création d'un état de l'infrastructure qui sera stocké sous la forme d'un fichier \begin{code}\texttt{terraform.tfstate}\end{code}. 
 Cet état permet d'assurer la cohérence entre ce qui est écrit localement et ce qui a déjà été appliqué. 
-Dans un travail collaboratif, cet état peut être configuré sur \gls{GitLab} de façon à assurer la cohérence des états entre différents développeurs.
+Dans un travail collaboratif, cet état peut être configuré sur \gls{GitLab} de façon à assurer la cohérence des états entre développeurs. \\
 
 \gls{Terraform} se base sur un fonctionnement autour de \textit{providers} ou fournisseurs. 
 Un provider est là pour manager une ressource donnée. 
-Ces provider sont nombreux: Amazon Web Services, Google Cloud Plateform, Azure, VmWare Vsphere, \gls{Proxmox} etc.
+Ces provider sont nombreux: Amazon Web Services, Google Cloud Plateform, Azure, VMWare Vsphere, \gls{Proxmox} etc.\\
 
 À ces providers on spécifie des ressources. 
 Chaque bloc de ressources décrit un ou plusieurs objets d'un service. 
-La construction d'une ressource est basée sur le provider qui la fournie.
+La construction d'une ressource est basée sur le provider qui la fournie.\\
 
 Il est également possible de créer des modules afin de les réutiliser. 
 Utile par exemple dans le cas de template de machines virtuelles, où les variables sont toujours les mêmes mais où seuls les valeurs changent.
 
-Chez Empreinte Digitale, \gls{Terraform} permet le déploiement dans un premier de temps de machines virtuelles sur des \gls{cluster} \gls{Proxmox}. 
-Par la suite, \gls{Terraform} permet d'installer des composants sur ces machines telles que des ressources Kubernetes, MongoDB, Helm, etc.
-
 \newpage
 \section{Ansible}
-Nous avons vu précédemment l'intérêt de \gls{Terraform} dans l'installation de machines virtuelles ou logicielles à partir de différents fournisseurs. 
-Une fois cette étapes effectuée, il peut être nécessaire d'effectuer des configurations supplémentaires. 
-C'est là qu'\gls{Ansible} intervient.
-
 \noindent%
 \begin{minipage}{.8\textwidth}%
 \gls{Ansible} est un logiciel libre de gestion des configurations qui automatise le déploiement de configurations sur un ensemble de machines. 
 Celui-ci est basé sur l'utilisation du protocole SSH. 
-Cela lui donne l'avantage de ne pas avoir besoin d'installer d'agents sur les machines, parfois consommateur de ressources.
+Cela lui donne l'avantage de ne pas avoir besoin d'installer d'agent sur les machines, parfois consommateur de ressources. \\
 
 \end{minipage}%
 \hfill
@@ -547,24 +622,24 @@ On distingue trois principaux types de scripts:
 \begin{itemize}
     \item Les \textbf{rôles}. Ce sont un ensemble de playbooks qui s'assurent de la présence ou absence de fonctionnalité spécifique.
     \item Les \textbf{playbooks}. Ce sont un ensemble de tâches d'automatisations.
-    \item Les \textbf{tâches}. Une tâche correspond à la description de l'état souhaité d'un composant d'un machine. 
-    Cela peut être exemple la présence ou non d'un paquet apt.
+    \item Les \textbf{tâches}. Une tâche correspond à la description de l'état souhaité d'un composant d'une machine. 
+    Cela peut être par exemple la présence ou non d'un paquet apt.
 \end{itemize}
 
-L'utilisation de rôle n'est pas toujours nécessaire. 
+L'utilisation d'un rôle n'est pas toujours nécessaire. 
 Un rôle à surtout pour vocation de créer une configuration qui sera réutilisée régulièrement. 
-Il est donc possible de se limiter à l'utilisation de playbook.
+Il est donc possible de se limiter à l'utilisation de playbook. \\
 
 Comme indiqué précédemment, \gls{Ansible} est dit "agentless". 
 Cela signifie qu'il n'est pas nécessaire d'installer d'agents sur les cibles. 
-Pour réaliser sa mission, \gls{Ansible} n'a donc besoin que trois de pré-requis:  une connexion SSH vers ces cibles, la bonne version de python d'installé sur ces cibles et un inventaire de l'ensemble des cibles.
+Pour réaliser sa mission, \gls{Ansible} n'a donc besoin que trois de pré-requis:  une connexion SSH vers ces cibles, la bonne version de python d'installé sur ces cibles et un inventaire de l'ensemble des cibles. 
 
 Lorsqu'un script \gls{Ansible} est exécuté, la première étape consiste toujours à récupérer les \textit{facts}. 
 Ces facts sont l'ensemble des informations de la machine cible. 
-On aura le nom de la machine, sa version de système d'exploitation, son numéro de version, etc.
+On aura le nom de la machine, sa version de système d'exploitation, son numéro de version, etc. 
 
 A partir de ces informations on peut paramétrer l'utilisation d'\gls{Ansible}. 
-Cela va notamment permettre de faire une distinction entre les différents systèmes d'exploitation, leurs versions, leurs logiciels installés etc.
+Cela va notamment permettre de faire une distinction entre les différents systèmes d'exploitation, leurs versions, leurs logiciels installés etc.  \\
 
 Lorsqu'une tâche \gls{Ansible} est jouée, il y a quatre états principaux:
 \begin{itemize}
@@ -584,7 +659,7 @@ Mon sujet \begin{hilite} Analyse et réalisation d'audits automatisés de l'infr
     De plus, j'ai pris le temps de me cultiver sur les sujets de sécurité avec les documentations et livres blanc de sécurité de l'\gls{ANSSI} ainsi que les sites de conseils de sécurité.
     \item \textbf{Analyse}. J'ai débuté une analyse de l'infrastructure en me basant sur les critères du référentiel secNumCloud de l'\gls{ANSSI}. 
     Cette analyse n'était pas uniquement technique car parmi les critères de certification, de nombreux points concernent de la documentation.
-    \item \textbf{Préconisations}. J'ai rédigé des documentations pour le pôle \gls{sysadmin} et l'ensemble des salariées : livre blanc de sécurité, gls{PSSI} (Plan de sécurité des systèmes d'information), etc.
+    \item \textbf{Préconisations}. J'ai rédigé des documentations pour le pôle \gls{sysadmin} et l'ensemble des salariées : livre blanc de sécurité, \gls{PSSI} (Plan de sécurité des systèmes d'information), etc.
     \item \textbf{Mise en oeuvre}. J'ai effectué des \gls{POC} sur Rudder et \gls{Ansible CMDB}.
 \end{itemize}
 
@@ -623,7 +698,7 @@ On va ainsi inventorier des machines avec leurs caractéristiques matériels et 
 \noindent%
 \begin{minipage}{.7\textwidth}%
 \textbf{Gestionnaire Libre de Parc Informatique (\gls{GLPI})} est une solution open-source de gestion de parc informatique qui permet la classification des différentes ressources. 
-GLPI ne récupère pas les informations lui-même, il a besoin d'un logiciel d'inventaire complémentaire tel que OCSInventory ou FusionInventory.
+\gls{GLPI}) ne récupère pas les informations lui-même, il a besoin d'un logiciel d'inventaire complémentaire tel que \gls{OCSInventory}) ou FusionInventory.
 \end{minipage}%
 \hfill
 \begin{minipage}{.3\textwidth}%
@@ -632,7 +707,7 @@ GLPI ne récupère pas les informations lui-même, il a besoin d'un logiciel d'i
 \end{center}
 \end{minipage}% \\
 
-Finalement, \gls{GLPI} va permettre de trier les informations récupérées par OcsInventory.
+Finalement, \gls{GLPI} va permettre de trier les informations récupérées par \gls{OCSInventory}).
 
 \subsection{Architecture}
 \begin{figure}[!ht]
@@ -650,8 +725,8 @@ C'est-à-dire qu'un agent est installé sur l'ensemble des machines et celui-ci 
 Ensuite, l'application \gls{GLPI} avec un plugin va se connecter à \gls{OCSInventory} et lire les données.
 Finalement, par une action manuelle à réaliser dans \gls{GLPI}, je valide les imports.
 
-Un champ TAG configuré au niveau des agents permet une segmentation des machines.
-J'ai défini la nomenclature suivante pour les TAGs:
+Un champ TAG, configuré au niveau des agents, permet une segmentation des machines.
+J'ai défini les TAGs suivant:
 \begin{itemize}
     \item \begin{code}\texttt{ANG-ORD}\end{code}: ordinateurs des salariés d'Angers.
     \item \begin{code}\texttt{ANG-DC}\end{code}: serveurs physiques et machines virtuelles d'Angers.
@@ -664,21 +739,20 @@ Le TAG va alors permettre d'effectuer un trie lors de l'import.
 Par exemple, les machines dont le TAG est \begin{code}\texttt{REN}\end{code} seront placées dans l'entité "Datacenter de Rennes".
 Lorsqu'un import est validé, \gls{GLPI} écrit les données dans une base de données qui lui est propre. \\
 
-\begin{figure}[ht!]
-\noindent%
-\begin{minipage}{.5\textwidth}%
-\begin{center}
-\includegraphics[width=\textwidth]{src/interface_ocsinventory.png} \\
-\end{center}
-\end{minipage}%
-\hfill
-\begin{minipage}{.5\textwidth}%
-\begin{center}
-\includegraphics[width=\textwidth]{src/interface_glpi.png} \\
-\end{center}
-\end{minipage}% \\
-    \caption{Interfaces de \gls{OCSInventory} et \gls{GLPI}}
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[scale=0.2]{src/interface_glpi.png}
+    \label{fig:interface_glpi}
+    \caption{Interface de l'application \gls{GLPI}}
 \end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[scale=0.2]{src/interface_ocsinventory.png}
+    \label{fig:interface_ocsinventory}
+    \caption{Interface de l'application \gls{OCSInventory}}
+\end{figure}
+
 
 \newpage
 \subsection{Installation}
@@ -1010,7 +1084,7 @@ Cela serait donc plus de mettre d'utiliser \gls{Ansible CMDB}. \\
 J'ai également testé Rudder durant l'alternance. 
 Techniquement, la solution est intéressante mais coûteuse. \\
 
-De plus, j'ai essayé Wazuh, une plateforme gratuite et opensource de sécurité basé sur un fonctionnement d'agent. 
+De plus, j'ai essayé Wazuh, une plateforme gratuite et opensource de sécurité basée sur un fonctionnement d'agent. 
 Celle-ci permet de réaliser du monitoring de sécurité ainsi que de l'application de correctifs.
 Néanmoins, le fonctionnement par agent est contraignent et la configuration uniquement via des fichiers XML rend le travail fastidieux.
 
