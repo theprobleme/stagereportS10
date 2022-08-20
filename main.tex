@@ -24,6 +24,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{etoolbox}
+\usepackage{adjustbox}
+\usepackage{graphicx}
 
 \setlength{\abovecaptionskip}{0pt plus 0pt minus 0pt}
 \pagestyle{fancy}
@@ -1119,6 +1121,7 @@ Je ne suis pas allé très loin dans l'expérimentation, l'outil mériterait d'y
 
 \newpage
 \part{Travaux d'administrateur système}
+\label{part: Travaux d'administrateur système}
 \section{Nextcloud et Collabora}
 \noindent%
 \begin{minipage}{.7\textwidth}%
@@ -1947,45 +1950,38 @@ Vim est le prochain outil à prendre en main.
 \newpage
 \part{Bilan personnel}
 Cela fait maintenant 1 an que je suis chez Empreinte Digitale et cette année fût passionnante.
-Dès mon arrivé, j'ai beaucoup apprécié l'environnement en entreprise.
-Le modèle d'une petite entreprise d'une cinquantaine sur un modèle associatif m'a beaucoup plu.
-Ayant passé 4 années dans le milieu associatif avec le BDE de l'école, j'adhére complétement au modèle de \gls{SCOP}.
+Dès mon arrivé, j'ai beaucoup apprécié le modèle d'une petite entreprise d'une cinquantaine de salarié sur un fonctionnement associatif.
+Ayant passé 4 années dans le milieu associatif avec le BDE de l'école, j'adhére complétement au modèle de \gls{SCOP}.\\
 
 Lors de mon précédent stage, du fait de la crise sanitaire, je n'avais pas eu l'occasion d'une expérience de stage "normal".
 Je n'avais pas pu partir à l'étranger ou être en entreprise.
 Les complications dans la recherche de stage technique m'avaient ammenées à réaliser mon stage dans l'incubateur de l'ESEO d'Angers.
-J'avais alors le sentiment d'aller en stage comme j'irais à l'école.
+J'avais alors le sentiment d'aller en stage comme j'irais à l'école.\\
 
 Dès les premiers cours de réseau en 1ère année de cycle ingénieur, j'ai su que c'était le domaine dans lequel je voudrais travailler.
 Je suis très heureux qu'à l'issue de mon stage technique j'ai pu rentrer dans l'option Cloud Système et Sécurité.
-J'y appris de nombreuses bases, qui m'ont amplement permises de m'en sortir durant mon alternance.
+J'y ai appris de nombreuses bases qui m'ont amplement permis de m'en sortir durant mon alternance.\\
 
 Terminer cette dernière année d'étude à l'ESEO en contrat de professionnalisation était la meilleure chose possible.
 Durant la période d'alternance, j'ai eu le temps de me cultiver sur les domaines de l'infrastructure et la sécurité.
-J'y ai renforcé mes connaissances théorique sur le sujet.
+J'y ai renforcé mes connaissances théoriques sur le sujet.
 Cette période n'était pas forcément évidente. 
-En effet, le fonctionnement de l'alternance avec seulement deux jours par semaine en entreprise rend les choses compliquées dans l'intégration à l'entreprise.
-De plus, cela demande chaque semaine à se remettre dans le bain.
-J'ai finalement surtout apprécié ma présence chez Empreinte Digitale lorsque j'ai débuté le stage.
+En effet, le fonctionnement de l'alternance avec seulement deux jours par semaine en entreprise rend l'intégration en entreprise compliquée.\\
 
-Par la suite, dans la période de stage, j'ai pu mettre en pratique de nombreuses choses.
-Bien qu'à l'origine mon stage devait porter sur le demaine de la sécurité, j'ai beaucoup aimé cette bifurcation sur l'administration système.
+Mon expérience lors de la période de stage a été beaucoup plus enrichissante.
+Ces sept mois fûrent pour moi l'occasion de mettre en pratique de nombreux outils.
+Mon rapport fait état de \gls{Docker}, \gls{Kubernetes}, \gls{Proxmox} et \gls{Ansible} mais j'ai appris bien plus.
+Ces travaux, associés à divers autres tâches, m'ont fait approfondir mes connaissances sur des éléments de bases : pare-feu, DNS, DHCP, VRRP, VoIP etc.
+On m'a également laissé le temps de faire de la veille sur des technologies que je ne connaissais pas: Puppet, Chef, Salt, Jenkins, Oauth, etc.\\
 
+Parmi l'ensemble de mes travaux, j'ai particulièrement apprécié ceux présentés dans la partie \ref{part: Travaux d'administrateur système}.
+Bien que mon sujet portait sur la sécurité, j'étais très heureux d'avoir été intégré sur ces tâches.
+Je n'ai pas d'appétence particulière pour le milieu de la sécurité, ce qui m'intéresse le plus est la partie infrastructure.
+Cela fait echo au fait que j'ai choisis l'axe infrastructure parmi les axes disponibles en option CSS.\\
 
-En seulement un an, je vois mon évolution dans mes connaissances et compétences techniques.
-J'ai renforcé mes bases techniques et renforcé mon savoir sur des technologies intéréressantes telles que Docker ou Kubernetes.
-
-
-Dans mon précédent bilan personnel de compte rendu de stage, j'avais écris: "Le bagage technique supplémentaires que j'ai obtenu lors de ces 12 semaines n'a pas de lien particulier avec le domaine dans lequel je me destine".
-J'avais tort à l'époque.
-J'ai découvert en entreprise l'importance de connaître l'applicatif hébergé.
-Connaître le fonctionnement d'une application et la meilleure méthode en tant qu'administrateur pour résoudre beaucoup de problème.
-L'infrastructure est importante mais sur but premier reste la mise en place d'applications ou services.
-
-Je termine mon année en contrat de professionnalisation.
-Mon aventure chez Empreinte Digitale ne s'arrête cependant pas là.
+Mon aventure chez Empreinte Digitale ne s'arrête pas.
 J'ai signé un contrat en CDD de 6 mois.
-Durant les mois à venir, je vais me distancer des travaux de sécurité pour travailler majoritairement sur les offres cloud et l'utilisation de Kubernetes.
+Durant les mois à venir, je vais me distancer des travaux de sécurité pour travailler des projets cloud. 
 
 \newpage
 \section*{Annexes}
@@ -1995,6 +1991,7 @@ Durant les mois à venir, je vais me distancer des travaux de sécurité pour tr
 \begin{table}[!ht]
     \newcolumntype{M}[1]{>{\raggedright}m{#1}}
     % \center
+    \begin{adjustbox}{max width=\textwidth}
     \begin{tabular}{|c|M{4cm}|M{11.5cm}|}
         \hline
         N° & \begin{center} Thèmes \end{center} & \begin{center}
@@ -2042,6 +2039,7 @@ Durant les mois à venir, je vais me distancer des travaux de sécurité pour tr
         \tabularnewline
         \hline
 \end{tabular}
+\end{adjustbox}
 \caption{Les 16 thématiques de sécurité - Partie 1}
 \label{tab:16thematiques1}
 \end{table}
@@ -2050,6 +2048,7 @@ Durant les mois à venir, je vais me distancer des travaux de sécurité pour tr
 \begin{table}[!ht]
     \newcolumntype{M}[1]{>{\raggedright}m{#1}}
     \center
+    \begin{adjustbox}{max width=\textwidth}
     \begin{tabular}{|c|M{4cm}|M{11.5cm}|}
         \hline
         N° & Thèmes & \begin{center}
@@ -2097,6 +2096,7 @@ Durant les mois à venir, je vais me distancer des travaux de sécurité pour tr
 
         \hline
 \end{tabular}
+\end{adjustbox}
 \caption{Les 16 thématiques de sécurité - Partie 2}
 \label{tab:16thematiques2}
 \end{table}
@@ -2113,6 +2113,7 @@ Durant les mois à venir, je vais me distancer des travaux de sécurité pour tr
 \begin{table}[!ht]
 \newcolumntype{M}[1]{>{\raggedright}m{#1}}
 \center
+\begin{adjustbox}{max width=\textwidth}
 \begin{tabular}{|c|c|M{11.5cm}|}
     \hline
     N° & Semaine & \begin{center}
@@ -2183,6 +2184,7 @@ Durant les mois à venir, je vais me distancer des travaux de sécurité pour tr
     
     \hline
 \end{tabular}
+\end{adjustbox}
 \caption{Planning du travail effectué sur la période de d'alternance - Partie 1}
 \end{table}
 
@@ -2190,6 +2192,7 @@ Durant les mois à venir, je vais me distancer des travaux de sécurité pour tr
 \begin{table}[!htp]
     \newcolumntype{M}[1]{>{\raggedright}m{#1}}
     \center
+    \begin{adjustbox}{max width=\textwidth}
     \begin{tabular}{|c|c|M{11.5cm}|}
         
         \hline
@@ -2237,6 +2240,7 @@ Durant les mois à venir, je vais me distancer des travaux de sécurité pour tr
         \tabularnewline   
     \hline
 \end{tabular}
+\end{adjustbox}
 \caption{Planning du travail effectué sur la période de d'alternance - Partie 2}
 \end{table}
 
@@ -2247,6 +2251,7 @@ Durant les mois à venir, je vais me distancer des travaux de sécurité pour tr
 \begin{table}[!ht]
 \newcolumntype{M}[1]{>{\raggedright}m{#1}}
 \center
+\begin{adjustbox}{max width=\textwidth}
 \begin{tabular}{|c|c|M{11.5cm}|}
     \hline
     N° & Semaine & \begin{center}
@@ -2283,10 +2288,9 @@ Durant les mois à venir, je vais me distancer des travaux de sécurité pour tr
     Installation et configuration d'un nouveau noeud \gls{Proxmox} ajouté au \gls{cluster} de test. 
     Fin de paramétrage de \gls{GLPI} avant d'ajouter l'ensemble du matériel du personnel.
     \tabularnewline
-
-
 \hline
 \end{tabular}
+\end{adjustbox}
 \caption{Planning du travail effectué sur la période de stage - Partie 1}
 \end{table}
 
@@ -2294,6 +2298,7 @@ Durant les mois à venir, je vais me distancer des travaux de sécurité pour tr
 \begin{table}[!ht]
 \newcolumntype{M}[1]{>{\raggedright}m{#1}}
 \center
+\begin{adjustbox}{max width=\textwidth}
 \begin{tabular}{|c|c|M{11.5cm}|}
     \hline
     N° & Semaine & \begin{center}
@@ -2341,6 +2346,7 @@ Durant les mois à venir, je vais me distancer des travaux de sécurité pour tr
     
     \hline
 \end{tabular}
+\end{adjustbox}
 \caption{Planning du travail effectué sur la période de stage - Partie 2}
 \end{table}
 
@@ -2348,6 +2354,7 @@ Durant les mois à venir, je vais me distancer des travaux de sécurité pour tr
 \begin{table}[!ht]
 \newcolumntype{M}[1]{>{\raggedright}m{#1}}
 \center
+\begin{adjustbox}{max width=\textwidth}
 \begin{tabular}{|c|c|M{11.5cm}|}
     \hline
     N° & Semaine & \begin{center}
@@ -2399,6 +2406,7 @@ Durant les mois à venir, je vais me distancer des travaux de sécurité pour tr
     \tabularnewline
     \hline
 \end{tabular}
+\end{adjustbox}
 \caption{Planning du travail effectué sur la période de stage - Partie 3}
 \end{table}
 
@@ -2406,6 +2414,7 @@ Durant les mois à venir, je vais me distancer des travaux de sécurité pour tr
 \begin{table}[!ht]
 \newcolumntype{M}[1]{>{\raggedright}m{#1}}
 \center
+\begin{adjustbox}{max width=\textwidth}
 \begin{tabular}{|c|c|M{11.5cm}|}
     \hline
     N° & Semaine & \begin{center}
@@ -2472,7 +2481,215 @@ Durant les mois à venir, je vais me distancer des travaux de sécurité pour tr
     
     \hline    
 \end{tabular}
+\end{adjustbox}
 \caption{Planning du travail effectué sur la période de stage - Partie 4}
+\end{table}
+
+\newpage
+\subsection*{Tickets réalisés lors de la période de stage}
+\begin{table}[!ht]
+    \newcolumntype{M}[1]{>{\raggedright}m{#1}}
+    \center
+    \begin{adjustbox}{max width=\textwidth}
+    \begin{tabular}{|p{6cm}|c|c|c|c|c|c|c|}
+    \hline
+        Demande & Février & Mars & Avril & Mai & Juin & Juillet & Temps total \\ \hline
+        TOTAL & 136,67 & 162,66 & 133,00 & 126,00 & 154,00 & 127,08 & 839,41 \\ \hline
+        \begin{code} DATACENTER\end{code} & 83,50 & 154,66 & 64,25 & 14,50 & 12,00 & 0,17 & 329,08 \\ \hline
+        Nom de domaine pour page Assistant RGAA & 1,00 &  &  &  &  &  & 1,00 \\ \hline
+        Déplacement datacenter 2022 &  &  & 4,00 &  & 7,00 &  & 11,00 \\ \hline
+        Réunions internes Datacenter 2022 & 2,33 &  &  &  &  &  & 2,33 \\ \hline
+        Installation Ceph sur le cluster de Test Proxmox & 11,00 & 16,00 &  &  &  &  & 27,00 \\ \hline
+        Installation Framemo & 3,00 &  &  &  &  &  & 3,00 \\ \hline
+        Installation de GLPI & 23,00 & 4,50 &  &  &  &  & 27,50 \\ \hline
+        Remplacement du disque & 0,50 &  &  &  &  &  & 0,50 \\ \hline
+        Installation de la derniére version & 4,50 &  &  &  &  &  & 4,50 \\ \hline
+        Compréhension du fonctionnement de GLPI & 1,00 &  &  &  &  &  & 1,00 \\ \hline
+        Installation du plugin OCS-Inventory & 4,67 &  &  &  &  &  & 4,67 \\ \hline
+        Ajout GLPI de la base de données OCSInventory et import de l'ancienne base de données & 4,50 &  &  &  &  &  & 4,50 \\ \hline
+        Configuration pour l'affectation aux entités & 7,00 & 1,50 &  &  &  &  & 8,50 \\ \hline
+        Configuration des éléments é importer &  & 4,00 &  &  &  &  & 4,00 \\ \hline
+        Configuration des dictionnaires & 17,50 &  &  &  &  &  & 17,50 \\ \hline
+        Install NocoDB &  & 5,50 &  &  &  &  & 5,50 \\ \hline
+        Mise en place du SNMP &  & 13,00 &  &  &  &  & 13,00 \\ \hline
+        Installation serveur de CVE & 3,00 &  &  &  &  &  & 3,00 \\ \hline
+        Rendez-vous suivi de stage école avec tuteur école & 0,50 &  &  &  &  &  & 0,50 \\ \hline
+        Reprise générale de la documentation lié au datacenter &  & 24,50 & 31,00 & 4,00 &  &  & 59,50 \\ \hline
+        HTTPS et certificat auto-signé pour OCSInventory &  & 5,00 &  &  &  &  & 5,00 \\ \hline
+    \end{tabular}
+\end{adjustbox}
+\caption{Tickets réalisés lors de la période de stage - Partie 1}
+\end{table}
+
+\newpage
+\begin{table}[!ht]
+        \newcolumntype{M}[1]{>{\raggedright}m{#1}}
+        \center
+        \begin{adjustbox}{max width=\textwidth}
+        \begin{tabular}{|p{6cm}|c|c|c|c|c|c|c|}
+        \hline
+        Demande & Février & Mars & Avril & Mai & Juin & Juillet & Temps total \\ \hline      
+        Documentation audit de sécurité &  & 5,00 &  &  &  &  & 5,00 \\ \hline
+        Réinstallation cluster Proxmox Angers &  & 8,50 &  &  &  &  & 8,50 \\ \hline
+        Installation pour Audit de sécurité &  & 25,67 &  &  &  &  & 25,67 \\ \hline
+        Ajout de l'ensemble des salariés &  & 1,50 &  &  &  &  & 1,50 \\ \hline
+        Installation PC de télé-travail pour Clélia &  & 2,50 &  &  &  &  & 2,50 \\ \hline
+        Mise en place local d'Ansible et reprise des travaux de Raphaél &  & 5,00 &  &  &  &  & 5,00 \\ \hline
+        Ajout des machines d'Angers sur OCSInventory via Ansible &  & 7,00 & 7,00 &  &  &  & 14,00 \\ \hline
+        Streaming d'un webinaire pour l'URSCOP le 12 mai &  &  &  & 1,50 &  &  & 1,50 \\ \hline
+        Ajout des machines de Tours sur OCSInventory via Ansible &  &  & 1,00 &  &  &  & 1,00 \\ \hline
+        Ajout des machines de Rennes sur OCSInventory via Ansible &  &  & 4,00 &  &  &  & 4,00 \\ \hline
+        Veille Kubernetes &  &  & 11,75 &  &  &  & 11,75 \\ \hline
+        Montée de version superset &  &  & 1,50 &  &  &  & 1,50 \\ \hline
+        Compréhension et configuration pour relier les DC d'Angers et Tours &  &  & 4,00 &  &  &  & 4,00 \\ \hline
+        Installation Zammad sur Tours &  &  &  & 2,00 &  &  & 2,00 \\ \hline
+        Mise en place d'une plateforme Peertube et tests streaming &  &  &  & 7,00 &  &  & 7,00 \\ \hline
+        Post it pour les JL 2022 &  &  &  &  & 2,00 &  & 2,00 \\ \hline
+        Creation Compte mail associes@empreintedigitale.fr &  &  &  &  & 1,00 &  & 1,00 \\ \hline
+        Odoo test erreur 502 Bad Gateway &  &  &  &  & 1,00 &  & 1,00 \\ \hline
+        Faire une documentation sur automatiser le lancement de linphone ou jitsi au démarrage du PC &  &  &  &  & 1,00 &  & 1,00 \\ \hline
+        Procédure migration des mails &  &  &  &  &  & 0,08 & 0,08 \\ \hline
+        Adresse mail alias ne fonctionne pas &  &  &  &  &  & 0,08 & 0,08 \\ \hline
+        \begin{code}SADEL\end{code} &  & 0,50 &  &  &  &  & 0,50 \\ \hline
+        Ouvertures accés bitwarden / gitlab ALI &  & 0,50 &  &  &  &  & 0,50 \\ \hline
+    \end{tabular}
+    \end{adjustbox}
+    \caption{Tickets réalisés lors de la période de stage - Partie 2}
+\end{table}
+
+\newpage
+\begin{table}[!ht]
+    \newcolumntype{M}[1]{>{\raggedright}m{#1}}
+    \center
+    \begin{adjustbox}{max width=\textwidth}
+    \begin{tabular}{|p{6cm}|c|c|c|c|c|c|c|}
+    \hline
+    Demande & Février & Mars & Avril & Mai & Juin & Juillet & Temps total \\ \hline      
+    \begin{code}RH\end{code}  & 4,00 &  & 2,00 & 5,00 & 5,00 & 1,50 & 17,50 \\ \hline
+    Procédure nouvel arrivant - Axel Liszkowski & 4,00 &  &  &  &  &  & 4,00 \\ \hline
+    Procédure nouvel arrivant : Marie ANDRE &  &  & 2,00 &  &  &  & 2,00 \\ \hline
+    Présentation des outils et configurations pour Marie André &  &  &  & 3,00 &  &  & 3,00 \\ \hline
+    Procédure Arrivé Bertrand Raes &  &  &  & 2,00 &  &  & 2,00 \\ \hline
+    Procédure départ Jochen Rousse &  &  &  &  &  & 0,50 & 0,50 \\ \hline
+    Arrivée Samuel MASSON &  &  &  &  & 5,00 &  & 5,00 \\ \hline
+    Arrivée Rodolphe REMY &  &  &  &  &  & 0,50 & 0,50 \\ \hline
+    Procédure nouvel arrivant : Thibault Dequidt &  &  &  &  &  & 0,50 & 0,50 \\ \hline
+    Demande & Février & Mars & Avril & Mai & Juin & Juillet & Temps total \\ \hline
+    \begin{code}FOURNITURES\end{code} &  &  &  &  &  & 1,00 & 1,00 \\ \hline
+    Préparation de la commande pour les arrivé d'aout et septembre &  &  &  &  &  & 1,00 & 1,00 \\ \hline
+    \begin{code}AD07\end{code} & 0,50 &  &  &  &  &  & 0,50 \\ \hline
+    Nombre de téléchargement & 0,50 &  &  &  &  &  & 0,50 \\ \hline
+    \begin{code}AD33\end{code} &  &  &  & 3,00 &  &  & 3,00 \\ \hline
+    PAS Département de la gironde &  &  &  & 3,00 &  &  & 3,00 \\ \hline
+    \begin{code}Pôle sécurité\end{code} &  &  & 1,00 &  &  &  & 1,00 \\ \hline
+    Réunion / Ateliers Sécurité &  &  & 1,00 &  &  &  & 1,00 \\ \hline
+    \begin{code}Fonctionnement interne\end{code} &  &  & 18,08 & 87,50 &  &  & 105,58 \\ \hline
+    Linphone &  &  & 0,08 &  &  &  & 0,08 \\ \hline
+    Audit usage cpu / ram / disques par client &  &  & 18,00 & 55,50 &  &  & 73,50 \\ \hline
+    Mise en place d'un second Bastion SSH &  &  &  & 18,00 &  &  & 18,00 \\ \hline
+    Mise é jours des instances BBB d'Angers &  &  &  & 14,00 &  &  & 14,00 \\ \hline
+    \begin{code}Agence Lucie\end{code} & 2,33 &  &  &  &  &  & 2,33 \\ \hline
+    Probléme de langue certificat & 2,00 &  &  &  &  &  & 2,00 \\ \hline
+    Demande d'installation d'un plug-in moodle & 0,33 &  &  &  &  &  & 0,33 \\ \hline
+\end{tabular}
+\end{adjustbox}
+\caption{Tickets réalisés lors de la période de stage - Partie 3}
+\end{table}
+
+
+\newpage
+\begin{table}[!ht]
+\newcolumntype{M}[1]{>{\raggedright}m{#1}}
+\center
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|p{6cm}|c|c|c|c|c|c|c|}
+    \hline
+    Demande & Février & Mars & Avril & Mai & Juin & Juillet & Temps total \\ \hline  
+    \begin{code}Fibat\end{code} &  &  & 0,25 &  &  &  & 0,25 \\ \hline
+    Questions Divers &  &  & 0,25 &  &  &  & 0,25 \\ \hline
+    \begin{code}Cybersécurité\end{code} & 46,33 & 7,50 & 34,00 & 12,00 & 59,00 & 13,00 & 171,83 \\ \hline
+    Analyse état actuel de l'infrastructure & 3,00 &  &  &  &  &  & 3,00 \\ \hline
+    POC Site Web monitoring/push & 8,00 &  &  &  &  &  & 8,00 \\ \hline
+    Installation OpenVAS & 13,00 &  &  &  &  &  & 13,00 \\ \hline
+    Mise à jours du tableau de suivi d'audit & 14,00 &  &  &  &  &  & 14,00 \\ \hline
+    POC DeepFence & 2,00 &  &  &  &  &  & 2,00 \\ \hline
+    Recherches de solutions d'audit de sécurité & 2,00 &  &  &  &  &  & 2,00 \\ \hline
+    Rapport de stage & 3,00 & 5,50 & 1,00 & 1,00 & 13,50 & 10,00 & 34,00 \\ \hline
+    Installation Log4j-RCE-Scanner & 1,33 &  &  &  &  &  & 1,33 \\ \hline
+    Installation locale avec test sur la machine OCS Inventory &  & 2,00 &  &  &  &  & 2,00 \\ \hline
+    Outils d'audit de sécurité automatisée &  &  & 30,00 &  &  &  & 30,00 \\ \hline
+    Parcours et recherche d'outils d'audit de sécurité &  &  & 3,00 &  &  &  & 3,00 \\ \hline
+    Découverte de l'outil en ligne de commande, installations tests - Automatisation via Ansible de l'installation &  &  &  & 7,00 &  &  & 7,00 \\ \hline
+    Création d'une archive .dev é partir des ressources pour l'installation sur les machines Debian dont la version est supérieure é 10 &  &  &  & 4,00 &  &  & 4,00 \\ \hline
+    Création d'un role Ansible pour automatiser la récupération de document d'audit et l'application de correctifs &  &  &  &  & 29,00 &  & 29,00 \\ \hline
+    Test et corrections &  &  &  &  & 10,00 &  & 10,00 \\ \hline
+    Checklist de sécurité basé sur le bilan de l'audit de sécurité &  &  &  &  & 1,50 &  & 1,50 \\ \hline
+    Tests divers avec snort &  &  &  &  & 1,00 &  & 1,00 \\ \hline
+
+\end{tabular}
+\end{adjustbox}
+\caption{Tickets réalisés lors de la période de stage - Partie 4}
+\end{table}
+
+\newpage
+\begin{table}[!ht]
+    \newcolumntype{M}[1]{>{\raggedright}m{#1}}
+    \center
+    \begin{adjustbox}{max width=\textwidth}
+    \begin{tabular}{|p{6cm}|c|c|c|c|c|c|c|}
+        \hline
+        Demande & Février & Mars & Avril & Mai & Juin & Juillet & Temps total \\ \hline 
+        Installation d'un Zammad pour Stratosfair &  &  &  &  & 3,00 &  & 3,00 \\ \hline
+        Réunion de restitution avec cogent &  &  &  &  & 1,00 &  & 1,00 \\ \hline
+        Suivi des travaux de valentin sur l'URSSAF &  &  &  &  &  & 3,00 & 3,00 \\ \hline
+        \begin{code}Réunions transverses\end{code} &  &  &  &  &  & 7,00 & 7,00 \\ \hline
+        Divers réunions internes (transverses) &  &  &  &  &  & 7,00 & 7,00 \\ \hline
+        \begin{code}Groupe de travail\end{code} &  &  &  &  &  & 2,00 & 2,00 \\ \hline
+        [Dev] GT Embarquement &  &  &  &  &  & 2,00 & 2,00 \\ \hline
+        \begin{code} Marketing et Commercial\end{code} &  &  &  & 1,00 &  &  & 1,00 \\ \hline
+        Page webinaire pour le 12 mai &  &  &  & 1,00 &  &  & 1,00 \\ \hline
+        \begin{code}Marketing et Commercial - A11Y\end{code} &  &  &  & 1,00 &  &  & 1,00 \\ \hline
+        Webinaire Lucie 20 mai &  &  &  & 1,00 &  &  & 1,00 \\ \hline
+        \begin{code}Marketing et commercial - RGPD\end{code} &  &  &  &  & 0,50 &  & 0,50 \\ \hline
+        Webinaire RGPD Lucie le 7 juin &  &  &  &  & 0,50 &  & 0,50 \\ \hline
+        \begin{code}Iresa\end{code} &  &  &  &  & 16,00 & 0,92 & 16,92 \\ \hline
+        Agenda Nextcloud et emails sur smartphone &  &  &  &  & 16,00 & 0,92 & 16,92 \\ \hline
+        \begin{code}J aime mes dents\end{code} &  &  & 13,42 &  &  & 2,00 & 15,42 \\ \hline
+        Zammad &  &  & 0,75 &  &  &  & 0,75 \\ \hline
+        Nextcloud + collabora &  &  & 12,67 &  &  &  & 12,67 \\ \hline
+        Pas de proposition de répondre aux tickets par email sur Zammad &  &  &  &  &  & 2,00 & 2,00 \\ \hline
+        \begin{code}INSERM CLOUD\end{code} &  &  &  & 2,00 & 2,00 &  & 4,00 \\ \hline
+        Création d'un petit redmine pour l'inserm -  redmine.inserm.cloud-ed.fr &  &  &  & 2,00 & 2,00 &  & 4,00 \\ \hline
+\end{tabular}
+\end{adjustbox}
+\caption{Tickets réalisés lors de la période de stage - Partie 5}
+\end{table}
+
+\newpage
+\begin{table}[!ht]
+\newcolumntype{M}[1]{>{\raggedright}m{#1}}
+\center
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|p{6cm}|c|c|c|c|c|c|c|}
+    \hline
+    Demande & Février & Mars & Avril & Mai & Juin & Juillet & Temps total \\ \hline  
+    \begin{code}Dehon with cyres\end{code}&  &  &  &  & 49,50 & 61,50 & 111,00 \\ \hline
+    Installation machines Cogent &  &  &  &  &  & 7,00 & 7,00 \\ \hline
+    Déploiement des VMs avec le versionning dans TF &  &  &  &  & 11,00 &  & 11,00 \\ \hline
+    Configuration des VMs avec Kubespray en version 1.23.7 de kube &  &  &  &  & 15,00 &  & 15,00 \\ \hline
+    Configuration HA du cluster kube (Haproxy en gateway api) &  &  &  &  & 18,50 &  & 18,50 \\ \hline
+    Configuration des composants &  &  &  &  & 4,00 & 17,50 & 21,50 \\ \hline
+    Création du stockage &  &  &  &  &  & 31,00 & 31,00 \\ \hline
+    Install WikiJs &  &  &  &  & 1,00 &  & 1,00 \\ \hline
+    Rédaction de la documentation technique du projet &  &  &  &  &  & 6,00 & 6,00 \\ \hline
+    \begin{code}Region Normandie\end{code} &  &  &  &  & 10,00 & 5,00 & 15,00 \\ \hline
+    Nom du service :  matomo Nom du client : Région Normandie &  &  &  &  & 10,00 & 5,00 & 15,00 \\ \hline
+    \begin{code}AICLA\end{code} &  &  &  &  &  & 33,00 & 33,00 \\ \hline
+    Install Nextcloud &  &  &  &  &  & 33,00 & 33,00 \\ \hline
+    \begin{code}TOTAUX\end{code} & 136,67 & 162,66 & 133,00 & 126,00 & 154,00 & 127,08 & 839,41 \\ \hline 
+\end{tabular}
+\end{adjustbox}
+\caption{Tickets réalisés lors de la période de stage - Partie 6}
 \end{table}
 
 \newpage
