@@ -1335,18 +1335,79 @@ Dans un premier temps, j'ai ajouté une carte fibre 10G pour disposer d'une inte
 Cette interface est destinée à faire transiter du trafic réseau ayant besoin de plus de débit qu'une simple interface 1G. 
 L'interface 1G quant à elle sert à l'administration du serveur.
 
-Dans un second temps, j'ai racké les serveurs dans une baie. 
+\begin{figure}[!h]
+    \begin{minipage}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{src/img_carte_1g.jpg}
+        \caption{Carte fibre 1 Gigabytes}
+        \label{fig:carte_1g}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{src/img_carte_10g.jpg}
+        \caption{Carte fibre 10 Gigabytes}
+        \label{fig:carte_10g}
+    \end{minipage}%
+\end{figure}
 
+\newpage
+Les deux cartes se distinguent par leur port.
+L'interface 1G nécessite un câble RJ45 alors que la 10G utilise un câble SFP+.
+\begin{figure}[!h]
+    \begin{minipage}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{src/img_rj45.jpg}
+        \caption{Câble réseau RJ45}
+        \label{fig:rj45}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{src/img_sfp.jpg}
+        \caption{Câble réseau SFP+}
+        \label{fig:sfp}
+    \end{minipage}%
+\end{figure}
+
+Dans un second temps, j'ai racké les serveurs dans une baie. 
 Enfin, j'ai ajouté des disques \gls{SSD} et \gls{HDD} supplémentaires.
 Pour chaque serveur, un disque est réservé à l'installation du système d'exploitation et les autres servent au stockage pour les machines virtuelles.
 J'ai formaté chacun des disques destinés au stockage.
 
+\begin{figure}[!h]
+    \begin{minipage}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{src/img_hdd.jpg}
+        \caption{Disque HDD de 6To}
+        \label{fig:hdd_disk}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{src/img_ssd.jpg}
+        \caption{Disque SSD de 500Go}
+        \label{fig:ssd_disk}
+    \end{minipage}%
+\end{figure}
+
+\newpage
 \subsection{Installation logiciel}
 \subsubsection{Image}
+\noindent%
+\begin{minipage}{.7\textwidth}%
 Le système d'exploitation de \gls{Proxmox} s'installe à partir d'un fichier \gls{ISO}. 
 Celui-ci est basé sur une image \gls{Debian}. 
-J'ai installé une version \gls{Proxmox} VE 7.0 basé sur l'image \gls{Debian} 11 nommé Bullseye à partir d'un disque dur externe bootable IODD. 
+J'ai installé une version \gls{Proxmox} VE 7.0 basée sur l'image \gls{Debian} 11 nommé Bullseye à partir d'un disque dur externe bootable IODD. 
 Cela permet de ne pas avoir à créer une clé bootable dédiée.
+
+\end{minipage}%
+\hfill
+\begin{minipage}{.3\textwidth}%
+\begin{center}
+\includegraphics[scale=0.1]{src/img_disk_iodd.jpg}
+\end{center}
+\end{minipage}% \\
 
 \subsubsection{Réseau}
 Depuis l'interface graphique, j'ai configuré la partie \gls{DNS} sur le \gls{DNS} interne et changé l'adresse \gls{IP} sur un réseau en 192.168.22.0/23. 
@@ -1356,6 +1417,14 @@ Une fois cette étape terminée, les interfaces web de \gls{Proxmox} sont dispon
 Sur le \gls{DNS} interne, j'ai créé trois enregistrements sur le domaine \begin{code}\texttt{.vt}\end{code}: \begin{code}\texttt{an-virt-pmx-1.vt}\end{code}, \begin{code}\texttt{an-virt-pmx-2.vt}\end{code} et \begin{code}\texttt{an-virt-pmx-3.vt}\end{code}.
 Le domaine utilisé est accessible uniquement sur le réseau local.
 
+\begin{figure}[ht!]
+    \centering
+        \includegraphics[width=\textwidth]{src/interface_proxmox_network.jpg}
+    \caption{Configuration réseau de Proxmox à l'installation}
+    \label{fig:proxmox_network}
+\end{figure}
+
+\newpage
 \subsubsection{Regroupement en cluster}
 Depuis l'interface graphique, dans la section \gls{cluster}, j'ai créé un \gls{cluster} en lui donnant un nom et un réseau. 
 Il se nomme \begin{code}\texttt{an-virt-pmx}\end{code}.
@@ -1460,7 +1529,7 @@ J'y ai déposé des \gls{ISO} pour Ubuntu, Debian, Fedora, CentOS et RockyLinux.
 \subsection{Template}
 L'utilisation de \gls{Proxmox} et \gls{Terraform} repose sur la création de Template Cloud Init.
 Pour faire un template, il suffit de créer une machine virtuelle avec le système d'exploitation souhaité puis de définir cette machine comme Template.
-Les templates possèdent les mêmes noms que ceux des clusters de Rennes et Tours.
+Les noms de templates sont les mêmes pour Angers, Rennes et Tours.
 Ainsi, lors de l'utilisation de Terraform, il n'y a pas à changer le nom du template en fonction du cluster.
 
 \newpage
@@ -1470,13 +1539,13 @@ Le groupe Dehon met en oeuvre un dispositif permettant la détection de fuite su
 Un Détecteur de Niveau Intelligent (\gls{DNI}) est donc installé sur chacune des installations frigorifique afin de détecter les fuites par méthodes de mesures indirectes.
 Chaque DNI est également connecté au système de l'entreprise et les données sont remontées sur une plateforme centralisée et consultable via un portail web. 
 
-Une évolutionde la réglmentation impose aux détenteurs d'installations frigorifiques de justifier d'un contrôle continu de leurs installations et d'être en mesure de présenter l'ensemble des vérifications ainsi que les opérations d'entretien effectuées.
+Une évolution de la réglmentation impose aux détenteurs d'installations frigorifiques de justifier d'un contrôle continu de leurs installations et d'être en mesure de présenter l'ensemble des vérifications ainsi que les opérations d'entretien effectuées.
 
 L'objectif est donc de mettre en place une plateforme cloud pour centraliser l'exploitation de l'ensemble des \gls{DNI} et proposer une offre de service complète de suivi et d'expertise en temps réel des installations frigorifiques.
 
 J'ai travaillé à la réalisation de cette infrastructure avec deux autres membres du pôle sysadmin.
 
-\subsection{Architecture}
+\subsection{Architecture sur trois sites}
 Pour des raisons de disponibilité, l'infrastructure du projet se trouve sur trois sites:
 \begin{itemize}
     \item \begin{code}\texttt{virt1}\end{code}: \gls{Proxmox} de Rennes sur lequel se trouve un arbiter MongoDB. 
@@ -1496,27 +1565,43 @@ En voici un schéma:
 Les serveurs étaient déjà mis en place pour \begin{code}\texttt{virt1}\end{code} et \begin{code}\texttt{virt2}\end{code}. 
 Il a cependant été nécessaire de se rendre à Tours à Cogent pour y installer une machine. 
 Cette machine contient un unique \gls{cluster} \gls{Proxmox}. 
+J'ai fais le déplacement avec Yves-Gaël Chény.
 
 Le rattachement du réseau de Cyrès vers Cogent s'est fait avec une fibre noir.
 Celle-ci a été installée par le personnel de Cyrès.
 La distance entre les deux bâtiments est d'environ 2km.
 
+\newpage
+\subsection{Schéma de le partie applicative}
+Le schéma ci-dessous présent l'architecture Kubernetes mise en oeuvre.
+Chacune des sections à venirs présentent les étapes d'installation de cette infrastructure.
+
+\begin{figure}[!ht]
+    \centering
+        \includegraphics[width=\textwidth]{src/graph_dehon2.png}
+    \caption{Cluster \gls{Kubernetes} de dehon sur virt2-prd-pmx}
+    \label{fig:graph_dehon2}
+\end{figure}
+
+\newpage
 \subsection{Déploiement des machines virtuelles avec Terraform}
 Nous avons commencé par developper l'infrastructure sur \begin{code}\texttt{virt2}\end{code}. 
 Nous nous sommes servis de terraform pour déployer les machines virtuelles sur le \gls{cluster}. 
 
 \subsubsection{Les machines et leur rôle}
-\begin{itemize}
-    \item trois machines virtuelles destinées à être les masters. 
-    Dans le conception de \gls{Kubernetes}, ces machines seront les cerveaux du \gls{cluster}.
-    C'est sur celles-ci que des composants de \gls{Kubernetes} vont permettrent l'orchestration de runner.
-    \item trois machines virtuelles destinées à être les workers. 
-    Ces trois machines seront celles qui supportent la charge de travail dans le \gls{cluster}.
-    \item deux machines virtuelles en tant que proxy. 
-    Elles seront le point d'entrée de l'infrastructure. 
-    \item une machine virtuelle pour le stockage. 
-    L'ensemble du \gls{cluster} utilisera un stockage partagé.
-\end{itemize}
+
+\textbf{dehon-k8s-master}: trois machines virtuelles destinées à être les masters. 
+Dans le conception de \gls{Kubernetes}, ces machines seront les cerveaux du \gls{cluster}.
+C'est sur celles-ci que des composants de \gls{Kubernetes} vont permettrent l'orchestration des runners.
+
+\textbf{dehon-k8s-run}: trois machines virtuelles destinées à être les workers. 
+Ces trois machines seront celles qui supportent la charge de travail dans le \gls{cluster}.
+
+\textbf{dehon-k8s-pxy}: deux machines virtuelles en tant que proxy. 
+Elles seront le point d'entrée de l'infrastructure. 
+
+\textbf{dehon-k8s-storage}: une machine virtuelle pour le stockage. 
+L'ensemble du \gls{cluster} utilisera un stockage partagé.
 
 La dénomination de ces machines est réfléchie afin d'identifier le client, le rôle et le nombre de chaque composant. 
 Ces noms sont visibles sur le schéma de l'infrastructure.
@@ -1528,22 +1613,25 @@ Chacun des providers possède son url, son nom d'utilisateur et son mot de passe
 Ces variables sensibles sont stockées dans un fichier \begin{code}\texttt{secret.tfvars}\end{code}, le fichier \gls{Terraform} pour les secrets.
 
 \subsubsection{Les modules}
-Ensuite, j'ai défini différents modules. Pour les \gls{cluster} dupliqués, on utilise quatre modules:
-\begin{itemize}
-    \item \textbf{dehon-k8s-master-virt2-main}: module pour la création des masters sur \begin{code}\texttt{virt2}\end{code}.
-    Un champ spécifique permet de définir que ce module doit être utilisé trois fois pour ainsi créer trois machines virtuelles.
-    Terraform permet de créer certains champs avec un système d'incrémentation, ainsi les adresses \gls{IP} ou les noms des machines se feront automatiquement.
-    \item \textbf{dehon-k8s-run-virt2-main}: module pour la création des runners sur \begin{code}\texttt{virt2}\end{code}.
-    \item \textbf{dehon-k8s-pxy-virt2-main}: module pour la création de deux proxy.
-    \item \textbf{dehon-k8s-storage-virt2-main}: module pour la machine de stockage.
-    Celle-ci possède la particularité d'avoir deux disques, le premier pour le système d'exploitation et le second de 2 To pour les données.
-\end{itemize}
+J'ai défini différents modules. Pour les \gls{cluster}s dupliqués, on utilise quatre modules:
+
+\textbf{dehon-k8s-master-virt2-main}: module pour la création des masters sur \begin{code}\texttt{virt2}\end{code}.
+Un champ spécifique permet de définir que ce module doit être utilisé trois fois pour ainsi créer trois machines virtuelles.
+Terraform permet de créer certains champs avec un système d'incrémentation, ainsi les adresses \gls{IP} ou les noms des machines se feront automatiquement.
+
+\textbf{dehon-k8s-run-virt2-main}: module pour la création des runners sur \begin{code}\texttt{virt2}\end{code}. 
+La logique est similaire à celle des masters.
+
+\textbf{dehon-k8s-pxy-virt2-main}: module pour la création de deux proxy.
+
+\textbf{dehon-k8s-storage-virt2-main}: module pour la machine de stockage.
+Celle-ci possède la particularité d'avoir deux disques, le premier pour le système d'exploitation et le second de 2 To pour les données.
 
 Le rôle et l'architecture des machines installées avec les deux derniers modules de la liste ci-dessus seront présentés plus tard.
 
 A l'issue de cette étape, on obtient le \gls{cluster} présenté sur la figure \ref{fig:graph_dehon1} avec trois autres machines virtuelles.
 
-\subsubsection{Déploiement du cluster Kubernetes avec Kubespray}
+\subsection{Déploiement du cluster Kubernetes avec Kubespray}
 A présent que les machines virtuelles du \gls{cluster} \gls{Kubernetes} sont installées, il a fallu installer le \gls{cluster} \gls{Kubernetes}.
 
 \subsubsection{Kubespray}
@@ -1552,67 +1640,92 @@ Le dépôt GitHub du projet est disponible ici: \\ \begin{hilite}\url{https://gi
 
 \subsubsection{Mise à jour de l'inventaire}
 La première étape consiste à mettre à jour l'inventaire \gls{Ansible}.
-Pour cela, un exemple est donné dans le dépôt \href{https://github.com/kubernetes-sigs/kubespray/blob/master/inventory/sample/inventory.ini}{ici}.
+Pour cela, un exemple est donné dans le dépôt \begin{hilite}\href{https://github.com/kubernetes-sigs/kubespray/blob/master/inventory/sample/inventory.ini}{ici}\end{hilite}.
 On y voit un inventaire basé autour des composants vitaux de \gls{Kubernetes}:
-\begin{itemize}
-    \item \textbf{kube\_controle\_plane}: cerveau de \gls{Kubernetes}.
-    Ce composant doit donc être installé sur les noeuds master.
-    \item \textbf{etcd}: base de données clé-valeur reposant sur un tableau à deux colonnes.
+
+\textbf{kube\_controle\_plane}: cerveau de \gls{Kubernetes}.
+Ce composant doit donc être installé sur les noeuds master.
+
+\textbf{etcd}: base de données clé-valeur reposant sur un tableau à deux colonnes.
     La première contient la valeur.
     La second contient la clé.
     Cette base contient la totalité de la configuration du \gls{cluster} \gls{Kubernetes}.
     Ce fichier est vital à la reconstruction d'un \gls{cluster} en cas de sinistre.
-    \item \textbf{kube\_node}: ce sont les travailleurs.
-\end{itemize}
+
+\textbf{kube\_node}: ce sont les travailleurs.
+
 
 Cette structure permet l'installation des bons composants de \gls{Kubernetes} aux bons endroits.
 
 \subsubsection{Paramétrage de Kubespray}
 Le nombre de paramètres possibles est gigantesque.
-Pour cette partie je n'ai donc paramétré que les éléments que je connaissais:
-\begin{itemize}
-    \item \textbf{loadbalancer\_apiserver}: les noeuds slaves communiquent via \gls{API} aux masters.
-    \item \textbf{loadbalancer\_apiserver\_port}: port d'accès à l'\gls{API}.
-    \item \textbf{kube\_network\_plugin}: différents plugin Kubernete existent pour le réseau.
-    Dans notre cas, on utilise calico.
-    \item \textbf{kube\_apiserver\_ip}: même valeur que le loadbalancer\_apiserver.
-\end{itemize}
+Pour cette partie je n'ai donc paramétré que les éléments que je connaissais, le reste ayant été fait pas mon tuteur:
 
-\subsection{Configuration des 2 Haproxy}
-La configuration des deux proxys se fait avec un rôle \gls{Ansible}.
+\textbf{loadbalancer\_apiserver}: les noeuds slaves communiquent via \gls{API} aux masters.
+
+\textbf{loadbalancer\_apiserver\_port}: port d'accès à l'\gls{API}.
+
+ \textbf{kube\_network\_plugin}: différents plugin Kubernete existent pour le réseau.
+    Dans notre cas, on utilise calico.
+
+\textbf{kube\_apiserver\_ip}: même valeur que le loadbalancer\_apiserver.
+
+
+\subsubsection{Installation}
+L'installation se lance comme un rôle Ansible avec la commande \begin{code}\texttt{ansible-playbook}\end{code}.
+Cela lance un nombre importante de tâches.
+L'installation a une durée comprise entre 20 et 30 minutes.
+
+\newpage
+\subsection{Configuration des deux Haproxy}
+Deux Haproxys sont installés afin d'assurer la haute disponibilité.
+Si un seul Haproxy était installé, et que celui-ci venait à avoir des défaillances, alors le cluster ne serait plus accessible.
+
+La configuration des proxys se fait avec un rôle \gls{Ansible}.
 Le paramétrage des variables permet la génération des fichiers de configurations à partir de template \gls{Jinja}.
 Quatre fichiers sont dédiés aux configurations de bases de l'Haproxy.
 Un autre fichier, qui est le plus important, contient les différentes configurations des frontend et backend.
 
-J'ai édité ce fichier de façon à qu'il se génère le fichier de configuration en fonction du nom du projet, des adresses \gls{IP} autorisées etc.
+J'ai édité le template Jinja des configurations des frontend et backend de façon à se qu'il génère le fichier de configuration en fonction du nom du projet, des adresses \gls{IP} autorisées etc.
 La présence de boucle dans le template \gls{Jinja} permet d'auto-générer un ensemble de champs \begin{code}\texttt{server}\end{code} à partir de la liste des serveurs.
 C'est par exemple le cas pour les différents backend sur l'ensemble des master et runner.
 
-\subsection{Configuration de la VIP sur les proxy}
-Le champ \begin{code}\texttt{loadbalancer\_apiserver}\end{code} a été paramétré sur l'adresse 10.2.11.100.
-Cela correspond à la \gls{VIP} entre les 2 proxy.
-Graĉe à cette \gls{VIP}  (Virtual \gls{IP}), nous n'avons plus de SPOF (Single Point Of Failure) pour l'\gls{API} Server.
+A l'issue de cette configuration, les deux Haproxy possèdent la même configuration.
+Ils sont donc en mesure de jouer un rôle identique.
+\subsection{Configuration de la VIP sur les proxys}
+Toujours dans l'objectif d'assurer une haute disponiblité, une \gls{VIP}  (Virtual \gls{IP}) est configurée sur les proxys.
+Concrètement, c'est une adresse \gls{IP} qui "se balade" entre les deux proxys.
+Celle-ci est paramétré à l'adresse 10.2.11.100, adresse utilisée pour le \begin{code}\texttt{loadbalancer\_apiserver}\end{code}.
+
+Par exemple, si le premier proxy à une défaillance, l'adresse \gls{IP} 10.2.11.100 va être relocalisée sur le second proxy.
+Ainsi, nous n'avons plus de SPOF (Single Point Of Failure) pour l'\gls{API} Server.
+
 Pour mettre en place cette \gls{VIP} , j'ai utilisé un playbook \gls{Ansible} qui permet d'installer KeepAlived.
-KeepAlived s'appuie sur le protocole VRRP (Virtual Router Redundancy Protocol) conçu pour gérer une adresse \gls{IP} virtuelle entre plusieurs hôtes.
-Concrètement, c'est une adresse \gls{IP} qui se balade entre les deux proxys.
+eepAlived s'appuie sur le protocole VRRP (Virtual Router Redundancy Protocol) conçu pour gérer une adresse \gls{IP} virtuelle entre plusieurs hôtes.
 
-Après l'installation et la configuration de KeepAlived avec \gls{Ansible}, l'interface réseau \verb|eth0| de \verb|dehon-k8s-pxy-1| possède deux adresses: \verb|10.2.11.80| et \verb|10.2.11.100|.
-L'interface \verb|eth0| de \verb|dehon-k8s-pxy-2| ne possède que l'adresse \verb|10.2.11.81|.
-Si le service KeepAlived ou Haproxy s'arrête, ou pire encore si une des machines s'arrête, alors la \gls{VIP}  \verb|10.2.11.100| bascule sur l'autre machine.
+Après l'installation et la configuration de KeepAlived avec \gls{Ansible}, l'interface réseau \begin{code}\texttt{eth0}\end{code} de \begin{code}\texttt{dehon-k8s-pxy-1}\end{code} possède deux adresses: \begin{code}\texttt{10.2.11.80}\end{code}, son adresse sur le réseau local et \begin{code}\texttt{10.2.11.100}\end{code}, la \gls{VIP}.
+\begin{code}\texttt{eth0}\end{code} de \begin{code}\texttt{dehon-k8s-pxy-2}\end{code} ne possède que l'adresse \begin{code}\texttt{10.2.11.81}\end{code}.
+Si le service KeepAlived ou Haproxy s'arrête, ou pire encore si une des machines s'éteind, alors la \gls{VIP} \begin{code}\texttt{10.2.11.100}\end{code} bascule sur l'autre machine.
+C'est alors \begin{code}\texttt{dehon-k8s-pxy-2}\end{code} qui possède les adresses \begin{code}\texttt{10.2.11.81}\end{code} et \begin{code}\texttt{10.2.11.100}\end{code} sur l'interface \begin{code}\texttt{eth0}\end{code}.
 
-On assure ainsi une redondance de l'accessibilité à l'\gls{API} Server.
+On assure ainsi une redondance de l'accessibilité à l'\gls{API} server.
 
+\newpage
 \subsection{Stockage NFS externalisé}
-\gls{Ansible} est à nouveau utilisé pour déployer le NFS sur la machine de storage.
-L'installation est basée sur l'utilisation du paquet apt \verb|nfs-kernel-server|.
-Le chemin d'export est également paramétré sur le point de montage \verb|/srv/nfs/shared|.
+Externaliser les données permet de confier en un point l'ensemble des données.
+Cela permet également d'avoir un point unique à sauvegarder.
+De plus, en cas de sinistre, les données sont localisées à autre endroit.
+Afin d'externaliser les données, un serveur NFS est installé sur le \begin{code}\texttt{virt1}\end{code}.
 
+\gls{Ansible} est à nouveau utilisé pour déployer le serveur NFS sur la machine de storage.
+L'installation est basée sur l'utilisation du paquet apt \begin{code}\texttt{nfs-kernel-server}\end{code}.
 La machine possède un premier disque de 50G pour le système d'exploitation et un second pour le stockage de 2To.
-J'ai fai un point de montage \verb|/srv/nfs/shared| sur l'entièreté du disque de stockage.
+J'ai fait un point de montage \begin{code}\texttt{/srv/nfs/shared}\end{code} sur l'entièreté du disque de stockage.
+Le chemin d'export est donc paramétré sur le point de montage \begin{code}\texttt{/srv/nfs/shared}\end{code}.
 
 La suite de la configuration se fait au niveau du \gls{cluster} \gls{Kubernetes}.
-Il faut déclarer une nouvelle StorageClass (sc) qui utilisera le serveur NFS.
-Pour cela, j'ai utilisé le provider "Helm" avec la ressource "kubernetes\_storage\_class".
+Il faut déclarer une nouvelle \begin{code}\texttt{StorageClass}\end{code} qui utilisera le serveur NFS.
+Pour cela, j'ai utilisé le provider "Helm" avec la ressource \begin{code}\texttt{kubernetes\_storage\_class}\end{code}.
 Les paramètres principaux à spécifier sont l'adresse du serveur et le chemin:
 \vspace{-1ex}
 \begin{code}
@@ -1634,21 +1747,21 @@ Les paramètres principaux à spécifier sont l'adresse du serveur et le chemin:
 \vspace{-1ex}
 \end{code}
 
-Le Physical Volume Claim (PVC) des applications utilisant la StorageClass (SC) nfs-csi sont alors montés sur le serveur NFS.
+Le \begin{code}\texttt{Physical Volume Claim}\end{code} des applications utilisant la \begin{code}\texttt{StorageClass}\end{code} \begin{code}\texttt{nfs-csi}\end{code} sont alors montés sur le serveur \gls{NFS}.
 A l'issue de cette installation, j'ai réalisé des tests de performance des disques.
-Pour cela, j'ai utilisé les commandes \begin{code}\texttt{hdparm}\end{code}|hdparm| et \begin{code}\texttt{fio}\end{code}.
+Pour cela, j'ai utilisé les commandes \begin{code}\texttt{hdparm}\end{code} et \begin{code}\texttt{fio}\end{code}.
+J'ai également créé un pod fictif utilisant la \begin{code}\texttt{StorageClass}\end{code} \begin{code}\texttt{nfs-csi}\end{code} afin de tester l'apparition du \begin{code}\texttt{Physical Volume Claim}\end{code} sur le serveur \gls{NFS}.
 
 \subsection{Les ressources Kubernetes}
 J'ai participé à l'installation de nombreuses ressources du Cluster \gls{Kubernetes}.
 Toutes ces ressources on été installées avec le provider "Helm" de \gls{Terraform}.
 
-Voici la liste de ces ressources:
 \subsubsection{Ingress Controller}
-Ingress Controller nginx. Un Ingress est un composant \gls{Kubernetes} qui permet de relier une URL à un service.
-Un IngressController est un composant qui permet de piloter l'implémentation de l'ensemble des Ingress.
-L'IngressController va gérer le traffic externe au \gls{cluster} vers l'ensemble des PODS.
+Un \begin{code}\texttt{Ingress}\end{code} est un composant \gls{Kubernetes} qui permet de relier une URL à un service.
+Un \begin{code}\texttt{IngressController}\end{code} est un composant qui permet de piloter l'implémentation de l'ensemble des Ingress.
+L'\begin{code}\texttt{IngressController}\end{code} va gérer le traffic externe au \gls{cluster} vers l'ensemble des PODS.
 
-L'image ci-dessous présente le fonctionnement de l'IngressController d'Nginx:
+L'image ci-dessous présente le fonctionnement de l'\begin{code}\texttt{IngressController}\end{code} d'Nginx:
 
 \begin{figure}[!ht]
     \centering
@@ -1672,7 +1785,7 @@ Rancher fournit une interface WEB optimale pour la gestion d'un \gls{cluster}.
     \label{fig:rancher_interface}
 \end{figure}
 
-\gls{Terraform} m'a également permis de configurer les accès utilisateurs à l'application de Rancher ainsi que la création des namespaces (n) prod, qualif et test.
+\gls{Terraform} m'a également permis de configurer les accès utilisateurs à l'application de Rancher ainsi que la création des namespaces prod, qualif et test.
 
 \subsubsection{Monitoring}
 Je n'ai pas travaillé sur la partie interface de monitoring.
@@ -1694,30 +1807,19 @@ Un serveur S3 est un serveur de stockage sous forme d'objet manipulable via HTTP
 Ainsi, on intéragit avec les objets avec des requêtes PUT, GET, DELETE etc.
 
 \subsubsection{Base de données MongoDB et MongoArbiter}
-Les applications utilisent une base de données MongoDB.
-J'ai travaillé sur l'installation et la configuration d'une partie.
-
 Il faut garder à l'esprit qu'en cas de désastre, l'applicatif doit basculer l'écriture des données d'une base de données présente sur le premier \gls{cluster} vers une autre base sur le \gls{cluster} de Backup.
 Ce mécanismes est pris en compte avec MongoDB avec un composant MongoArbiter.
-MongoArbiter permet de simplement déclarer la base de données dans laquel l'applicatif doit écrire.
+MongoArbiter permet de simplement déclarer la base de données dans laquelle l'applicatif doit écrire.
 
 Après l'installation de la machine virtuelle comme à son habitude avec \gls{Terraform}, j'ai automatisé l'installation de l'Arbiter avec \gls{Terraform} sur celle-ci.
 L'arbiter est dans une application docker.
 L'utilisation des commandes docker et docker-compose n'est pas prise en compte par défaut avec \gls{Ansible}.
-Il est nécessaire dans un premier temps d'installer la commande \verb|pip| et les module \verb|docker| et \verb|docker-compose|.
+Il est nécessaire dans un premier temps d'installer l'utilitaire \begin{code}\texttt{pip}\end{code} et les modules \begin{code}\texttt{docker}\end{code} et \begin{code}\texttt{docker-compose}\end{code}.
 
-Avec ce module, j'ai créé une task \gls{Ansible} qui lance la création d'un conteneur à partir de l'image \verb|killercentury/mongo-arbiter|.
-J'ai ajouté dans la section \verb|environnement| les identifiants de connexion à la base de données maître ainsi que son URL.
+Avec ce module, j'ai créé une tâche \gls{Ansible} qui lance la création d'un conteneur à partir de l'image \begin{code}\texttt{killercentury/mongo-arbiter}\end{code}.
+J'ai ajouté dans la section \begin{code}\texttt{environnement}\end{code} les identifiants de connexion à la base de données maître ainsi que son URL.
 
 \newpage
-\subsection{Schéma de le partie applicative}
-\begin{figure}[!ht]
-    \centering
-        \includegraphics[width=\textwidth]{src/graph_dehon2.png}
-    \caption{Cluster \gls{Kubernetes} de dehon sur virt2-prd-pmx}
-    \label{fig:graph_dehon2}
-\end{figure}
-
 \subsection{Bilan}
 Ce projet a été extrêment enrichissant sur de nombreux points.
 Il a tout d'abord renforcé mes compétences dans l'utilisation d'\gls{Ansible} et \gls{Terraform} avec des besoins plus compliqués que ce que j'avais pu mettre en oeuvre précédemment.
@@ -1725,18 +1827,17 @@ Il a tout d'abord renforcé mes compétences dans l'utilisation d'\gls{Ansible} 
 De plus, le projet portant sur \gls{Kubernetes}, j'ai pu mettre oeuvre les compétences acquises en cours. 
 Cela m'a permis de renforcer mes compétences sur \gls{Kubernetes} tout en les développant grâce à la découverte de nouveaux composants \gls{Kubernetes}.
 J'ai vu la différence entre le \gls{cluster} mis en place lors de cours et celui d'un \gls{cluster} de production.
-Toujours lié à \gls{Kubernetes}, cela m'a permis de découvrir les helm, \gls{Kubespray}, k9s etc.
+Cela m'a permis de découvrir les helm, \gls{Kubespray}, k9s etc.
 
 Du début à la fin, j'ai pu travailler sur la mise en oeuvre de chaque étape d'une infrastructure: réseau, sécurité, supervision, sauvegarde, tests, redondance etc.
 J'ai observé tout le cheminement de pensée permettant de répondre à un besoin spécifique.
-
-
+Cela m'a permis de prendre du recule sur comment concevoir une architecture de A à Z.
 
 \newpage
 \section{Procédure d'arrivée}
 \subsection{Objectif}
 L'arrivée d'une nouvelle personne au sein d'Empreinte Digitale nécessite l'installation et la configuration de nombreux logiciels.
-Une procédure existait déjà mais elle n'était exhaustive.
+Une procédure existait déjà mais elle n'était pas exhaustive.
 L'objectif est d'étoffer l'existant afin de fluidifier l'arrivée d'un nouvel employé plus fluide.
 
 \subsection{Description}
@@ -1749,7 +1850,7 @@ Aujourd'hui, lorsqu'un nouveau salarié arrive, tout est déjà prêt et il poss
 
 \subsection{Documentation}
 J'ai rédigé un ensemble de fichier \gls{Markdown} pour la documentation. 
-Celle-ci comprend treizes sections dont certaines sont spécifiques au rôle de l'employé dans l'entreprise.
+On compte en tout 14 fichiers dont certaines sont spécifiques au rôle de l'employé dans l'entreprise.
 
 La première partie concerne le matériel adapté aux besoins du nouveau salarié.
 En effet, en amont de son arrivée, le nouvel arrivant est contacté afin qu'il spécifie le matériel avec lequel il souhaite travailler : nombre d'écrans, taille de PC, système d'exploitation etc.
@@ -1844,11 +1945,47 @@ Cependant, pour les tâches à venir, je sais que c'est un outil que pourrais ê
 Vim est le prochain outil à prendre en main.
 
 \newpage
-\section{Bilan}
-
-\newpage
 \part{Bilan personnel}
+Cela fait maintenant 1 an que je suis chez Empreinte Digitale et cette année fût passionnante.
+Dès mon arrivé, j'ai beaucoup apprécié l'environnement en entreprise.
+Le modèle d'une petite entreprise d'une cinquantaine sur un modèle associatif m'a beaucoup plu.
+Ayant passé 4 années dans le milieu associatif avec le BDE de l'école, j'adhére complétement au modèle de \gls{SCOP}.
 
+Lors de mon précédent stage, du fait de la crise sanitaire, je n'avais pas eu l'occasion d'une expérience de stage "normal".
+Je n'avais pas pu partir à l'étranger ou être en entreprise.
+Les complications dans la recherche de stage technique m'avaient ammenées à réaliser mon stage dans l'incubateur de l'ESEO d'Angers.
+J'avais alors le sentiment d'aller en stage comme j'irais à l'école.
+
+Dès les premiers cours de réseau en 1ère année de cycle ingénieur, j'ai su que c'était le domaine dans lequel je voudrais travailler.
+Je suis très heureux qu'à l'issue de mon stage technique j'ai pu rentrer dans l'option Cloud Système et Sécurité.
+J'y appris de nombreuses bases, qui m'ont amplement permises de m'en sortir durant mon alternance.
+
+Terminer cette dernière année d'étude à l'ESEO en contrat de professionnalisation était la meilleure chose possible.
+Durant la période d'alternance, j'ai eu le temps de me cultiver sur les domaines de l'infrastructure et la sécurité.
+J'y ai renforcé mes connaissances théorique sur le sujet.
+Cette période n'était pas forcément évidente. 
+En effet, le fonctionnement de l'alternance avec seulement deux jours par semaine en entreprise rend les choses compliquées dans l'intégration à l'entreprise.
+De plus, cela demande chaque semaine à se remettre dans le bain.
+J'ai finalement surtout apprécié ma présence chez Empreinte Digitale lorsque j'ai débuté le stage.
+
+Par la suite, dans la période de stage, j'ai pu mettre en pratique de nombreuses choses.
+Bien qu'à l'origine mon stage devait porter sur le demaine de la sécurité, j'ai beaucoup aimé cette bifurcation sur l'administration système.
+
+
+En seulement un an, je vois mon évolution dans mes connaissances et compétences techniques.
+J'ai renforcé mes bases techniques et renforcé mon savoir sur des technologies intéréressantes telles que Docker ou Kubernetes.
+
+
+Dans mon précédent bilan personnel de compte rendu de stage, j'avais écris: "Le bagage technique supplémentaires que j'ai obtenu lors de ces 12 semaines n'a pas de lien particulier avec le domaine dans lequel je me destine".
+J'avais tort à l'époque.
+J'ai découvert en entreprise l'importance de connaître l'applicatif hébergé.
+Connaître le fonctionnement d'une application et la meilleure méthode en tant qu'administrateur pour résoudre beaucoup de problème.
+L'infrastructure est importante mais sur but premier reste la mise en place d'applications ou services.
+
+Je termine mon année en contrat de professionnalisation.
+Mon aventure chez Empreinte Digitale ne s'arrête cependant pas là.
+J'ai signé un contrat en CDD de 6 mois.
+Durant les mois à venir, je vais me distancer des travaux de sécurité pour travailler majoritairement sur les offres cloud et l'utilisation de Kubernetes.
 
 \newpage
 \section*{Annexes}
