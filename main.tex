@@ -30,6 +30,10 @@
 \setlength{\abovecaptionskip}{0pt plus 0pt minus 0pt}
 \pagestyle{fancy}
 
+\makeatletter
+\let\ps@plain\ps@fancy
+\makeatother
+
 % Import du glossaire
 \makeglossaries
 \setglossarystyle{listhypergroup}
@@ -106,6 +110,7 @@
 \newpage
 
 \section*{Engagement de non plagiat}
+\addcontentsline{toc}{section}{Engagement de non plagiat}
 \textit{Je soussigné, Paul LEFAY, étudiant à l'\gls{ESEO}, atteste avoir pris connaissance du contenu du Règlement intérieur de l'École et de l'engagement de « non-plagiat ». 
 Je déclare m'y conformer dans le cadre de la rédaction de ce document. 
 Je déclare sur l'honneur que le contenu du présent mémoire est original et reflète mon travail personnel. 
@@ -117,6 +122,7 @@ Le non-respect de cet engagement m'exposerait à des sanctions dont j'ai bien pr
 % Remerciements %
 \newpage
 \section*{Remerciements}
+\addcontentsline{toc}{section}{Remerciements}
 Je tiens à remercier Yves-Gaël Chény, Nicolas Gourichon et Valentin Baraise pour l'opportunité qu'ils m'ont donnée en m'acceptant en contrat de professionnalisation. 
 L'expérience acquise lors de la période de Projet de Fin d'Etude (\gls{PFE}) est inestimable comparée à celle que j'aurais eue si j'avais travaillé sur un \gls{PFE} scolaire. \\
 
@@ -132,12 +138,14 @@ Enfin, merci à Yves-Gaël Chény et Raphaël Poitevin pour l'aide qu'ils m'ont 
 
 % Sommaire %
 \newpage
-\section*{Table des matières}
+\section*{\phantomsection Table des matières}
+\addcontentsline{toc}{section}{Table des matières}
 \tableofcontents
 
 % Fiche de synthèse du stage %
 \newpage
 \section*{Fiche de synthèse}
+\addcontentsline{toc}{section}{Fiche de synthèse}
 J'ai effectué mon stage dans le cadre d'un contrat de professionnalisation chez Empreinte Digitale située au 11 rue des Noyers à Angers.
 Cela signifie que j'y étais présent en tant qu'alternant du 7 septembre 2021 au 29 janvier 2022, puis en tant que stagiaire du 30 janvier 2022 au 8 septembre 2022. \\
 
@@ -166,17 +174,18 @@ En parallèle de mes travaux de sécurité, j'ai travaillé sur divers tâches d
     \item La mise à jours de la documentation et du processus pour les nouveaux arrivants.
 \end{itemize} 
 
-De façon général, durant les sept derniers mois, j'ai passé 60\% de mon temps sur les tâches d'administrateur système et 40\% sur les travaux de sécurité.
+De façon générale, durant les sept derniers mois, j'ai passé 60\% de mon temps sur les tâches d'administrateur système et 40\% sur les travaux de sécurité.
 N'ayant pas d'appétence particulière sur le sujet de la sécurité, j'ai beaucoup apprécié cette bifurcation.
 Cela me conforte dans l'idée que je souhaite à l'avenir travailler dans le domaine de l'administration système et du \gls{DevOps}.\\
 
 Les difficultés rencontrée étaient toutes techniques.
-Mon manque de connaissances sur des aspects bas niveau, réseau notamment, m'ont parfois ralentie dans l'avancement de mes projets.
+Mon manque de connaissances sur des aspects bas niveau, réseau notamment, m'a parfois ralenti dans l'avancement de mes projets.
 Cela n'était pas un problème pour autant, car l'aide de l'ensemble de administrateurs systèmes et particulièrement de Valentin Baraise m'a permis d'avancer et d'apprendre.
 
 % Abstract %
 \newpage
 \section*{Abstract}
+\addcontentsline{toc}{section}{Abstract}
 The threat of cyberattacks is a subject that has always existed for all companies.
 Nevertheless, in recent years, the scale of attacks has increased, to such an extent that it is difficult for companies to follow the movement.
 As a result, it has become essential for companies to implement a reinforced policy for the security of information systems. \\
@@ -213,19 +222,20 @@ I also give the axes which will allow to go further on the implementation and th
 % Introduction %
 \newpage
 \section*{Introduction}
+\addcontentsline{toc}{section}{Introduction}
 La menace des cyberattaques est un sujet qui a toujours existé pour toutes les entreprises.
 Néanmoins, ces dernières années, l'ampleur des attaques est grandissante, à un point tel qu'il est compliqué pour les entreprises de suivre le mouvement.
 En effet, d'après l'\gls{ANSSI}, l'Agence Nationale de la Sécurité des Systèmes d'Information, le nombre d'attaques a augmentée de 37\% entre 2020 et 2021.
 Cela représente un évolution de 786 intrusions avérées à 1082. \\
 
 Une partie importante de la sécurité concerne l'amélioration du SI sur un vaste panel de sujets.
-Cependant, la plupart des attaques utilisent l'hameçonnage ou \textit{phishing}.
+Néanmoins, la plupart des attaques utilisent l'hameçonnage ou \textit{phishing}.
 Cette technique consiste à récupérer des données personnelles par la tromperie puis de les utiliser de manière maveillante.
 Dans la vie courante, l'intêret peut être d'obtenir les informations bancaire d'un individu, mais dans le cadre d'une entreprise, cette méthode peut permettre une intrusion dans le \gls{SI}.
 Pour cette raison, la sécurité d'une entreprise passe également par les utilisateurs qui y accèdent.
 On peut aller jusqu'à dire que si une priorisation devait être faite, la formation et la sensiblisation des salariés à la sécurité du \gls{SI} est prioritaire.\\
 
-Du fait de cette croissance des incidents de sécurité, Empreinte Digitale a décidé de renforcer son système d'information avec de nouveaux outils de sécurité.
+Du fait de cette croissance des incidents de sécurité, Empreinte Digitale a décidé de renforcer son système d'information.
 L'entreprise à également fait auditer le \gls{SI} afin d'établir un premier état des lieux. \\
 
 Mon rapport s'organise en quatre parties. 
@@ -266,15 +276,6 @@ L'activité de l'entreprise se découpe en cinq axes:
 \begin{hilite}Système d'information archivistique\end{hilite}: suite logicielle Ligeo Archives, un système d'information archivistique. 
 Il répond aux besoins de gestion et de valorisation du patrimoine archivistique, tout en garantissant une souplesse d'utilisation, de paramétrage et une ergonomie moderne.
 
-\begin{hilite}Développement sur-mesure\end{hilite}: réalisation de logiciels répondant à un besoin métier.
-
-\begin{hilite}Hébergement en cloud privé\end{hilite}: hébergement Web responsable en \gls{cloud privé} indépendant dans des datacenters en France. 
-Les serveurs sont exclusivement gérés avec des technologies libres et open source, garantissant une indépendance vis-à-vis d'entreprises tierces.
-
-\begin{hilite}Accessibilité numérique\end{hilite}: audit de services numériques, formations et accompagnement dans la mise en place de démarche de mise en accessibilité des sites et services.
-
-\begin{hilite}Mise en conformité \gls{RGPD}\end{hilite}: évaluation du niveau de conformité \gls{RGPD} avec pilotage de la mise en oeuvre des préconisations essentielles à la mise en conformité au \gls{RGPD}.
-
 \end{minipage}%
 \hfill
 \begin{minipage}{.3\textwidth}%
@@ -282,6 +283,19 @@ Les serveurs sont exclusivement gérés avec des technologies libres et open sou
     \includegraphics[scale=0.2]{src/logo_ligeo.png}
 \end{center}
 \end{minipage}%
+
+\noindent%
+\begin{hilite}Développement sur-mesure\end{hilite}: réalisation de logiciels répondant à un besoin métier.
+
+\noindent%
+\begin{hilite}Hébergement en cloud privé\end{hilite}: hébergement Web responsable en \gls{cloud privé} indépendant dans des datacenters en France. 
+Les serveurs sont exclusivement gérés avec des technologies libres et open source, garantissant une indépendance vis-à-vis d'entreprises tierces.
+
+\noindent%
+\begin{hilite}Accessibilité numérique\end{hilite}: audit de services numériques, formations et accompagnement dans la mise en place de démarche de mise en accessibilité des sites et services.
+
+\noindent%
+\begin{hilite}Mise en conformité \gls{RGPD}\end{hilite}: évaluation du niveau de conformité \gls{RGPD} avec pilotage de la mise en oeuvre des préconisations essentielles à la mise en conformité au \gls{RGPD}.
 
 \begin{figure}[!ht]
     \noindent%
@@ -356,11 +370,11 @@ La gouvernance se découpe de la manière suivante:
 La gouvernance coopérative est similaire au fonctionnement d'une association loi 1901 avec les membres de l'association et le conseil d'administration. 
 Le conseil d'administration a pour rôle de déterminer les orientations de l'activité de la société. 
 Actuellement, l'assemblée générale est composée de 32 salariés. 
-Un salarié ne peut pas rester dans l'entreprise si a ses 3 ans d'ancienneté il ne souhaite pas adhérer à la \gls{SCOP}. 
 Cette assemblée générale mandate le conseil d'administration constitué des membres élus et en retour, les membres de conseil animent, représentent et rendent compte aux associés.
+Un salarié ne peut pas rester dans l'entreprise si a ses 3 ans d'ancienneté il ne souhaite pas adhérer à la \gls{SCOP}. 
 
 La gouvernance de l'entreprise est assurée par un directeur général, responsable légale qui travaille avec un comité opérationnel. 
-Ils travaillent avec les différents pôles dans la mise en oeuvre de la stratégie d'entreprise.
+Ensemble, ils travaillent avec les différents pôles dans la mise en oeuvre de la stratégie d'entreprise.
 
 Une assemblée générale ordinaire a lieu une fois par an pour voter les grandes orientations de l'entreprise, valider les comptes, voter la répartition des bénéfices et décider de l'intégration de nouveaux associés.
 
@@ -438,7 +452,7 @@ Les activités sont découpées de la manière suivante:
     \item \textbf{Ligeo}: deux personnes travaillent principalement sur les produits Ligeo. 
     Cela comprend les installations, les mises à jours et la maintenance.
     \item \textbf{Cloud}: une personne travaille sur la conception, les installations et la maintenance des produits cloud. 
-    Cela va de l'installation de produits tels que \gls{Nextcloud}, Zammad jusqu'à la conception et l'installation d'architectures spécifiques à un besoin. 
+    Cela va de l'installation de produits tels que \gls{Nextcloud} ou \gls{Zammad} jusqu'à la conception et l'installation d'architectures spécifiques à un besoin. 
     C'est le cas par exemple pour le projet Dehon.
     \item \textbf{Travaux internes}: deux personnes, moi y compris, travaillons sur divers travaux internes. 
     Cela concerne par exemple les installations des postes de travail, les mails, les accès et les installations de nouveaux outils.
@@ -448,7 +462,7 @@ Les activités sont découpées de la manière suivante:
 
 Les activités ne sont pas à ce point-là segmentées. 
 En raison des astreintes et à l'entre-aide collective, tout le monde "touche à tout". 
-Par exemple, bien qu'ayant travaillé majoritairement sur des travaux internes, je également intervenu sur des offres cloud.
+Par exemple, bien qu'ayant travaillé majoritairement sur des travaux internes, je suis également intervenu sur des offres cloud. \\
 
 \subsection{Comité sécurité}
 Empreinte Digitale possède un comité sécurité dans lequel j'ai été intégré à mon arrivé.
@@ -457,6 +471,7 @@ Celui-ci est composé d'une dizaine de personnes aux profils variés: développe
 Sa mission est pour le moment de maintenir une veille sur la sécurité afin d'apporter des axes d'améliorations dans les domaines du développement, de l'hébergement, de la documentation et des bonnes pratiques générales à l'attention de tous. 
 Le comité se réuni une fois pas mois pour suivre l'avancement de divers sujets.
 
+\newpage
 \subsection{Gestion de projet}
 Deux outils sont très utilisés dans la gestion de projet chez Empreinte Digitale. \\
 
@@ -476,7 +491,7 @@ L'outils permet également d'avoir une liste de contacts rattachées aux projets
 
 \gls{Redmine} a un rôle important dans l'exploitation car il permet de gérer deux autres aspects.
 \begin{itemize}
-    \item La comptabilisation du temps de travail qui est, via l'outil, calculé à partir de la saisie hebdomadaire de chaque employé ( il n'y a pas de système de badgeage).
+    \item La comptabilisation du temps de travail qui est, via l'outil, calculé à partir de la saisie hebdomadaire de chaque employé ( il n'y a pas de système de badge).
     \item La production d'analytiques comptables issus de la classification des tickets, par exemple l'évaluation du temps de travail consacré à une l'activité de développement.
 \end{itemize}
 
@@ -504,17 +519,17 @@ Mes travaux étant souvent internes, je créais, dans la même logique, des tick
 \newpage
 \section{Sujet}
 \subsection{Contexte}
-Empreinte digitale développe son offre DATACENTER engendrant ainsi une évolution rapide de l'infrastructure et de nouveaux besoins notamment en matière de sécurité. 
+Empreinte digitale développe son offre \begin{hilite}DATACENTER\end{hilite} engendrant ainsi une évolution rapide de l'infrastructure et de nouveaux besoins notamment en matière de sécurité. 
 En effet, l'entreprise ne possède actuelle pas d'outils de conformité, de contrôle de sécurité ni de \gls{CVE}. 
 Par ailleurs, les salariés ne disposent pas encore de documentation spécifiant le comportement à adopter lors de l'utilisation du \gls{SI} ou en cas de faille de sécurité révélée.
 
 \subsection{Problématique}
 Les problématiques sont multiples:
 \begin{itemize}
-    \item Comment réaliser un état des lieux du système d'information actuel?
-    \item Comment établir les besoins en hiérarchisant les priorités?
-    \item Comment faire un choix parmi l'ensemble des outils d'audits disponibles?
-    \item Comment pérenniser les solutions mises en oeuvre? 
+    \item Comment réaliser un état des lieux du système d'information actuel ?
+    \item Comment établir les besoins en hiérarchisant les priorités ?
+    \item Comment faire un choix parmi l'ensemble des outils d'audits disponibles ?
+    \item Comment pérenniser les solutions mises en oeuvre ? 
 \end{itemize}
 
 \subsection{Objectifs}
@@ -708,7 +723,7 @@ J'ai par la suite complété ce tableau afin de mettre en avant les points déj�
 
 Dans le cadre de la 4\textsuperscript{ème} thématique portant sur la gestion des actifs, il est nécessaire de tenir un inventaire des ressources informatiques. 
 Cela comprend l'ensemble des ordinateurs du personnel, les machines physiques liées au différents datacenters et les machines virtuelles qu'elles hébergent.
-La solution retenue est d'utiliser deux logiciels open-source :
+La solution retenue est d'utiliser deux logiciels :
 
 \subsection{OCSInventory et GLPI}
 \begin{minipage}{.7\textwidth}%
@@ -800,7 +815,7 @@ La partie réseau est gérée avec un routeur \gls{Traefik}.
 Il m'a suffit d'ajouter dans la partie \begin{code}\texttt{label}\end{code} du fichier \begin{code}\texttt{docker-compose.yaml}\end{code} quelques lignes de configuration.
 
 Par défaut, \gls{Traefik} est configuré afin de router les ports 80 et 443.
-Le point d'entrée 80 est nommé \begin{code}\texttt{web}\end{code} et le 433 \begin{code}\texttt{web-secure}\end{code}.
+Le point d'entré 80 est nommé \begin{code}\texttt{web}\end{code} et le 433 \begin{code}\texttt{web-secure}\end{code}.
 Ainsi, dans les labels du \begin{code}\texttt{docker-compose}\end{code}, j'ai spécifié l'utilisation du point d'entrée \begin{code}\texttt{web}\end{code}.
 Je n'ai pas mis en place de redirection vers \begin{code}\texttt{web-secure}\end{code} car l'application est accessible uniquement sur le réseau local.
 
@@ -839,7 +854,7 @@ Voici la commande utilisée pour les vhosts des serveurs Nginx.
 Enfin, pour récupérer les vhosts des conteneurs docker, cela se fait avec la commande \begin{code}\texttt{docker}\end{code} et \begin{code}\texttt{jq}\end{code} (jquery).
 La commande \begin{code}\texttt{docker ps}\end{code} permet de récupérer l'ensemble des identifiants de conteneurs, une boucle va ensuite effectuer un \begin{code} \texttt{docker inspect}\end{code} sur chacun des IDs puis la commande \begin{code} \texttt{jq}\end{code}  va en sortir le vhost dans le \gls{JSON} retourné.
 
-Cela donne la commande suivante pour les vhots des conteneurs docker:
+Cela donne la commande suivante pour les vhosts des conteneurs docker:
 \vspace{-1ex}
 \begin{code}
 \vspace{-1ex}
@@ -848,9 +863,9 @@ Cela donne la commande suivante pour les vhots des conteneurs docker:
 \end{center}
 \vspace{-1ex}
 \begin{verbatim}
-    grep -EhR 'server_name\\s' $dir | 
-    sed 's/^.*server_name\\s\\+\\(.\\+\\)\\s*;/\\1/' |
-    sort | uniq |
+    docker inspect $1 | jq '.[0] | .Config.Labels |
+    to_entries | .[] | select(.key | test(".*http.*rule")) |
+    .value' | sed 's/.*`\(.*\)`.*/\1/' | uniq
 \end{verbatim}
 \vspace{-1ex}
 \begin{center} 
@@ -928,7 +943,7 @@ Cela va lancer une série d'étapes durant lesquelles \gls{Ansible} va se connec
 Dans un soucis de simplicité, on considère ici que la connexion est acceptée et \gls{Ansible} récupère l'ensemble des facts.
 Débute ensuite un paramétrage dépendant des facts. 
 Dans le cas de cette installation d'\gls{OCSInventory}, cela prend en compte la famille du système d'exploitation et sa version.
-À l'issue de ces étapes, diverses tâches vont permettre l'installation et la configuration de l'agent sur la cible.
+Enfin, diverses tâches vont permettre l'installation et la configuration de l'agent sur la cible.
 
 Afin que les salariés installent eux-même l'agent, j'ai rédigé une documentation décrivant comment installer et configurer l'agent \gls{OCSInventory} sur Windows, \gls{Linux} et ArchLinux.
 J'ai accompagné les salariés qui avaient des difficultés d'installation.
@@ -1060,7 +1075,7 @@ Néanmoins, lorsque l'on passe par le \gls{bastion SSH}, toutes les connexions s
 Appliquer le script en l'état empêcherait l'utilisation du \gls{bastion SSH}.
 Cela n'est donc pour le moment pas compatible avec le fonctionnement chez Empreinte Digitale.
 
-Néanmoins, le rapport généré permet permet d'obtenir une liste de modifications à apporter.
+Néanmoins, le rapport généré permet d'obtenir une liste de modifications à apporter.
 Par exemple, il serait intéressant de retravailler sur l'installation et la configuration du paquet \begin{code}\texttt{auditd}\end{code}, du découpage des différentes journaux de log etc.
 
 \newpage
@@ -1150,7 +1165,7 @@ Pour répondre à ces besoins, quatre outils sont utilisés:
 \subsection{Description}
 L'application repose sur des conteneurs Docker hébergés sur une machine virtuelle, elle-même dans un \gls{cluster} \gls{Proxmox}. On compte cinq composants:
 \begin{itemize}
-    \item \textbf{\gls{Nextcloud}} notre application principale associée à un serveur web apache dans un unique conteneur.
+    \item \textbf{\gls{Nextcloud}} notre application principale associée à un serveur web Apache dans un unique conteneur.
     \item \textbf{\gls{Collabora}} l'application supplémentaire pour l'édition de texte.
     \item \textbf{\gls{Traefik}} le reverse proxy qui va exposer les sites web \begin{code}\texttt{collabora.cloud-ed.fr}\end{code} et \begin{code}\texttt{nextcloud.cloud-ed.fr}\end{code} représentés sur la figure \ref{fig:nextcloudXcollabora}
     C'est également au niveau de \gls{Traefik} que sont gérés les certificats HTTPs.
@@ -1185,11 +1200,19 @@ Les variables sont utilisées à trois endroits:
     \item Dans le \begin{code}\texttt{template}\end{code} \gls{Jinja}, qui prend ses valeurs dans l'\begin{code}\texttt{inventory}\end{code} AWX et également dans le \begin{code}\texttt{vault}\end{code} \gls{Ansible}.
 \end{itemize}
 
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\textwidth]{src/graph_variables_nextcloud.png}
+    \caption{Représentation des liens entres variables}
+    \label{fig:graph_variables_nextcloud}
+\end{figure}
+
 J'ai créé un \begin{code}\texttt{template}\end{code} \gls{Jinja} qui génère le fichier \begin{code}\texttt{.env}\end{code} en utilisant les variables de l'\begin{code}\texttt{inventory}\end{code} AWX et le \begin{code}\texttt{vault}\end{code} \gls{Ansible}.
 Le fichier généré est par la suite déplacé dans le bon répertoire pour être utilisé lors du lancement de la commande \begin{code}\texttt{docker-compose up}\end{code}. 
 
 L'opérateur, lors d'une nouvelle installation, doit donc dans un premier spécifier les variables dans l'\begin{code}\texttt{inventory}\end{code} AWX et dans le \begin{code}\texttt{vault}\end{code}  \gls{Ansible}.
 
+\newpage
 \subsection{Inventaire Ansible}
 Le paramétrage des variables pour le rôle et le vault était la première étape. 
 Ensuite, il faut mettre à jour l'inventaire \gls{Ansible}.
@@ -1251,6 +1274,7 @@ Le fichier \begin{code}\texttt{host}\end{code} faisant office d'inventaire conti
 Il faut comprendre que le groupe \begin{code}\texttt{aicla}\end{code} possède une machine nommée \begin{code}\texttt{aicla-cloud-1}\end{code} dont l'adresse \gls{IP} est \begin{code}\texttt{192.168.X.X}\end{code}. 
 Ce groupe possède des variables de groupe, d'où le nom \begin{code}\texttt{group\_vars}\end{code}, spécifiés dans le fichier \begin{code}\texttt{group\_vars/vault.yaml}\end{code}.
 
+\newpage
 \subsection{Utilisation d'AWX}
 Ansible AWX est un projet communautaire en code source libre qui fournit un logiciel pour la gestion des projets Ansible.
 Ainsi, par le biais d'une interface graphique, on va pouvoir exécuter des rôles ou playbooks Ansible.
@@ -1755,6 +1779,7 @@ A l'issue de cette installation, j'ai réalisé des tests de performance des dis
 Pour cela, j'ai utilisé les commandes \begin{code}\texttt{hdparm}\end{code} et \begin{code}\texttt{fio}\end{code}.
 J'ai également créé un pod fictif utilisant la \begin{code}\texttt{StorageClass}\end{code} \begin{code}\texttt{nfs-csi}\end{code} afin de tester l'apparition du \begin{code}\texttt{Physical Volume Claim}\end{code} sur le serveur \gls{NFS}.
 
+\newpage
 \subsection{Les ressources Kubernetes}
 J'ai participé à l'installation de nombreuses ressources du Cluster \gls{Kubernetes}.
 Toutes ces ressources on été installées avec le provider "Helm" de \gls{Terraform}.
@@ -1792,7 +1817,7 @@ Rancher fournit une interface WEB optimale pour la gestion d'un \gls{cluster}.
 
 \subsubsection{Monitoring}
 Je n'ai pas travaillé sur la partie interface de monitoring.
-A titre indicatif, les solutions utilisées sont: Alertmanager, Grafana et Prometheus.
+À titre indicatif, les solutions utilisées sont: Alertmanager, Grafana et Prometheus.
 
 \subsubsection{Journaux de log}
 La gestion de l'ensemble des logs se fait avec Loki.
@@ -1931,7 +1956,7 @@ Il est notamment intéressant dans l'utilisation de Git en terminal.
 
 \newpage
 \subsection{K9s}
-Enfin, l'outils K9S est très pratique dans l'utilisation de \gls{Kubernetes}.
+Enfin, l'outils K9s est très pratique dans l'utilisation de \gls{Kubernetes}.
 Il permet de facilement visualiser l'ensemble des informations d'un \gls{cluster} et donne la possiblité d'agir dessus.
 On peut détruire, créer ou éditer des ressources directement depuis l'interface.
 
@@ -1945,7 +1970,20 @@ Cependant, pour les tâches à venir, je sais que c'est un outil que pourrais ê
     \label{fig:k9s}
 \end{figure}
 
-Vim est le prochain outil à prendre en main.
+\subsection{Vim}
+Vim est un éditeur de texte pour le terminal sous GNU/Linux. 
+Il a une stabilité exemplaire et ne cesse d'être amélioré. 
+Malgré son austérité, c'est un outil très puissant.
+
+J'utilise encore nano en éditeur de texte.
+Vim est le prochain outil qu'il faut que je prenne en main.
+
+\begin{figure}[!ht]
+    \centering
+        \includegraphics[scale=0.4]{src/logo_vim.png}
+    \caption{Logo de l'éditeur Vim}
+    \label{fig:Vim}
+\end{figure}
 
 \newpage
 \part{Bilan personnel}
@@ -2105,7 +2143,7 @@ Durant les mois à venir, je vais me distancer des travaux de sécurité pour tr
 \subsection*{CV}
 \addcontentsline{toc}{subsection}{CV}
 \begin{center}
-    \includegraphics[scale=0.9]{src/annexe_cv.png}
+    \includegraphics[scale=0.8]{src/annexe_cv.png}
 \end{center}
 
 \newpage
@@ -2696,22 +2734,22 @@ Durant les mois à venir, je vais me distancer des travaux de sécurité pour tr
 \subsection*{Bibliographie}
 \addcontentsline{toc}{subsection}{Bibliographie}
 \nocite{*}
-\printbibliography
+\printbibliography\thispagestyle{fancy}
 \newpage
 \subsection*{Liste des figures}
 \addcontentsline{toc}{subsection}{Liste des figures}
-\listoffigures
+\listoffigures\thispagestyle{fancy}
 
 \newpage
 \subsection*{Liste des tables}
 \addcontentsline{toc}{subsection}{Liste des tables}
-\listoftables
+\listoftables\thispagestyle{fancy}
 
 \newpage
 \subsection*{Acronymes et définition}
 \addcontentsline{toc}{subsection}{Acronymes et définition}
 L'ensemble des acronymes et définitions du glossaires proviennent de Wikipédia.
 \glsaddall
-\printglossaries
+\printglossaries\thispagestyle{fancy}
 
 \end{document}
